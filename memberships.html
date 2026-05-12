@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe7da" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23efe7da'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%231c1410' font-style='italic'%3Efh%3C/text%3E%3Ccircle cx='25' cy='23' r='2' fill='%235a1620'/%3E%3C/svg%3E">
+  <title>Memberships · flowhouse</title>
+  <meta name="description" content="Founding-member pricing, intro packs, and unlimited monthly memberships at flowhouse pilates &amp; barre — Rehoboth Beach." />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" data-nav="home">studio</a>
+      <a href="schedule.html" data-nav="schedule">schedule</a>
+      <a href="memberships.html" data-nav="memberships" aria-current="page">memberships</a>
+      <a href="locations.html" data-nav="locations">location</a>
+      <a href="new-here.html" data-nav="new">new here</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="schedule.html" class="btn btn--primary btn--sm">Book a class</a>
+      <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-drawer" data-drawer aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <span class="wordmark">flowhouse</span>
+    <button class="nav-toggle" data-drawer-toggle aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html">studio</a>
+    <a href="schedule.html">schedule</a>
+    <a href="memberships.html">memberships</a>
+    <a href="locations.html">location</a>
+    <a href="new-here.html">new here</a>
+  </nav>
+  <div class="drawer-cta">
+    <a href="schedule.html" class="btn btn--primary btn--full">Book a class</a>
+    <a href="memberships.html" class="btn btn--ghost btn--full">See memberships</a>
+  </div>
+</aside>
+
+  <main id="main">
+
+    <section class="section" style="padding-top: clamp(var(--s-10), 6vw, var(--s-16));">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">memberships &amp; packs</span>
+            <h1 class="h2">Find the rhythm that fits your life.</h1>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Drop in, try a pack, or go unlimited. Founding-member rates lock in for life — but only for the first 100 to commit before opening day.</p>
+          </div>
+        </div>
+
+        <!-- intro offer banner -->
+        <div data-reveal style="background: var(--c-ink); color: var(--c-bg); border-radius: var(--r-lg); padding: var(--s-6) var(--s-8); margin-bottom: var(--s-12); display: flex; gap: var(--s-5); flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <div>
+            <span class="eyebrow" style="color: var(--c-pink);">New here?</span>
+            <h2 class="h3" style="color: var(--c-bg); margin-top: 0.4rem;">3 weeks unlimited · $89</h2>
+            <p style="color: rgba(245,236,224,0.78); max-width: 50ch; margin-top: 0.5rem;">Your first reformer class is on the house. Then 3 weeks unlimited to find your formats — no auto-renew, no pressure.</p>
+          </div>
+          <a href="#tiers" class="btn btn--primary" style="background: var(--c-pink); color: var(--c-ink);">Start your intro</a>
+        </div>
+
+        <!-- pricing tiers -->
+        <div class="tier-grid" id="tiers">
+          <article class="tier" data-reveal>
+            <span class="eyebrow">drop in</span>
+            <h3 class="tier__name">Single class</h3>
+            <div class="tier__price"><span class="num">$32</span><small>per class</small></div>
+            <p class="text-muted" style="font-size: 0.92rem;">Try us once. Reformer, barre, or recover — your pick. Book up to 7 days out.</p>
+            <ul class="tier__perks">
+              <li>One reservation, any format</li>
+              <li>Free late-cancel up to 12 hours out</li>
+              <li>No commitment, no membership</li>
+            </ul>
+            <a href="schedule.html" class="btn btn--ghost btn--full">Book a class</a>
+          </article>
+
+          <article class="tier" data-reveal>
+            <span class="eyebrow">class pack</span>
+            <h3 class="tier__name">5-pack</h3>
+            <div class="tier__price"><span class="num">$140</span><small>$28 / class</small></div>
+            <p class="text-muted" style="font-size: 0.92rem;">Bank 5 classes, use them in any 90-day window. Perfect for visitors and once-a-week movers.</p>
+            <ul class="tier__perks">
+              <li>Mix &amp; match any format</li>
+              <li>90-day validity</li>
+              <li>Bring-a-friend voucher (1×)</li>
+            </ul>
+            <a href="#" class="btn btn--ghost btn--full">Buy 5-pack</a>
+          </article>
+
+          <article class="tier tier--featured" data-reveal>
+            <span class="tier__badge">Most loved</span>
+            <span class="eyebrow" style="color: var(--c-pink);">unlimited</span>
+            <h3 class="tier__name">Unlimited monthly</h3>
+            <div class="tier__price"><span class="num" style="color: var(--c-pink);">$249</span><small style="color: rgba(245,236,224,0.7);">/ month</small></div>
+            <p style="color: rgba(245,236,224,0.78); font-size: 0.92rem;">For people who train 3+ times a week. Includes priority booking and our entire perks list.</p>
+            <ul class="tier__perks">
+              <li>Unlimited classes, all formats</li>
+              <li>Priority booking · 14 days out</li>
+              <li>Bring a friend free · 1× per 30 days</li>
+              <li>Late-cancel fee waived · 1× per 30 days</li>
+              <li>10% off retail &amp; partner perks</li>
+              <li>Guest passes for visiting family</li>
+            </ul>
+            <a href="#" class="btn btn--primary btn--full" style="background: var(--c-pink); color: var(--c-ink);">Go unlimited</a>
+          </article>
+
+          <article class="tier" data-reveal>
+            <span class="eyebrow">commit</span>
+            <h3 class="tier__name">8 / month</h3>
+            <div class="tier__price"><span class="num">$189</span><small>/ month</small></div>
+            <p class="text-muted" style="font-size: 0.92rem;">Eight classes a month, rolling over up to 4 unused. The sweet spot for 2× weekly movers.</p>
+            <ul class="tier__perks">
+              <li>8 classes per cycle</li>
+              <li>Up to 4 roll over each month</li>
+              <li>Booking · 10 days out</li>
+              <li>Bring a friend free · 1× per 30 days</li>
+            </ul>
+            <a href="#" class="btn btn--ghost btn--full">Choose 8 / month</a>
+          </article>
+        </div>
+
+        <!-- founding member callout -->
+        <div data-reveal style="margin-top: var(--s-16); padding: var(--s-10); background: var(--c-pink-soft); border-radius: var(--r-xl); display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--s-8); align-items: center;">
+          <div>
+            <span class="eyebrow">founding 100</span>
+            <h2 class="h3" style="margin: 0.5rem 0 1rem; max-width: 16ch;">$199 / month unlimited. For life. For the first 100 only.</h2>
+            <p style="color: var(--c-ink-soft); max-width: 56ch;">Lock in $50 off the unlimited rate forever. Includes everything above, plus a private opening-week invite and a founding-member welcome kit (yes, including grip socks).</p>
+            <div style="margin-top: var(--s-5); display:flex; gap: var(--s-3); flex-wrap: wrap;">
+              <a href="index.html#waitlist" class="btn btn--primary">Join the founding 100</a>
+              <a href="locations.html" class="btn btn--ghost">Tour the studio</a>
+            </div>
+          </div>
+          <div style="font-family: var(--ff-display); font-size: clamp(4rem, 9vw, 8rem); line-height: 0.85; color: var(--c-oxblood); letter-spacing: -0.04em; font-style: italic; text-align:right;">
+            100<br><span style="font-size: 0.35em; font-style: normal; color: var(--c-ink-soft); letter-spacing: 0.18em; text-transform: uppercase; font-family: var(--ff-body);">spots only</span>
+          </div>
+        </div>
+
+        <!-- perks comparison -->
+        <div style="margin-top: var(--s-20);">
+          <div class="section-head">
+            <div class="section-head__title" data-reveal>
+              <span class="eyebrow">the fine print, simplified</span>
+              <h2 class="h2">What every membership includes.</h2>
+            </div>
+            <div class="section-head__aside" data-reveal>
+              <p>No mystery cancellation rules. No "but actually" footnotes. Here's exactly what you get.</p>
+            </div>
+          </div>
+
+          <div class="class-grid">
+            <div class="quote-card" data-reveal>
+              <strong style="font-family: var(--ff-display); font-size: 1.2rem;">Free late-cancel grace</strong>
+              <p style="color: var(--c-ink-soft);">Cancel up to 12 hours before class — no questions, no fee. Unlimited members get one inside-12-hour waiver every 30 days.</p>
+            </div>
+            <div class="quote-card" data-reveal>
+              <strong style="font-family: var(--ff-display); font-size: 1.2rem;">Bring a friend</strong>
+              <p style="color: var(--c-ink-soft);">All recurring members get a free guest pass every 30 days. Send it from the app, they reserve their own spot.</p>
+            </div>
+            <div class="quote-card" data-reveal>
+              <strong style="font-family: var(--ff-display); font-size: 1.2rem;">Hold, don't quit</strong>
+              <p style="color: var(--c-ink-soft);">Going on vacation or healing an injury? Freeze any monthly membership for up to 60 days a year — no fee.</p>
+            </div>
+            <div class="quote-card" data-reveal>
+              <strong style="font-family: var(--ff-display); font-size: 1.2rem;">Local partner perks</strong>
+              <p style="color: var(--c-ink-soft);">10% off at curated Rehoboth partners — coffee, juice, smoothies, and a few sweet spots we won't spoil yet.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <span class="wordmark">flowhouse</span>
+        <p style="margin-top:1.25rem; max-width: 38ch; color: rgba(245,236,224,0.7);">Your local movement sanctuary. Reformer pilates &amp; barre on the Delaware coast.</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Rehoboth Beach, DE · Opening 2026</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="index.html">About</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="locations.html">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h5>New here</h5>
+        <a href="new-here.html">First class</a>
+        <a href="new-here.html#prep">What to bring</a>
+        <a href="new-here.html#faq">FAQ</a>
+        <a href="#waitlist">Founding waitlist</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
+        <a href="mailto:hello@myflowhouse.com">hello@myflowhouse.com</a>
+        <a href="tel:+13025550199">(302) 555-0199</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 flowhouse studio · Rehoboth Beach, DE</span>
+      <span>Designed for movement, made for the coast.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" role="region" aria-label="Quick book">
+  <div class="book-bar__text">
+    <strong>Founding-member intro · $89</strong>
+    <span>3 weeks unlimited. Limited spots.</span>
+  </div>
+  <a href="schedule.html" class="btn">Book now</a>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

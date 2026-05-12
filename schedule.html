@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe7da" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23efe7da'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%231c1410' font-style='italic'%3Efh%3C/text%3E%3Ccircle cx='25' cy='23' r='2' fill='%235a1620'/%3E%3C/svg%3E">
+  <title>Schedule · flowhouse</title>
+  <meta name="description" content="Browse the flowhouse weekly class schedule. Reformer pilates, barre, foundations and recovery — book through our partner studio app." />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__row">
+    <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" data-nav="home">studio</a>
+      <a href="schedule.html" data-nav="schedule" aria-current="page">schedule</a>
+      <a href="memberships.html" data-nav="memberships">memberships</a>
+      <a href="locations.html" data-nav="locations">location</a>
+      <a href="new-here.html" data-nav="new">new here</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="schedule.html" class="btn btn--primary btn--sm">Book a class</a>
+      <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-drawer" data-drawer aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <span class="wordmark">flowhouse</span>
+    <button class="nav-toggle" data-drawer-toggle aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html">studio</a>
+    <a href="schedule.html">schedule</a>
+    <a href="memberships.html">memberships</a>
+    <a href="locations.html">location</a>
+    <a href="new-here.html">new here</a>
+  </nav>
+  <div class="drawer-cta">
+    <a href="schedule.html" class="btn btn--primary btn--full">Book a class</a>
+    <a href="memberships.html" class="btn btn--ghost btn--full">See memberships</a>
+  </div>
+</aside>
+
+  <main id="main">
+    <section class="section" style="padding-top: clamp(var(--s-10), 6vw, var(--s-16));">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">the schedule</span>
+            <h1 class="h2">This week at flowhouse.</h1>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Founding members get early-access booking 14 days out. Class packs and drop-ins open 7 days out. Tap any class to reserve through our booking partner.</p>
+          </div>
+        </div>
+
+        <!-- booking integration banner -->
+        <div data-reveal style="background: var(--c-bg-soft); border: 1px dashed var(--c-divider-strong); border-radius: var(--r-lg); padding: var(--s-5); margin-bottom: var(--s-8); display: flex; gap: var(--s-4); align-items: center; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 240px;">
+            <strong style="font-family: var(--ff-display); font-size: 1.1rem; display:block; margin-bottom: 0.25rem;">Booking opens in our app at launch.</strong>
+            <span style="color: var(--c-muted); font-size: 0.92rem;">flowhouse runs on <a href="#" style="color: var(--c-ink); border-bottom: 1px solid var(--c-divider-strong);">Mariana Tek</a>. Reserve, swap, and pay from the app — and sync any class straight to your calendar.</span>
+          </div>
+          <div style="display:flex; gap: var(--s-2); flex-wrap: wrap;">
+            <a href="#" class="btn btn--ghost btn--sm">App Store</a>
+            <a href="#" class="btn btn--ghost btn--sm">Google Play</a>
+          </div>
+        </div>
+
+        <!-- filters -->
+        <div class="schedule-controls" data-reveal>
+          <div class="filter-group">
+            <label for="filter-format">Format</label>
+            <select id="filter-format" data-filter="format">
+              <option value="all">All formats</option>
+              <option value="flow">flow · reformer</option>
+              <option value="barre">house · barre</option>
+              <option value="foundations">foundations</option>
+              <option value="recover">recover</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-level">Level</label>
+            <select id="filter-level" data-filter="level">
+              <option value="all">All levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="all-levels">All levels</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- day tabs -->
+        <div class="day-tabs" data-reveal>
+          <button class="day-tab" data-day="mon" data-active="true"><span class="day">Mon</span><span class="date">18</span></button>
+          <button class="day-tab" data-day="tue"><span class="day">Tue</span><span class="date">19</span></button>
+          <button class="day-tab" data-day="wed"><span class="day">Wed</span><span class="date">20</span></button>
+          <button class="day-tab" data-day="thu"><span class="day">Thu</span><span class="date">21</span></button>
+          <button class="day-tab" data-day="fri"><span class="day">Fri</span><span class="date">22</span></button>
+          <button class="day-tab" data-day="sat"><span class="day">Sat</span><span class="date">23</span></button>
+          <button class="day-tab" data-day="sun"><span class="day">Sun</span><span class="date">24</span></button>
+        </div>
+
+        <!-- class list -->
+        <div class="schedule-list" data-reveal style="background: var(--c-card); border: 1px solid var(--c-divider); border-radius: var(--r-lg); overflow: hidden;">
+
+          <!-- monday -->
+          <div class="class-row" data-class-row data-day="mon" data-format="flow" data-level="all-levels">
+            <div class="class-row__time">6:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Coastal sunrise · all levels</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="mon" data-format="foundations" data-level="beginner">
+            <div class="class-row__time">8:00 <small>55 min</small></div>
+            <div class="class-row__info"><div class="name">foundations · new client</div><div class="sub">Reformer setup · beginners only</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row full" data-class-row data-day="mon" data-format="flow" data-level="all-levels">
+            <div class="class-row__time">9:15 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Glutes &amp; obliques focus</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="mon" data-format="barre" data-level="all-levels">
+            <div class="class-row__time">12:00 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Lunch flow · light props</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="mon" data-format="flow" data-level="intermediate">
+            <div class="class-row__time">17:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Strength &amp; spring play · intermediate</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="mon" data-format="recover" data-level="all-levels">
+            <div class="class-row__time">19:00 <small>40 min</small></div>
+            <div class="class-row__info"><div class="name">recover · stretch &amp; release</div><div class="sub">Reformer mobility · breath-led</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- tuesday -->
+          <div class="class-row" data-class-row data-day="tue" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">6:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Full-body signature</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="tue" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">9:15 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Glutes &amp; long-line legs</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="tue" data-format="foundations" data-level="beginner" style="display:none;">
+            <div class="class-row__time">10:30 <small>55 min</small></div>
+            <div class="class-row__info"><div class="name">foundations · new client</div><div class="sub">Reformer setup · beginners only</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row full" data-class-row data-day="tue" data-format="flow" data-level="intermediate" style="display:none;">
+            <div class="class-row__time">17:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Power flow · intermediate</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="tue" data-format="recover" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">19:00 <small>40 min</small></div>
+            <div class="class-row__info"><div class="name">recover · stretch &amp; release</div><div class="sub">Reformer mobility</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- wednesday -->
+          <div class="class-row" data-class-row data-day="wed" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">6:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Full-body signature</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="wed" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">9:15 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Sculpt &amp; lengthen</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="wed" data-format="flow" data-level="intermediate" style="display:none;">
+            <div class="class-row__time">12:00 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Mid-day strength</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="wed" data-format="recover" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">19:00 <small>40 min</small></div>
+            <div class="class-row__info"><div class="name">recover · stretch &amp; release</div><div class="sub">Wednesday wind-down</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- thursday -->
+          <div class="class-row" data-class-row data-day="thu" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">6:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Full-body signature</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="thu" data-format="foundations" data-level="beginner" style="display:none;">
+            <div class="class-row__time">8:00 <small>55 min</small></div>
+            <div class="class-row__info"><div class="name">foundations · new client</div><div class="sub">Beginners only</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="thu" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">12:00 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Lunch flow</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="thu" data-format="flow" data-level="intermediate" style="display:none;">
+            <div class="class-row__time">17:30 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Strength flow</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- friday -->
+          <div class="class-row" data-class-row data-day="fri" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">7:00 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Friday signature</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="fri" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">9:15 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Long-line legs</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="fri" data-format="recover" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">17:30 <small>40 min</small></div>
+            <div class="class-row__info"><div class="name">recover · stretch &amp; release</div><div class="sub">Friday reset</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- saturday -->
+          <div class="class-row full" data-class-row data-day="sat" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">8:00 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Saturday signature</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="sat" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">9:15 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Glute &amp; core</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="sat" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">10:30 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Weekend sculpt</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="sat" data-format="foundations" data-level="beginner" style="display:none;">
+            <div class="class-row__time">11:45 <small>55 min</small></div>
+            <div class="class-row__info"><div class="name">foundations · new client</div><div class="sub">Beginners only</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+          <!-- sunday -->
+          <div class="class-row" data-class-row data-day="sun" data-format="flow" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">9:00 <small>50 min</small></div>
+            <div class="class-row__info"><div class="name">flow · reformer</div><div class="sub">Sunday signature</div></div>
+            <div class="class-row__instructor">Maya R.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="sun" data-format="recover" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">10:30 <small>40 min</small></div>
+            <div class="class-row__info"><div class="name">recover · stretch &amp; release</div><div class="sub">Slow Sunday</div></div>
+            <div class="class-row__instructor">Jules P.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+          <div class="class-row" data-class-row data-day="sun" data-format="barre" data-level="all-levels" style="display:none;">
+            <div class="class-row__time">17:00 <small>45 min</small></div>
+            <div class="class-row__info"><div class="name">house · barre</div><div class="sub">Sunset barre</div></div>
+            <div class="class-row__instructor">Avery T.</div>
+            <div class="class-row__cta"><a href="#" class="btn btn--ink">Reserve</a></div>
+          </div>
+
+        </div>
+
+        <p data-reveal style="text-align:center; margin-top: var(--s-8); color: var(--c-muted); font-size: 0.9rem;">
+          Schedules update Sundays at 6 PM ET. Cancellation policy: free up to 12 hours before class.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <span class="wordmark">flowhouse</span>
+        <p style="margin-top:1.25rem; max-width: 38ch; color: rgba(245,236,224,0.7);">Your local movement sanctuary. Reformer pilates &amp; barre on the Delaware coast.</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Rehoboth Beach, DE · Opening 2026</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="index.html">About</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="locations.html">Visit</a>
+      </div>
+      <div class="footer-col">
+        <h5>New here</h5>
+        <a href="new-here.html">First class</a>
+        <a href="new-here.html#prep">What to bring</a>
+        <a href="new-here.html#faq">FAQ</a>
+        <a href="#waitlist">Founding waitlist</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
+        <a href="mailto:hello@myflowhouse.com">hello@myflowhouse.com</a>
+        <a href="tel:+13025550199">(302) 555-0199</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 flowhouse studio · Rehoboth Beach, DE</span>
+      <span>Designed for movement, made for the coast.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" role="region" aria-label="Quick book">
+  <div class="book-bar__text">
+    <strong>Founding-member intro · $89</strong>
+    <span>3 weeks unlimited. Limited spots.</span>
+  </div>
+  <a href="schedule.html" class="btn">Book now</a>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
