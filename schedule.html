@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="no-bookbar">
 <head>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#efe7da" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>Schedule · flowhouse</title>
-  <meta name="description" content="Browse the flowhouse weekly class schedule. Reformer pilates, barre, foundations and recovery — book through our partner studio app." />
+  <title>Schedule — flowhouse classes this week</title>
+  <meta name="description" content="Browse this week's reformer, barre, foundations, and recovery classes at flowhouse. Reserve through our booking partner.">
+  <meta property="og:title" content="Schedule — flowhouse classes this week">
+  <meta property="og:description" content="Reformer, barre, foundations, and recovery classes — reserve through the flowhouse app.">
+  <link rel="canonical" href="https://myflowhouse.com/schedule.html">
 </head>
-<body>
+<body class="no-bookbar">
   <a href="#main" class="skip-link">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__row">
     <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" data-nav="home">studio</a>
+      <a href="studio.html" data-nav="studio">studio</a>
+      <a href="team.html" data-nav="team">team</a>
+      <a href="first-timers.html" data-nav="first-timers">first timers</a>
       <a href="schedule.html" data-nav="schedule" aria-current="page">schedule</a>
-      <a href="memberships.html" data-nav="memberships">memberships</a>
-      <a href="locations.html" data-nav="locations">location</a>
-      <a href="new-here.html" data-nav="new">new here</a>
+      <a href="pricing.html" data-nav="pricing">pricing</a>
+      <a href="flowformer.html" data-nav="flowformer">flowformer</a>
+      <a href="teach.html" data-nav="teach">teach</a>
     </nav>
     <div class="header-actions">
-      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
       <a href="schedule.html" class="btn btn--primary btn--sm">Book a class</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
@@ -46,15 +48,18 @@
     </button>
   </div>
   <nav>
-    <a href="index.html">studio</a>
+    <a href="index.html">home</a>
+    <a href="studio.html">studio</a>
+    <a href="team.html">team</a>
+    <a href="first-timers.html">first timers</a>
     <a href="schedule.html">schedule</a>
-    <a href="memberships.html">memberships</a>
-    <a href="locations.html">location</a>
-    <a href="new-here.html">new here</a>
+    <a href="pricing.html">pricing</a>
+    <a href="flowformer.html">flowformer</a>
+    <a href="teach.html">teach</a>
   </nav>
   <div class="drawer-cta">
     <a href="schedule.html" class="btn btn--primary btn--full">Book a class</a>
-    <a href="memberships.html" class="btn btn--ghost btn--full">See memberships</a>
+    <a href="pricing.html" class="btn btn--ghost btn--full">See pricing</a>
   </div>
 </aside>
 
@@ -65,7 +70,7 @@
         <div class="section-head">
           <div class="section-head__title" data-reveal>
             <span class="eyebrow">the schedule</span>
-            <h1 class="h2">This week at flowhouse.</h1>
+            <h1>This week at flowhouse.</h1>
           </div>
           <div class="section-head__aside" data-reveal>
             <p>Founding members get early-access booking 14 days out. Class packs and drop-ins open 7 days out. Tap any class to reserve through our booking partner.</p>
@@ -75,7 +80,7 @@
         <!-- booking integration banner -->
         <div data-reveal style="background: var(--c-bg-soft); border: 1px dashed var(--c-divider-strong); border-radius: var(--r-lg); padding: var(--s-5); margin-bottom: var(--s-8); display: flex; gap: var(--s-4); align-items: center; flex-wrap: wrap;">
           <div style="flex: 1; min-width: 240px;">
-            <strong style="font-family: var(--ff-display); font-size: 1.1rem; display:block; margin-bottom: 0.25rem;">Booking opens in our app at launch.</strong>
+            <strong style="font-family: var(--ff-display); font-weight: 700; font-size: 1.1rem; display:block; margin-bottom: 0.25rem; letter-spacing: -0.01em;">Booking opens in our app at launch.</strong>
             <span style="color: var(--c-muted); font-size: 0.92rem;">flowhouse runs on <a href="#" style="color: var(--c-ink); border-bottom: 1px solid var(--c-divider-strong);">Mariana Tek</a>. Reserve, swap, and pay from the app — and sync any class straight to your calendar.</span>
           </div>
           <div style="display:flex; gap: var(--s-2); flex-wrap: wrap;">
@@ -118,7 +123,6 @@
           <button class="day-tab" data-day="sun"><span class="day">Sun</span><span class="date">24</span></button>
         </div>
 
-        <!-- class list -->
         <div class="schedule-list" data-reveal style="background: var(--c-card); border: 1px solid var(--c-divider); border-radius: var(--r-lg); overflow: hidden;">
 
           <!-- monday -->
@@ -324,21 +328,21 @@
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
         <p style="margin-top:1.25rem; max-width: 38ch; color: rgba(245,236,224,0.7);">Your local movement sanctuary. Reformer pilates &amp; barre on the Delaware coast.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Rehoboth Beach, DE · Opening 2026</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">123 Rehoboth Avenue · Rehoboth Beach, DE · Opening 2026</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
-        <a href="index.html">About</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="memberships.html">Memberships</a>
-        <a href="locations.html">Visit</a>
+        <a href="studio.html">The studio</a>
+        <a href="team.html">The team</a>
+        <a href="flowformer.html">Flowformer</a>
+        <a href="teach.html">Teach with us</a>
       </div>
       <div class="footer-col">
-        <h5>New here</h5>
-        <a href="new-here.html">First class</a>
-        <a href="new-here.html#prep">What to bring</a>
-        <a href="new-here.html#faq">FAQ</a>
-        <a href="#waitlist">Founding waitlist</a>
+        <h5>Move</h5>
+        <a href="schedule.html">Schedule</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="first-timers.html">First timers</a>
+        <a href="index.html#waitlist">Founding waitlist</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
@@ -359,7 +363,7 @@
     <strong>Founding-member intro · $89</strong>
     <span>3 weeks unlimited. Limited spots.</span>
   </div>
-  <a href="schedule.html" class="btn">Book now</a>
+  <a href="schedule.html" class="btn btn--pink">Book now</a>
 </div>
 
 <script src="js/site.js"></script>

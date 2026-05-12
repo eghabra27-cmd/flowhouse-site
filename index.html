@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#efe7da" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>flowhouse · reformer pilates &amp; barre · Rehoboth Beach</title>
-  <meta name="description" content="flowhouse is a boutique reformer pilates and barre studio opening in Rehoboth Beach, DE. Move with intention. Founding-member spots open now." />
+  <title>flowhouse — Reformer Pilates &amp; Barre in Rehoboth Beach</title>
+  <meta name="description" content="A boutique reformer pilates and barre studio opening in Rehoboth Beach. Founding memberships open. Move with intention.">
+  <meta property="og:title" content="flowhouse — Reformer Pilates & Barre in Rehoboth Beach">
+  <meta property="og:description" content="A coastal movement sanctuary. Reformer pilates and barre coached by name. Founding memberships open now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myflowhouse.com/">
+  <meta property="og:image" content="https://myflowhouse.com/images/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://myflowhouse.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://myflowhouse.com/#studio",
+    "name": "flowhouse",
+    "description": "Boutique reformer pilates and barre studio in Rehoboth Beach, Delaware.",
+    "image": "https://myflowhouse.com/images/hero.png",
+    "url": "https://myflowhouse.com/",
+    "telephone": "+1-302-555-0199",
+    "email": "hello@myflowhouse.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Rehoboth Avenue",
+      "addressLocality": "Rehoboth Beach",
+      "addressRegion": "DE",
+      "postalCode": "19971",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 38.7209, "longitude": -75.0760 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "07:00", "closes": "18:00" }
+    ],
+    "sameAs": ["https://instagram.com/myflowhouse"]
+  }
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -20,16 +55,15 @@
   <div class="container site-header__row">
     <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html" data-nav="home" aria-current="page">studio</a>
+      <a href="studio.html" data-nav="studio">studio</a>
+      <a href="team.html" data-nav="team">team</a>
+      <a href="first-timers.html" data-nav="first-timers">first timers</a>
       <a href="schedule.html" data-nav="schedule">schedule</a>
-      <a href="memberships.html" data-nav="memberships">memberships</a>
-      <a href="locations.html" data-nav="locations">location</a>
-      <a href="new-here.html" data-nav="new">new here</a>
+      <a href="pricing.html" data-nav="pricing">pricing</a>
+      <a href="flowformer.html" data-nav="flowformer">flowformer</a>
+      <a href="teach.html" data-nav="teach">teach</a>
     </nav>
     <div class="header-actions">
-      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
       <a href="schedule.html" class="btn btn--primary btn--sm">Book a class</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
@@ -46,36 +80,34 @@
     </button>
   </div>
   <nav>
-    <a href="index.html">studio</a>
+    <a href="index.html">home</a>
+    <a href="studio.html">studio</a>
+    <a href="team.html">team</a>
+    <a href="first-timers.html">first timers</a>
     <a href="schedule.html">schedule</a>
-    <a href="memberships.html">memberships</a>
-    <a href="locations.html">location</a>
-    <a href="new-here.html">new here</a>
+    <a href="pricing.html">pricing</a>
+    <a href="flowformer.html">flowformer</a>
+    <a href="teach.html">teach</a>
   </nav>
   <div class="drawer-cta">
     <a href="schedule.html" class="btn btn--primary btn--full">Book a class</a>
-    <a href="memberships.html" class="btn btn--ghost btn--full">See memberships</a>
+    <a href="pricing.html" class="btn btn--ghost btn--full">See pricing</a>
   </div>
 </aside>
 
   <main id="main">
 
-    <!-- ============== HERO ============== -->
+    <!-- 01 · HERO -->
     <section class="hero">
       <div class="container">
         <div class="hero__grid">
           <div class="hero__copy" data-reveal>
             <span class="eyebrow">reformer pilates &amp; barre · Rehoboth Beach</span>
-            <h1 class="display">
-              Move with
-              <em>intention.</em>
-            </h1>
-            <p class="lead">
-              A coastal movement sanctuary built for people who want to feel strong, soft, and steady. Small classes, sharp coaching, beautiful equipment — and a community that actually shows up.
-            </p>
+            <h1>Stronger. Softer. Steadier.</h1>
+            <p class="lead">A coastal movement sanctuary built for people who want to feel strong, soft, and steady. Small classes, sharp coaching, beautiful equipment — and a community that actually shows up.</p>
             <div class="hero__cta-row">
               <a href="schedule.html" class="btn btn--primary">Book your first class</a>
-              <a href="memberships.html" class="btn btn--ghost">See memberships</a>
+              <a href="pricing.html" class="btn btn--ghost">See pricing</a>
             </div>
             <dl class="hero__meta">
               <div><dt>Format</dt><dd>Reformer &amp; barre</dd></div>
@@ -84,14 +116,14 @@
             </dl>
           </div>
           <div class="hero__image-frame" data-reveal>
-            <img src="images/hero.png" alt="A pilates practitioner holding a long-line plank on a black reformer, soft window light." loading="eager" fetchpriority="high">
+            <img src="images/hero.png" alt="A pilates practitioner holding a long-line pose on a black reformer, soft window light." loading="eager" fetchpriority="high">
             <span class="hero__image-badge">Founding memberships open</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== TICKER ============== -->
+    <!-- 02 · BRAND BAR TICKER -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker__track">
         <span>reformer<span class="dot"></span></span>
@@ -99,71 +131,67 @@
         <span>flow<span class="dot"></span></span>
         <span>recover<span class="dot"></span></span>
         <span>built for the coast<span class="dot"></span></span>
+        <span>founding 100<span class="dot"></span></span>
         <span>reformer<span class="dot"></span></span>
         <span>barre<span class="dot"></span></span>
         <span>flow<span class="dot"></span></span>
         <span>recover<span class="dot"></span></span>
         <span>built for the coast<span class="dot"></span></span>
+        <span>founding 100<span class="dot"></span></span>
       </div>
     </div>
 
-    <!-- ============== THE DIFFERENCE ============== -->
+    <!-- 03 · THE DIFFERENCE (3 EDITORIAL PILLARS) -->
     <section class="section">
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
             <span class="eyebrow">the flowhouse difference</span>
-            <h2 class="h2">A studio built on three principles, not a hundred trends.</h2>
+            <h2>A studio built on three principles, not a hundred trends.</h2>
           </div>
           <div class="section-head__aside" data-reveal>
             <p>We don't shout. We don't gimmick. We build a room where you can hear your own breath and feel your own body — coached by instructors who actually know your name.</p>
           </div>
         </div>
 
-        <div class="class-grid">
-          <article class="class-card" data-reveal>
-            <div class="class-card__media" style="background: linear-gradient(135deg, #f3d4c8, #e9b2a4);">
-              <img src="images/barre.png" alt="A hand resting on a brass ballet barre against a clay-pink wall.">
-              <span class="tag">Slow on purpose</span>
-            </div>
-            <div class="class-card__body">
-              <h3 class="h4">Coached, not corrected</h3>
-              <p>Every class is capped at 10 reformers and one instructor. You'll get hands-on cues and form adjustments — not a microphone barking at the back row.</p>
+        <div class="pillar-grid">
+          <article class="pillar" data-reveal>
+            <img src="images/instructor-avery.png" alt="A flowhouse instructor smiling into the camera.">
+            <span class="pillar__tag">Coached by name</span>
+            <div class="pillar__overlay">
+              <h3>Coached, not corrected.</h3>
+              <p>Every class is capped at 10 reformers with one instructor. Hands-on cues — not a microphone at the back row.</p>
             </div>
           </article>
 
-          <article class="class-card" data-reveal>
-            <div class="class-card__media" style="background: linear-gradient(135deg, #c4715a, #5a1620);">
-              <img src="images/moment.png" alt="Editorial back-of-shoulder shot in dusty-pink activewear against a maroon wall.">
-              <span class="tag">Form first</span>
-            </div>
-            <div class="class-card__body">
-              <h3 class="h4">Strong &amp; soft, by design</h3>
-              <p>Reformer pilates and barre were built to develop deep stabilising strength without grinding your joints. We program for the long game, not the highlight reel.</p>
+          <article class="pillar" data-reveal>
+            <img src="images/moment.png" alt="Back-of-shoulder portrait in dusty pink against an oxblood wall.">
+            <span class="pillar__tag">Form first</span>
+            <div class="pillar__overlay">
+              <h3>Strong &amp; soft, by design.</h3>
+              <p>Reformer and barre, programmed for the long game — not the highlight reel.</p>
             </div>
           </article>
 
-          <article class="class-card" data-reveal>
-            <div class="class-card__media" style="background: linear-gradient(135deg, #efe7da, #c98a2b);">
-              <img src="images/studio.png" alt="Sun-lit pilates studio with arched windows and warm white-oak floors.">
-              <span class="tag">Coastal</span>
-            </div>
-            <div class="class-card__body">
-              <h3 class="h4">A studio that feels like Rehoboth</h3>
-              <p>Warm white oak, arched windows, sea-grass views, and a soundtrack you'll actually want to flow to. Built locally, for locals — and the people who summer here.</p>
+          <article class="pillar" data-reveal>
+            <img src="images/studio.png" alt="A sunlit pilates studio with arched windows and warm white oak floors.">
+            <span class="pillar__tag">Coastal</span>
+            <div class="pillar__overlay">
+              <h3>A studio that feels like Rehoboth.</h3>
+              <p>Warm white oak. Arched windows. Sea grass out the window. Built locally, for locals.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============== CLASS MENU ============== -->
+    <!-- 04 · CLASS MENU (4 FORMATS) -->
     <section class="section section--soft" id="classes">
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
             <span class="eyebrow">the menu</span>
-            <h2 class="h2">Four formats. One philosophy: move better.</h2>
+            <h2>Four formats. One philosophy: move better.</h2>
           </div>
           <div class="section-head__aside" data-reveal>
             <p>Whether it's your first reformer class or your five-hundredth, we have a slot that meets you where you are.</p>
@@ -172,7 +200,7 @@
 
         <div class="class-grid">
           <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/hero.png" alt="Reformer pilates pose"><span class="tag">50 min · all levels</span></div>
+            <div class="class-card__media"><img src="images/hero.png" alt="Reformer pilates long-line pose"><span class="tag">50 min · all levels</span></div>
             <div class="class-card__body">
               <h3 class="h4">flow · reformer</h3>
               <p>Our signature class. Full-body reformer training across strength, control, and mobility — sequenced so every muscle gets attention without your spine getting punished.</p>
@@ -181,7 +209,7 @@
           </article>
 
           <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/barre.png" alt="Brass ballet barre"><span class="tag">45 min · all levels</span></div>
+            <div class="class-card__media"><img src="images/barre.png" alt="A hand resting on a brass ballet barre against clay wall"><span class="tag">45 min · all levels</span></div>
             <div class="class-card__body">
               <h3 class="h4">house · barre</h3>
               <p>Low-impact barre with a pilates spine. Small isometric work, long lines, glute and core focused, with light props for sneaky intensity.</p>
@@ -190,7 +218,7 @@
           </article>
 
           <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/instructor.png" alt="Smiling instructor"><span class="tag">55 min · level 1</span></div>
+            <div class="class-card__media"><img src="images/instructor-maya.png" alt="Smiling flowhouse instructor portrait"><span class="tag">55 min · level 1</span></div>
             <div class="class-card__body">
               <h3 class="h4">foundations · new client</h3>
               <p>A capped, slower-paced first reformer class for new movers. Setup, springs, and the four foundational positions — so your second class isn't a guessing game.</p>
@@ -210,35 +238,133 @@
       </div>
     </section>
 
-    <!-- ============== EDITORIAL FEATURE — MOMENT ============== -->
+    <!-- 05 · FLOWFORMER FEATURE -->
     <section class="section section--ink">
       <div class="container container-wide">
         <div class="feature-split">
-          <div class="feature-split__media" data-reveal>
-            <img src="images/moment.png" alt="Editorial moment — back of shoulders, dusty pink, maroon studio backdrop.">
+          <div class="feature-split__media" data-reveal style="aspect-ratio: 16/10;">
+            <img src="images/flowformer.png" alt="The Flowformer — our signature matte-black reformer in a clay-toned studio.">
           </div>
           <div class="feature-split__copy" data-reveal>
-            <span class="eyebrow">a movement sanctuary</span>
-            <h2 class="h2">Built around the idea that <em style="color: var(--c-pink);">how you move matters more than how hard.</em></h2>
-            <p class="lead" style="color: rgba(245,236,224,0.78);">
-              Pilates was never meant to be a punishment. We bring it back to its roots: precise, breath-led, deeply strengthening, and quietly transformative. The result is a stronger spine, a steadier core, and an hour that feels like the best part of your day.
-            </p>
+            <span class="eyebrow">the flowformer</span>
+            <h2>The reformer, sequenced like a sentence.</h2>
+            <p class="lead">The Flowformer is our signature reformer-based method — pilates principles, modern programming, coastal pacing. Every class is built around a single muscle conversation, so what you feel in class is what you feel the next morning.</p>
             <div class="hero__cta-row">
-              <a href="new-here.html" class="btn btn--primary">What to expect</a>
-              <a href="schedule.html" class="btn btn--ghost" style="color: var(--c-bg); border-color: rgba(245,236,224,0.3);">See the schedule</a>
+              <a href="flowformer.html" class="btn btn--pink">See the Flowformer</a>
+              <a href="schedule.html" class="btn btn--ghost" style="color: var(--c-bg); border-color: rgba(245,236,224,0.3);">Book a flow class</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== TESTIMONIALS ============== -->
+    <!-- 06 · EDITORIAL MOMENT -->
+    <section class="section">
+      <div class="container container-wide">
+        <div class="feature-split feature-split--reverse">
+          <div class="feature-split__media" data-reveal>
+            <img src="images/moment.png" alt="Editorial back-of-shoulder portrait in dusty pink activewear against a maroon studio wall.">
+          </div>
+          <div class="feature-split__copy" data-reveal>
+            <span class="eyebrow">why we built it</span>
+            <h2>Because how you move matters more than how hard.</h2>
+            <p class="lead">Pilates was never meant to be a punishment. We bring it back to its roots: precise, breath-led, deeply strengthening, and quietly transformative. The result is a stronger spine, a steadier core, and an hour that feels like the best part of your day.</p>
+            <div class="hero__cta-row">
+              <a href="first-timers.html" class="btn btn--primary">What to expect</a>
+              <a href="studio.html" class="btn btn--ghost">See the studio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · TEAM TEASER -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">the team</span>
+            <h2>Coaches who live here. Teach by name.</h2>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Every flowhouse instructor is a 500-hour comprehensively certified pilates teacher, hired locally, and trained on our specific programming.</p>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <a class="instructor" href="team.html" data-reveal>
+            <div class="instructor__photo"><img src="images/instructor-maya.png" alt="Maya, founder and lead instructor"></div>
+            <span class="instructor__role">Founder · Lead instructor</span>
+            <span class="instructor__name">Maya</span>
+          </a>
+          <a class="instructor" href="team.html" data-reveal>
+            <div class="instructor__photo"><img src="images/instructor-avery.png" alt="Avery, senior instructor"></div>
+            <span class="instructor__role">Senior instructor</span>
+            <span class="instructor__name">Avery</span>
+          </a>
+          <a class="instructor" href="team.html" data-reveal>
+            <div class="instructor__photo"><img src="images/instructor-jules.png" alt="Jules, instructor"></div>
+            <span class="instructor__role">Instructor</span>
+            <span class="instructor__name">Jules</span>
+          </a>
+        </div>
+
+        <div style="margin-top: var(--s-8); text-align: center;" data-reveal>
+          <a href="team.html" class="btn btn--ghost">Meet the team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · HOW IT WORKS (3-STEP) -->
     <section class="section">
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
+            <span class="eyebrow">how it works</span>
+            <h2>Three steps. From curious to hooked.</h2>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>If reformer is new to you, this is the path of least resistance. Every founding member started here.</p>
+          </div>
+        </div>
+
+        <ol class="checklist" data-reveal>
+          <li>
+            <span class="num">1</span>
+            <div>
+              <strong>Reserve a foundations class.</strong>
+              <p>A capped, slower-paced first reformer class. You'll learn setup, springs, and the four foundational positions — so your second class isn't a guessing game.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <strong>Arrive ten minutes early.</strong>
+              <p>We'll check you in, set your springs, and walk you through the carriage before the room fills up. Grip socks and water are on us for your first class.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <strong>Leave hooked.</strong>
+              <p>You'll know exactly which class to book next, and our intro pack lets you try every format in three weeks for $89.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div style="margin-top: var(--s-8); text-align: center;" data-reveal>
+          <a href="first-timers.html" class="btn btn--primary">See the first-timer guide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · TESTIMONIALS -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
             <span class="eyebrow">from the founding circle</span>
-            <h2 class="h2">Real words from real movers.</h2>
+            <h2>Real words from real movers.</h2>
           </div>
           <div class="section-head__aside" data-reveal>
             <p>We've been quietly training with our founding community while we build out the space. Here's what they have to say.</p>
@@ -262,11 +388,11 @@
       </div>
     </section>
 
-    <!-- ============== WAITLIST CTA ============== -->
+    <!-- 10 · FOUNDING WAITLIST -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
         <span class="eyebrow" data-reveal>founding members</span>
-        <h2 class="h2" style="margin: 0.5rem auto 1rem; max-width: 18ch;" data-reveal>Be one of the first 100 through the door.</h2>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 18ch;" data-reveal>Be one of the first 100 through the door.</h2>
         <p class="lead" style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 52ch;" data-reveal>
           Founding members lock in our lowest monthly rate for life, priority booking for the first 30 days, and an invitation to our private opening week — before we sell a single membership to the public.
         </p>
@@ -285,6 +411,15 @@
       </div>
     </section>
 
+    <!-- 11 · PRESS / PARTNERS — minimal pre-launch -->
+    <section class="section">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>follow along</span>
+        <h2 style="margin: 0.5rem auto var(--s-6); max-width: 22ch;" data-reveal>The build, the previews, the first 100 — all on Instagram.</h2>
+        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener" class="btn btn--ghost" data-reveal>@myflowhouse</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -293,21 +428,21 @@
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
         <p style="margin-top:1.25rem; max-width: 38ch; color: rgba(245,236,224,0.7);">Your local movement sanctuary. Reformer pilates &amp; barre on the Delaware coast.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Rehoboth Beach, DE · Opening 2026</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">123 Rehoboth Avenue · Rehoboth Beach, DE · Opening 2026</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
-        <a href="index.html">About</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="memberships.html">Memberships</a>
-        <a href="locations.html">Visit</a>
+        <a href="studio.html">The studio</a>
+        <a href="team.html">The team</a>
+        <a href="flowformer.html">Flowformer</a>
+        <a href="teach.html">Teach with us</a>
       </div>
       <div class="footer-col">
-        <h5>New here</h5>
-        <a href="new-here.html">First class</a>
-        <a href="new-here.html#prep">What to bring</a>
-        <a href="new-here.html#faq">FAQ</a>
-        <a href="#waitlist">Founding waitlist</a>
+        <h5>Move</h5>
+        <a href="schedule.html">Schedule</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="first-timers.html">First timers</a>
+        <a href="index.html#waitlist">Founding waitlist</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
@@ -328,7 +463,7 @@
     <strong>Founding-member intro · $89</strong>
     <span>3 weeks unlimited. Limited spots.</span>
   </div>
-  <a href="schedule.html" class="btn">Book now</a>
+  <a href="schedule.html" class="btn btn--pink">Book now</a>
 </div>
 
 <script src="js/site.js"></script>
