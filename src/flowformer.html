@@ -201,8 +201,8 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
-        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">{{ global.settings.footer_address }}</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -219,23 +219,23 @@
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
-        <a href="mailto:info@flowhouserb.com">info@flowhouserb.com</a>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 flowhouse · Rehoboth Beach, DE</span>
-      <span>Opening Summer 2026.</span>
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
     </div>
   </div>
 </footer>
 
 <div class="book-bar" role="region" aria-label="Founding circle">
   <div class="book-bar__text">
-    <strong>Founding Memberships · Launching Soon</strong>
-    <span>Join the Founding Circle for first access.</span>
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
   </div>
-  <a href="index.html#waitlist" class="btn btn--pink">Be first to know</a>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
 </div>
 
 <script src="js/site.js"></script>

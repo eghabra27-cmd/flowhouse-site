@@ -56,19 +56,28 @@ collections:
           - { label: "Meta strip — Opening label", name: "meta_opening", widget: "string" }
 
       - name: "home_classes"
-        label: "Class menu (3 classes)"
+        label: "Class menu section"
         file: "content/home/classes.yml"
         fields:
+          - { label: "Section eyebrow", name: "section_eyebrow", widget: "string" }
+          - { label: "Section headline (HTML allowed for italics)", name: "section_headline_html", widget: "text", hint: "Wrap a phrase in <span class='serif-italic'>…</span> to italicize" }
+          - { label: "Section intro paragraph", name: "section_intro", widget: "text" }
           - label: "Classes"
             name: "classes"
             widget: "list"
-            max: 3
-            min: 3
+            min: 1
+            max: 6
+            summary: "{{fields.name}}"
             fields:
               - { label: "Class name", name: "name", widget: "string" }
-              - { label: "Duration / spots", name: "meta", widget: "string", hint: "e.g. '50 min · 10 spots'" }
+              - { label: "Card image", name: "image", widget: "image" }
+              - { label: "Image alt text", name: "alt", widget: "string" }
+              - { label: "Tag pill (e.g. '50 min · intermediate')", name: "tag", widget: "string" }
               - { label: "Bio (the long description)", name: "bio", widget: "text" }
-              - { label: "Card image", name: "image", widget: "image", required: false }
+              - { label: "Note (smaller text under the bio, optional)", name: "note", widget: "text", required: false }
+              - { label: "Meta — left label (e.g. 'Reformer')", name: "meta_left", widget: "string" }
+              - { label: "Meta — right label (e.g. 'Time under tension')", name: "meta_right", widget: "string" }
+          - { label: "Footer note below the cards", name: "footer_note", widget: "text" }
 
       - name: "home_testimonials"
         label: "Testimonials"
@@ -83,69 +92,137 @@ collections:
               - { label: "Subtitle (optional)", name: "subtitle", widget: "string", required: false }
 
       - name: "home_founding_cta"
-        label: "Founding Circle call-to-action"
+        label: "Founding Circle call-to-action (bottom of home)"
         file: "content/home/founding.yml"
         fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Headline", name: "headline", widget: "text" }
           - { label: "Body paragraph", name: "body", widget: "text" }
           - { label: "Button label", name: "cta", widget: "string" }
-          - { label: "Form placeholder text", name: "placeholder", widget: "string", default: "you@email.com" }
+          - { label: "Form disclaimer (small text under submit button)", name: "form_disclaimer", widget: "string" }
 
   # ─────────────────────────────────────────────
   # STUDIO PAGE
   # ─────────────────────────────────────────────
   - name: "studio"
     label: "Studio page"
-    description: "The studio page — address, atmosphere, build photos."
+    description: "The studio page — atmosphere, address, what's inside, and the build."
     files:
       - name: "studio_main"
         label: "Studio content"
         file: "content/studio/main.yml"
         fields:
-          - { label: "Page eyebrow", name: "eyebrow", widget: "string", default: "The Studio" }
+          - { label: "Page eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Page headline", name: "headline", widget: "text" }
-          - { label: "Intro paragraph", name: "intro", widget: "text" }
-          - { label: "Address line 1", name: "address1", widget: "string", default: "18585 Coastal Highway, Suite 22" }
-          - { label: "Address line 2", name: "address2", widget: "string", default: "Rehoboth Beach, DE 19971" }
-          - { label: "Parking note", name: "parking", widget: "text", default: "Free public lot directly in front of the building." }
-          - { label: "Contact email", name: "email", widget: "string", default: "info@flowhouserb.com" }
-          - { label: "Pull quote", name: "pullquote", widget: "text" }
-          - label: "What's inside (3 cards)"
+          - { label: "Intro paragraph (right column)", name: "intro", widget: "text" }
+
+          - { label: "——— Featured studio card ———", name: "_sep1", widget: "hidden", required: false }
+          - { label: "Card eyebrow", name: "card_eyebrow", widget: "string" }
+          - { label: "Card headline", name: "card_headline", widget: "string" }
+          - { label: "Card body paragraph", name: "card_body", widget: "text" }
+          - { label: "Address line 1", name: "address1", widget: "string" }
+          - { label: "Address line 2", name: "address2", widget: "string" }
+          - { label: "Opening label (e.g. 'Summer 2026')", name: "opening_label", widget: "string" }
+          - { label: "Parking note", name: "parking", widget: "text" }
+          - { label: "Contact email", name: "email", widget: "string" }
+          - { label: "Primary button — label", name: "cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "cta_primary_href", widget: "string" }
+          - { label: "Secondary button — label", name: "cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "cta_secondary_href", widget: "string" }
+
+          - { label: "——— What's Inside section ———", name: "_sep2", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "inside_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "inside_headline", widget: "text" }
+          - { label: "Section intro", name: "inside_intro", widget: "text" }
+          - label: "What's inside (cards)"
             name: "inside_cards"
             widget: "list"
-            max: 3
-            min: 3
+            min: 1
+            max: 6
+            summary: "{{fields.title}}"
             fields:
+              - { label: "Tag pill (top of image)", name: "tag", widget: "string" }
+              - { label: "Card image", name: "image", widget: "image" }
+              - { label: "Image alt text", name: "alt", widget: "string" }
               - { label: "Card title", name: "title", widget: "string" }
               - { label: "Card body", name: "body", widget: "text" }
+
+          - { label: "——— Atmosphere pull quote ———", name: "_sep3", widget: "hidden", required: false }
+          - { label: "Atmosphere eyebrow", name: "atmosphere_eyebrow", widget: "string" }
+          - { label: "Atmosphere pull quote (HTML allowed for italics)", name: "atmosphere_html", widget: "text", hint: "Wrap a word in <em>…</em> to italicize" }
 
   # ─────────────────────────────────────────────
   # WHAT TO EXPECT PAGE
   # ─────────────────────────────────────────────
   - name: "what_to_expect"
     label: "What to Expect page"
-    description: "First-timer friendly page — the class flow and FAQ."
+    description: "First-timer friendly page — hero, class flow, after class, start here, FAQ."
     files:
       - name: "wte_main"
         label: "Page content"
         file: "content/what-to-expect/main.yml"
         fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "What to Expect" }
-          - { label: "Headline", name: "headline", widget: "text" }
-          - { label: "Intro paragraph", name: "intro", widget: "text" }
-          - label: "Six-block class flow"
-            name: "blocks"
+          - { label: "——— Hero ———", name: "_sep_hero", widget: "hidden", required: false }
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero headline", name: "hero_headline", widget: "text" }
+          - { label: "Hero subhead", name: "hero_subhead", widget: "text" }
+          - { label: "Primary button — label", name: "hero_cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "hero_cta_primary_href", widget: "string" }
+          - { label: "Secondary button — label", name: "hero_cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "hero_cta_secondary_href", widget: "string" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt", name: "hero_image_alt", widget: "text" }
+          - { label: "Hero badge text", name: "hero_badge", widget: "string" }
+
+          - { label: "——— Six-block class flow ———", name: "_sep_flow", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "flow_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "flow_headline", widget: "text" }
+          - { label: "Section intro", name: "flow_intro", widget: "text" }
+          - label: "Class flow blocks"
+            name: "flow_blocks"
             widget: "list"
-            max: 6
-            min: 6
+            min: 1
+            max: 8
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Block name (e.g. Center)", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-          - { label: "Community section headline", name: "community_headline", widget: "text" }
-          - { label: "Community section body", name: "community_body", widget: "text" }
-          - label: "FAQ"
-            name: "faq"
+              - { label: "Block title", name: "title", widget: "string" }
+              - { label: "Block body", name: "body", widget: "text" }
+
+          - { label: "——— After class (community) ———", name: "_sep_after", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "after_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "after_headline", widget: "text" }
+          - { label: "Lead paragraph", name: "after_lead", widget: "text" }
+          - { label: "Body paragraph", name: "after_body", widget: "text" }
+          - { label: "Section image", name: "after_image", widget: "image" }
+          - { label: "Image alt", name: "after_image_alt", widget: "text" }
+
+          - { label: "——— Start Here ———", name: "_sep_start", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "start_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "start_headline", widget: "text" }
+          - { label: "Section intro", name: "start_intro", widget: "text" }
+          - label: "Checklist items"
+            name: "start_items"
             widget: "list"
+            min: 1
+            max: 8
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Item title", name: "title", widget: "string" }
+              - { label: "Item body", name: "body", widget: "text" }
+          - { label: "Barre note — eyebrow", name: "barre_note_eyebrow", widget: "string" }
+          - { label: "Barre note — headline", name: "barre_note_headline", widget: "text" }
+          - { label: "Barre note — body", name: "barre_note_body", widget: "text" }
+
+          - { label: "——— FAQ ———", name: "_sep_faq", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "faq_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "faq_headline", widget: "text" }
+          - { label: "Section aside", name: "faq_aside", widget: "text" }
+          - label: "FAQ entries"
+            name: "faqs"
+            widget: "list"
+            min: 1
+            max: 20
+            summary: "{{fields.question}}"
             fields:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
@@ -161,28 +238,47 @@ collections:
         label: "Page content"
         file: "content/memberships/main.yml"
         fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "Founding Memberships" }
-          - { label: "Headline", name: "headline", widget: "text" }
-          - { label: "Body paragraph", name: "body", widget: "text" }
-          - { label: "Status note", name: "status", widget: "string", default: "Launching soon" }
-          - { label: "Form label", name: "form_label", widget: "string" }
-          - { label: "Button label", name: "cta", widget: "string", default: "Join the Founding Circle" }
+          - { label: "——— Hero (teaser) ———", name: "_sep_hero", widget: "hidden", required: false }
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero headline (HTML allowed for italics)", name: "hero_headline_html", widget: "text", hint: "Wrap a phrase in <span class='serif-italic'>…</span> to italicize" }
+          - { label: "Hero lead paragraph", name: "hero_lead", widget: "text" }
+          - { label: "Primary button — label", name: "hero_cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "hero_cta_primary_href", widget: "string" }
+          - { label: "Secondary button — label", name: "hero_cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "hero_cta_secondary_href", widget: "string" }
+
+          - { label: "——— Pull quote strip ———", name: "_sep_pq", widget: "hidden", required: false }
+          - { label: "Eyebrow", name: "pullquote_eyebrow", widget: "string" }
+          - { label: "Pull quote (HTML allowed for italics)", name: "pullquote_html", widget: "text" }
+          - { label: "Body paragraph", name: "pullquote_body", widget: "text" }
+
+          - { label: "——— Waitlist form ———", name: "_sep_wl", widget: "hidden", required: false }
+          - { label: "Eyebrow", name: "waitlist_eyebrow", widget: "string" }
+          - { label: "Headline", name: "waitlist_headline", widget: "text" }
+          - { label: "Lead paragraph", name: "waitlist_lead", widget: "text" }
+          - { label: "Form submit button label", name: "waitlist_cta", widget: "string" }
 
   # ─────────────────────────────────────────────
   # SCHEDULE PAGE (teaser)
   # ─────────────────────────────────────────────
   - name: "schedule"
     label: "Schedule (teaser)"
-    description: "Pre-launch teaser."
+    description: "Pre-launch teaser. One screen until the real schedule drops."
     files:
       - name: "schedule_main"
         label: "Page content"
         file: "content/schedule/main.yml"
         fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "The Schedule" }
-          - { label: "Headline", name: "headline", widget: "text" }
-          - { label: "Body", name: "body", widget: "text" }
-          - { label: "Status note", name: "status", widget: "string", default: "Class schedule launching soon" }
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Headline (HTML allowed for italics)", name: "headline_html", widget: "text", hint: "Wrap a phrase in <span class='serif-italic'>…</span> to italicize" }
+          - { label: "Lead paragraph", name: "lead", widget: "text" }
+          - { label: "Primary button — label", name: "cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "cta_primary_href", widget: "string" }
+          - { label: "Secondary button — label", name: "cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "cta_secondary_href", widget: "string" }
+          - { label: "Editorial image", name: "image", widget: "image" }
+          - { label: "Image alt text", name: "image_alt", widget: "text" }
+          - { label: "Image caption", name: "image_caption", widget: "string" }
 
   # ─────────────────────────────────────────────
   # MERCH PAGE
@@ -224,38 +320,93 @@ collections:
   # ─────────────────────────────────────────────
   - name: "teach"
     label: "Teach page"
-    description: "Instructor recruitment page."
+    description: "Instructor recruitment page — hero, philosophy, benefits, application."
     files:
       - name: "teach_main"
         label: "Page content"
         file: "content/teach/main.yml"
         fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string", default: "Teach at flowhouse" }
-          - { label: "Headline", name: "headline", widget: "text" }
-          - { label: "Intro paragraph", name: "intro", widget: "text" }
+          - { label: "——— Hero ———", name: "_sep_hero", widget: "hidden", required: false }
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero headline (HTML allowed for italics)", name: "hero_headline_html", widget: "text" }
+          - { label: "Hero lead paragraph", name: "hero_lead", widget: "text" }
+          - { label: "Primary button — label", name: "hero_cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "hero_cta_primary_href", widget: "string" }
+          - { label: "Secondary button — label", name: "hero_cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "hero_cta_secondary_href", widget: "string" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt", name: "hero_image_alt", widget: "text" }
+          - { label: "Hero badge", name: "hero_badge", widget: "string" }
+          - { label: "Meta strip — Open roles label", name: "hero_meta_roles", widget: "string" }
+          - { label: "Meta strip — Format label", name: "hero_meta_format", widget: "string" }
+          - { label: "Meta strip — Start label", name: "hero_meta_start", widget: "string" }
+
+          - { label: "——— Hiring philosophy ———", name: "_sep_phil", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "philosophy_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "philosophy_headline", widget: "text" }
+          - { label: "Section intro", name: "philosophy_intro", widget: "text" }
+          - { label: "Left column — eyebrow", name: "love_to_see_eyebrow", widget: "string" }
+          - { label: "Left column — headline", name: "love_to_see_headline", widget: "text" }
+          - label: "Left column — bullet list"
+            name: "love_to_see_items"
+            widget: "list"
+            min: 1
+            max: 12
+            field: { label: "Item", name: "item", widget: "string" }
+          - { label: "Right column — eyebrow", name: "train_eyebrow", widget: "string" }
+          - { label: "Right column — headline", name: "train_headline", widget: "text" }
+          - label: "Right column — bullet list"
+            name: "train_items"
+            widget: "list"
+            min: 1
+            max: 12
+            field: { label: "Item", name: "item", widget: "string" }
+
+          - { label: "——— Benefits (cards) ———", name: "_sep_ben", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "benefits_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "benefits_headline", widget: "text" }
+          - { label: "Section intro", name: "benefits_intro", widget: "text" }
           - label: "Benefit cards"
             name: "benefits"
             widget: "list"
+            min: 1
+            max: 12
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Benefit title", name: "title", widget: "string" }
-              - { label: "Benefit body", name: "body", widget: "text" }
-          - { label: "Application section headline", name: "apply_headline", widget: "text" }
-          - { label: "Application section body", name: "apply_body", widget: "text" }
+              - { label: "Card title", name: "title", widget: "string" }
+              - { label: "Card body", name: "body", widget: "text" }
+
+          - { label: "——— Application form ———", name: "_sep_app", widget: "hidden", required: false }
+          - { label: "Section eyebrow", name: "apply_eyebrow", widget: "string" }
+          - { label: "Section headline", name: "apply_headline", widget: "text" }
+          - { label: "Section lead", name: "apply_lead", widget: "text" }
 
   # ─────────────────────────────────────────────
   # GLOBAL — nav, footer, brand
   # ─────────────────────────────────────────────
   - name: "global"
     label: "Site-wide"
-    description: "Things that appear on every page — nav, footer, contact info."
+    description: "Things that appear on EVERY page — footer + sticky bar at the bottom of the screen."
     files:
       - name: "global_settings"
-        label: "Global settings"
+        label: "Site-wide settings"
         file: "content/global/settings.yml"
         fields:
-          - { label: "Studio email (footer)", name: "email", widget: "string", default: "info@flowhouserb.com" }
-          - { label: "Studio address (footer)", name: "address", widget: "string", default: "18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971" }
-          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
-          - { label: "Footer tagline", name: "footer_tagline", widget: "string", default: "A new movement space coming to Rehoboth · Summer 2026" }
-          - { label: "Sticky bar — left text", name: "sticky_left", widget: "string", default: "Opening Summer 2026 · Founding Memberships Launching Soon" }
-          - { label: "Sticky bar — button label", name: "sticky_cta", widget: "string", default: "Join the Founding Circle" }
+          - { label: "——— Footer brand column ———", name: "_sep_fb", widget: "hidden", required: false }
+          - { label: "Footer tagline (under wordmark)", name: "footer_tagline", widget: "text" }
+          - { label: "Footer address", name: "footer_address", widget: "string" }
+
+          - { label: "——— Connect (footer right) ———", name: "_sep_c", widget: "hidden", required: false }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+          - { label: "Instagram handle (display text, e.g. @myflowhouse)", name: "instagram_handle", widget: "string" }
+          - { label: "Studio email", name: "email", widget: "string" }
+
+          - { label: "——— Footer bottom strip ———", name: "_sep_b", widget: "hidden", required: false }
+          - { label: "Copyright line", name: "copyright", widget: "string" }
+          - { label: "Status line (right of footer)", name: "status", widget: "string" }
+
+          - { label: "——— Sticky bar (bottom of every page) ———", name: "_sep_s", widget: "hidden", required: false }
+          - { label: "Sticky title (bold)", name: "sticky_title", widget: "string" }
+          - { label: "Sticky subtitle", name: "sticky_subtitle", widget: "string" }
+          - { label: "Sticky button — label", name: "sticky_cta_label", widget: "string" }
+          - { label: "Sticky button — link", name: "sticky_cta_href", widget: "string" }

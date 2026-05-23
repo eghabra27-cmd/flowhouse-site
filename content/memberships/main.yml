@@ -1,6 +1,25 @@
-eyebrow: "Founding Memberships"
-headline: "Founding Memberships launching soon."
-body: "First access. Exclusive launch perks. Introductory pricing. Join the Founding Circle to be first in line — pricing and tiers will be released to founding members before anyone else."
-status: "Launching soon"
-form_label: "Be first to know:"
-cta: "Join the Founding Circle"
+# ──────────────────────────────────────────────
+# HERO (teaser)
+# ──────────────────────────────────────────────
+hero_eyebrow: "founding memberships launching soon"
+hero_headline_html: "First access. <span class='serif-italic'>First booking.</span> First through the door."
+hero_lead: "Founding members will receive first access to class booking, exclusive launch perks, and introductory membership opportunities. A new movement space is coming to Rehoboth — stay tuned for first access."
+hero_cta_primary_label: "Join the Founding Circle"
+hero_cta_primary_href: "index.html#waitlist"
+hero_cta_secondary_label: "The Method"
+hero_cta_secondary_href: "flowformer.html"
+
+# ──────────────────────────────────────────────
+# PULL QUOTE STRIP
+# ──────────────────────────────────────────────
+pullquote_eyebrow: "be first to know"
+pullquote_html: "An invitation, <em style=\"color: var(--c-pink);\">before the doors open.</em>"
+pullquote_body: "The Founding Circle is our pre-launch community — the first people to book, the first to know, the first to receive our launch perks. Quiet, considered, intentional."
+
+# ──────────────────────────────────────────────
+# WAITLIST FORM SECTION
+# ──────────────────────────────────────────────
+waitlist_eyebrow: "join us"
+waitlist_headline: "Be one of the first."
+waitlist_lead: "One update a month, max. Quiet, considered, never spam. We'll share the launch details as we have them."
+waitlist_cta: "Join the Founding Circle"

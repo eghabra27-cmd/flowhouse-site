@@ -107,7 +107,10 @@ function parse(tokens) {
 //  - "this.x"      -> always reads x from the innermost scope's `this`
 //  - "@index"      -> innermost scope's index
 function resolveRef(ref, scopes) {
-  if (ref === '@index') return scopes[scopes.length - 1]?.__index;
+  if (ref === '@index')   return scopes[scopes.length - 1]?.__index;
+  if (ref === '@index1')  return (scopes[scopes.length - 1]?.__index ?? -1) + 1;
+  if (ref === '@first')   return scopes[scopes.length - 1]?.__index === 0;
+  if (ref === '@last')    return scopes[scopes.length - 1]?.__last === true;
   const parts = ref.split('.');
   if (parts[0] === 'this') {
     const top = scopes[scopes.length - 1];
@@ -175,7 +178,12 @@ function renderNode(node, scopes) {
     const list = resolveRef(node.path, scopes);
     if (!Array.isArray(list)) return '';
     return list.map((item, i) => {
-      const newScope = { __this: item, __index: i, __global: scopes[0].__global || scopes[0] };
+      const newScope = {
+        __this: item,
+        __index: i,
+        __last: i === list.length - 1,
+        __global: scopes[0].__global || scopes[0],
+      };
       return node.children.map(c => renderNode(c, [...scopes, newScope])).join('');
     }).join('');
   }

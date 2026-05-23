@@ -1,12 +1,70 @@
-eyebrow: "Teach at flowhouse"
-headline: "Now hiring and training our founding instructors."
-intro: "We're building a founding team of pilates and barre instructors who care deeply about the practice, the community, and the studio. Certification preferred, not required — we mentor and train in-house for the right movement-focused people."
+# ──────────────────────────────────────────────
+# HERO
+# ──────────────────────────────────────────────
+hero_eyebrow: "teach at flowhouse · now hiring"
+hero_headline_html: "We're building the <em>founding</em> teaching team."
+hero_lead: "flowhouse is hiring and training instructors before we open. Certification is preferred — but not required. We mentor, we train in-house, and we believe great instructors are made in the room."
+hero_cta_primary_label: "Apply to teach"
+hero_cta_primary_href: "#apply"
+hero_cta_secondary_label: "Our hiring philosophy"
+hero_cta_secondary_href: "#path"
+hero_image: "images/v4/community.png"
+hero_image_alt: "A group of flowhouse instructors smiling against a warm walnut wall."
+hero_badge: "Apply now"
+hero_meta_roles: "Founding team"
+hero_meta_format: "Reformer & barre"
+hero_meta_start: "Summer 2026"
+
+# ──────────────────────────────────────────────
+# HIRING PHILOSOPHY
+# ──────────────────────────────────────────────
+philosophy_eyebrow: "our hiring philosophy"
+philosophy_headline: "Certification preferred. Movement obsession required."
+philosophy_intro: "We believe the best instructors are made — in the room, with mentorship, on real reformers, in front of real classes. We're open to movement-focused individuals at any starting point."
+
+love_to_see_eyebrow: "we love to see"
+love_to_see_headline: "A few things, in any combination."
+love_to_see_items:
+  - "A pilates, barre, dance, yoga, or rehab background"
+  - "A current certification (BASI, Polestar, STOTT, Romana's, Body Arts & Science, or equivalent)"
+  - "Group-class teaching experience — any modality"
+  - "Comfort with hands-on adjustments and clear verbal cueing"
+  - "A point of view about programming you can defend in conversation"
+  - "Above all: a calm, deep love for the practice"
+
+train_eyebrow: "we'll train you in"
+train_headline: "The Flowhouse Method."
+train_items:
+  - "In-house training on the Flowformer method and machine"
+  - "One-on-one mentorship through your first 90 days"
+  - "Programming workshops every quarter"
+  - "A real audition — not a résumé interview"
+  - "A founding-team seat in shaping the practice"
+
+# ──────────────────────────────────────────────
+# BENEFITS (6 cards)
+# ──────────────────────────────────────────────
+benefits_eyebrow: "what we offer"
+benefits_headline: "A teaching environment built by people who teach."
+benefits_intro: "Most studios optimise for the operator. We optimise for the instructor — because if the room behind the microphone is calm, the room in front of it is too."
+
 benefits:
-  - title: "Mentorship and in-house training"
-    body: "Our founding team trains together, learns together, and shapes the studio culture from day one."
+  - title: "Complimentary membership"
+    body: "Unlimited reformer + barre classes on our schedule for the duration of your time on the team. Movement keeps you sharp."
+  - title: "Discounted merchandise"
+    body: "Generous discount on the flowhouse apparel line. Wear it to teach, live in it after."
   - title: "Thoughtful compensation"
-    body: "Built to value your time and your craft. We're committed to compensation that reflects the work and the community you build."
-  - title: "A studio with intention"
-    body: "Modern equipment, warm space, a community that takes the practice seriously and doesn't take itself too seriously."
-apply_headline: "Apply to teach."
-apply_body: "Tell us a little about you, your background, and what you're looking for in a studio. We read every application."
+    body: "Competitive compensation, mentorship, and long-term growth opportunities within an expanding studio environment."
+  - title: "In-house training & mentorship"
+    body: "A real apprenticeship in the Flowhouse Method, one-on-one mentorship through your first 90 days, programming workshops every quarter."
+  - title: "Growth with the studio"
+    body: "Founding-team members shape what flowhouse becomes — the programming, the apprenticeship pipeline, the future locations. There's room to grow with us."
+  - title: "A community-focused environment"
+    body: "Small, warm, calm. We hire for warmth and craft, in that order. We protect the room — for our members and our team."
+
+# ──────────────────────────────────────────────
+# APPLICATION FORM
+# ──────────────────────────────────────────────
+apply_eyebrow: "application"
+apply_headline: "Tell us about you."
+apply_lead: "Five minutes. We respond to every application within a week."

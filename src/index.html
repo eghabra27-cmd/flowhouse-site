@@ -159,48 +159,31 @@
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
-            <span class="eyebrow">the modalities</span>
-            <h2>Reformer. Barre. <span class="serif-italic">Equally essential.</span></h2>
+            <span class="eyebrow">{{ home.classes.section_eyebrow }}</span>
+            <h2>{{ home.classes.section_headline_html | raw }}</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>An elevated movement studio blending reformer pilates, barre, and intentional strength-based movement — designed to support the body long-term through posture, alignment, mobility, core strength, and mind-body connection.</p>
+            <p>{{ home.classes.section_intro }}</p>
           </div>
         </div>
 
         <div class="class-grid">
+          {{#each home.classes.classes}}
           <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/v4/hero.png" alt="A practitioner mid-flow on the Flowformer"><span class="tag">50 min · intermediate</span></div>
+            <div class="class-card__media"><img src="{{ this.image }}" alt="{{ this.alt }}"><span class="tag">{{ this.tag }}</span></div>
             <div class="class-card__body">
-              <h3 class="h4">Signature</h3>
-              <p>Our signature reformer class blends modern strength-based movement with foundational principles inspired by Joseph Pilates. Through intentional movement, clients build deep core strength, pelvic-floor support, stability, endurance, and full-body control.</p>
-              <p class="text-muted text-sm" style="margin-top: 0.5rem;">While still accessible to many clients, the pacing and sequencing lean slightly intermediate/advanced and are best suited for those with prior reformer experience.</p>
-              <div class="class-card__meta"><span>Reformer</span><span>·</span><span>Time under tension</span></div>
+              <h3 class="h4">{{ this.name }}</h3>
+              <p>{{ this.bio }}</p>
+              {{#if this.note}}
+              <p class="text-muted text-sm" style="margin-top: 0.5rem;">{{ this.note }}</p>
+              {{/if}}
+              <div class="class-card__meta"><span>{{ this.meta_left }}</span><span>·</span><span>{{ this.meta_right }}</span></div>
             </div>
           </article>
-
-          <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/v4/class.png" alt="Three practitioners on reformers in a foundation-style class"><span class="tag">55 min · all levels</span></div>
-            <div class="class-card__body">
-              <h3 class="h4">Foundation</h3>
-              <p>The perfect introduction to both the reformer and the Flowhouse Method. This slower-paced class focuses on foundational pilates principles, alignment, breath, control, and safely learning the reformer.</p>
-              <p class="text-muted text-sm" style="margin-top: 0.5rem;">Designed to help clients build confidence, body awareness, and strong movement foundations. Suitable for all levels.</p>
-              <div class="class-card__meta"><span>Reformer</span><span>·</span><span>All levels</span></div>
-            </div>
-          </article>
-
-          <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="images/v4/barre.jpg" alt="Detail of a hand resting on the brass barre"><span class="tag">45 min · all levels</span></div>
-            <div class="class-card__body">
-              <h3 class="h4">Barre 45</h3>
-              <p>A modern barre class rooted in alignment, muscular endurance, posture, and low-impact strength training. Expect intentional movement, sculpt-based sequencing, deep core activation, and full-body burn designed to strengthen and support the body without high-impact stress.</p>
-              <div class="class-card__meta"><span>Barre</span><span>·</span><span>Continuous movement</span></div>
-            </div>
-          </article>
+          {{/each}}
         </div>
 
-        <p data-reveal class="text-muted text-sm" style="text-align:center; margin-top: var(--s-8); max-width: 56ch; margin-inline: auto;">
-          Yin restorative reformer recovery, foundations, and occasional introductory classes round out the full menu — launching with the studio.
-        </p>
+        <p data-reveal class="text-muted text-sm" style="text-align:center; margin-top: var(--s-8); max-width: 56ch; margin-inline: auto;">{{ home.classes.footer_note }}</p>
       </div>
     </section>
 
@@ -357,11 +340,9 @@
     <!-- 12 · FOUNDING WAITLIST (anchor CTA) -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
-        <span class="eyebrow" data-reveal>founding memberships launching soon</span>
-        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Be one of the first through the door.</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">
-          Founding members receive first access to class booking, exclusive launch perks, and introductory membership opportunities. A new movement space is coming to Rehoboth — stay tuned for first access.
-        </p>
+        <span class="eyebrow" data-reveal>{{ home.founding.eyebrow }}</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ home.founding.headline }}</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ home.founding.body }}</p>
         <form class="form-row" style="max-width: 480px; margin: 0 auto; text-align: left;" data-reveal>
           <div class="field">
             <label for="wl-name">First name</label>
@@ -371,8 +352,8 @@
             <label for="wl-email">Email</label>
             <input id="wl-email" type="email" autocomplete="email" required>
           </div>
-          <button type="submit" class="btn btn--ink btn--full">Join the Founding Circle</button>
-          <small style="color: rgba(251,243,235,0.7); font-size: 0.8rem; text-align: center;">One update a month, max. Never spam.</small>
+          <button type="submit" class="btn btn--ink btn--full">{{ home.founding.cta }}</button>
+          <small style="color: rgba(251,243,235,0.7); font-size: 0.8rem; text-align: center;">{{ home.founding.form_disclaimer }}</small>
         </form>
       </div>
     </section>
@@ -384,8 +365,8 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
-        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">{{ global.settings.footer_address }}</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -402,23 +383,23 @@
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
-        <a href="mailto:info@flowhouserb.com">info@flowhouserb.com</a>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 flowhouse · Rehoboth Beach, DE</span>
-      <span>Opening Summer 2026.</span>
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
     </div>
   </div>
 </footer>
 
 <div class="book-bar" role="region" aria-label="Founding circle">
   <div class="book-bar__text">
-    <strong>Founding Memberships · Launching Soon</strong>
-    <span>Join the Founding Circle for first access.</span>
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
   </div>
-  <a href="index.html#waitlist" class="btn btn--pink">Be first to know</a>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
 </div>
 
 <script src="js/site.js"></script>

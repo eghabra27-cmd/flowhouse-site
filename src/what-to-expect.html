@@ -85,17 +85,17 @@
       <div class="container">
         <div class="hero__grid">
           <div class="hero__copy" data-reveal>
-            <span class="eyebrow">what to expect</span>
-            <h1>More than a workout.</h1>
-            <p class="lead">Movement designed to strengthen the body while creating space to reconnect with yourself. Flowhouse is a place to reset, strengthen, and return to your body — every class, every visit.</p>
+            <span class="eyebrow">{{ what-to-expect.main.hero_eyebrow }}</span>
+            <h1>{{ what-to-expect.main.hero_headline }}</h1>
+            <p class="lead">{{ what-to-expect.main.hero_subhead }}</p>
             <div class="hero__cta-row">
-              <a href="index.html#waitlist" class="btn btn--primary">Join the Founding Circle</a>
-              <a href="#flow" class="btn btn--ghost">See the class flow</a>
+              <a href="{{ what-to-expect.main.hero_cta_primary_href }}" class="btn btn--primary">{{ what-to-expect.main.hero_cta_primary_label }}</a>
+              <a href="{{ what-to-expect.main.hero_cta_secondary_href }}" class="btn btn--ghost">{{ what-to-expect.main.hero_cta_secondary_label }}</a>
             </div>
           </div>
           <div class="hero__image-frame" data-reveal>
-            <img src="images/v4/class.png" alt="Three flowhouse practitioners working on Flowformer reformers with overhead cable straps, warm ambient lighting." loading="eager">
-            <span class="hero__image-badge">Opening Summer 2026</span>
+            <img src="{{ what-to-expect.main.hero_image }}" alt="{{ what-to-expect.main.hero_image_alt }}" loading="eager">
+            <span class="hero__image-badge">{{ what-to-expect.main.hero_badge }}</span>
           </div>
         </div>
       </div>
@@ -106,21 +106,18 @@
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
-            <span class="eyebrow">the class flow</span>
-            <h2>Six blocks. One conversation with the body.</h2>
+            <span class="eyebrow">{{ what-to-expect.main.flow_eyebrow }}</span>
+            <h2>{{ what-to-expect.main.flow_headline }}</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>Every Signature and Foundation class is structured this way — sequenced for time under tension, continuous movement, and intentional return.</p>
+            <p>{{ what-to-expect.main.flow_intro }}</p>
           </div>
         </div>
 
         <ol class="checklist">
-          <li data-reveal><span class="num">1</span><div><strong>Center · core activation</strong><p>Breath work and deep-core engagement on the Flowformer. We start the conversation from the inside out — finding the muscles that hold every other movement together.</p></div></li>
-          <li data-reveal><span class="num">2</span><div><strong>Lower body block</strong><p>Footwork, glutes, hamstrings. Time-under-tension reps on the carriage — slow eccentrics, intentional control, low-impact strength.</p></div></li>
-          <li data-reveal><span class="num">3</span><div><strong>Obliques</strong><p>Side-lying work, rotational planks, kneeling oblique series. The most quietly powerful block — and the one you'll feel two days later.</p></div></li>
-          <li data-reveal><span class="num">4</span><div><strong>Upper body block</strong><p>Long-lever arms on the cables, push-pull symmetry, breath-led pacing. Strength without strain.</p></div></li>
-          <li data-reveal><span class="num">5</span><div><strong>Final core push · center abdominals</strong><p>One last deliberate burn. Centered, low-impact, high-intensity — the moment you'll catch yourself smiling mid-flow.</p></div></li>
-          <li data-reveal><span class="num">6</span><div><strong>Slow stretch + cool down</strong><p>Long-line opening, breath, nervous-system regulation. You'll wipe the carriage, reset, and walk out taller than you came in.</p></div></li>
+          {{#each what-to-expect.main.flow_blocks}}
+          <li data-reveal><span class="num">{{ @index1 }}</span><div><strong>{{ this.title }}</strong><p>{{ this.body }}</p></div></li>
+          {{/each}}
         </ol>
       </div>
     </section>
@@ -130,13 +127,13 @@
       <div class="container container-wide">
         <div class="feature-split feature-split--reverse">
           <div class="feature-split__media" data-reveal style="aspect-ratio: 4/3;">
-            <img src="images/v4/community.png" alt="Three flowhouse members chatting in the studio after class against a walnut wall.">
+            <img src="{{ what-to-expect.main.after_image }}" alt="{{ what-to-expect.main.after_image_alt }}">
           </div>
           <div class="feature-split__copy" data-reveal>
-            <span class="eyebrow">after class</span>
-            <h2 class="h3" style="margin: 0.5rem 0 1rem;">A social and wellness experience.</h2>
-            <p class="lead">flowhouse is a sanctuary, but also a community. Stay after class. Grab a juice. Chat with the founding circle. Linger in the calm.</p>
-            <p class="text-muted">The hour on the Flowformer is the start of the ritual — not the end of it. We protect the calm inside the studio and we welcome you into the community right outside it. Both are part of the experience.</p>
+            <span class="eyebrow">{{ what-to-expect.main.after_eyebrow }}</span>
+            <h2 class="h3" style="margin: 0.5rem 0 1rem;">{{ what-to-expect.main.after_headline }}</h2>
+            <p class="lead">{{ what-to-expect.main.after_lead }}</p>
+            <p class="text-muted">{{ what-to-expect.main.after_body }}</p>
           </div>
         </div>
       </div>
@@ -147,25 +144,24 @@
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
-            <span class="eyebrow">start here</span>
-            <h2>Four things to know before your first class.</h2>
+            <span class="eyebrow">{{ what-to-expect.main.start_eyebrow }}</span>
+            <h2>{{ what-to-expect.main.start_headline }}</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>Simple, intentional, no over-explanation. You walk in calm — and walk out hooked.</p>
+            <p>{{ what-to-expect.main.start_intro }}</p>
           </div>
         </div>
 
         <ol class="checklist">
-          <li data-reveal><span class="num">1</span><div><strong>Begin with Intro or Foundation.</strong><p>Both are paced and cued for first-time movers. From there, Signature, Yin, and Barre 45 are all open to you.</p></div></li>
-          <li data-reveal><span class="num">2</span><div><strong>Wear something comfortable you can move in.</strong><p>Fitted or relaxed, your call. The flowhouse line will be available in studio at launch.</p></div></li>
-          <li data-reveal><span class="num">3</span><div><strong>Grip socks required.</strong><p>Available for purchase in studio — quietly part of the kit you'll keep returning to.</p></div></li>
-          <li data-reveal><span class="num">4</span><div><strong>Bring water — beverages available in studio.</strong><p>Filtered water on-site. Stay after for a juice and meet the community.</p></div></li>
+          {{#each what-to-expect.main.start_items}}
+          <li data-reveal><span class="num">{{ @index1 }}</span><div><strong>{{ this.title }}</strong><p>{{ this.body }}</p></div></li>
+          {{/each}}
         </ol>
 
         <div data-reveal style="background: var(--c-card); border: 1px solid var(--c-divider); border-radius: var(--r-lg); padding: var(--s-6); margin-top: var(--s-8);">
-          <span class="eyebrow">a note on barre</span>
-          <h4 style="margin: 0.5rem 0;">Barre is beginner-friendly, low impact, posture-enhancing, strength-focused — and a perfect complement to your reformer practice.</h4>
-          <p class="text-muted">Two barre walls, twenty-five spots per Barre 45 class, continuous movement, and intentional burn. It belongs alongside the reformer, not behind it.</p>
+          <span class="eyebrow">{{ what-to-expect.main.barre_note_eyebrow }}</span>
+          <h4 style="margin: 0.5rem 0;">{{ what-to-expect.main.barre_note_headline }}</h4>
+          <p class="text-muted">{{ what-to-expect.main.barre_note_body }}</p>
         </div>
       </div>
     </section>
@@ -175,43 +171,21 @@
       <div class="container">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
-            <span class="eyebrow">questions, answered</span>
-            <h2>The things you'd text a friend who's already done it.</h2>
+            <span class="eyebrow">{{ what-to-expect.main.faq_eyebrow }}</span>
+            <h2>{{ what-to-expect.main.faq_headline }}</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>Can't find your question? Email <a href="mailto:info@flowhouserb.com" style="border-bottom: 1px solid var(--c-divider-strong);">info@flowhouserb.com</a> — we read everything.</p>
+            <p>{{ what-to-expect.main.faq_aside }}</p>
           </div>
         </div>
 
         <div class="faq" data-reveal>
-          <details open>
-            <summary>What's the difference between Signature and Barre 45?</summary>
-            <p>Signature is our contemporary reformer pilates class on the Flowformer — full-body, time-under-tension, sequenced. Barre 45 is a strength-based barre class on the wall using small props and continuous movement. Different equipment, same flowhouse philosophy: precision-based, low impact, high intensity.</p>
+          {{#each what-to-expect.main.faqs}}
+          <details{{#if @first}} open{{/if}}>
+            <summary>{{ this.question }}</summary>
+            <p>{{ this.answer }}</p>
           </details>
-          <details>
-            <summary>What's the difference between Foundation and Signature?</summary>
-            <p>Foundation is the slower, more cued version of Signature — built for new reformer movers and for refining the basics. You'll learn the Flowformer setup, the springs, and our foundational positions. Signature assumes you know the carriage and moves at a steadier, more continuous pace.</p>
-          </details>
-          <details>
-            <summary>What is Yin?</summary>
-            <p>Yin is our restorative reformer-based stretch and recovery class, inspired by yin yoga principles. Slow holds, long lines, breath-led pacing, nervous-system regulation. The class your body books for itself after a hard week.</p>
-          </details>
-          <details>
-            <summary>What should beginners start with?</summary>
-            <p>Start with Foundation if you're new to reformer pilates, or grab a seat in our occasional Intro class. Both are paced and cued for first-timers. Once you've taken either one, Signature, Yin, and Barre 45 are all open to you.</p>
-          </details>
-          <details>
-            <summary>I've never done pilates. Is this for me?</summary>
-            <p>Yes — and especially yes. Reformer pilates is one of the most beginner-friendly strength practices because the machine supports you while it challenges you.</p>
-          </details>
-          <details>
-            <summary>How fit do I need to be to start?</summary>
-            <p>Not fit at all. We program for every body — including people coming back from injury, post-partum, or who haven't moved in years. Just tell your instructor at check-in.</p>
-          </details>
-          <details>
-            <summary>Is the studio women-only?</summary>
-            <p>No. flowhouse is a women-led studio with a beautifully diverse community. We welcome everyone who wants to move with intention.</p>
-          </details>
+          {{/each}}
         </div>
       </div>
     </section>
@@ -223,8 +197,8 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
-        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">{{ global.settings.footer_address }}</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -241,23 +215,23 @@
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
-        <a href="mailto:info@flowhouserb.com">info@flowhouserb.com</a>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 flowhouse · Rehoboth Beach, DE</span>
-      <span>Opening Summer 2026.</span>
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
     </div>
   </div>
 </footer>
 
 <div class="book-bar" role="region" aria-label="Founding circle">
   <div class="book-bar__text">
-    <strong>Founding Memberships · Launching Soon</strong>
-    <span>Join the Founding Circle for first access.</span>
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
   </div>
-  <a href="index.html#waitlist" class="btn btn--pink">Be first to know</a>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
 </div>
 
 <script src="js/site.js"></script>

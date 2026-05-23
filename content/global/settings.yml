@@ -1,6 +1,20 @@
+# These appear on EVERY page (footer + sticky bar).
+
+# ── Footer brand column ──
+footer_tagline: "A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach."
+footer_address: "18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971"
+
+# ── Footer connect column ──
+instagram_url: "https://instagram.com/myflowhouse"
+instagram_handle: "@myflowhouse"
 email: "info@flowhouserb.com"
-address: "18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971"
-instagram: "https://instagram.com/myflowhouse"
-footer_tagline: "A new movement space coming to Rehoboth · Summer 2026"
-sticky_left: "Opening Summer 2026 · Founding Memberships Launching Soon"
-sticky_cta: "Join the Founding Circle"
+
+# ── Footer bottom strip ──
+copyright: "© 2026 flowhouse · Rehoboth Beach, DE"
+status: "Opening Summer 2026."
+
+# ── Sticky bar (appears bottom of every page) ──
+sticky_title: "Founding Memberships · Launching Soon"
+sticky_subtitle: "Join the Founding Circle for first access."
+sticky_cta_label: "Be first to know"
+sticky_cta_href: "index.html#waitlist"

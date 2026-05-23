@@ -66,13 +66,13 @@
 
     <section class="section" style="padding-top: clamp(var(--s-12), 10vw, var(--s-24)); padding-bottom: clamp(var(--s-12), 10vw, var(--s-24));">
       <div class="container container-narrow" style="text-align: center;">
-        <span class="eyebrow" data-reveal>founding memberships launching soon</span>
-        <h1 data-reveal style="margin: var(--s-5) 0;">First access. <span class="serif-italic">First booking.</span> First through the door.</h1>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8);">Founding members will receive first access to class booking, exclusive launch perks, and introductory membership opportunities. A new movement space is coming to Rehoboth — stay tuned for first access.</p>
+        <span class="eyebrow" data-reveal>{{ memberships.main.hero_eyebrow }}</span>
+        <h1 data-reveal style="margin: var(--s-5) 0;">{{ memberships.main.hero_headline_html | raw }}</h1>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8);">{{ memberships.main.hero_lead }}</p>
 
         <div data-reveal style="display:flex; gap: var(--s-3); flex-wrap: wrap; justify-content: center;">
-          <a href="index.html#waitlist" class="btn btn--primary">Join the Founding Circle</a>
-          <a href="flowformer.html" class="btn btn--ghost">The Method</a>
+          <a href="{{ memberships.main.hero_cta_primary_href }}" class="btn btn--primary">{{ memberships.main.hero_cta_primary_label }}</a>
+          <a href="{{ memberships.main.hero_cta_secondary_href }}" class="btn btn--ghost">{{ memberships.main.hero_cta_secondary_label }}</a>
         </div>
       </div>
     </section>
@@ -80,22 +80,18 @@
     <!-- pull quote -->
     <section class="section section--walnut">
       <div class="container container-narrow" style="text-align: center;">
-        <span class="eyebrow" data-reveal>be first to know</span>
-        <p class="pull-quote" data-reveal style="margin-top: var(--s-6); color: #f5ecdf;">An invitation, <em style="color: var(--c-pink);">before the doors open.</em></p>
-        <p class="lead" data-reveal style="margin: var(--s-8) auto 0;">
-          The Founding Circle is our pre-launch community — the first people to book, the first to know, the first to receive our launch perks. Quiet, considered, intentional.
-        </p>
+        <span class="eyebrow" data-reveal>{{ memberships.main.pullquote_eyebrow }}</span>
+        <p class="pull-quote" data-reveal style="margin-top: var(--s-6); color: #f5ecdf;">{{ memberships.main.pullquote_html | raw }}</p>
+        <p class="lead" data-reveal style="margin: var(--s-8) auto 0;">{{ memberships.main.pullquote_body }}</p>
       </div>
     </section>
 
     <!-- founding waitlist -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
-        <span class="eyebrow" data-reveal>join us</span>
-        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Be one of the first.</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">
-          One update a month, max. Quiet, considered, never spam. We'll share the launch details as we have them.
-        </p>
+        <span class="eyebrow" data-reveal>{{ memberships.main.waitlist_eyebrow }}</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ memberships.main.waitlist_headline }}</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ memberships.main.waitlist_lead }}</p>
         <form class="form-row" style="max-width: 480px; margin: 0 auto; text-align: left;" data-reveal>
           <div class="field">
             <label for="m-name">First name</label>
@@ -105,7 +101,7 @@
             <label for="m-email">Email</label>
             <input id="m-email" type="email" autocomplete="email" required>
           </div>
-          <button type="submit" class="btn btn--ink btn--full">Join the Founding Circle</button>
+          <button type="submit" class="btn btn--ink btn--full">{{ memberships.main.waitlist_cta }}</button>
         </form>
       </div>
     </section>
@@ -117,8 +113,8 @@
     <div class="footer-grid">
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
-        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">{{ global.settings.footer_address }}</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -135,23 +131,23 @@
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
-        <a href="mailto:info@flowhouserb.com">info@flowhouserb.com</a>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 flowhouse · Rehoboth Beach, DE</span>
-      <span>Opening Summer 2026.</span>
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
     </div>
   </div>
 </footer>
 
 <div class="book-bar" role="region" aria-label="Founding circle">
   <div class="book-bar__text">
-    <strong>Founding Memberships · Launching Soon</strong>
-    <span>Join the Founding Circle for first access.</span>
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
   </div>
-  <a href="index.html#waitlist" class="btn btn--pink">Be first to know</a>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
 </div>
 
 <script src="js/site.js"></script>
