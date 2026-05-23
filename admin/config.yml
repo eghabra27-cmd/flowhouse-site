@@ -6,9 +6,9 @@ backend:
   name: github
   repo: eghabra27-cmd/flowhouse-site
   branch: main
-  # Sveltia uses GitHub OAuth directly via its hosted auth helper
-  # (no Netlify Identity, no separate auth server required)
-  base_url: https://gh-auth.sveltia.dev
+  # Sveltia uses GitHub OAuth via our Cloudflare Worker auth helper
+  # (deployed at sveltia-cms-auth.eghabra27.workers.dev)
+  base_url: https://sveltia-cms-auth.eghabra27.workers.dev
   auth_endpoint: auth
   commit_messages:
     create: 'content: create {{collection}} "{{slug}}"'
