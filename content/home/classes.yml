@@ -1,0 +1,13 @@
+classes:
+  - name: "Signature"
+    meta: "50 min · 10 spots"
+    bio: "Our signature reformer class — a full-body, low-impact, high-intensity practice on the Flowformer. Cardio, strength, and stability woven into one intentional flow. Breath-led. Time under tension. Every class designed to leave you feeling grounded, strong, and connected to your body."
+    image: "/images/v4/class.png"
+  - name: "Foundation"
+    meta: "50 min · 10 spots"
+    bio: "Our slower, more foundational reformer class — built for beginners, returning movers, or anyone wanting to feel every detail of the practice. Same Flowformer. Same intention. More time spent on the why behind each movement, the cueing, and the breath."
+    image: "/images/v4/foundation.png"
+  - name: "Barre 45"
+    meta: "45 min · 25 spots"
+    bio: "Our high-energy barre class. A full-body, ballet-inspired workout designed to sculpt, strengthen, and elevate. Pulses, isometrics, and intentional movement at the barre and beyond. Music-driven. Endurance-forward. The studio's pulse."
+    image: "/images/v4/barre.png"

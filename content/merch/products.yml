@@ -1,0 +1,59 @@
+# When the Squarespace store is live, paste each product's Squarespace URL into checkout_url
+# and flip coming_soon to false. The /merch page will swap "Coming Soon" for "Add to Cart" automatically.
+
+products:
+  - name: "Studio Wrap"
+    tagline: "Taupe · oversized fleece wrap"
+    price: ""
+    image: "/images/v4/merch-1.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Studio Wrap"
+    tagline: "Black · oversized fleece wrap"
+    price: ""
+    image: "/images/v4/merch-2.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Studio Bra"
+    tagline: "Cream · seamless studio bra"
+    price: ""
+    image: "/images/v4/merch-3.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Studio Legging"
+    tagline: "Cream · high-rise studio legging"
+    price: ""
+    image: "/images/v4/merch-4.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Core Tee"
+    tagline: "Brown · everyday core tee"
+    price: ""
+    image: "/images/v4/merch-5.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Core Tee"
+    tagline: "White · everyday core tee"
+    price: ""
+    image: "/images/v4/merch-6.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Flow Raglan"
+    tagline: "Cream · long-sleeve raglan"
+    price: ""
+    image: "/images/v4/merch-7.png"
+    checkout_url: ""
+    coming_soon: true
+
+  - name: "Studio Cap"
+    tagline: "Cream · embroidered cap"
+    price: ""
+    image: "/images/v4/merch-8.png"
+    checkout_url: ""
+    coming_soon: true
