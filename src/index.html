@@ -95,22 +95,22 @@
       <div class="container">
         <div class="hero__grid">
           <div class="hero__copy" data-reveal>
-            <span class="eyebrow">Opening Summer 2026 · Rehoboth Beach</span>
-            <h1>A movement <em>sanctuary</em> on the Delaware coast.</h1>
-            <p class="lead">Contemporary reformer pilates and barre rooted in intentional movement, strength, alignment, and full-body longevity. A new movement space coming to Rehoboth.</p>
+            <span class="eyebrow">{{ home.hero.eyebrow }}</span>
+            <h1>{{ home.hero.headline_html | raw }}</h1>
+            <p class="lead">{{ home.hero.subhead }}</p>
             <div class="hero__cta-row">
-              <a href="#waitlist" class="btn btn--primary">Join the Founding Circle</a>
-              <a href="flowformer.html" class="btn btn--ghost">The Method</a>
+              <a href="{{ home.hero.cta_primary_href }}" class="btn btn--primary">{{ home.hero.cta_primary_label }}</a>
+              <a href="{{ home.hero.cta_secondary_href }}" class="btn btn--ghost">{{ home.hero.cta_secondary_label }}</a>
             </div>
             <dl class="hero__meta">
-              <div><dt>Method</dt><dd>The Flowformer</dd></div>
-              <div><dt>Modalities</dt><dd>Reformer · Barre · Yin</dd></div>
-              <div><dt>Opening</dt><dd>Summer 2026</dd></div>
+              <div><dt>Method</dt><dd>{{ home.hero.meta_method }}</dd></div>
+              <div><dt>Modalities</dt><dd>{{ home.hero.meta_modalities }}</dd></div>
+              <div><dt>Opening</dt><dd>{{ home.hero.meta_opening }}</dd></div>
             </dl>
           </div>
           <div class="hero__image-frame" data-reveal>
-            <img src="images/v4/hero.png" alt="A flowhouse practitioner in cream activewear performing a long-line side stretch on the custom Flowformer reformer, against a warm walnut wood-slat wall." loading="eager" fetchpriority="high">
-            <span class="hero__image-badge">Founding Circle · Now Open</span>
+            <img src="{{ home.hero.hero_image }}" alt="{{ home.hero.hero_image_alt }}" loading="eager" fetchpriority="high">
+            <span class="hero__image-badge">{{ home.hero.badge }}</span>
           </div>
         </div>
       </div>
@@ -313,22 +313,12 @@
         </div>
 
         <div class="class-grid">
-          
+          {{#each home.testimonials.testimonials}}
           <div class="quote-card" data-reveal>
-            <blockquote>"sam! this is great, we've been looking for a place to do it all."</blockquote>
-            <cite>— Heather</cite>
+            <blockquote>"{{ this.quote }}"</blockquote>
+            <cite>— {{ this.name }}</cite>
           </div>
-          
-          <div class="quote-card" data-reveal>
-            <blockquote>"wishhh i was closer omg."</blockquote>
-            <cite>— Hayley</cite>
-          </div>
-          
-          <div class="quote-card" data-reveal>
-            <blockquote>"eep so excited."</blockquote>
-            <cite>— Julia</cite>
-          </div>
-          
+          {{/each}}
         </div>
       </div>
     </section>

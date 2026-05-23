@@ -1,0 +1,68 @@
+name: Build and deploy flowhouse
+
+# Runs whenever:
+#  - Content is edited in /content (your sister hits Publish in /admin)
+#  - Templates are edited in /src (the dev side)
+#  - The build script itself changes
+# Result: /content + /src -> regenerated HTML at the repo root -> GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'src/**'
+      - 'css/**'
+      - 'images/**'
+      - 'brand/**'
+      - 'admin/**'
+      - 'build.js'
+      - 'package.json'
+      - '_redirects'
+      - 'netlify.toml'
+      - '.github/workflows/build-and-deploy.yml'
+  workflow_dispatch:
+
+# Required for GitHub Pages deploy
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Avoid concurrent deploys stomping on each other
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          # Need full history so we can commit back
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build site
+        run: npm run build
+
+      - name: Commit regenerated HTML (if changed)
+        run: |
+          git config user.name "flowhouse-bot"
+          git config user.email "bot@flowhouse.dev"
+          git add -A '*.html'
+          if git diff --cached --quiet; then
+            echo "No HTML changes to commit."
+          else
+            git commit -m "build: regenerate pages from content"
+            git push
+          fi

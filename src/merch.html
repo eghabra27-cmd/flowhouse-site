@@ -115,95 +115,25 @@
         </div>
 
         <div class="product-grid">
-          
-          
+          {{#each merch.products.products}}
+          {{#unless this.hidden}}
           <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-wrap-taupe.png" alt="The Studio Wrap long-sleeve in taupe — flat lay product photograph."></div>
-            <span class="product__name">The Studio Wrap · Taupe</span>
-            <span class="product__meta">Ribbed long-sleeve · coming soon</span>
-            
+            {{#if this.checkout_url}}
+            <a class="product__link" href="{{ this.checkout_url }}" target="_blank" rel="noopener">
+              <div class="product__media"><img src="{{ this.image }}" alt="{{ this.alt }}"></div>
+              <span class="product__name">{{ this.name }}</span>
+              <span class="product__meta">{{ this.meta }}{{#if this.price}} · {{ this.price }}{{/if}}</span>
+              <span class="product__cta">Add to Cart →</span>
+            </a>
+            {{/if}}
+            {{#unless this.checkout_url}}
+            <div class="product__media"><img src="{{ this.image }}" alt="{{ this.alt }}"></div>
+            <span class="product__name">{{ this.name }}</span>
+            <span class="product__meta">{{ this.meta }} · coming soon</span>
+            {{/unless}}
           </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-wrap-black.png" alt="The Studio Wrap long-sleeve in black — flat lay product photograph."></div>
-            <span class="product__name">The Studio Wrap · Black</span>
-            <span class="product__meta">Ribbed long-sleeve · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-bra-set.png" alt="Flowhouse seamless sports bra and leggings flat lay in black."></div>
-            <span class="product__name">The Studio Bra &amp; Legging</span>
-            <span class="product__meta">Seamless set · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-tee-brown.png" alt="The Core Tee in vintage brown — folded flat lay."></div>
-            <span class="product__name">The Core Tee · Vintage Brown</span>
-            <span class="product__meta">Oversized boxy fit · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-tee-white.png" alt="The Core Tee in vintage white — folded flat lay."></div>
-            <span class="product__name">The Core Tee · Vintage White</span>
-            <span class="product__meta">Oversized boxy fit · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-raglan.png" alt="The Flow Raglan tee in heather gray with charcoal sleeves."></div>
-            <span class="product__name">The Flow Raglan</span>
-            <span class="product__meta">Vertical wordmark print · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-tanks.png" alt="Two ribbed tank tops — heather gray and navy — flat lay."></div>
-            <span class="product__name">The Ribbed Tank · Heather &amp; Navy</span>
-            <span class="product__meta">Layered everyday · coming soon</span>
-            
-          </div>
-          
-          
-          
-          <div class="product" data-reveal>
-            
-            
-            <div class="product__media"><img src="images/v4/merch-caps.png" alt="Two washed dad caps in black and cream — flat lay."></div>
-            <span class="product__name">The Studio Cap · Black &amp; Cream</span>
-            <span class="product__meta">Washed cotton · coming soon</span>
-            
-          </div>
-          
-          
+          {{/unless}}
+          {{/each}}
         </div>
       </div>
     </section>

@@ -1,59 +1,78 @@
-# When the Squarespace store is live, paste each product's Squarespace URL into checkout_url
-# and flip coming_soon to false. The /merch page will swap "Coming Soon" for "Add to Cart" automatically.
+# THE FLOWHOUSE MERCH LINE
+#
+# Each product card shows EITHER:
+#   • A "Coming Soon" pill (pre-launch — when checkout_url is empty)
+#   • An "Add to Cart" button (post-launch — once checkout_url is pasted in)
+#
+# To go live with a product:
+#   1. Create the product in your Squarespace store
+#   2. Copy the product URL from Squarespace (looks like https://flowhouse-store.squarespace.com/shop/p/the-studio-wrap-taupe)
+#    3. Paste it into checkout_url below
+#   4. Hit Publish — the button changes automatically
+#
+# To make a product disappear from the site, set hidden: true
 
 products:
-  - name: "Studio Wrap"
-    tagline: "Taupe · oversized fleece wrap"
+  - name: "The Studio Wrap · Taupe"
+    meta: "Ribbed long-sleeve"
+    image: "images/v4/merch-wrap-taupe.png"
+    alt: "The Studio Wrap long-sleeve in taupe — flat lay product photograph."
     price: ""
-    image: "/images/v4/merch-1.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Studio Wrap"
-    tagline: "Black · oversized fleece wrap"
+  - name: "The Studio Wrap · Black"
+    meta: "Ribbed long-sleeve"
+    image: "images/v4/merch-wrap-black.png"
+    alt: "The Studio Wrap long-sleeve in black — flat lay product photograph."
     price: ""
-    image: "/images/v4/merch-2.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Studio Bra"
-    tagline: "Cream · seamless studio bra"
+  - name: "The Studio Bra & Legging"
+    meta: "Seamless set"
+    image: "images/v4/merch-bra-set.png"
+    alt: "Flowhouse seamless sports bra and leggings flat lay in black."
     price: ""
-    image: "/images/v4/merch-3.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Studio Legging"
-    tagline: "Cream · high-rise studio legging"
+  - name: "The Core Tee · Vintage Brown"
+    meta: "Oversized boxy fit"
+    image: "images/v4/merch-tee-brown.png"
+    alt: "The Core Tee in vintage brown — folded flat lay."
     price: ""
-    image: "/images/v4/merch-4.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Core Tee"
-    tagline: "Brown · everyday core tee"
+  - name: "The Core Tee · Vintage White"
+    meta: "Oversized boxy fit"
+    image: "images/v4/merch-tee-white.png"
+    alt: "The Core Tee in vintage white — folded flat lay."
     price: ""
-    image: "/images/v4/merch-5.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Core Tee"
-    tagline: "White · everyday core tee"
+  - name: "The Flow Raglan"
+    meta: "Vertical wordmark print"
+    image: "images/v4/merch-raglan.png"
+    alt: "The Flow Raglan tee in heather gray with charcoal sleeves."
     price: ""
-    image: "/images/v4/merch-6.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Flow Raglan"
-    tagline: "Cream · long-sleeve raglan"
+  - name: "The Ribbed Tank · Heather & Navy"
+    meta: "Layered everyday"
+    image: "images/v4/merch-tanks.png"
+    alt: "Two ribbed tank tops — heather gray and navy — flat lay."
     price: ""
-    image: "/images/v4/merch-7.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false
 
-  - name: "Studio Cap"
-    tagline: "Cream · embroidered cap"
+  - name: "The Studio Cap · Black & Cream"
+    meta: "Washed cotton"
+    image: "images/v4/merch-caps.png"
+    alt: "Two washed dad caps in black and cream — flat lay."
     price: ""
-    image: "/images/v4/merch-8.png"
     checkout_url: ""
-    coming_soon: true
+    hidden: false

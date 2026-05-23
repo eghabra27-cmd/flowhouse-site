@@ -3,8 +3,13 @@
 # Hosting: Netlify  |  Source of truth: GitHub repo eghabra27-cmd/flowhouse-site
 
 backend:
-  name: git-gateway
+  name: github
+  repo: eghabra27-cmd/flowhouse-site
   branch: main
+  # Sveltia uses GitHub OAuth directly via its hosted auth helper
+  # (no Netlify Identity, no separate auth server required)
+  base_url: https://gh-auth.sveltia.dev
+  auth_endpoint: auth
   commit_messages:
     create: 'content: create {{collection}} "{{slug}}"'
     update: 'content: update {{collection}} "{{slug}}"'
@@ -36,13 +41,19 @@ collections:
         label: "Hero section"
         file: "content/home/hero.yml"
         fields:
-          - { label: "Eyebrow (small text above headline)", name: "eyebrow", widget: "string", default: "Opening Summer 2026" }
-          - { label: "Headline", name: "headline", widget: "text", default: "A movement sanctuary on the Delaware coast." }
+          - { label: "Eyebrow (small text above headline)", name: "eyebrow", widget: "string" }
+          - { label: "Headline (HTML allowed — wrap one word in <em>…</em> to italicize)", name: "headline_html", widget: "text" }
           - { label: "Subhead paragraph", name: "subhead", widget: "text" }
-          - { label: "Badge text", name: "badge", widget: "string", default: "Founding Circle · Now Open" }
-          - { label: "Primary button label", name: "cta_primary", widget: "string", default: "Join the Founding Circle" }
-          - { label: "Secondary button label", name: "cta_secondary", widget: "string", default: "Explore the studio" }
-          - { label: "Hero image", name: "hero_image", widget: "image", required: false }
+          - { label: "Badge text (on the hero image)", name: "badge", widget: "string" }
+          - { label: "Primary button — label", name: "cta_primary_label", widget: "string" }
+          - { label: "Primary button — link", name: "cta_primary_href", widget: "string", hint: "Use #waitlist for the Founding Circle form, or a page like memberships.html" }
+          - { label: "Secondary button — label", name: "cta_secondary_label", widget: "string" }
+          - { label: "Secondary button — link", name: "cta_secondary_href", widget: "string" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt text (for accessibility & SEO)", name: "hero_image_alt", widget: "text" }
+          - { label: "Meta strip — Method label", name: "meta_method", widget: "string" }
+          - { label: "Meta strip — Modalities label", name: "meta_modalities", widget: "string" }
+          - { label: "Meta strip — Opening label", name: "meta_opening", widget: "string" }
 
       - name: "home_classes"
         label: "Class menu (3 classes)"
@@ -190,21 +201,23 @@ collections:
           - { label: "Status banner", name: "status", widget: "string", default: "Limited first release coming soon" }
 
       - name: "merch_products"
-        label: "Products (8 items)"
+        label: "Products"
         file: "content/merch/products.yml"
         fields:
           - label: "Products"
             name: "products"
             widget: "list"
+            summary: "{{fields.name}} — {{fields.meta}}"
             min: 1
-            max: 12
+            max: 24
             fields:
-              - { label: "Product name", name: "name", widget: "string" }
-              - { label: "Tagline", name: "tagline", widget: "string", required: false }
-              - { label: "Price (display only, e.g. $58)", name: "price", widget: "string", required: false }
+              - { label: "Product name", name: "name", widget: "string", hint: "Shown as the card title. E.g. 'The Studio Wrap · Taupe'" }
+              - { label: "Meta line (subtitle under name)", name: "meta", widget: "string", required: false, hint: "e.g. 'Ribbed long-sleeve' or 'Seamless set'" }
               - { label: "Product image", name: "image", widget: "image" }
-              - { label: "Squarespace checkout URL", name: "checkout_url", widget: "string", required: false, hint: "Paste the product's Squarespace URL once the store is live. Leave blank for pre-launch." }
-              - { label: "Show 'Coming Soon' instead of buy button?", name: "coming_soon", widget: "boolean", default: true }
+              - { label: "Image alt text (accessibility)", name: "alt", widget: "string", required: false }
+              - { label: "Price (only shown when checkout URL is set)", name: "price", widget: "string", required: false, hint: "e.g. '$58' — leave blank to hide" }
+              - { label: "Squarespace checkout URL", name: "checkout_url", widget: "string", required: false, hint: "Paste the Squarespace product URL here once the store is live. Leave blank to show 'Coming Soon'." }
+              - { label: "Hide this product?", name: "hidden", widget: "boolean", default: false, required: false }
 
   # ─────────────────────────────────────────────
   # TEACH PAGE

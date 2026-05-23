@@ -736,9 +736,26 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   overflow: hidden;
   background: var(--c-walnut);
 }
-.product__media img { width: 100%; height: 100%; object-fit: cover; }
+.product__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease-out); }
 .product__name { font-family: var(--ff-display); font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; }
 .product__meta { font-size: 0.8rem; color: var(--c-muted); }
+
+/* Live product card (post-Squarespace-launch) — wraps the card in a link */
+.product__link {
+  display: flex; flex-direction: column; gap: var(--s-2);
+  text-decoration: none; color: inherit;
+  transition: opacity .25s var(--ease-out);
+}
+.product__link:hover .product__media img { transform: scale(1.03); }
+.product__link:hover .product__cta { opacity: 1; transform: translateX(2px); }
+.product__cta {
+  font-family: var(--ff-display); font-weight: 600; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--c-oxblood);
+  opacity: 0.78;
+  transition: opacity .2s var(--ease-out), transform .2s var(--ease-out);
+  margin-top: var(--s-1);
+}
 
 /* ---------- mobile ---------- */
 @media (max-width: 960px) {

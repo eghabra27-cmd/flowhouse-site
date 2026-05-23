@@ -1,0 +1,13 @@
+{
+  "name": "flowhouse-site",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "flowhouse — pilates & barre studio site (Rehoboth Beach, DE)",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
