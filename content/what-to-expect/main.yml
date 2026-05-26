@@ -1,89 +1,65 @@
-# ──────────────────────────────────────────────
-# HERO
-# ──────────────────────────────────────────────
-hero_eyebrow: "what to expect"
-hero_headline: "More than a workout."
-hero_subhead: "Movement designed to strengthen the body while creating space to reconnect with yourself. Flowhouse is a place to reset, strengthen, and return to your body — every class, every visit."
-hero_cta_primary_label: "Join the Founding Circle"
-hero_cta_primary_href: "index.html#waitlist"
-hero_cta_secondary_label: "See the class flow"
-hero_cta_secondary_href: "#flow"
-hero_image: "images/v4/class.png"
-hero_image_alt: "Three flowhouse practitioners working on Flowformer reformers with overhead cable straps, warm ambient lighting."
-hero_badge: "Opening Summer 2026"
-
-# ──────────────────────────────────────────────
-# SIX-BLOCK CLASS FLOW
-# ──────────────────────────────────────────────
-flow_eyebrow: "the class flow"
-flow_headline: "Six blocks. One conversation with the body."
-flow_intro: "Every Signature and Foundation class is structured this way — sequenced for time under tension, continuous movement, and intentional return."
-
+hero_eyebrow: what to expect
+hero_headline: More than a workout.
+hero_subhead: Movement designed to strengthen the body while creating space to reconnect with yourself. Flowhouse is a place to reset, strengthen, and return to your body — every class, every visit.
+hero_cta_primary_label: Join the Founding Circle
+hero_cta_primary_href: index.html#waitlist
+hero_cta_secondary_label: See the class flow
+hero_cta_secondary_href: '#flow'
+hero_image: /images/uploads/84c031d2-0b9e-43fe-8e9e-502650c9721b.png
+hero_image_alt: Three flowhouse practitioners working on Flowformer reformers with overhead cable straps, warm ambient lighting.
+hero_badge: Opening Summer 2026
+flow_eyebrow: the class flow
+flow_headline: Six blocks. One conversation with the body.
+flow_intro: Every Signature and Foundation class is structured this way — sequenced for time under tension, continuous movement, and intentional return.
 flow_blocks:
-  - title: "Center · core activation"
-    body: "Breath work and deep-core engagement on the Flowformer. We start the conversation from the inside out — finding the muscles that hold every other movement together."
-  - title: "Lower body block"
-    body: "Footwork, glutes, hamstrings. Time-under-tension reps on the carriage — slow eccentrics, intentional control, low-impact strength."
-  - title: "Obliques"
-    body: "Side-lying work, rotational planks, kneeling oblique series. The most quietly powerful block — and the one you'll feel two days later."
-  - title: "Upper body block"
-    body: "Long-lever arms on the cables, push-pull symmetry, breath-led pacing. Strength without strain."
-  - title: "Final core push · center abdominals"
-    body: "One last deliberate burn. Centered, low-impact, high-intensity — the moment you'll catch yourself smiling mid-flow."
-  - title: "Slow stretch + cool down"
-    body: "Long-line opening, breath, nervous-system regulation. You'll wipe the carriage, reset, and walk out taller than you came in."
-
-# ──────────────────────────────────────────────
-# AFTER CLASS (community section)
-# ──────────────────────────────────────────────
-after_eyebrow: "after class"
-after_headline: "A social and wellness experience."
-after_lead: "flowhouse is a sanctuary, but also a community. Stay after class. Grab a juice. Chat with the founding circle. Linger in the calm."
-after_body: "The hour on the Flowformer is the start of the ritual — not the end of it. We protect the calm inside the studio and we welcome you into the community right outside it. Both are part of the experience."
-after_image: "images/v4/community.png"
-after_image_alt: "Three flowhouse members chatting in the studio after class against a walnut wall."
-
-# ──────────────────────────────────────────────
-# START HERE (4 checklist items)
-# ──────────────────────────────────────────────
-start_eyebrow: "start here"
-start_headline: "Four things to know before your first class."
-start_intro: "Simple, intentional, no over-explanation. You walk in calm — and walk out hooked."
-
+  - title: Center · core activation
+    body: Breath work and deep-core engagement on the Flowformer. We start the conversation from the inside out — finding the muscles that hold every other movement together.
+  - title: Lower body block
+    body: Footwork, glutes, hamstrings. Time-under-tension reps on the carriage — slow eccentrics, intentional control, low-impact strength.
+  - title: Obliques
+    body: Side-lying work, rotational planks, kneeling oblique series. The most quietly powerful block — and the one you'll feel two days later.
+  - title: Upper body block
+    body: Long-lever arms on the cables, push-pull symmetry, breath-led pacing. Strength without strain.
+  - title: Final core push · center abdominals
+    body: One last deliberate burn. Centered, low-impact, high-intensity — the moment you'll catch yourself smiling mid-flow.
+  - title: Slow stretch + cool down
+    body: Long-line opening, breath, nervous-system regulation. You'll wipe the carriage, reset, and walk out taller than you came in.
+after_eyebrow: after class
+after_headline: A social and wellness experience.
+after_lead: flowhouse is a sanctuary, but also a community. Stay after class. Grab a juice. Chat with the founding circle. Linger in the calm.
+after_body: The hour on the Flowformer is the start of the ritual — not the end of it. We protect the calm inside the studio and we welcome you into the community right outside it. Both are part of the experience.
+after_image: images/v4/community.png
+after_image_alt: Three flowhouse members chatting in the studio after class against a walnut wall.
+start_eyebrow: start here
+start_headline: Four things to know before your first class.
+start_intro: Simple, intentional, no over-explanation. You walk in calm — and walk out hooked.
 start_items:
-  - title: "Begin with Intro or Foundation."
-    body: "Both are paced and cued for first-time movers. From there, Signature, Yin, and Barre 45 are all open to you."
-  - title: "Wear something comfortable you can move in."
-    body: "Fitted or relaxed, your call. The flowhouse line will be available in studio at launch."
-  - title: "Grip socks required."
-    body: "Available for purchase in studio — quietly part of the kit you'll keep returning to."
-  - title: "Bring water — beverages available in studio."
-    body: "Filtered water on-site. Stay after for a juice and meet the community."
-
-# Barre note card (under Start Here)
-barre_note_eyebrow: "a note on barre"
-barre_note_headline: "Barre is beginner-friendly, low impact, posture-enhancing, strength-focused — and a perfect complement to your reformer practice."
-barre_note_body: "Two barre walls, twenty-five spots per Barre 45 class, continuous movement, and intentional burn. It belongs alongside the reformer, not behind it."
-
-# ──────────────────────────────────────────────
-# FAQ
-# ──────────────────────────────────────────────
-faq_eyebrow: "questions, answered"
-faq_headline: "The things you'd text a friend who's already done it."
-faq_aside: "Can't find your question? Email info@flowhouserb.com — we read everything."
-
+  - title: Begin with Intro or Foundation.
+    body: Both are paced and cued for first-time movers. From there, Signature, Yin, and Barre 45 are all open to you.
+  - title: Wear something comfortable you can move in.
+    body: Fitted or relaxed, your call. The flowhouse line will be available in studio at launch.
+  - title: Grip socks required.
+    body: Available for purchase in studio — quietly part of the kit you'll keep returning to.
+  - title: Bring water — beverages available in studio.
+    body: Filtered water on-site. Stay after for a juice and meet the community.
+barre_note_eyebrow: a note on barre
+barre_note_headline: Barre is beginner-friendly, low impact, posture-enhancing, strength-focused — and a perfect complement to your reformer practice.
+barre_note_body: Two barre walls, twenty-five spots per Barre 45 class, continuous movement, and intentional burn. It belongs alongside the reformer, not behind it.
+faq_eyebrow: questions, answered
+faq_headline: The things you'd text a friend who's already done it.
+faq_aside: Can't find your question? Email info@flowhouserb.com — we read everything.
 faqs:
-  - question: "What's the difference between Signature and Barre 45?"
-    answer: "Signature is our contemporary reformer pilates class on the Flowformer — full-body, time-under-tension, sequenced. Barre 45 is a strength-based barre class on the wall using small props and continuous movement. Different equipment, same flowhouse philosophy: precision-based, low impact, high intensity."
-  - question: "What's the difference between Foundation and Signature?"
-    answer: "Foundation is the slower, more cued version of Signature — built for new reformer movers and for refining the basics. You'll learn the Flowformer setup, the springs, and our foundational positions. Signature assumes you know the carriage and moves at a steadier, more continuous pace."
-  - question: "What is Yin?"
-    answer: "Yin is our restorative reformer-based stretch and recovery class, inspired by yin yoga principles. Slow holds, long lines, breath-led pacing, nervous-system regulation. The class your body books for itself after a hard week."
-  - question: "What should beginners start with?"
-    answer: "Start with Foundation if you're new to reformer pilates, or grab a seat in our occasional Intro class. Both are paced and cued for first-timers. Once you've taken either one, Signature, Yin, and Barre 45 are all open to you."
-  - question: "I've never done pilates. Is this for me?"
-    answer: "Yes — and especially yes. Reformer pilates is one of the most beginner-friendly strength practices because the machine supports you while it challenges you."
-  - question: "How fit do I need to be to start?"
-    answer: "Not fit at all. We program for every body — including people coming back from injury, post-partum, or who haven't moved in years. Just tell your instructor at check-in."
-  - question: "Is the studio women-only?"
-    answer: "No. flowhouse is a women-led studio with a beautifully diverse community. We welcome everyone who wants to move with intention."
+  - question: What's the difference between Signature and Barre 45?
+    answer: 'Signature is our contemporary reformer pilates class on the Flowformer — full-body, time-under-tension, sequenced. Barre 45 is a strength-based barre class on the wall using small props and continuous movement. Different equipment, same flowhouse philosophy: precision-based, low impact, high intensity.'
+  - question: What's the difference between Foundation and Signature?
+    answer: Foundation is the slower, more cued version of Signature — built for new reformer movers and for refining the basics. You'll learn the Flowformer setup, the springs, and our foundational positions. Signature assumes you know the carriage and moves at a steadier, more continuous pace.
+  - question: What is Yin?
+    answer: Yin is our restorative reformer-based stretch and recovery class, inspired by yin yoga principles. Slow holds, long lines, breath-led pacing, nervous-system regulation. The class your body books for itself after a hard week.
+  - question: What should beginners start with?
+    answer: Start with Foundation if you're new to reformer pilates, or grab a seat in our occasional Intro class. Both are paced and cued for first-timers. Once you've taken either one, Signature, Yin, and Barre 45 are all open to you.
+  - question: I've never done pilates. Is this for me?
+    answer: Yes — and especially yes. Reformer pilates is one of the most beginner-friendly strength practices because the machine supports you while it challenges you.
+  - question: How fit do I need to be to start?
+    answer: Not fit at all. We program for every body — including people coming back from injury, post-partum, or who haven't moved in years. Just tell your instructor at check-in.
+  - question: Is the studio women-only?
+    answer: No. flowhouse is a women-led studio with a beautifully diverse community. We welcome everyone who wants to move with intention.
