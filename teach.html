@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>Teach at flowhouse — Now Hiring &amp; Training Instructors</title>
+  <title>Teach at flowhouse — Pilates &amp; Barre Instructor Jobs in Rehoboth Beach, DE</title>
   <meta name="description" content="flowhouse is hiring and training instructors. Certification preferred — not required. We mentor, we train in-house, and we welcome movement-focused individuals.">
   <meta property="og:title" content="Teach at flowhouse — We're Hiring &amp; Training">
   <meta property="og:description" content="Certification preferred, not required. We train in-house. Movement-focused individuals welcome.">
@@ -222,37 +222,47 @@
           <p class="lead" data-reveal style="margin: 0 auto; color: rgba(251,243,235,0.92);">Five minutes. We respond to every application within a week.</p>
         </div>
 
-        <form class="form-row" style="max-width: 560px; margin: 0 auto; text-align: left;" data-reveal>
+        <form name="instructor-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-fh-form action="/thank-you.html" class="form-row" style="max-width: 560px; margin: 0 auto; text-align: left;" data-reveal>
+          <input type="hidden" name="form-name" value="instructor-application" />
+          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <div data-fh-fields style="display:grid; gap: var(--s-4);">
           <div class="field">
             <label for="t-name">Full name</label>
-            <input id="t-name" type="text" autocomplete="name" required>
+            <input id="t-name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field">
             <label for="t-email">Email</label>
-            <input id="t-email" type="email" autocomplete="email" required>
+            <input id="t-email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="field">
             <label for="t-phone">Phone</label>
-            <input id="t-phone" type="tel" autocomplete="tel">
+            <input id="t-phone" name="phone" type="tel" autocomplete="tel">
           </div>
           <div class="field">
             <label for="t-background">Movement background</label>
-            <input id="t-background" type="text" placeholder="e.g., 2yrs reformer at a boutique studio · dance for 10yrs · uncertified but obsessed" required>
+            <input id="t-background" name="background" type="text" placeholder="e.g., 2yrs reformer at a boutique studio · dance for 10yrs · uncertified but obsessed" required>
           </div>
           <div class="field">
             <label for="t-cert">Certifications (if any)</label>
-            <input id="t-cert" type="text" placeholder="Optional — BASI, Polestar, STOTT, dance training, none yet…">
+            <input id="t-cert" name="certifications" type="text" placeholder="Optional — BASI, Polestar, STOTT, dance training, none yet…">
           </div>
           <div class="field">
             <label for="t-why">Why flowhouse?</label>
-            <textarea id="t-why" placeholder="A paragraph is plenty. What drew you to us. What you'd bring. What you want to teach." required></textarea>
+            <textarea id="t-why" name="why" placeholder="A paragraph is plenty. What drew you to us. What you'd bring. What you want to teach." required></textarea>
           </div>
           <div class="field">
             <label for="t-availability">Weekly availability</label>
-            <input id="t-availability" type="text" placeholder="e.g., M/W/F mornings + Sat midday">
+            <input id="t-availability" name="availability" type="text" placeholder="e.g., M/W/F mornings + Sat midday">
           </div>
           <button type="submit" class="btn btn--ink btn--full">Submit application</button>
-          <small style="color: rgba(251,243,235,0.75); font-size: 0.8rem; text-align: center;">You can also email <a href="mailto:teach@myflowhouse" style="border-bottom: 1px solid rgba(251,243,235,0.4);">teach@myflowhouse</a> directly.</small>
+          <small class="form-note" style="color: rgba(251,243,235,0.75);">You can also email <a href="mailto:info@flowhouserb.com" style="border-bottom: 1px solid rgba(251,243,235,0.4);">info@flowhouserb.com</a> directly.</small>
+          <small data-fh-error hidden style="color: var(--c-ink);">Something went wrong — please email <a href="mailto:info@flowhouserb.com" style="text-decoration:underline;">info@flowhouserb.com</a>.</small>
+          </div>
+          <div data-fh-success hidden class="form-success">
+            <span class="eyebrow">received</span>
+            <h3 class="h4" style="margin:0.4rem 0;">Application received.</h3>
+            <p class="text-muted" style="margin:0;">Thank you for applying to teach at flowhouse. We respond to every application within a week.</p>
+          </div>
         </form>
       </div>
     </section>
@@ -265,7 +275,7 @@
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
         <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Coastal Highway · Rehoboth Beach, DE · Opening Summer 2026</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>

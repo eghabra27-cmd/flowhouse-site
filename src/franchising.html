@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe5d6" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>Franchising — Coming Soon · flowhouse</title>
+  <meta name="description" content="flowhouse franchising is in development — a considered, future-facing franchise model for a luxury reformer pilates and barre brand. Register your interest.">
+  <meta property="og:title" content="flowhouse Franchising — Coming Soon">
+  <meta property="og:description" content="A movement brand designed to grow beautifully. Franchise opportunities in development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flowhouserb.com/franchising.html">
+  <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://flowhouserb.com/franchising.html">
+  <meta name="robots" content="index, follow">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+{{> mobile-drawer }}
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy" data-reveal>
+            <span class="eyebrow">{{ franchising.main.hero_eyebrow }}</span>
+            <h1>{{ franchising.main.hero_headline_html | raw }}</h1>
+            <p class="lead">{{ franchising.main.hero_lead }}</p>
+            <div class="hero__cta-row">
+              <a href="#register" class="btn btn--primary">Register interest</a>
+              <a href="flowformer.html" class="btn btn--ghost">The Method</a>
+            </div>
+          </div>
+          <div class="hero__image-frame" data-reveal>
+            <img src="{{ franchising.main.hero_image }}" alt="{{ franchising.main.hero_image_alt }}" loading="eager">
+            <span class="hero__image-badge">{{ franchising.main.hero_badge }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULL QUOTE -->
+    <section class="section section--walnut">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>{{ franchising.main.pq_eyebrow }}</span>
+        <p class="pull-quote" data-reveal style="margin-top: var(--s-6); color:#f5ecdf;">{{ franchising.main.pq_html | raw }}</p>
+        <p class="lead" data-reveal style="margin: var(--s-8) auto 0;">{{ franchising.main.pq_body }}</p>
+        <dl class="fr-metric">
+          {{#each franchising.main.metrics}}
+          <div><dt>{{ this.figure }}</dt><dd>{{ this.label }}</dd></div>
+          {{/each}}
+        </dl>
+      </div>
+    </section>
+
+    <!-- WHY FLOWHOUSE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">{{ franchising.main.why_eyebrow }}</span>
+            <h2>{{ franchising.main.why_headline }}</h2>
+          </div>
+        </div>
+        <div class="class-grid">
+          {{#each franchising.main.why_cards}}
+          <div class="quote-card" data-reveal>
+            <strong style="font-family: var(--ff-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em;">{{ this.title }}</strong>
+            <p style="color: var(--c-ink-soft);">{{ this.body }}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTER INTEREST -->
+    <section class="section section--clay" id="register">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>{{ franchising.main.cta_eyebrow }}</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 24ch;" data-reveal>{{ franchising.main.cta_headline }}</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 58ch;">{{ franchising.main.cta_body }}</p>
+
+        <form name="franchise-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-fh-form action="/thank-you.html" class="form-row" style="max-width: 520px; margin: 0 auto; text-align:left;" data-reveal>
+          <input type="hidden" name="form-name" value="franchise-interest" />
+          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+          <div data-fh-fields style="display:grid; gap: var(--s-4);">
+            <div class="field"><label for="fr-name">Full name</label><input id="fr-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="fr-email">Email</label><input id="fr-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="fr-phone">Phone</label><input id="fr-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="fr-market">Market of interest</label><input id="fr-market" name="market" type="text" placeholder="City / region you'd like to bring flowhouse to"></div>
+            <div class="field"><label for="fr-note">A little about you</label><textarea id="fr-note" name="note" placeholder="Your background, why flowhouse, and your timeline."></textarea></div>
+            <label class="consent">
+              <input type="checkbox" name="consent" value="yes" required>
+              <span>I’d like to receive flowhouse franchise updates and agree to be contacted by email and phone. See our <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
+            <button type="submit" class="btn btn--ink btn--full">Register interest</button>
+            <small class="form-note">You can also email <a href="mailto:{{ franchising.main.cta_email }}" style="text-decoration:underline;">{{ franchising.main.cta_email }}</a> directly.</small>
+            <small data-fh-error hidden style="color: var(--c-ink);">Something went wrong — please email <a href="mailto:{{ franchising.main.cta_email }}" style="text-decoration:underline;">{{ franchising.main.cta_email }}</a>.</small>
+          </div>
+          <div data-fh-success hidden class="form-success">
+            <span class="eyebrow">thank you</span>
+            <h3 class="h4" style="margin:0.4rem 0;">Interest registered.</h3>
+            <p class="text-muted" style="margin:0;">We’ll be in touch as the franchise model takes shape. Thank you for believing in flowhouse.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+{{> site-footer }}
+{{> book-bar }}
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>The Line — flowhouse Apparel · Coming Soon</title>
+  <title>flowhouse — The Line · Studio Apparel &amp; Accessories Coming Soon</title>
   <meta name="description" content="An elevated wellness apparel line from flowhouse. Minimal branding, premium fabrics, designed for movement and the hours around it. Limited first release coming soon.">
   <meta property="og:title" content="The Line — flowhouse Apparel · Coming Soon">
   <meta property="og:description" content="Elevated essentials. Minimal branding. Designed for movement. Limited first release coming soon.">
@@ -75,11 +75,11 @@
         <div class="hero__grid">
           <div class="hero__copy" data-reveal>
             <span class="eyebrow">flowhouse · the line</span>
-            <h1>Elevated essentials. <em>Launching soon.</em></h1>
-            <p class="lead">An apparel line designed for the way our community lives — minimal branding, premium fabrics, considered details. Wear it to class. Live in it after.</p>
+            <h1>flowhouse — <em>the line.</em></h1>
+            <p class="lead">An elevated lifestyle line designed for the way our community lives — from the studio to the shoreline. Minimal branding, premium fabrics, considered details. Something quiet is coming.</p>
             <div class="hero__cta-row">
-              <a href="index.html#waitlist" class="btn btn--primary">Join the Founding Circle</a>
-              <a href="#line" class="btn btn--ghost">See the line</a>
+              <a href="index.html#waitlist" class="btn btn--primary">Be first to shop</a>
+              <a href="#line" class="btn btn--ghost">Preview the drop</a>
             </div>
             <dl class="hero__meta">
               <div><dt>Release</dt><dd>Coming Soon</dd></div>
@@ -88,8 +88,8 @@
             </dl>
           </div>
           <div class="hero__image-frame" data-reveal>
-            <img src="images/v4/merch-bra-set.png" alt="A folded flowhouse seamless sports bra and high-rise leggings flat-lay against a cream backdrop.">
-            <span class="hero__image-badge">Limited first release · coming soon</span>
+            <img src="images/v4/merch-bag.jpg" alt="A flowhouse member at the water's edge in Rehoboth carrying the blue-and-cream striped flowhouse tote.">
+            <span class="hero__image-badge">The first drop · coming soon</span>
           </div>
         </div>
       </div>
@@ -106,40 +106,32 @@
       </div>
     </section>
 
-    <!-- THE LINE — 8 PRODUCTS -->
+    <!-- THE FIRST DROP — blurred, mysterious teaser -->
     <section class="section" id="line">
       <div class="container container-wide">
         <div class="section-head">
           <div class="section-head__title" data-reveal>
             <span class="eyebrow">the first drop</span>
-            <h2>Eight pieces. <span class="serif-italic">Built to live in.</span></h2>
+            <h2>A capsule, <span class="serif-italic">coming into focus.</span></h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>Cream, taupe, walnut, oxblood — the colours of the studio itself. Each piece is fit-tested in real classes on the Flowformer by the instructors who teach them.</p>
+            <p>Cream, taupe, walnut, oxblood — the colours of the studio itself. Movement sets, pilates grip socks, washed caps, soft tees, studio wraps, and the striped tote. Revealed piece by piece. Founding Circle sees it first.</p>
           </div>
         </div>
 
-        <div class="product-grid">
-          {{#each merch.products.products}}
-          {{#unless this.hidden}}
-          <div class="product" data-reveal>
-            {{#if this.checkout_url}}
-            <a class="product__link" href="{{ this.checkout_url }}" target="_blank" rel="noopener">
-              <div class="product__media"><img src="{{ this.image }}" alt="{{ this.alt }}"></div>
-              <span class="product__name">{{ this.name }}</span>
-              <span class="product__meta">{{ this.meta }}{{#if this.price}} · {{ this.price }}{{/if}}</span>
-              <span class="product__cta">Add to Cart →</span>
-            </a>
-            {{/if}}
-            {{#unless this.checkout_url}}
-            <div class="product__media"><img src="{{ this.image }}" alt="{{ this.alt }}"></div>
-            <span class="product__name">{{ this.name }}</span>
-            <span class="product__meta">{{ this.meta }} · coming soon</span>
-            {{/unless}}
+        <div class="teaser-grid">
+          {{#each merch.teaser.items}}
+          <div class="teaser-card" data-reveal>
+            <img src="{{ this.image }}" alt="" aria-hidden="true">
+            <div class="teaser-card__overlay">
+              <span class="teaser-card__name">{{ this.name }}</span>
+              <span class="teaser-card__pill">{{ this.hint }}</span>
+            </div>
           </div>
-          {{/unless}}
           {{/each}}
         </div>
+
+        <p data-reveal class="text-muted text-sm" style="text-align:center; margin-top: var(--s-10); max-width: 52ch; margin-inline:auto;">A few quiet pieces to start — with more to come. Join the Founding Circle for the first look, private fittings, and a complimentary piece on launch day.</p>
       </div>
     </section>
 

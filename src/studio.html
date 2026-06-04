@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>The Studio — A Movement Sanctuary in Rehoboth Beach · flowhouse</title>
+  <title>The Studio — Luxury Pilates &amp; Barre Sanctuary in Rehoboth Beach · flowhouse</title>
   <meta name="description" content="A coastal movement sanctuary opening Summer 2026 in Rehoboth Beach. Custom Flowformer reformers, two barre walls, warm intentional studio design.">
   <meta property="og:title" content="The Studio — A Movement Sanctuary in Rehoboth Beach">
   <meta property="og:description" content="Custom Flowformer machines, two barre walls, warm walnut interior. Opening Summer 2026.">
@@ -91,15 +91,15 @@
             <p class="text-muted">{{ studio.main.card_body }}</p>
 
             <dl class="kv-list">
-              <dt>Address</dt><dd>{{ studio.main.address1 }}<br>{{ studio.main.address2 }}</dd>
+              <dt>Location</dt><dd>{{ studio.main.area }}<br><span class="addr-private" aria-hidden="true">{{ studio.main.address1 }}</span></dd>
               <dt>Opening</dt><dd>{{ studio.main.opening_label }}</dd>
               <dt>Parking</dt><dd>{{ studio.main.parking }}</dd>
               <dt>Contact</dt><dd><a href="mailto:{{ studio.main.email }}" style="border-bottom:1px solid var(--c-divider-strong);">{{ studio.main.email }}</a></dd>
             </dl>
+            <p class="addr-note">{{ studio.main.address_note }}</p>
 
             <div style="display:flex; gap: var(--s-3); flex-wrap: wrap;">
               <a href="{{ studio.main.cta_primary_href }}" class="btn btn--primary">{{ studio.main.cta_primary_label }}</a>
-              <a href="{{ studio.main.cta_secondary_href }}" target="_blank" rel="noopener" class="btn btn--ghost">{{ studio.main.cta_secondary_label }}</a>
             </div>
           </div>
         </div>
@@ -126,36 +126,6 @@
               </div>
             </article>
             {{/each}}
-          </div>
-        </div>
-
-        <!-- the build — real construction photography -->
-        <div style="margin-top: var(--s-20);">
-          <div class="section-head">
-            <div class="section-head__title" data-reveal>
-              <span class="eyebrow">the build</span>
-              <h2>Real walls. Real wood. Real pendants.</h2>
-            </div>
-            <div class="section-head__aside" data-reveal>
-              <p>The studio renders are coming to life. Below: the actual space, mid-build, with the lanterns already glowing over the walnut feature wall.</p>
-            </div>
-          </div>
-
-          <div class="class-grid">
-            <article class="class-card" data-reveal style="grid-column: span 2;">
-              <div class="class-card__media" style="aspect-ratio: 4/3;"><img src="images/v4/studio-real-wide.jpg" alt="The flowhouse studio mid-build — wide view of the barre wall, three pendant lanterns, and walnut feature wall."><span class="tag">In progress</span></div>
-              <div class="class-card__body">
-                <h3 class="h4">The room, lit.</h3>
-                <p>Three Noguchi-style paper pendants illuminating the upper walnut feature wall, the glass-and-wood barre partition, and the mirror beyond. Ten reformers' worth of floor.</p>
-              </div>
-            </article>
-            <article class="class-card" data-reveal>
-              <div class="class-card__media" style="aspect-ratio: 4/3;"><img src="images/v4/studio-real-pendants.jpg" alt="Close-up of the pendant lanterns and walnut feature wall during the flowhouse build."><span class="tag">Detail</span></div>
-              <div class="class-card__body">
-                <h3 class="h4">Soft warm light.</h3>
-                <p>The pendants throw a calm amber glow across the walnut grain. The whole room slows you down the moment you walk in.</p>
-              </div>
-            </article>
           </div>
         </div>
 

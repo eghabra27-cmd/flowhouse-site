@@ -980,3 +980,27 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
   color: var(--c-oxblood); margin-top: var(--s-6);
 }
+
+/* ---------- form readability on colored sections ---------- */
+.section--clay .field label,
+.section--clay .consent,
+.section--clay .form-note { color: rgba(251,243,235,0.92); }
+.section--clay .field input,
+.section--clay .field textarea,
+.section--clay .field select {
+  background: rgba(251,243,235,0.96);
+  border-color: rgba(26,19,13,0.18);
+  color: var(--c-ink);
+}
+.section--clay .field input::placeholder,
+.section--clay .field textarea::placeholder { color: var(--c-muted); }
+.section--clay .consent a,
+.section--clay .form-note a { color: #fff; }
+.section--walnut .field label,
+.section--ink .field label { color: rgba(245,236,224,0.9); }
+.section--walnut .field input,
+.section--ink .field input,
+.section--walnut .field textarea,
+.section--ink .field textarea {
+  background: rgba(245,236,224,0.96); color: var(--c-ink); border-color: rgba(245,236,224,0.3);
+}

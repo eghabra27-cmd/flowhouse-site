@@ -1,5 +1,23 @@
 // flowhouse v2 — site interactions
 (() => {
+  // active nav highlight (for pages using the shared header partial)
+  try {
+    const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const map = {
+      'index.html': 'home', '': 'home',
+      'about.html': 'about', 'studio.html': 'studio', 'flowformer.html': 'flowformer',
+      'what-to-expect.html': 'what-to-expect', 'schedule.html': 'schedule',
+      'memberships.html': 'memberships', 'membership.html': 'memberships',
+      'merch.html': 'merch', 'teach.html': 'teach', 'account.html': 'account',
+      'franchising.html': 'franchising',
+    };
+    const cur = map[path];
+    if (cur) {
+      const link = document.querySelector(`.nav-links a[data-nav="${cur}"]`);
+      if (link && !link.hasAttribute('aria-current')) link.setAttribute('aria-current', 'page');
+    }
+  } catch (e) {}
+
   // mobile drawer
   const drawer = document.querySelector('[data-drawer]');
   document.querySelectorAll('[data-drawer-toggle]').forEach(btn => {

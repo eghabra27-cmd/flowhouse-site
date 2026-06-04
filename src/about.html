@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe5d6" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>Meet Sam — The Founder of flowhouse · Rehoboth Beach Pilates</title>
+  <meta name="description" content="Meet Sam, founder of flowhouse — a coastal movement sanctuary in Rehoboth Beach blending reformer pilates, barre, and yoga. A studio built on intention, strength, and softness. Opening Summer 2026.">
+  <meta property="og:title" content="Meet Sam — The Founder of flowhouse">
+  <meta property="og:description" content="flowhouse was created by Sam as a modern movement space designed to feel grounding, intentional, and inspiring.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://flowhouserb.com/about.html">
+  <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://flowhouserb.com/about.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+{{> mobile-drawer }}
+
+  <main id="main">
+
+    <!-- HERO — editorial founder split -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy" data-reveal>
+            <span class="eyebrow">{{ about.main.hero_eyebrow }}</span>
+            <h1>{{ about.main.hero_headline_html | raw }}</h1>
+            <p class="lead">{{ about.main.hero_lead }}</p>
+            <div class="hero__cta-row">
+              <a href="index.html#waitlist" class="btn btn--primary">Join the Founding Circle</a>
+              <a href="flowformer.html" class="btn btn--ghost">The Method</a>
+            </div>
+          </div>
+          <div class="hero__image-frame" data-reveal>
+            <img src="{{ about.main.hero_image }}" alt="{{ about.main.hero_image_alt }}" loading="eager" fetchpriority="high">
+            <span class="hero__image-badge">{{ about.main.hero_badge }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER STORY -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">{{ about.main.story_eyebrow }}</span>
+            <h2>{{ about.main.story_headline }}</h2>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>{{ about.main.story_p1 }}</p>
+          </div>
+        </div>
+        <div class="container-narrow" style="margin-inline:0;">
+          <p class="lead" data-reveal style="margin-bottom: var(--s-6);">{{ about.main.story_p2 }}</p>
+          <p class="lead" data-reveal>{{ about.main.story_p3 }}</p>
+          <p class="founder-signature" data-reveal>{{ about.main.signature }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY PULL QUOTE -->
+    <section class="section section--walnut">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>rooted in strength &amp; softness</span>
+        <p class="pull-quote" data-reveal style="margin-top: var(--s-6); color:#f5ecdf;">Movement, for Sam, has always been about <em>more than fitness.</em></p>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">{{ about.main.values_eyebrow }}</span>
+            <h2>{{ about.main.values_headline }}</h2>
+          </div>
+        </div>
+        <div class="class-grid">
+          {{#each about.main.values}}
+          <div class="quote-card" data-reveal>
+            <strong style="font-family: var(--ff-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em;">{{ this.title }}</strong>
+            <p style="color: var(--c-ink-soft);">{{ this.body }}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="section section--clay" id="waitlist">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>{{ about.main.cta_eyebrow }}</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ about.main.cta_headline }}</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ about.main.cta_body }}</p>
+        {{> founding-form }}
+      </div>
+    </section>
+
+  </main>
+
+{{> site-footer }}
+{{> book-bar }}
+<script src="js/site.js"></script>
+</body>
+</html>
