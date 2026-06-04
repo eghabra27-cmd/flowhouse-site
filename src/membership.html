@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe5d6" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>Memberships, Packages &amp; Intro Offers — Buy Online · flowhouse Rehoboth Beach</title>
+  <meta name="description" content="Purchase flowhouse memberships, class packages, intro offers, and founding-member options online. Reformer pilates and barre in Rehoboth Beach — powered by Mariana Tek.">
+  <meta property="og:title" content="Memberships &amp; Packages · flowhouse">
+  <meta property="og:description" content="Buy memberships, class packs, and intro offers online. Reformer pilates and barre in Rehoboth Beach.">
+  <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
+  <link rel="canonical" href="https://flowhouserb.com/membership.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+{{> mobile-drawer }}
+
+  <main id="main">
+    <section class="section" style="padding-top: clamp(var(--s-10), 6vw, var(--s-16));">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: var(--s-8);">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">memberships &amp; packages</span>
+            <h1>Find your way in.</h1>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Memberships, class packages, intro offers, and founding-member options — purchase online below. New to flowhouse? An intro offer is the easiest way to begin. Founding Circle members receive first access and locked-in founding rates.</p>
+          </div>
+        </div>
+
+        <div class="mt-embed-wrap" data-reveal>
+          <div data-mariana-integrations="/memberships">
+            <div class="mt-fallback">
+              <span class="mt-loading">Loading membership options…</span>
+              <p class="text-sm" style="max-width: 46ch;">If options don’t appear, please enable JavaScript or <a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" style="text-decoration:underline;">open in a new tab</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-muted text-sm" data-reveal style="text-align:center; margin-top: var(--s-6);">
+          <a href="schedule.html" style="text-decoration:underline;">Book a class</a> ·
+          <a href="account.html" style="text-decoration:underline;">Manage your account</a> ·
+          See our <a href="policies.html" style="text-decoration:underline;">membership &amp; cancellation policies</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Founding Circle CTA -->
+    <section class="section section--clay" id="waitlist">
+      <div class="container container-narrow" style="text-align:center;">
+        <span class="eyebrow" data-reveal>founding memberships</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Founding rates, locked in.</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">Founding members receive first access to booking, exclusive launch perks, and introductory pricing held for as long as they stay. Join the circle before the doors open.</p>
+        {{> founding-form }}
+      </div>
+    </section>
+  </main>
+
+{{> site-footer }}
+{{> book-bar }}
+<script src="js/site.js"></script>
+{{> mariana-script }}
+</body>
+</html>

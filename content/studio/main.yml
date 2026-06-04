@@ -3,25 +3,24 @@ headline: One room. Built as a sanctuary.
 intro: flowhouse is a single, carefully designed studio on the Delaware coast. Every material was chosen — every angle was intentional — so the room feels less like a fitness studio and more like the hour you give yourself every day.
 card_eyebrow: opening summer 2026
 card_headline: flowhouse · Rehoboth Beach
-card_body: A movement sanctuary on Coastal Highway. Ten custom Flowformer reformers, two barre walls, warm walnut feature walls, and a calming environment designed for ritual.
-address1: 18585 Coastal Highway, Suite 22
-address2: Rehoboth Beach, DE 19971
+card_body: A movement sanctuary on Coastal Highway. Ten custom FlowFormer reformers, two barre walls, warm walnut feature walls, and a calming environment designed for ritual.
+area: Coastal Highway · Rehoboth Beach, DE
+address1: Full address revealed at launch
+address_note: Our exact address will be shared with Founding Circle members ahead of opening. Join the list for first access.
 opening_label: Summer 2026
-parking: Public parking available + plenty of nearby parking.
+parking: Ample on-site and nearby parking.
 email: info@flowhouserb.com
 cta_primary_label: Join the Founding Circle
 cta_primary_href: index.html#waitlist
-cta_secondary_label: Get directions
-cta_secondary_href: https://maps.google.com/?q=18585+Coastal+Highway+Rehoboth+Beach+DE
 inside_eyebrow: what's inside
 inside_headline: Designed for the body — and for the room you walk into.
 inside_intro: We designed our reformers, the studio, and every material independently. The room you train in shapes how you feel about training.
 inside_cards:
   - tag: Custom equipment
-    image: /images/uploads/flowformer.png
-    alt: The custom Flowformer reformer designed by flowhouse
-    title: Custom Flowformer reformers
-    body: Ten reformers, all designed and manufactured to our specifications. Matte-black steel frames with the flowhouse. wordmark cut into the side rail. Built for the way we teach.
+    image: /images/v4/flowformer-real.jpg
+    alt: The custom FlowFormer reformer designed by flowhouse
+    title: Custom FlowFormer reformers
+    body: Ten reformers, all designed and manufactured to our specifications. Matte-black frames with the flowhouse wordmark on the side rail. Built for the way we teach.
   - tag: Two barre walls
     image: /images/uploads/f87de14c-7b29-4678-a62d-329a47e2b2e6.png
     alt: One of the two barre walls installed at flowhouse — wooden barre on black hardware against a glass partition

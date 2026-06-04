@@ -1,0 +1,21 @@
+# Pre-launch "flowhouse the line" teaser — blurred, mysterious hints.
+# Each card is intentionally obscured to build anticipation.
+items:
+  - name: "The Movement Set"
+    hint: "Coming soon"
+    image: "/images/v4/merch-bra-set.png"
+  - name: "Grip Socks"
+    hint: "Coming soon"
+    image: "/images/v4/merch-accessories.png"
+  - name: "The Studio Cap"
+    hint: "Coming soon"
+    image: "/images/v4/merch-caps.png"
+  - name: "The Core Tee"
+    hint: "Coming soon"
+    image: "/images/v4/merch-tee-brown.png"
+  - name: "The Studio Wrap"
+    hint: "Coming soon"
+    image: "/images/v4/merch-wrap-taupe.png"
+  - name: "The Striped Tote"
+    hint: "Coming soon"
+    image: "/images/v4/merch-bag.jpg"

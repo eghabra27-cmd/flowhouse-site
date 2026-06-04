@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>The Studio — A Movement Sanctuary in Rehoboth Beach · flowhouse</title>
+  <title>The Studio — Luxury Pilates &amp; Barre Sanctuary in Rehoboth Beach · flowhouse</title>
   <meta name="description" content="A coastal movement sanctuary opening Summer 2026 in Rehoboth Beach. Custom Flowformer reformers, two barre walls, warm intentional studio design.">
   <meta property="og:title" content="The Studio — A Movement Sanctuary in Rehoboth Beach">
   <meta property="og:description" content="Custom Flowformer machines, two barre walls, warm walnut interior. Opening Summer 2026.">
@@ -24,14 +24,17 @@
   <div class="container site-header__row">
     <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
     <nav class="nav-links" aria-label="Primary">
+      <a href="about.html" data-nav="about">about</a>
       <a href="studio.html" data-nav="studio" aria-current="page">studio</a>
       <a href="flowformer.html" data-nav="flowformer">method</a>
       <a href="what-to-expect.html" data-nav="what-to-expect">what to expect</a>
+      <a href="schedule.html" data-nav="schedule">schedule</a>
       <a href="memberships.html" data-nav="memberships">memberships</a>
       <a href="merch.html" data-nav="merch">merch</a>
       <a href="teach.html" data-nav="teach">teach</a>
     </nav>
     <div class="header-actions">
+      <a href="schedule.html" class="btn btn--ghost btn--sm" data-nav-cta>Book</a>
       <a href="index.html#waitlist" class="btn btn--primary btn--sm">Founding Circle</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
@@ -49,16 +52,18 @@
   </div>
   <nav>
     <a href="index.html">home</a>
+    <a href="about.html">about</a>
     <a href="studio.html">studio</a>
     <a href="flowformer.html">method</a>
     <a href="what-to-expect.html">what to expect</a>
+    <a href="schedule.html">schedule</a>
     <a href="memberships.html">memberships</a>
     <a href="merch.html">merch</a>
     <a href="teach.html">teach</a>
   </nav>
   <div class="drawer-cta">
+    <a href="schedule.html" class="btn btn--ghost btn--full">Book a class</a>
     <a href="index.html#waitlist" class="btn btn--primary btn--full">Join the Founding Circle</a>
-    <a href="flowformer.html" class="btn btn--ghost btn--full">The Method</a>
   </div>
 </aside>
 
@@ -86,15 +91,15 @@
             <p class="text-muted">{{ studio.main.card_body }}</p>
 
             <dl class="kv-list">
-              <dt>Address</dt><dd>{{ studio.main.address1 }}<br>{{ studio.main.address2 }}</dd>
+              <dt>Location</dt><dd>{{ studio.main.area }}<br><span class="addr-private" aria-hidden="true">{{ studio.main.address1 }}</span></dd>
               <dt>Opening</dt><dd>{{ studio.main.opening_label }}</dd>
               <dt>Parking</dt><dd>{{ studio.main.parking }}</dd>
               <dt>Contact</dt><dd><a href="mailto:{{ studio.main.email }}" style="border-bottom:1px solid var(--c-divider-strong);">{{ studio.main.email }}</a></dd>
             </dl>
+            <p class="addr-note">{{ studio.main.address_note }}</p>
 
             <div style="display:flex; gap: var(--s-3); flex-wrap: wrap;">
               <a href="{{ studio.main.cta_primary_href }}" class="btn btn--primary">{{ studio.main.cta_primary_label }}</a>
-              <a href="{{ studio.main.cta_secondary_href }}" target="_blank" rel="noopener" class="btn btn--ghost">{{ studio.main.cta_secondary_label }}</a>
             </div>
           </div>
         </div>
@@ -124,36 +129,6 @@
           </div>
         </div>
 
-        <!-- the build — real construction photography -->
-        <div style="margin-top: var(--s-20);">
-          <div class="section-head">
-            <div class="section-head__title" data-reveal>
-              <span class="eyebrow">the build</span>
-              <h2>Real walls. Real wood. Real pendants.</h2>
-            </div>
-            <div class="section-head__aside" data-reveal>
-              <p>The studio renders are coming to life. Below: the actual space, mid-build, with the lanterns already glowing over the walnut feature wall.</p>
-            </div>
-          </div>
-
-          <div class="class-grid">
-            <article class="class-card" data-reveal style="grid-column: span 2;">
-              <div class="class-card__media" style="aspect-ratio: 4/3;"><img src="images/v4/studio-real-wide.jpg" alt="The flowhouse studio mid-build — wide view of the barre wall, three pendant lanterns, and walnut feature wall."><span class="tag">In progress</span></div>
-              <div class="class-card__body">
-                <h3 class="h4">The room, lit.</h3>
-                <p>Three Noguchi-style paper pendants illuminating the upper walnut feature wall, the glass-and-wood barre partition, and the mirror beyond. Ten reformers' worth of floor.</p>
-              </div>
-            </article>
-            <article class="class-card" data-reveal>
-              <div class="class-card__media" style="aspect-ratio: 4/3;"><img src="images/v4/studio-real-pendants.jpg" alt="Close-up of the pendant lanterns and walnut feature wall during the flowhouse build."><span class="tag">Detail</span></div>
-              <div class="class-card__body">
-                <h3 class="h4">Soft warm light.</h3>
-                <p>The pendants throw a calm amber glow across the walnut grain. The whole room slows you down the moment you walk in.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -178,21 +153,28 @@
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
+        <a href="about.html">Meet Sam</a>
         <a href="studio.html">The studio</a>
         <a href="flowformer.html">The method</a>
         <a href="what-to-expect.html">What to expect</a>
         <a href="teach.html">Teach with us</a>
       </div>
       <div class="footer-col">
-        <h5>Brand</h5>
+        <h5>Visit</h5>
+        <a href="schedule.html">Schedule &amp; booking</a>
         <a href="memberships.html">Memberships</a>
         <a href="merch.html">Merch</a>
+        <a href="franchising.html">Franchising</a>
         <a href="index.html#waitlist">Founding Circle</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
         <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
         <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sms-terms.html">SMS Terms</a>
+        <a href="policies.html">Studio Policies</a>
       </div>
     </div>
     <div class="footer-bottom">

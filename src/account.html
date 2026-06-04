@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#efe5d6" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>My Account — Sign In &amp; Manage Your Membership · flowhouse</title>
+  <meta name="description" content="Sign in to your flowhouse account to manage bookings, memberships, class packages, payment details, and waitlists — powered by Mariana Tek.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://flowhouserb.com/account.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+{{> mobile-drawer }}
+
+  <main id="main">
+    <section class="section" style="padding-top: clamp(var(--s-10), 6vw, var(--s-16));">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: var(--s-8);">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">my account</span>
+            <h1>Your flowhouse account.</h1>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Sign in to manage your bookings, membership, class packages, payment details, and waitlists. New here? You can create an account when you book your first class.</p>
+          </div>
+        </div>
+
+        <div class="mt-embed-wrap" data-reveal>
+          <div data-mariana-integrations="/account">
+            <div class="mt-fallback">
+              <span class="mt-loading">Loading your account…</span>
+              <p class="text-sm" style="max-width: 46ch;">If your account doesn’t appear, please enable JavaScript or <a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" style="text-decoration:underline;">sign in via a new tab</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-muted text-sm" data-reveal style="text-align:center; margin-top: var(--s-6);">
+          <a href="schedule.html" style="text-decoration:underline;">Book a class</a> ·
+          <a href="membership.html" style="text-decoration:underline;">View memberships</a> ·
+          Need help? <a href="mailto:info@flowhouserb.com" style="text-decoration:underline;">info@flowhouserb.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+{{> site-footer }}
+{{> book-bar }}
+<script src="js/site.js"></script>
+{{> mariana-script }}
+</body>
+</html>

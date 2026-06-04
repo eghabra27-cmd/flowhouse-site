@@ -382,6 +382,91 @@ collections:
           - { label: "Section lead", name: "apply_lead", widget: "text" }
 
   # ─────────────────────────────────────────────
+  # ABOUT / MEET SAM PAGE
+  # ─────────────────────────────────────────────
+  - name: "about"
+    label: "About / Meet Sam page"
+    description: "The founder story page — hero, Sam's story, values, and CTA."
+    files:
+      - name: "about_main"
+        label: "Page content"
+        file: "content/about/main.yml"
+        fields:
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero headline (HTML allowed for italics)", name: "hero_headline_html", widget: "text" }
+          - { label: "Hero lead paragraph", name: "hero_lead", widget: "text" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt", name: "hero_image_alt", widget: "text" }
+          - { label: "Hero badge", name: "hero_badge", widget: "string" }
+          - { label: "Story eyebrow", name: "story_eyebrow", widget: "string" }
+          - { label: "Story headline", name: "story_headline", widget: "text" }
+          - { label: "Story paragraph 1", name: "story_p1", widget: "text" }
+          - { label: "Story paragraph 2", name: "story_p2", widget: "text" }
+          - { label: "Story paragraph 3", name: "story_p3", widget: "text" }
+          - { label: "Signature line", name: "signature", widget: "string" }
+          - { label: "Values eyebrow", name: "values_eyebrow", widget: "string" }
+          - { label: "Values headline", name: "values_headline", widget: "text" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            min: 1
+            max: 6
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
+          - { label: "CTA headline", name: "cta_headline", widget: "text" }
+          - { label: "CTA body", name: "cta_body", widget: "text" }
+
+  # ─────────────────────────────────────────────
+  # FRANCHISING PAGE
+  # ─────────────────────────────────────────────
+  - name: "franchising"
+    label: "Franchising page"
+    description: "Franchising coming-soon page — hero, opportunity, why flowhouse, and register interest."
+    files:
+      - name: "franchising_main"
+        label: "Page content"
+        file: "content/franchising/main.yml"
+        fields:
+          - { label: "Hero eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero headline (HTML allowed)", name: "hero_headline_html", widget: "text" }
+          - { label: "Hero lead", name: "hero_lead", widget: "text" }
+          - { label: "Hero image", name: "hero_image", widget: "image" }
+          - { label: "Hero image alt", name: "hero_image_alt", widget: "text" }
+          - { label: "Hero badge", name: "hero_badge", widget: "string" }
+          - { label: "Pull quote eyebrow", name: "pq_eyebrow", widget: "string" }
+          - { label: "Pull quote (HTML allowed)", name: "pq_html", widget: "text" }
+          - { label: "Pull quote body", name: "pq_body", widget: "text" }
+          - { label: "Why eyebrow", name: "why_eyebrow", widget: "string" }
+          - { label: "Why headline", name: "why_headline", widget: "text" }
+          - label: "Why cards"
+            name: "why_cards"
+            widget: "list"
+            min: 1
+            max: 6
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "Metrics eyebrow", name: "metrics_eyebrow", widget: "string" }
+          - label: "Metrics"
+            name: "metrics"
+            widget: "list"
+            min: 1
+            max: 6
+            summary: "{{fields.figure}} {{fields.label}}"
+            fields:
+              - { label: "Figure", name: "figure", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "CTA eyebrow", name: "cta_eyebrow", widget: "string" }
+          - { label: "CTA headline", name: "cta_headline", widget: "text" }
+          - { label: "CTA body", name: "cta_body", widget: "text" }
+          - { label: "Inquiry email label", name: "cta_email_label", widget: "string" }
+          - { label: "Inquiry email", name: "cta_email", widget: "string" }
+
+  # ─────────────────────────────────────────────
   # GLOBAL — nav, footer, brand
   # ─────────────────────────────────────────────
   - name: "global"

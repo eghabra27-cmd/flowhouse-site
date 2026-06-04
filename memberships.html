@@ -11,11 +11,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>Founding Memberships Launching Soon · flowhouse</title>
+  <title>Founding Memberships — Reformer Pilates &amp; Barre · flowhouse Rehoboth Beach</title>
   <meta name="description" content="Founding memberships at flowhouse will be released soon. Founding members receive first access to class booking, exclusive launch perks, and introductory membership opportunities.">
   <meta property="og:title" content="Founding Memberships Launching Soon · flowhouse">
   <meta property="og:description" content="First access. Exclusive launch perks. Introductory membership opportunities. Join the Founding Circle.">
-  <meta property="og:image" content="https://flowhouserb.com/images/v4/hero.png">
+  <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
   <link rel="canonical" href="https://flowhouserb.com/memberships.html">
 </head>
 <body>
@@ -24,14 +24,17 @@
   <div class="container site-header__row">
     <a href="index.html" class="wordmark" aria-label="flowhouse home">flowhouse</a>
     <nav class="nav-links" aria-label="Primary">
+      <a href="about.html" data-nav="about">about</a>
       <a href="studio.html" data-nav="studio">studio</a>
       <a href="flowformer.html" data-nav="flowformer">method</a>
       <a href="what-to-expect.html" data-nav="what-to-expect">what to expect</a>
+      <a href="schedule.html" data-nav="schedule">schedule</a>
       <a href="memberships.html" data-nav="memberships" aria-current="page">memberships</a>
       <a href="merch.html" data-nav="merch">merch</a>
       <a href="teach.html" data-nav="teach">teach</a>
     </nav>
     <div class="header-actions">
+      <a href="schedule.html" class="btn btn--ghost btn--sm" data-nav-cta>Book</a>
       <a href="index.html#waitlist" class="btn btn--primary btn--sm">Founding Circle</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
@@ -49,16 +52,18 @@
   </div>
   <nav>
     <a href="index.html">home</a>
+    <a href="about.html">about</a>
     <a href="studio.html">studio</a>
     <a href="flowformer.html">method</a>
     <a href="what-to-expect.html">what to expect</a>
+    <a href="schedule.html">schedule</a>
     <a href="memberships.html">memberships</a>
     <a href="merch.html">merch</a>
     <a href="teach.html">teach</a>
   </nav>
   <div class="drawer-cta">
+    <a href="schedule.html" class="btn btn--ghost btn--full">Book a class</a>
     <a href="index.html#waitlist" class="btn btn--primary btn--full">Join the Founding Circle</a>
-    <a href="flowformer.html" class="btn btn--ghost btn--full">The Method</a>
   </div>
 </aside>
 
@@ -92,17 +97,54 @@
         <span class="eyebrow" data-reveal>join us</span>
         <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Be one of the first.</h2>
         <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">One update a month, max. Quiet, considered, never spam. We'll share the launch details as we have them.</p>
-        <form class="form-row" style="max-width: 480px; margin: 0 auto; text-align: left;" data-reveal>
-          <div class="field">
-            <label for="m-name">First name</label>
-            <input id="m-name" type="text" autocomplete="given-name" required>
-          </div>
-          <div class="field">
-            <label for="m-email">Email</label>
-            <input id="m-email" type="email" autocomplete="email" required>
-          </div>
-          <button type="submit" class="btn btn--ink btn--full">Join the Founding Circle</button>
-        </form>
+        <!-- Founding Circle email capture — Netlify Forms (Name / Email / Phone) -->
+<!-- Submissions are stored in Netlify and emailed to info@flowhouserb.com. -->
+<!-- Exportable to the Mariana Tek CRM at launch. -->
+<form
+  name="founding-circle"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  data-fh-form
+  action="/thank-you.html"
+  class="form-row"
+  style="max-width: 480px; margin: 0 auto; text-align: left;"
+  data-reveal
+>
+  <input type="hidden" name="form-name" value="founding-circle" />
+  <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+
+  <div data-fh-fields style="display: grid; gap: var(--s-4);">
+    <div class="field">
+      <label for="fc-name">First name</label>
+      <input id="fc-name" name="name" type="text" autocomplete="given-name" required>
+    </div>
+    <div class="field">
+      <label for="fc-email">Email</label>
+      <input id="fc-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="fc-phone">Phone number</label>
+      <input id="fc-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(302) 555-0100">
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" name="consent" value="yes" required>
+      <span>I’d like to join the flowhouse Founding Circle and agree to receive launch updates by email and occasional SMS. Message &amp; data rates may apply; reply STOP to opt out. See our <a href="privacy.html">Privacy Policy</a> &amp; <a href="sms-terms.html">SMS Terms</a>.</span>
+    </label>
+
+    <button type="submit" class="btn btn--ink btn--full">Join the Founding Circle</button>
+    <small class="form-note">One thoughtful update a month, max. Quiet, considered, never spam.</small>
+    <small data-fh-error hidden style="color: var(--c-oxblood);">Something went wrong — please email <a href="mailto:info@flowhouserb.com" style="text-decoration:underline;">info@flowhouserb.com</a> and we’ll add you directly.</small>
+  </div>
+
+  <div data-fh-success hidden class="form-success">
+    <span class="eyebrow">welcome in</span>
+    <h3 class="h4" style="margin: 0.4rem 0;">You’re on the list.</h3>
+    <p class="text-muted" style="margin:0;">Welcome to the Founding Circle. We’ll be in touch with first access, founding-member pricing, and launch details as we get closer to opening.</p>
+  </div>
+</form>
+
       </div>
     </section>
 
@@ -114,25 +156,32 @@
       <div class="footer-col footer-col--brand">
         <span class="wordmark">flowhouse</span>
         <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(245,236,224,0.7);">A coastal movement sanctuary. Contemporary reformer pilates and barre — opening Summer 2026 in Rehoboth Beach.</p>
-        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE 19971</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(245,236,224,0.6);">Coastal Highway · Rehoboth Beach, DE · Opening Summer 2026</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
+        <a href="about.html">Meet Sam</a>
         <a href="studio.html">The studio</a>
         <a href="flowformer.html">The method</a>
         <a href="what-to-expect.html">What to expect</a>
         <a href="teach.html">Teach with us</a>
       </div>
       <div class="footer-col">
-        <h5>Brand</h5>
+        <h5>Visit</h5>
+        <a href="schedule.html">Schedule &amp; booking</a>
         <a href="memberships.html">Memberships</a>
         <a href="merch.html">Merch</a>
+        <a href="franchising.html">Franchising</a>
         <a href="index.html#waitlist">Founding Circle</a>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
         <a href="https://instagram.com/myflowhouse" target="_blank" rel="noopener">@myflowhouse</a>
         <a href="mailto:info@flowhouserb.com">info@flowhouserb.com</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sms-terms.html">SMS Terms</a>
+        <a href="policies.html">Studio Policies</a>
       </div>
     </div>
     <div class="footer-bottom">

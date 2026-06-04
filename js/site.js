@@ -1,5 +1,23 @@
 // flowhouse v2 — site interactions
 (() => {
+  // active nav highlight (for pages using the shared header partial)
+  try {
+    const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const map = {
+      'index.html': 'home', '': 'home',
+      'about.html': 'about', 'studio.html': 'studio', 'flowformer.html': 'flowformer',
+      'what-to-expect.html': 'what-to-expect', 'schedule.html': 'schedule',
+      'memberships.html': 'memberships', 'membership.html': 'memberships',
+      'merch.html': 'merch', 'teach.html': 'teach', 'account.html': 'account',
+      'franchising.html': 'franchising',
+    };
+    const cur = map[path];
+    if (cur) {
+      const link = document.querySelector(`.nav-links a[data-nav="${cur}"]`);
+      if (link && !link.hasAttribute('aria-current')) link.setAttribute('aria-current', 'page');
+    }
+  } catch (e) {}
+
   // mobile drawer
   const drawer = document.querySelector('[data-drawer]');
   document.querySelectorAll('[data-drawer-toggle]').forEach(btn => {
@@ -56,6 +74,37 @@
   }));
   formatFilter?.addEventListener('change', applyFilters);
   levelFilter?.addEventListener('change', applyFilters);
+
+  // ── Founding Circle / lead forms → Netlify Forms (AJAX, stay on page) ──
+  // Any <form data-fh-form> posts to Netlify and shows an inline success state.
+  document.querySelectorAll('form[data-fh-form]').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const origLabel = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      try {
+        const data = new FormData(form);
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString(),
+        });
+        const success = form.querySelector('[data-fh-success]');
+        const fields = form.querySelector('[data-fh-fields]');
+        if (success) success.hidden = false;
+        if (fields) fields.hidden = true;
+        if (!success) {
+          form.innerHTML = '<div class="form-success"><h3 class="h4">You\u2019re on the list.</h3><p class="text-muted">Welcome to the Founding Circle. We\u2019ll be in touch with first access as we get closer to opening.</p></div>';
+        }
+      } catch (err) {
+        if (btn) { btn.disabled = false; btn.textContent = origLabel; }
+        const errEl = form.querySelector('[data-fh-error]');
+        if (errEl) errEl.hidden = false;
+        else alert('Something went wrong. Please email info@flowhouserb.com and we\u2019ll add you directly.');
+      }
+    });
+  });
 
   // book-bar reveal after first scroll
   const bar = document.querySelector('.book-bar');
