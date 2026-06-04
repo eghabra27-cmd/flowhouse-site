@@ -161,12 +161,13 @@ h4, .h4 {
   gap: var(--s-6);
   height: var(--header-h);
 }
-.nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 0.9rem; }
+.nav-links { display: flex; align-items: center; gap: clamp(var(--s-5), 2vw, var(--s-8)); font-size: 1rem; }
 .nav-links a {
   color: var(--c-ink-soft);
   font-weight: 500;
+  letter-spacing: 0.005em;
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.35rem 0;
   transition: color var(--t-fast);
 }
 .nav-links a::after {
@@ -322,7 +323,7 @@ h4, .h4 {
 .section--walnut {
   background: var(--c-walnut-deep);
   color: #f5ecdf;
-  background-image: url('../images/v3/texture.jpg');
+  background-image: url('../images/v4/texture.jpg');
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
@@ -788,3 +789,194 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
 
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: var(--s-4); top: var(--s-4); z-index: 100; background: var(--c-ink); color: var(--c-bg); padding: var(--s-3) var(--s-4); border-radius: var(--r-md); }
+
+/* ============================================================
+   LUXURY REBUILD — additions (2026)
+   Full-bleed editorial hero · MT embeds · teaser blur · legal
+   ============================================================ */
+
+/* ---------- full-bleed editorial hero (homepage campaign) ---------- */
+.hero-editorial {
+  position: relative;
+  min-height: clamp(600px, 82vh, 880px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--c-bg-soft);
+}
+.hero-editorial__media { position: absolute; inset: 0; z-index: 0; }
+.hero-editorial__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
+/* light scrim from top so dark headline stays readable over the bright sky */
+.hero-editorial__media::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(245,236,224,0.42) 0%, rgba(245,236,224,0.12) 26%, rgba(245,236,224,0) 48%),
+    linear-gradient(0deg, rgba(38,24,16,0.42) 0%, rgba(38,24,16,0.10) 26%, rgba(38,24,16,0) 46%);
+}
+.hero-editorial__inner {
+  position: relative; z-index: 1;
+  width: 100%;
+  padding-block: clamp(var(--s-10), 7vw, var(--s-20));
+}
+.hero-editorial__eyebrow {
+  font-size: var(--fs-eyebrow); letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--c-oxblood); font-weight: 600;
+}
+.hero-editorial h1 {
+  font-size: clamp(2.8rem, 1.6rem + 6.2vw, 7rem);
+  line-height: 0.92; letter-spacing: -0.04em;
+  margin-top: var(--s-4); max-width: 16ch;
+  color: var(--c-ink);
+}
+.hero-editorial h1 em {
+  font-family: var(--ff-serif); font-style: italic; font-weight: 400; color: var(--c-oxblood);
+}
+.hero-editorial__lead {
+  font-size: var(--fs-lead); color: var(--c-ink-soft);
+  max-width: 52ch; margin-top: var(--s-5); line-height: 1.5;
+}
+.hero-editorial__cta { display: flex; gap: var(--s-3); flex-wrap: wrap; margin-top: var(--s-6); }
+.hero-editorial__badge {
+  position: absolute; top: var(--s-6); right: var(--s-6); z-index: 2;
+  padding: 0.5rem 0.95rem; background: rgba(26,19,13,0.72); color: #f5e6d6;
+  font-size: var(--fs-eyebrow); letter-spacing: 0.2em; text-transform: uppercase;
+  border-radius: var(--r-full); backdrop-filter: blur(6px);
+}
+/* lead text on the editorial hero gets a hair more weight for contrast */
+.hero-editorial__lead { font-weight: 450; }
+@media (max-width: 680px) {
+  .hero-editorial { align-items: flex-start; min-height: auto; }
+  .hero-editorial__media img { object-position: center 80%; }
+  .hero-editorial__media::after {
+    background:
+      linear-gradient(180deg, rgba(245,236,224,0.80) 0%, rgba(245,236,224,0.40) 42%, rgba(245,236,224,0.05) 72%);
+  }
+  .hero-editorial__inner { padding-top: var(--s-12); padding-bottom: 56vw; }
+  /* move badge below the header so it never collides with the eyebrow */
+  .hero-editorial__badge { top: auto; bottom: var(--s-5); right: 50%; transform: translateX(50%); }
+}
+
+/* ---------- Mariana Tek embed container ---------- */
+.mt-embed-wrap {
+  background: var(--c-card);
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-lg);
+  padding: clamp(var(--s-4), 3vw, var(--s-8));
+  min-height: 360px;
+  box-shadow: var(--shadow-sm);
+}
+[data-mariana-integrations] { min-height: 320px; }
+.mt-fallback {
+  display: flex; flex-direction: column; gap: var(--s-3);
+  align-items: center; justify-content: center; text-align: center;
+  min-height: 280px; color: var(--c-muted);
+}
+.mt-loading { font-size: var(--fs-sm); color: var(--c-muted); letter-spacing: 0.04em; }
+
+/* ---------- pre-launch teaser (blurred, mysterious merch) ---------- */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--s-5);
+}
+.teaser-card {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: var(--c-walnut);
+  border: 1px solid var(--c-divider);
+}
+.teaser-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: blur(13px) saturate(0.92) brightness(1.02);
+  transform: scale(1.12);
+  transition: filter 1.2s var(--ease), transform 1.4s var(--ease);
+}
+.teaser-card:hover img { filter: blur(8px) saturate(0.95) brightness(1.03); }
+.teaser-card__overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--s-2); text-align: center; padding: var(--s-5);
+  background: linear-gradient(180deg, rgba(38,24,16,0.10), rgba(38,24,16,0.42));
+  color: #f7efe4;
+}
+.teaser-card__name {
+  font-family: var(--ff-display); font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em;
+  text-shadow: 0 1px 14px rgba(26,19,13,0.5);
+}
+.teaser-card__pill {
+  font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border: 1px solid rgba(247,239,228,0.5);
+  border-radius: var(--r-full); color: #f7efe4;
+}
+
+/* ---------- privacy-obscured address ---------- */
+.addr-private { filter: blur(5px); user-select: none; transition: filter var(--t); }
+.addr-note { font-size: var(--fs-sm); color: var(--c-muted); margin-top: var(--s-2); }
+
+/* ---------- prose / legal pages ---------- */
+.prose-page { padding: clamp(var(--s-12), 9vw, var(--s-20)) 0; }
+.prose { max-width: 760px; margin-inline: auto; }
+.prose h1 { font-size: var(--fs-h2); letter-spacing: -0.03em; margin-bottom: var(--s-3); }
+.prose .prose__updated { color: var(--c-muted); font-size: var(--fs-sm); letter-spacing: 0.04em; margin-bottom: var(--s-10); }
+.prose h2 {
+  font-size: var(--fs-h3); margin-top: var(--s-12); margin-bottom: var(--s-4);
+  padding-top: var(--s-6); border-top: 1px solid var(--c-divider);
+}
+.prose h2:first-of-type { border-top: 0; padding-top: 0; margin-top: var(--s-8); }
+.prose h3 { font-size: var(--fs-h4); margin-top: var(--s-6); margin-bottom: var(--s-2); }
+.prose p, .prose li { color: var(--c-ink-soft); font-size: var(--fs-body); line-height: 1.7; }
+.prose p { margin-bottom: var(--s-4); }
+.prose ul, .prose ol { margin: 0 0 var(--s-4) 1.2rem; display: flex; flex-direction: column; gap: var(--s-2); }
+.prose a { color: var(--c-oxblood); border-bottom: 1px solid color-mix(in srgb, var(--c-oxblood) 35%, transparent); }
+.prose a:hover { border-bottom-color: var(--c-oxblood); }
+.prose strong { color: var(--c-ink); font-weight: 600; }
+.prose__toc {
+  background: var(--c-bg-soft); border: 1px solid var(--c-divider);
+  border-radius: var(--r-lg); padding: var(--s-6); margin-bottom: var(--s-10);
+}
+.prose__toc h2 { border: 0; padding: 0; margin: 0 0 var(--s-3); font-size: var(--fs-h4); }
+.prose__toc ul { margin: 0; list-style: none; padding: 0; }
+.prose__toc a { border: 0; }
+
+/* ---------- consent checkbox row (forms) ---------- */
+.consent {
+  display: flex; gap: 0.6rem; align-items: flex-start;
+  font-size: 0.78rem; line-height: 1.45;
+}
+.consent input[type="checkbox"] {
+  margin-top: 0.15rem; width: 17px; height: 17px; flex-shrink: 0;
+  accent-color: var(--c-oxblood); cursor: pointer;
+}
+.consent label { font-size: 0.78rem; letter-spacing: 0; text-transform: none; color: inherit; font-weight: 400; }
+.consent a { text-decoration: underline; }
+.form-note { font-size: 0.78rem; line-height: 1.45; opacity: 0.85; }
+.form-success {
+  background: var(--c-card); border: 1px solid var(--c-divider);
+  border-radius: var(--r-lg); padding: var(--s-8); text-align: center;
+}
+.form-success h3 { margin-bottom: var(--s-2); }
+
+/* ---------- franchising page accents ---------- */
+.fr-metric {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--s-5); margin-top: var(--s-10);
+}
+.fr-metric > div { border-left: 2px solid var(--c-pink); padding-left: var(--s-4); }
+.fr-metric dt { font-family: var(--ff-display); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.02em; line-height: 1; }
+.fr-metric dd { color: var(--c-muted); font-size: var(--fs-sm); margin-top: var(--s-2); letter-spacing: 0.02em; }
+.section--walnut .fr-metric dt { color: #f5ecdf; }
+.section--walnut .fr-metric dd { color: rgba(245,236,224,0.7); }
+
+/* ---------- about / founder editorial ---------- */
+.founder-portrait {
+  border-radius: var(--r-xl); overflow: hidden;
+  aspect-ratio: 4/5; background: var(--c-walnut); box-shadow: var(--shadow-lg);
+}
+.founder-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.founder-signature {
+  font-family: var(--ff-serif); font-style: italic;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+  color: var(--c-oxblood); margin-top: var(--s-6);
+}
