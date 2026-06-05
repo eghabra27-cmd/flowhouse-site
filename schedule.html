@@ -191,5 +191,56 @@
   </a>
 </noscript>
 
+<!-- Graceful fallback: if Mariana Tek hasn't rendered a live widget yet
+     (e.g. pre-launch, before classes are published), show a polished
+     on-brand message instead of a permanent loading spinner. The moment
+     the MT tenant goes live, the real booking widget renders and this
+     never triggers. -->
+<script>
+  (function () {
+    function looksLive(container) {
+      // MT renders an iframe with a real src once the tenant is publishing content.
+      var iframe = container.querySelector('iframe[src]:not([src=""]):not([src="about:blank"])');
+      if (iframe) return true;
+      // Or any substantial MT-rendered DOM beyond our fallback markup.
+      var mt = container.querySelector('[class*="mariana"], [id*="mariana"], [data-testid]');
+      return !!mt;
+    }
+    function applyFallbacks() {
+      var containers = document.querySelectorAll('[data-mariana-integrations]');
+      containers.forEach(function (c) {
+        if (c.getAttribute('data-fh-fallback') === 'done') return;
+        if (looksLive(c)) return; // real widget present — leave it alone
+        c.setAttribute('data-fh-fallback', 'done');
+        var path = c.getAttribute('data-mariana-integrations') || '';
+        var heading = 'Booking opens soon.';
+        var body = 'Our live class schedule is on its way. Join the Founding Circle and you\u2019ll be first to book when classes open.';
+        if (path.indexOf('account') > -1) {
+          heading = 'Accounts open soon.';
+          body = 'Member accounts go live with our class schedule. Join the Founding Circle for first access.';
+        } else if (path.indexOf('membership') > -1) {
+          heading = 'Memberships open soon.';
+          body = 'Founding-member pricing and packages are on their way. Join the Founding Circle to lock in first access.';
+        }
+        c.innerHTML =
+          '<div class="mt-fallback">' +
+            '<span class="eyebrow">opening summer 2026</span>' +
+            '<h3 class="h4" style="margin:0.4rem 0;">' + heading + '</h3>' +
+            '<p class="text-sm" style="max-width:46ch;">' + body + '</p>' +
+            '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem;">' +
+              '<a href="index.html#waitlist" class="btn btn--primary btn--sm">Join the Founding Circle</a>' +
+              '<a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Open booking</a>' +
+            '</div>' +
+          '</div>';
+      });
+    }
+    // Give Mariana Tek a fair chance to load, then check (runs regardless of
+    // whether the page 'load' event has already fired).
+    setTimeout(applyFallbacks, 6000);
+    // Check again a little later in case MT is slow on a cold connection.
+    setTimeout(applyFallbacks, 12000);
+  })();
+</script>
+
 </body>
 </html>
