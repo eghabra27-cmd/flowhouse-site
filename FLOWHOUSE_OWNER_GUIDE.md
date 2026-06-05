@@ -23,8 +23,9 @@ Your live site: **https://flowhouserb.com**
 11. [Legal pages](#11-legal-pages)
 12. [Common things you'll want to do (quick recipes)](#12-common-things-youll-want-to-do)
 13. [If something breaks or looks wrong](#13-if-something-breaks)
-14. [Logins & accounts checklist](#14-logins--accounts-checklist)
-15. [Words you might see (glossary)](#15-glossary)
+14. [Your logins (write them here)](#14-your-logins)
+15. [Logins & accounts checklist](#15-logins--accounts-checklist)
+16. [Words you might see (glossary)](#16-glossary)
 
 ---
 
@@ -258,7 +259,55 @@ When in doubt, the answer is always: **open the flowhouse Space in Perplexity an
 
 ---
 
-## 14. Logins & accounts checklist
+## 14. Your logins (write them here)
+
+Keep your important logins in one safe place. Fill these in by hand (in your printed copy), or ask Ethan to set them up with you. **Treat this page like a key to your studio — keep it private and safe.**
+
+> Security tip: use a strong, unique password for each account, and turn on two-factor authentication (2FA) where it's offered. A free password manager (like the one built into your phone or browser) can store all of this for you securely.
+
+### GitHub — needed to log into your website editor (/admin)
+
+- **Website:** https://github.com/login
+- **Username / email:** _______________________________________________
+- **Password:** _______________________________________________
+- **2FA / backup codes (if set up):** _______________________________________________
+- *Note: this is also how you log into flowhouserb.com/admin — click "Login with GitHub."*
+
+### Perplexity Computer — the easy editing path (the flowhouse Space)
+
+- **Website:** https://perplexity.ai
+- **Username / email:** _______________________________________________
+- **Password:** _______________________________________________
+
+### Netlify — your website host + where sign-ups are stored
+
+- **Website:** https://app.netlify.com
+- **Username / email:** _______________________________________________
+- **Password:** _______________________________________________
+
+### Mariana Tek — class booking, memberships & accounts
+
+- **Login link:** _______________________________________________
+- **Username / email:** _______________________________________________
+- **Password:** _______________________________________________
+
+### Studio email inbox — info@flowhouserb.com
+
+- **Where you check it (Gmail, etc.):** _______________________________________________
+- **Username / email:** _______________________________________________
+- **Password:** _______________________________________________
+
+### Other accounts (Squarespace, Instagram, domain, etc.)
+
+- **Account:** ___________________  **Login:** ___________________  **Password:** ___________________
+- **Account:** ___________________  **Login:** ___________________  **Password:** ___________________
+- **Account:** ___________________  **Login:** ___________________  **Password:** ___________________
+
+> If you ever forget a password, every one of these sites has a "Forgot password?" link that emails you a reset to **info@flowhouserb.com** — so keeping access to that inbox is the most important one of all.
+
+---
+
+## 15. Logins & accounts checklist
 
 Make sure you have access to these (ask Ethan to transfer/share ownership where needed):
 
@@ -274,7 +323,7 @@ Make sure you have access to these (ask Ethan to transfer/share ownership where 
 
 ---
 
-## 15. Glossary
+## 16. Glossary
 
 - **Hero** — the big headline + photo at the top of a page.
 - **CMS / the editor (/admin)** — the form-based dashboard where you type changes without code.
