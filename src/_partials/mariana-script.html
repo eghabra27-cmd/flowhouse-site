@@ -29,12 +29,16 @@
 <script>
   (function () {
     function looksLive(container) {
-      // MT renders an iframe with a real src once the tenant is publishing content.
-      var iframe = container.querySelector('iframe[src]:not([src=""]):not([src="about:blank"])');
-      if (iframe) return true;
-      // Or any substantial MT-rendered DOM beyond our fallback markup.
-      var mt = container.querySelector('[class*="mariana"], [id*="mariana"], [data-testid]');
-      return !!mt;
+      // The only reliable signal that the tenant is actually serving content is
+      // a Mariana Tek iframe with a real (non-empty) src. MT injects empty
+      // scaffolding (e.g. an <aside class="mariana-integrations-notifications">)
+      // even before a schedule exists, so we must NOT treat that as "live".
+      var iframes = container.querySelectorAll('iframe');
+      for (var i = 0; i < iframes.length; i++) {
+        var src = iframes[i].getAttribute('src');
+        if (src && src !== 'about:blank' && src.indexOf('http') === 0) return true;
+      }
+      return false;
     }
     function applyFallbacks() {
       var containers = document.querySelectorAll('[data-mariana-integrations]');
