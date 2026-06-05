@@ -176,13 +176,17 @@ Three pages are built to plug directly into your Mariana Tek account: **Schedule
 
 Right now those pages show a gentle "Loading the live schedule…" message. They'll start working the moment Mariana Tek's **Web Integrations** are turned on for your account.
 
-**To turn them on:**
-1. Log into your **Mariana Tek admin**.
-2. Find **Web Integrations** (sometimes under Settings or Marketing — your Mariana Tek onboarding rep can point you to it).
-3. Make sure your studio's booking is published and the integration is enabled. Your account name is **flowhouse** (so your booking site is `flowhouse.marianatek.com`).
-4. That's it — the Schedule, Membership, and Account pages will fill in automatically. No website changes needed.
+**Right now (pre-launch):** the website embed is built correctly and connected to your `flowhouse` Mariana Tek account. Until you publish a live class schedule in Mariana Tek, these pages show a tasteful "Booking opens soon — Join the Founding Circle" message (never a broken/empty box). The moment your schedule goes live in Mariana Tek, the real booking widget appears automatically — no website change needed.
 
-If anything looks off after enabling it, ask Perplexity: "The Mariana Tek schedule isn't showing on flowhouserb.com — help me check it." Your Mariana Tek support rep can also confirm the integration is active.
+**To turn live booking on (do this in Mariana Tek, not the website):**
+1. Log into your **Mariana Tek admin**.
+2. **Add your classes to the schedule** and **publish** them (booking can't show until there are real classes to book).
+3. Find **Web Integrations** (often under Settings or Marketing — your Mariana Tek onboarding rep can point you to it) and make sure it's **enabled** and your **booking site is published**. Confirm your booking site loads at `flowhouse.marianatek.com`. (If that link gives a "not found" error, the tenant isn't published yet — that's the thing to fix with your MT rep.)
+4. That's it — the Schedule, Membership, and Account pages on flowhouserb.com will fill in with the live widget automatically.
+
+**How to test it's working:** open `flowhouserb.com/schedule.html` in your browser. If you see real classes you can click to book, you're live. If you still see "Booking opens soon," your Mariana Tek schedule isn't published yet — finish steps 2–3 above.
+
+If anything looks off, ask Perplexity: "The Mariana Tek schedule isn't showing on flowhouserb.com — help me check it." Your Mariana Tek support rep can also confirm the integration is active.
 
 ---
 
