@@ -157,9 +157,10 @@
         <h2 style="margin: 0.5rem auto 1rem; max-width: 24ch;" data-reveal>Be the first to know when franchising opens.</h2>
         <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 58ch;">We're building our franchise framework with intention and will open conversations with aligned partners soon. Register your interest and we'll be in touch as the model takes shape.</p>
 
-        <form name="franchise-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-fh-form action="/thank-you.html" class="form-row" style="max-width: 520px; margin: 0 auto; text-align:left;" data-reveal>
-          <input type="hidden" name="form-name" value="franchise-interest" />
-          <p hidden><label>Don’t fill this out: <input name="bot-field" /></label></p>
+        <form name="franchise-interest" method="POST" data-fh-form action="https://formspree.io/f/xnjyngdw" class="form-row" style="max-width: 520px; margin: 0 auto; text-align:left;" data-reveal>
+          <input type="hidden" name="_subject" value="New franchise inquiry — flowhouse" />
+          <input type="hidden" name="form" value="Franchise inquiry" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
           <div data-fh-fields style="display:grid; gap: var(--s-4);">
             <div class="field"><label for="fr-name">Full name</label><input id="fr-name" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="fr-email">Email</label><input id="fr-email" name="email" type="email" autocomplete="email" required></div>

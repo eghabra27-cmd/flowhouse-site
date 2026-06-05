@@ -1,19 +1,18 @@
-<!-- Founding Circle email capture — Netlify Forms (Name / Email / Phone) -->
-<!-- Submissions are stored in Netlify and emailed to info@flowhouserb.com. -->
-<!-- Exportable to the Mariana Tek CRM at launch. -->
+<!-- Founding Circle email capture (Name / Email / Phone) -->
+<!-- Submissions are emailed to info@flowhouserb.com via Formspree. -->
+<!-- To connect: paste your Formspree endpoint into the action below. -->
 <form
   name="founding-circle"
   method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
   data-fh-form
-  action="/thank-you.html"
+  action="https://formspree.io/f/xnjyngdw"
   class="form-row"
   style="max-width: 480px; margin: 0 auto; text-align: left;"
   data-reveal
 >
-  <input type="hidden" name="form-name" value="founding-circle" />
-  <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+  <input type="hidden" name="_subject" value="New Founding Circle sign-up — flowhouse" />
+  <input type="hidden" name="form" value="Founding Circle" />
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
 
   <div data-fh-fields style="display: grid; gap: var(--s-4);">
     <div class="field">

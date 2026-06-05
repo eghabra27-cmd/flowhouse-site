@@ -75,21 +75,41 @@
   formatFilter?.addEventListener('change', applyFilters);
   levelFilter?.addEventListener('change', applyFilters);
 
-  // ── Founding Circle / lead forms → Netlify Forms (AJAX, stay on page) ──
-  // Any <form data-fh-form> posts to Netlify and shows an inline success state.
+  // ── Founding Circle / lead forms → Formspree (AJAX, stay on page) ──
+  // Any <form data-fh-form> posts to its own `action` (a Formspree endpoint)
+  // and shows an inline success state. Works on static hosting (GitHub Pages).
   document.querySelectorAll('form[data-fh-form]').forEach((form) => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const origLabel = btn ? btn.textContent : '';
+      const errEl = form.querySelector('[data-fh-error]');
+      if (errEl) errEl.hidden = true;
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      const showError = () => {
+        if (btn) { btn.disabled = false; btn.textContent = origLabel; }
+        if (errEl) errEl.hidden = false;
+        else alert('Something went wrong. Please email info@flowhouserb.com and we\u2019ll add you directly.');
+      };
+
+      const endpoint = form.getAttribute('action');
+      // Guard: if the form hasn't been connected to Formspree yet, fail loudly
+      // (to the console) rather than silently pretending it sent.
+      if (!endpoint || endpoint.indexOf('formspree.io') === -1) {
+        console.error('Form is not connected to Formspree yet (no valid action endpoint).');
+        showError();
+        return;
+      }
+
       try {
         const data = new FormData(form);
-        await fetch('/', {
+        const res = await fetch(endpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(data).toString(),
+          body: data,
+          headers: { Accept: 'application/json' },
         });
+        if (!res.ok) throw new Error('Submission failed: ' + res.status);
         const success = form.querySelector('[data-fh-success]');
         const fields = form.querySelector('[data-fh-fields]');
         if (success) success.hidden = false;
@@ -98,10 +118,7 @@
           form.innerHTML = '<div class="form-success"><h3 class="h4">You\u2019re on the list.</h3><p class="text-muted">Welcome to the Founding Circle. We\u2019ll be in touch with first access as we get closer to opening.</p></div>';
         }
       } catch (err) {
-        if (btn) { btn.disabled = false; btn.textContent = origLabel; }
-        const errEl = form.querySelector('[data-fh-error]');
-        if (errEl) errEl.hidden = false;
-        else alert('Something went wrong. Please email info@flowhouserb.com and we\u2019ll add you directly.');
+        showError();
       }
     });
   });
