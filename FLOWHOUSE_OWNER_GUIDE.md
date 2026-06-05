@@ -157,12 +157,25 @@ Every sign-up form on the site (Founding Circle, plus the franchise and instruct
 
 **Where the sign-ups go:** they're stored in **Netlify** (your host) and can be emailed to you.
 
-**To get sign-ups emailed to info@flowhouserb.com (one-time setup):**
+Every form on the site (Founding Circle, franchise inquiries, and instructor applications) is set up to email you the moment it's filled out, so you can keep track of every lead. There are **two delivery methods** working together (belt-and-suspenders), both sending to **info@flowhouserb.com**:
+
+**Method 1 — Netlify built-in email (simplest, one-time setup):**
 1. Log into **netlify.com** with the account connected to the site.
-2. Open the flowhouse site → **Forms**.
-3. You'll see forms named `founding-circle`, `franchise-interest`, and `instructor-application`.
-4. Go to **Form notifications → Add notification → Email notification**, and enter **info@flowhouserb.com**.
-5. Save. From now on you'll get an email every time someone signs up.
+2. Open the flowhouse site → **Forms** → **Form notifications**.
+3. Click **Add notification → Email notification**.
+4. Enter **info@flowhouserb.com** and save. (You can add it once per form: `founding-circle`, `franchise-interest`, `instructor-application`.)
+5. Done — you'll get an email every time someone submits.
+
+**Method 2 — Branded emails via Resend (already built, needs one key):**
+A behind-the-scenes function emails you a nicely formatted summary of each submission, with **reply-to set to the person who filled it out** (so you can reply straight to the lead). To switch it on:
+1. In Netlify → your site → **Site settings → Environment variables → Add a variable**.
+2. Add **`RESEND_API_KEY`** = your Resend API key (from resend.com → API Keys; it starts with `re_`).
+3. Save and trigger a redeploy (Netlify → Deploys → Trigger deploy). That's it.
+4. *Optional polish:* once you've verified flowhouserb.com in Resend, also add **`NOTIFY_FROM`** = `flowhouse <hello@flowhouserb.com>` so emails come "from" your own domain. Until then they arrive from a Resend address — still delivered to your inbox.
+
+**Either method alone is enough** — Method 1 is the quickest. With both on, you simply get the notification twice. If you'd rather keep it simple, just do Method 1 and ignore Method 2.
+
+> No matter what, every submission is **also** stored in Netlify (Forms tab) as a backup, even if email isn't set up yet.
 
 **To see/download all sign-ups anytime:** Netlify → your site → **Forms** → click a form → you can view every submission and **export them to a spreadsheet (CSV)**.
 
