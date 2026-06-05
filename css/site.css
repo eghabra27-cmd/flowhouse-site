@@ -957,6 +957,23 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   border-radius: var(--r-lg); padding: var(--s-8); text-align: center;
 }
 .form-success h3 { margin-bottom: var(--s-2); }
+/* Force readable dark text inside the white success box, even when the box
+   sits inside a clay / walnut / ink section (which otherwise tint headings
+   and eyebrows light, making them invisible on white). */
+.section--clay .form-success .eyebrow,
+.section--walnut .form-success .eyebrow,
+.section--ink .form-success .eyebrow,
+.form-success .eyebrow { color: var(--c-oxblood); }
+.section--clay .form-success h1, .section--clay .form-success h2,
+.section--clay .form-success h3, .section--clay .form-success h4,
+.section--walnut .form-success h1, .section--walnut .form-success h2,
+.section--walnut .form-success h3, .section--walnut .form-success h4,
+.section--ink .form-success h1, .section--ink .form-success h2,
+.section--ink .form-success h3, .section--ink .form-success h4,
+.form-success h1, .form-success h2, .form-success h3, .form-success h4 { color: var(--c-ink); }
+.section--clay .form-success p, .section--walnut .form-success p,
+.section--ink .form-success p, .form-success p,
+.form-success .text-muted { color: var(--c-ink-soft); }
 
 /* ---------- franchising page accents ---------- */
 .fr-metric {
