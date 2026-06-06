@@ -1,29 +1,26 @@
-hero_eyebrow: "the founder · meet sam"
-hero_headline_html: "Meet <em>Sam.</em>"
-hero_lead: "flowhouse was created by Sam as a modern movement space designed to feel equal parts grounding, intentional, and inspiring."
-hero_image: /images/v4/hero-sam-portrait.jpg
-hero_image_alt: "Sam, founder of flowhouse, in a warm-toned editorial portrait holding hand weights overhead."
-hero_badge: "Founder & Lead Instructor"
-
-story_eyebrow: "her story"
-story_headline: "More than a studio. A place to return to."
-story_p1: "With a background in pilates, yoga, holistic wellness, and mindful movement, Sam's vision was to create more than just a studio. She wanted to build a place people could return to — for ritual, connection, growth, and feeling good in their bodies."
-story_p2: "Blending reformer pilates, barre, yoga, and sculpt-inspired movement, flowhouse is rooted in both strength and softness. Every detail — from the design to the movement itself — was created to feel welcoming, elevated, and intentional."
-story_p3: "For Sam, movement has always been about more than fitness. It's about coming home to yourself."
-signature: "It's about coming home to yourself."
-
-values_eyebrow: "what guides us"
-values_headline: "The principles flowhouse is built on."
+hero_eyebrow: the founder · meet sam
+hero_headline_html: Meet <em>Sam.</em>
+hero_lead: flowhouse was created by Sam as a modern movement space designed to feel equal parts grounding, intentional, and inspiring.
+hero_image: /images/uploads/flowhouse..png
+hero_image_alt: Sam, founder of flowhouse, in a warm-toned editorial portrait holding hand weights overhead.
+hero_badge: Founder & Lead Instructor
+story_eyebrow: her story
+story_headline: More than a studio. A place to return to.
+story_p1: With a background in pilates, yoga, holistic wellness, and mindful movement, Sam's vision was to create more than just a studio. She wanted to build a place people could return to — for ritual, connection, growth, and feeling good in their bodies.
+story_p2: Blending reformer pilates, barre, yoga, and sculpt-inspired movement, flowhouse is rooted in both strength and softness. Every detail — from the design to the movement itself — was created to feel welcoming, elevated, and intentional.
+story_p3: For Sam, movement has always been about more than fitness. It's about coming home to yourself.
+signature: It's about coming home to yourself.
+values_eyebrow: what guides us
+values_headline: The principles flowhouse is built on.
 values:
-  - title: "Intentional"
-    body: "Nothing here is accidental. Every class, every material, every detail is chosen with care — designed to slow you down and bring you back to yourself."
-  - title: "Grounded"
-    body: "Strength and softness, together. We build the body for the long term — posture, alignment, mobility, and a calm, regulated nervous system."
-  - title: "Elevated"
-    body: "A space that feels less like a gym and more like a sanctuary. Warm, considered, and quietly luxurious — the hour you give yourself every day."
-  - title: "Community-centered"
-    body: "Movement is the start of the ritual, not the end. flowhouse is a place to be met, to belong, and to grow alongside people who move with intention too."
-
-cta_eyebrow: "join us"
-cta_headline: "Be one of the first through the door."
-cta_body: "Founding members receive first access to class booking, exclusive launch perks, and introductory membership opportunities. Move with us from the very beginning."
+  - title: Intentional
+    body: Nothing here is accidental. Every class, every material, every detail is chosen with care — designed to slow you down and bring you back to yourself.
+  - title: Grounded
+    body: Strength and softness, together. We build the body for the long term — posture, alignment, mobility, and a calm, regulated nervous system.
+  - title: Elevated
+    body: A space that feels less like a gym and more like a sanctuary. Warm, considered, and quietly luxurious — the hour you give yourself every day.
+  - title: Community-centered
+    body: Movement is the start of the ritual, not the end. flowhouse is a place to be met, to belong, and to grow alongside people who move with intention too.
+cta_eyebrow: join us
+cta_headline: Be one of the first through the door.
+cta_body: Founding members receive first access to class booking, exclusive launch perks, and introductory membership opportunities. Move with us from the very beginning.
