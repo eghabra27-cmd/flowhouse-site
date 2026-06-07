@@ -215,6 +215,18 @@ function buildPages() {
     built.push(entry.name);
   }
   console.log(`✓ Built ${built.length} pages: ${built.join(', ')}`);
+
+  // Extensionless pretty-URL copies (GitHub Pages serves /thanks via /thanks/index.html)
+  const prettyUrls = ['thanks'];
+  for (const name of prettyUrls) {
+    const srcFile = path.join(ROOT, `${name}.html`);
+    if (fs.existsSync(srcFile)) {
+      const dir = path.join(ROOT, name);
+      fs.mkdirSync(dir, { recursive: true });
+      fs.copyFileSync(srcFile, path.join(dir, 'index.html'));
+      console.log(`✓ Pretty URL: /${name} → ${name}/index.html`);
+    }
+  }
 }
 
 buildPages();
