@@ -110,13 +110,9 @@
           headers: { Accept: 'application/json' },
         });
         if (!res.ok) throw new Error('Submission failed: ' + res.status);
-        const success = form.querySelector('[data-fh-success]');
-        const fields = form.querySelector('[data-fh-fields]');
-        if (success) success.hidden = false;
-        if (fields) fields.hidden = true;
-        if (!success) {
-          form.innerHTML = '<div class="form-success"><h3 class="h4">You\u2019re on the list.</h3><p class="text-muted">Welcome to the Founding Circle. We\u2019ll be in touch with first access as we get closer to opening.</p></div>';
-        }
+        // Redirect to the thank-you page on success.
+        window.location.href = '/thanks.html';
+        return;
       } catch (err) {
         showError();
       }
