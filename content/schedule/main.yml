@@ -1,12 +1,10 @@
-eyebrow: "schedule"
-headline_html: "Class schedule, <span class=\"serif-italic\">launching soon.</span>"
-lead: "Our class schedule and founding memberships will be released soon. Join the Founding Circle for early access, updates, and first booking opportunities."
-cta_primary_label: "Join the Founding Circle"
-cta_primary_href: "index.html#waitlist"
-cta_secondary_label: "The Method"
-cta_secondary_href: "flowformer.html"
-
-# Editorial image strip below
-image: "images/v4/studio.png"
-image_alt: "The flowhouse studio — ten custom Flowformer reformers under warm pendant lighting."
-image_caption: "Opening Summer 2026 · 18585 Coastal Highway, Suite 22 · Rehoboth Beach, DE"
+eyebrow: schedule
+headline_html: Class schedule, <span class="serif-italic">launching soon.</span>
+lead: Our class schedule and founding memberships will be released soon. Join the Founding Circle for early access, updates, and first booking opportunities.
+cta_primary_label: Join the Founding Circle
+cta_primary_href: index.html#waitlist
+cta_secondary_label: The Method
+cta_secondary_href: flowformer.html
+image: images/v4/studio.png
+image_alt: The flowhouse studio — ten custom Flowformer reformers under warm pendant lighting.
+image_caption: Opening Summer 2026 · Rehoboth Beach, DE
