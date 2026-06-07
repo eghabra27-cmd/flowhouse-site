@@ -1,39 +1,35 @@
-hero_eyebrow: "franchising"
-hero_headline_html: "Franchising, <em>coming soon.</em>"
-hero_lead: "flowhouse was built to be felt — and built to grow. We're laying the foundation for a considered, future-facing franchise model for founders who believe movement spaces should feel like sanctuaries."
+hero_eyebrow: franchising
+hero_headline_html: Franchising, <em>coming soon.</em>
+hero_lead: flowhouse was built to be felt — and built to grow. We're laying the foundation for a considered, future-facing franchise model for founders who believe movement spaces should feel like sanctuaries.
 hero_image: /images/v4/studio.png
-hero_image_alt: "The flowhouse studio interior — warm walnut walls and custom FlowFormer reformers under soft pendant light."
-hero_badge: "In development"
-
-pq_eyebrow: "the opportunity"
-pq_html: "A movement brand designed to <em>travel beautifully.</em>"
-pq_body: "From a single coastal studio to a brand built for thoughtful expansion. Every system — the FlowFormer, the method, the design language, the member experience — was created to be repeatable without losing what makes it feel personal."
-
-why_eyebrow: "why flowhouse"
-why_headline: "Built for expansion from day one."
+hero_image_alt: The flowhouse studio interior — warm walnut walls and custom FlowFormer reformers under soft pendant light.
+hero_badge: In development
+pq_eyebrow: the opportunity
+pq_html: A movement brand designed to <em>travel beautifully.</em>
+pq_body: From a single coastal studio to a brand built for thoughtful expansion. Every system — the FlowFormer, the method, the design language, the member experience — was created to be repeatable without losing what makes it feel personal.
+why_eyebrow: why flowhouse
+why_headline: Built for expansion from day one.
 why_cards:
-  - title: "A proprietary method"
-    body: "The FlowFormer and the Flowhouse Method are designed and owned in-house — a defensible, branded movement experience that can't be copied off a catalog."
-  - title: "A complete design language"
-    body: "Warm, elevated, hospitality-inspired interiors with a clear material and brand system — a studio that looks and feels unmistakably flowhouse anywhere it opens."
-  - title: "Modern operations"
-    body: "Built on Mariana Tek for booking, memberships, and CRM, with intentional systems for staffing, training, and member experience baked in from the start."
-  - title: "A brand people love"
-    body: "Community-first, design-forward, and genuinely warm. flowhouse is the kind of brand members tell their friends about — before the doors even open."
-
-metrics_eyebrow: "the model, at a glance"
+  - title: A proprietary method
+    body: The FlowFormer and the Flowhouse Method are designed and owned in-house — a defensible, branded movement experience that can't be copied off a catalog.
+  - title: A complete design language
+    body: Warm, elevated, hospitality-inspired interiors with a clear material and brand system — a studio that looks and feels unmistakably flowhouse anywhere it opens.
+  - title: Modern operations
+    body: Built on Mariana Tek with a dedicated mobile app for seamless booking, memberships, and account management, plus intentional systems for staffing, training, operations, and member experience baked in from the start.
+  - title: A brand people love
+    body: Community-first, design-forward, and genuinely warm. flowhouse is the kind of brand members tell their friends about — before the doors even open.
+metrics_eyebrow: the model, at a glance
 metrics:
-  - figure: "1"
-    label: "Flagship studio · Rehoboth Beach"
-  - figure: "3"
-    label: "Modalities — reformer, barre, yin"
-  - figure: "100%"
-    label: "Proprietary equipment & method"
-  - figure: "2026"
-    label: "Founding year"
-
-cta_eyebrow: "register interest"
-cta_headline: "Be the first to know when franchising opens."
-cta_body: "We're building our franchise framework with intention and will open conversations with aligned partners soon. Register your interest and we'll be in touch as the model takes shape."
-cta_email_label: "Franchise inquiries"
-cta_email: "info@flowhouserb.com"
+  - figure: '1'
+    label: Flagship studio · Rehoboth Beach
+  - figure: '3'
+    label: Modalities — reformer, barre, yin
+  - figure: 100%
+    label: Proprietary equipment & method
+  - figure: '2026'
+    label: Founding year
+cta_eyebrow: register interest
+cta_headline: Be the first to know when franchising opens.
+cta_body: We're building our franchise framework with intention and will open conversations with aligned partners soon. Register your interest and we'll be in touch as the model takes shape.
+cta_email_label: Franchise inquiries
+cta_email: info@flowhouserb.com
