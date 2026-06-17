@@ -38,6 +38,7 @@
       <a href="teach.html" data-nav="teach">teach</a>
     </nav>
     <div class="header-actions">
+      <a href="account.html" class="header-login" data-nav="account">Login</a>
       <a href="schedule.html" class="btn btn--ghost btn--sm" data-nav-cta>Book</a>
       <a href="index.html#waitlist" class="btn btn--primary btn--sm">Founding Circle</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
@@ -64,9 +65,11 @@
     <a href="memberships.html">memberships</a>
     <a href="merch.html">merch</a>
     <a href="teach.html">teach</a>
+    <a href="account.html">login</a>
   </nav>
   <div class="drawer-cta">
     <a href="schedule.html" class="btn btn--ghost btn--full">Book a class</a>
+    <a href="account.html" class="btn btn--ghost btn--full">Login</a>
     <a href="index.html#waitlist" class="btn btn--primary btn--full">Join the Founding Circle</a>
   </div>
 </aside>
@@ -86,7 +89,7 @@
         </div>
 
         <div class="mt-embed-wrap" data-reveal>
-          <div data-mariana-integrations="/memberships">
+          <div data-mariana-integrations="/buy/48717">
             <div class="mt-fallback">
               <span class="mt-loading">Loading membership options…</span>
               <p class="text-sm" style="max-width: 46ch;">If options don’t appear, please enable JavaScript or <a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" style="text-decoration:underline;">open in a new tab</a>.</p>
@@ -264,7 +267,7 @@
         if (path.indexOf('account') > -1) {
           heading = 'Accounts open soon.';
           body = 'Member accounts go live with our class schedule. Join the Founding Circle for first access.';
-        } else if (path.indexOf('membership') > -1) {
+        } else if (path.indexOf('membership') > -1 || path.indexOf('buy') > -1) {
           heading = 'Memberships open soon.';
           body = 'Founding-member pricing and packages are on their way. Join the Founding Circle to lock in first access.';
         }

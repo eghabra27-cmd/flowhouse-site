@@ -180,6 +180,21 @@ h4, .h4 {
 .nav-links a:hover::after, .nav-links a[aria-current="page"]::after { transform: scaleX(1); }
 
 .header-actions { display: flex; align-items: center; gap: var(--s-3); }
+.header-login {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--c-ink);
+  text-decoration: none;
+  padding: var(--s-1) var(--s-2);
+  position: relative;
+  transition: color 200ms var(--ease);
+}
+.header-login::after {
+  content: ""; position: absolute; left: var(--s-2); right: var(--s-2); bottom: 2px;
+  height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform 240ms var(--ease);
+}
+.header-login:hover::after, .header-login[aria-current="page"]::after { transform: scaleX(1); }
 .nav-toggle {
   display: none;
   width: 42px; height: 42px; border-radius: 999px;
@@ -761,6 +776,7 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
 /* ---------- mobile ---------- */
 @media (max-width: 960px) {
   .nav-links { display: none; }
+  .header-login { display: none; }
   .nav-toggle { display: inline-flex; }
   .hero__grid { grid-template-columns: 1fr; gap: var(--s-8); }
   .hero__image-frame { aspect-ratio: 4/4.6; order: -1; }
