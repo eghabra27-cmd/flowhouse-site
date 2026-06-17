@@ -88,11 +88,25 @@
         </div>
 
         <div class="mt-embed-wrap" data-reveal>
-          <div data-mariana-integrations="/buy/48717">
-            <div class="mt-fallback">
-              <span class="mt-loading">Loading membership options…</span>
-              <p class="text-sm" style="max-width: 46ch;">If options don’t appear, please enable JavaScript or <a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" style="text-decoration:underline;">open in a new tab</a>.</p>
+          <!-- Public-facing coming-soon card. Matches the Mariana Tek widget look
+               (location heading + "Move With Us") but hides pricing/cards until launch. -->
+          <div class="mt-comingsoon">
+            <div class="mt-comingsoon__head">
+              <h2 class="mt-comingsoon__location">Rehoboth Beach</h2>
+              <p class="mt-comingsoon__eyebrow">Move With Us</p>
             </div>
+            <div class="mt-comingsoon__body">
+              <p class="mt-comingsoon__msg">Memberships and intro offers are launching soon. Join the Founding Circle to be the first to know when early access opens.</p>
+              <a href="index.html#waitlist" class="btn btn--primary">Join the Founding Circle</a>
+            </div>
+          </div>
+
+          <!-- Mariana Tek Buy integration kept INSTALLED for verification (loads on
+               every visit; visible in page source / dev tools) but visually hidden
+               from the public until pricing goes live. To re-enable publicly, remove
+               the .mt-hidden class (and the coming-soon block above). -->
+          <div class="mt-hidden" aria-hidden="true">
+            <div data-mariana-integrations="/buy/48717"></div>
           </div>
         </div>
 
