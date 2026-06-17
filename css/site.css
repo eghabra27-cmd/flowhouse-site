@@ -889,58 +889,6 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
 }
 .mt-loading { font-size: var(--fs-sm); color: var(--c-muted); letter-spacing: 0.04em; }
 
-/* Pre-launch coming-soon card (mimics the MT widget header look). */
-.mt-comingsoon {
-  display: flex; flex-direction: column;
-  min-height: 280px;
-  padding: clamp(var(--s-2), 2vw, var(--s-6)) 0;
-}
-.mt-comingsoon__head {
-  border-bottom: 1px solid var(--c-divider);
-  padding-bottom: var(--s-5);
-  margin-bottom: var(--s-8);
-}
-.mt-comingsoon__location {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin: 0 0 0.35rem;
-  color: var(--c-ink);
-}
-.mt-comingsoon__eyebrow {
-  font-size: var(--fs-sm);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--c-muted);
-  margin: 0;
-}
-.mt-comingsoon__body {
-  flex: 1;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center; gap: var(--s-6);
-  padding: var(--s-6) 0 var(--s-4);
-}
-.mt-comingsoon__msg {
-  font-size: var(--fs-lead);
-  color: var(--c-ink-soft);
-  max-width: 48ch;
-  line-height: 1.55;
-  margin: 0;
-}
-
-/* Keep the MT integration loaded & verifiable, but hidden from the public.
-   Uses clip+collapse (not display:none) so the embed still mounts/renders
-   for verification in page source and dev tools. */
-.mt-hidden {
-  position: absolute !important;
-  width: 1px; height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-}
-
 /* ---------- pre-launch teaser (blurred, mysterious merch) ---------- */
 .teaser-grid {
   display: grid;
