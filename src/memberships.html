@@ -11,10 +11,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
-  <title>Founding Memberships — Reformer Pilates &amp; Barre · flowhouse Rehoboth Beach</title>
-  <meta name="description" content="Founding memberships at flowhouse will be released soon. Founding members receive first access to class booking, exclusive launch perks, and introductory membership opportunities.">
-  <meta property="og:title" content="Founding Memberships Launching Soon · flowhouse">
-  <meta property="og:description" content="First access. Exclusive launch perks. Introductory membership opportunities. Join the Founding Circle.">
+  <title>Memberships, Packages &amp; Intro Offers — Buy Online · flowhouse Rehoboth Beach</title>
+  <meta name="description" content="Purchase flowhouse memberships, class packages, intro offers, and founding-member options online. Reformer pilates and barre in Rehoboth Beach — powered by Mariana Tek.">
+  <meta property="og:title" content="Memberships &amp; Packages · flowhouse">
+  <meta property="og:description" content="Buy memberships, class packs, and intro offers online. Reformer pilates and barre in Rehoboth Beach.">
   <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
   <link rel="canonical" href="https://flowhouserb.com/memberships.html">
 </head>
-<body>
+<body data-fh-no-fallback>
   <a href="#main" class="skip-link">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__row">
@@ -75,39 +75,44 @@
 </aside>
 
   <main id="main">
-
-    <section class="section" style="padding-top: clamp(var(--s-12), 10vw, var(--s-24)); padding-bottom: clamp(var(--s-12), 10vw, var(--s-24));">
-      <div class="container container-narrow" style="text-align: center;">
-        <span class="eyebrow" data-reveal>{{ memberships.main.hero_eyebrow }}</span>
-        <h1 data-reveal style="margin: var(--s-5) 0;">{{ memberships.main.hero_headline_html | raw }}</h1>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8);">{{ memberships.main.hero_lead }}</p>
-
-        <div data-reveal style="display:flex; gap: var(--s-3); flex-wrap: wrap; justify-content: center;">
-          <a href="{{ memberships.main.hero_cta_primary_href }}" class="btn btn--primary">{{ memberships.main.hero_cta_primary_label }}</a>
-          <a href="{{ memberships.main.hero_cta_secondary_href }}" class="btn btn--ghost">{{ memberships.main.hero_cta_secondary_label }}</a>
+    <section class="section" style="padding-top: clamp(var(--s-10), 6vw, var(--s-16));">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: var(--s-8);">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">memberships &amp; packages</span>
+            <h1>Find your way in.</h1>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>Memberships, class packages, intro offers, and founding-member options — purchase online below. New to flowhouse? An intro offer is the easiest way to begin. Founding Circle members receive first access and locked-in founding rates.</p>
+          </div>
         </div>
+
+        <div class="mt-embed-wrap" data-reveal>
+          <div data-mariana-integrations="/buy/48717">
+            <div class="mt-fallback">
+              <span class="mt-loading">Loading membership options…</span>
+              <p class="text-sm" style="max-width: 46ch;">If options don’t appear, please enable JavaScript or <a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" style="text-decoration:underline;">open in a new tab</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-muted text-sm" data-reveal style="text-align:center; margin-top: var(--s-6);">
+          <a href="schedule.html" style="text-decoration:underline;">Book a class</a> ·
+          <a href="account.html" style="text-decoration:underline;">Manage your account</a> ·
+          See our <a href="policies.html" style="text-decoration:underline;">membership &amp; cancellation policies</a>.
+        </p>
       </div>
     </section>
 
-    <!-- pull quote -->
-    <section class="section section--walnut">
-      <div class="container container-narrow" style="text-align: center;">
-        <span class="eyebrow" data-reveal>{{ memberships.main.pullquote_eyebrow }}</span>
-        <p class="pull-quote" data-reveal style="margin-top: var(--s-6); color: #f5ecdf;">{{ memberships.main.pullquote_html | raw }}</p>
-        <p class="lead" data-reveal style="margin: var(--s-8) auto 0;">{{ memberships.main.pullquote_body }}</p>
-      </div>
-    </section>
-
-    <!-- founding waitlist -->
+    <!-- Founding Circle CTA -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
-        <span class="eyebrow" data-reveal>{{ memberships.main.waitlist_eyebrow }}</span>
-        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ memberships.main.waitlist_headline }}</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ memberships.main.waitlist_lead }}</p>
+        <span class="eyebrow" data-reveal>founding memberships</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Founding rates, locked in.</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">Founding members receive first access to booking, exclusive launch perks, and introductory pricing held for as long as they stay. Join the circle before the doors open.</p>
         {{> founding-form }}
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -160,6 +165,7 @@
 </div>
 
 <script src="js/site.js?v=2"></script>
+{{> mariana-script }}
 </body>
 </html>
 <!--
