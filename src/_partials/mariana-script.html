@@ -21,30 +21,49 @@
   </a>
 </noscript>
 
-<!-- Graceful fallback: if Mariana Tek hasn't rendered a live widget yet
-     (e.g. pre-launch, before classes are published), show a polished
-     on-brand message instead of a permanent loading spinner. The moment
-     the MT tenant goes live, the real booking widget renders and this
-     never triggers. -->
+<!-- Pre-launch placeholder: shows a polished on-brand message ONLY while a
+     container is still showing our own loading state and Mariana Tek has not
+     touched it. Once the MT tenant is live, MT renders its own UI (schedule,
+     empty-state, login, buy, etc.) and we must NEVER overwrite it — including
+     MT's own "no classes scheduled" empty state.
+
+     Opt-out: add data-mariana-no-fallback to a container (or data-fh-no-fallback
+     on <body>) to permanently disable the placeholder for that container/page. -->
 <script>
   (function () {
-    function looksLive(container) {
-      // The only reliable signal that the tenant is actually serving content is
-      // a Mariana Tek iframe with a real (non-empty) src. MT injects empty
-      // scaffolding (e.g. an <aside class="mariana-integrations-notifications">)
-      // even before a schedule exists, so we must NOT treat that as "live".
-      var iframes = container.querySelectorAll('iframe');
-      for (var i = 0; i < iframes.length; i++) {
-        var src = iframes[i].getAttribute('src');
-        if (src && src !== 'about:blank' && src.indexOf('http') === 0) return true;
+    // Hard opt-out at the page level (used on the Schedule page).
+    if (document.body && document.body.hasAttribute('data-fh-no-fallback')) return;
+
+    function mtHasRendered(container) {
+      // Mariana Tek is considered "in control" the moment it injects ANY of its
+      // own DOM into the container. This covers the live schedule, the buy page,
+      // the account/login UI, AND the legitimate "no classes scheduled" empty
+      // state — all of which we must leave alone.
+      if (!container) return false;
+      // 1) Any MT-authored element (classes/attributes are namespaced with "mariana").
+      if (container.querySelector(
+            'iframe,[class*="mariana"],[class*="Mariana"],[id*="mariana"],[data-mariana-app],[class*="mt-"]:not(.mt-fallback)'
+          )) return true;
+      // 2) Any real child element other than our own loading/fallback scaffold.
+      var kids = container.children;
+      for (var i = 0; i < kids.length; i++) {
+        var el = kids[i];
+        if (el.classList && (el.classList.contains('mt-fallback'))) continue;
+        // our initial markup is a single .mt-fallback wrapper; anything else = MT.
+        if (el.querySelector && el.querySelector('.mt-loading')) continue;
+        return true;
       }
       return false;
     }
-    function applyFallbacks() {
+
+    function applyPlaceholder() {
       var containers = document.querySelectorAll('[data-mariana-integrations]');
       containers.forEach(function (c) {
         if (c.getAttribute('data-fh-fallback') === 'done') return;
-        if (looksLive(c)) return; // real widget present — leave it alone
+        // Per-container opt-out.
+        if (c.hasAttribute('data-mariana-no-fallback')) return;
+        // If MT has rendered anything (incl. its empty state), never overwrite.
+        if (mtHasRendered(c)) return;
         c.setAttribute('data-fh-fallback', 'done');
         var path = c.getAttribute('data-mariana-integrations') || '';
         var heading = 'Booking opens soon.';
@@ -68,10 +87,10 @@
           '</div>';
       });
     }
-    // Give Mariana Tek a fair chance to load, then check (runs regardless of
-    // whether the page 'load' event has already fired).
-    setTimeout(applyFallbacks, 6000);
-    // Check again a little later in case MT is slow on a cold connection.
-    setTimeout(applyFallbacks, 12000);
+
+    // Check once after MT has had time to load. We DO NOT re-run on a second
+    // timer, so we can never clobber a widget that rendered late or that swaps
+    // its internal view (e.g. schedule -> empty state) after first paint.
+    setTimeout(applyPlaceholder, 6000);
   })();
 </script>
