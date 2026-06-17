@@ -310,5 +310,60 @@
   })();
 </script>
 
+<!-- Once Mariana Tek injects its real widget, MT renders it as a SIBLING of our
+     "Loading…" placeholder rather than replacing it (so both show, leaving the
+     loading text + empty whitespace above the real form). This observer hides
+     our placeholder the moment MT's own DOM appears, and collapses the reserved
+     min-height so there's no leftover gap. Functionality is untouched — we only
+     hide OUR scaffold, never anything Mariana renders. -->
+<script>
+  (function () {
+    var MT_RENDERED = 'iframe,[class*="mariana"],[class*="Mariana"],[id*="mariana"],[data-mariana-app],[class*="mt-"]:not(.mt-fallback):not(.mt-loading)';
+
+    function tidy(container) {
+      if (!container) return false;
+      // Has MT injected any of its own DOM into this container yet?
+      if (!container.querySelector(MT_RENDERED)) return false;
+      // Yes — hide our loading/placeholder scaffold and drop the reserved height.
+      var scaffolds = container.querySelectorAll('.mt-fallback');
+      for (var i = 0; i < scaffolds.length; i++) {
+        scaffolds[i].style.display = 'none';
+      }
+      container.style.minHeight = '0';
+      var wrap = container.closest ? container.closest('.mt-embed-wrap') : null;
+      if (wrap) wrap.style.minHeight = '0';
+      return true;
+    }
+
+    function tidyAll() {
+      var done = true;
+      document.querySelectorAll('[data-mariana-integrations]').forEach(function (c) {
+        if (c.getAttribute('data-fh-tidied') === '1') return;
+        if (tidy(c)) { c.setAttribute('data-fh-tidied', '1'); }
+        else { done = false; }
+      });
+      return done;
+    }
+
+    // Watch for MT injecting its widget (it can arrive at any time after load).
+    if ('MutationObserver' in window) {
+      var obs = new MutationObserver(function () { if (tidyAll()) { /* keep watching others */ } });
+      document.querySelectorAll('[data-mariana-integrations]').forEach(function (c) {
+        obs.observe(c, { childList: true, subtree: true });
+      });
+      // Stop observing after a reasonable window to avoid a lingering observer.
+      setTimeout(function () { obs.disconnect(); }, 30000);
+    }
+    // Also poll as a fallback for browsers/edge cases the observer misses.
+    var ticks = 0;
+    var poll = setInterval(function () {
+      ticks++;
+      if (tidyAll() || ticks > 30) clearInterval(poll);
+    }, 500);
+    // And run once immediately in case MT was already present.
+    tidyAll();
+  })();
+</script>
+
 </body>
 </html>
