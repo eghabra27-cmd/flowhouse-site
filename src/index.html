@@ -168,6 +168,28 @@
       </div>
     </section>
 
+    <!-- 03b · APP DOWNLOAD -->
+    <section class="section app-section" id="app">
+      <div class="container container-wide">
+        <div class="app-split">
+          <div class="app-phones" data-reveal aria-hidden="true">
+            <img class="app-phone app-phone--back-left" src="images/app/app-schedule.jpg" alt="">
+            <img class="app-phone app-phone--back-right" src="images/app/app-achievements.jpg" alt="">
+            <img class="app-phone app-phone--front" src="images/app/app-home.jpg" alt="The Flow House app home screen showing upcoming reservations and classes completed.">
+          </div>
+          <div class="app-copy" data-reveal>
+            <span class="eyebrow">the flow house app</span>
+            <h2>Download the <span class="serif-italic">Flow House</span> app.</h2>
+            <p class="lead">Book classes, manage your membership, purchase class packs, and stay connected with Flow House — all in one place.</p>
+            <p class="text-muted">Download the app to reserve your spot, manage your account, and be the first to know about new classes, workshops, and studio updates.</p>
+            <div class="app-badges">
+              <a href="{{ global.settings.app_store_url }}" class="btn btn--primary" target="_blank" rel="noopener">Download the App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 04 · CLASS MENU (3 core formats per spec) -->
     <section class="section section--soft" id="classes">
       <div class="container">
@@ -349,38 +371,15 @@
       </div>
     </section>
 
-    <!-- 11b · APP DOWNLOAD -->
-    <section class="section section--soft app-section" id="app">
-      <div class="container container-wide">
-        <div class="app-split">
-          <div class="app-phones" data-reveal aria-hidden="true">
-            <img class="app-phone app-phone--back-left" src="images/app/app-schedule.jpg" alt="">
-            <img class="app-phone app-phone--back-right" src="images/app/app-achievements.jpg" alt="">
-            <img class="app-phone app-phone--front" src="images/app/app-home.jpg" alt="The Flow House app home screen showing upcoming reservations and classes completed.">
-          </div>
-          <div class="app-copy" data-reveal>
-            <span class="eyebrow">the flow house app</span>
-            <h2>Download the <span class="serif-italic">Flow House</span> app.</h2>
-            <p class="lead">Book classes, manage your membership, purchase class packs, and stay connected with Flow House — all in one place.</p>
-            <p class="text-muted">Download the app to reserve your spot, manage your account, and be the first to know about new classes, workshops, and studio updates.</p>
-            <div class="app-badges">
-              <a href="{{ global.settings.app_store_url }}" class="btn btn--primary" target="_blank" rel="noopener">Download the App</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 12 · FOUNDING WAITLIST (anchor CTA) -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
-        <span class="eyebrow" data-reveal>{{ home.founding.eyebrow }}</span>
-        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ home.founding.headline }}</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-6); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ home.founding.body }}</p>
-        <div style="margin: 0 0 var(--s-8);" data-reveal>
-          <a href="memberships.html" class="btn btn--pink">Become a founding member</a>
+        <span class="eyebrow" data-reveal>founding membership · now live</span>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Founding Membership is now live.</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 52ch;">Become a founding member and lock in your early access rate.</p>
+        <div data-reveal>
+          <a href="memberships.html" class="btn btn--pink">Join Founding Membership</a>
         </div>
-        {{> founding-form }}
       </div>
     </section>
 

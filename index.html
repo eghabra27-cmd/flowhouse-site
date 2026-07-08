@@ -168,6 +168,28 @@
       </div>
     </section>
 
+    <!-- 03b · APP DOWNLOAD -->
+    <section class="section app-section" id="app">
+      <div class="container container-wide">
+        <div class="app-split">
+          <div class="app-phones" data-reveal aria-hidden="true">
+            <img class="app-phone app-phone--back-left" src="images/app/app-schedule.jpg" alt="">
+            <img class="app-phone app-phone--back-right" src="images/app/app-achievements.jpg" alt="">
+            <img class="app-phone app-phone--front" src="images/app/app-home.jpg" alt="The Flow House app home screen showing upcoming reservations and classes completed.">
+          </div>
+          <div class="app-copy" data-reveal>
+            <span class="eyebrow">the flow house app</span>
+            <h2>Download the <span class="serif-italic">Flow House</span> app.</h2>
+            <p class="lead">Book classes, manage your membership, purchase class packs, and stay connected with Flow House — all in one place.</p>
+            <p class="text-muted">Download the app to reserve your spot, manage your account, and be the first to know about new classes, workshops, and studio updates.</p>
+            <div class="app-badges">
+              <a href="https://apps.apple.com/app/flow-house/id6786468913" class="btn btn--primary" target="_blank" rel="noopener">Download the App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 04 · CLASS MENU (3 core formats per spec) -->
     <section class="section section--soft" id="classes">
       <div class="container">
@@ -381,85 +403,15 @@
       </div>
     </section>
 
-    <!-- 11b · APP DOWNLOAD -->
-    <section class="section section--soft app-section" id="app">
-      <div class="container container-wide">
-        <div class="app-split">
-          <div class="app-phones" data-reveal aria-hidden="true">
-            <img class="app-phone app-phone--back-left" src="images/app/app-schedule.jpg" alt="">
-            <img class="app-phone app-phone--back-right" src="images/app/app-achievements.jpg" alt="">
-            <img class="app-phone app-phone--front" src="images/app/app-home.jpg" alt="The Flow House app home screen showing upcoming reservations and classes completed.">
-          </div>
-          <div class="app-copy" data-reveal>
-            <span class="eyebrow">the flow house app</span>
-            <h2>Download the <span class="serif-italic">Flow House</span> app.</h2>
-            <p class="lead">Book classes, manage your membership, purchase class packs, and stay connected with Flow House — all in one place.</p>
-            <p class="text-muted">Download the app to reserve your spot, manage your account, and be the first to know about new classes, workshops, and studio updates.</p>
-            <div class="app-badges">
-              <a href="https://apps.apple.com/app/flow-house/id6786468913" class="btn btn--primary" target="_blank" rel="noopener">Download the App</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 12 · FOUNDING WAITLIST (anchor CTA) -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
         <span class="eyebrow" data-reveal>founding membership · now live</span>
-        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Become a founding member.</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-6); color: rgba(251,243,235,0.92); max-width: 56ch;">The Founding Membership is now live. Become a founding member today for first access to class booking, exclusive perks, and introductory rates held for as long as you stay. Join the Founding Circle for studio updates along the way.</p>
-        <div style="margin: 0 0 var(--s-8);" data-reveal>
-          <a href="memberships.html" class="btn btn--pink">Become a founding member</a>
+        <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>Founding Membership is now live.</h2>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 52ch;">Become a founding member and lock in your early access rate.</p>
+        <div data-reveal>
+          <a href="memberships.html" class="btn btn--pink">Join Founding Membership</a>
         </div>
-        <!-- Founding Circle email capture (Name / Email / Phone) -->
-<!-- Submissions are emailed to info@flowhouserb.com via Formspree. -->
-<!-- To connect: paste your Formspree endpoint into the action below. -->
-<form
-  name="founding-circle"
-  method="POST"
-  data-fh-form
-  action="https://formspree.io/f/xnjyngdw"
-  class="form-row"
-  style="max-width: 480px; margin: 0 auto; text-align: left;"
-  data-reveal
->
-  <input type="hidden" name="_subject" value="New Founding Circle sign-up — flowhouse" />
-  <input type="hidden" name="_next" value="https://flowhouserb.com/thanks" />
-  <input type="hidden" name="form" value="Founding Circle" />
-  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
-
-  <div data-fh-fields style="display: grid; gap: var(--s-4);">
-    <div class="field">
-      <label for="fc-name">First name</label>
-      <input id="fc-name" name="name" type="text" autocomplete="given-name" required>
-    </div>
-    <div class="field">
-      <label for="fc-email">Email</label>
-      <input id="fc-email" name="email" type="email" autocomplete="email" required>
-    </div>
-    <div class="field">
-      <label for="fc-phone">Phone number</label>
-      <input id="fc-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(302) 555-0100">
-    </div>
-
-    <label class="consent">
-      <input type="checkbox" name="consent" value="yes" required>
-      <span>I’d like to join the flowhouse Founding Circle and agree to receive launch updates by email and occasional SMS. Message &amp; data rates may apply; reply STOP to opt out. See our <a href="privacy.html">Privacy Policy</a> &amp; <a href="sms-terms.html">SMS Terms</a>.</span>
-    </label>
-
-    <button type="submit" class="btn btn--ink btn--full">Join the Founding Circle</button>
-    <small class="form-note">One thoughtful update a month, max. Quiet, considered, never spam.</small>
-    <small data-fh-error hidden style="color: var(--c-oxblood);">Something went wrong — please email <a href="mailto:info@flowhouserb.com" style="text-decoration:underline;">info@flowhouserb.com</a> and we’ll add you directly.</small>
-  </div>
-
-  <div data-fh-success hidden class="form-success">
-    <span class="eyebrow">welcome in</span>
-    <h3 class="h4" style="margin: 0.4rem 0;">You’re on the list.</h3>
-    <p class="text-muted" style="margin:0;">Welcome to the Founding Circle. We’ll be in touch with first access, founding-member pricing, and launch details as we get closer to opening.</p>
-  </div>
-</form>
-
       </div>
     </section>
 
