@@ -94,12 +94,11 @@
             <p class="text-muted">{{ studio.main.card_body }}</p>
 
             <dl class="kv-list">
-              <dt>Location</dt><dd>{{ studio.main.area }}<br><span class="addr-private" aria-hidden="true">{{ studio.main.address1 }}</span></dd>
+              <dt>Location</dt><dd>{{ studio.main.area }}<br>{{ studio.main.address1 }}</dd>
               <dt>Opening</dt><dd>{{ studio.main.opening_label }}</dd>
               <dt>Parking</dt><dd>{{ studio.main.parking }}</dd>
               <dt>Contact</dt><dd><a href="mailto:{{ studio.main.email }}" style="border-bottom:1px solid var(--c-divider-strong);">{{ studio.main.email }}</a></dd>
             </dl>
-            <p class="addr-note">{{ studio.main.address_note }}</p>
 
             <div style="display:flex; gap: var(--s-3); flex-wrap: wrap;">
               <a href="{{ studio.main.cta_primary_href }}" class="btn btn--primary">{{ studio.main.cta_primary_label }}</a>

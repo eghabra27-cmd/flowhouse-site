@@ -653,6 +653,53 @@ h4, .h4 {
 .feature-split__media img { width: 100%; height: 100%; object-fit: cover; }
 .feature-split__copy { display: flex; flex-direction: column; gap: var(--s-5); }
 
+/* ---------- app download section ---------- */
+.app-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--s-6), 5vw, var(--s-16));
+  align-items: center;
+}
+.app-copy { display: flex; flex-direction: column; gap: var(--s-5); }
+.app-badges { margin-top: var(--s-2); display: flex; gap: var(--s-3); flex-wrap: wrap; }
+
+/* fanned phone cluster (Solidcore-style) */
+.app-phones {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(360px, 42vw, 560px);
+  padding: 0 clamp(var(--s-4), 4vw, var(--s-10));
+}
+.app-phone {
+  border-radius: 26px;
+  box-shadow: 0 24px 60px -18px rgba(43,30,24,0.45);
+  background: var(--c-walnut);
+  width: clamp(180px, 21vw, 260px);
+  aspect-ratio: 400 / 800;
+  object-fit: cover;
+}
+.app-phone--front {
+  position: relative;
+  z-index: 3;
+  transform: translateY(-6px);
+}
+.app-phone--back-left {
+  position: absolute;
+  z-index: 2;
+  left: 12%;
+  transform: rotate(-8deg) translateY(14px) scale(0.86);
+  opacity: 0.96;
+}
+.app-phone--back-right {
+  position: absolute;
+  z-index: 1;
+  right: 12%;
+  transform: rotate(8deg) translateY(14px) scale(0.86);
+  opacity: 0.96;
+}
+
 /* ---------- video placeholder ---------- */
 .video-frame {
   position: relative;
@@ -783,6 +830,10 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   .section-head { grid-template-columns: 1fr; gap: var(--s-4); }
   .feature-split { grid-template-columns: 1fr; }
   .feature-split--reverse > :first-child { order: 0; }
+  .app-split { grid-template-columns: 1fr; gap: var(--s-8); }
+  .app-phones { order: -1; min-height: 380px; }
+  .app-copy { text-align: center; align-items: center; }
+  .app-badges { justify-content: center; }
   .studio-card { grid-template-columns: 1fr; }
   .studio-card__media img { min-height: 240px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--s-6); }

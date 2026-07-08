@@ -14,7 +14,7 @@
   <title>flowhouse — Reformer Pilates &amp; Barre in Rehoboth Beach, DE · Opening Summer 2026</title>
   <meta name="description" content="Contemporary reformer pilates and barre rooted in intentional movement, strength, alignment, and full-body longevity. A coastal movement sanctuary opening Summer 2026 in Rehoboth Beach. Join the Founding Circle.">
   <meta property="og:title" content="flowhouse — Opening Summer 2026 · Rehoboth Beach">
-  <meta property="og:description" content="A new movement space coming to Rehoboth. Contemporary reformer pilates and barre. Founding memberships launching soon.">
+  <meta property="og:description" content="A new movement space in Rehoboth. Contemporary reformer pilates and barre. Founding Membership now live — become a member today.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://flowhouserb.com/">
   <meta property="og:image" content="https://flowhouserb.com/images/v4/og-flowhouse.jpg">
@@ -38,6 +38,7 @@
     "email": "info@flowhouserb.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "18585 Coastal Highway, Unit 24",
       "addressLocality": "Rehoboth Beach",
       "addressRegion": "DE",
       "postalCode": "19971",
@@ -320,9 +321,12 @@
         <span class="eyebrow" data-reveal>stay tuned</span>
         <h2 data-reveal style="color: #f5ecdf; margin: 0.5rem auto var(--s-5); max-width: 22ch;">Class schedule launching soon.</h2>
         <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(245,236,224,0.85); max-width: 56ch;">
-          Our class schedule and founding memberships will be released soon. Join the Founding Circle for early access, updates, and first booking opportunities.
+          Our class schedule is launching soon. Our Founding Membership is already live — become a member today, and join the Founding Circle for updates and first booking.
         </p>
-        <a href="#waitlist" class="btn btn--pink" data-reveal>Be first to know</a>
+        <div style="display:flex; gap: var(--s-3); flex-wrap: wrap; justify-content:center;" data-reveal>
+          <a href="memberships.html" class="btn btn--pink">Become a member</a>
+          <a href="#waitlist" class="btn" style="background:transparent; color:#f5ecdf; border:1px solid rgba(245,236,224,0.5);">Be first to know</a>
+        </div>
       </div>
     </section>
 
@@ -345,12 +349,37 @@
       </div>
     </section>
 
+    <!-- 11b · APP DOWNLOAD -->
+    <section class="section section--soft app-section" id="app">
+      <div class="container container-wide">
+        <div class="app-split">
+          <div class="app-phones" data-reveal aria-hidden="true">
+            <img class="app-phone app-phone--back-left" src="images/app/app-schedule.jpg" alt="">
+            <img class="app-phone app-phone--back-right" src="images/app/app-achievements.jpg" alt="">
+            <img class="app-phone app-phone--front" src="images/app/app-home.jpg" alt="The Flow House app home screen showing upcoming reservations and classes completed.">
+          </div>
+          <div class="app-copy" data-reveal>
+            <span class="eyebrow">the flow house app</span>
+            <h2>Download the <span class="serif-italic">Flow House</span> app.</h2>
+            <p class="lead">Book classes, manage your membership, purchase class packs, and stay connected with Flow House — all in one place.</p>
+            <p class="text-muted">Download the app to reserve your spot, manage your account, and be the first to know about new classes, workshops, and studio updates.</p>
+            <div class="app-badges">
+              <a href="{{ global.settings.app_store_url }}" class="btn btn--primary" target="_blank" rel="noopener">Download the App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 12 · FOUNDING WAITLIST (anchor CTA) -->
     <section class="section section--clay" id="waitlist">
       <div class="container container-narrow" style="text-align:center;">
         <span class="eyebrow" data-reveal>{{ home.founding.eyebrow }}</span>
         <h2 style="margin: 0.5rem auto 1rem; max-width: 22ch;" data-reveal>{{ home.founding.headline }}</h2>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ home.founding.body }}</p>
+        <p class="lead" data-reveal style="margin: 0 auto var(--s-6); color: rgba(251,243,235,0.92); max-width: 56ch;">{{ home.founding.body }}</p>
+        <div style="margin: 0 0 var(--s-8);" data-reveal>
+          <a href="memberships.html" class="btn btn--pink">Become a founding member</a>
+        </div>
         {{> founding-form }}
       </div>
     </section>
