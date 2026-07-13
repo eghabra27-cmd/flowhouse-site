@@ -1100,3 +1100,119 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   letter-spacing: -0.02em;
 }
 .thanks-page__sig { margin-top: var(--s-8); color: var(--c-ink); }
+
+/* ============================================================
+   THE WORKOUT — class library, level badges, glossary
+   (extends existing .faq accordion + card language)
+   ============================================================ */
+
+/* level / meta badge — reuses pill language from .pillar__tag + .class-card .tag */
+.level-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: var(--r-full);
+  font-family: var(--ff-display);
+  font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid var(--c-divider-strong);
+  color: var(--c-ink-soft);
+  background: var(--c-bg-soft);
+}
+.level-badge::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px;
+  background: var(--c-clay);
+}
+.level-badge--all::before   { background: var(--c-clay); }
+.level-badge--intro::before { background: var(--c-pink); }
+.level-badge--build::before { background: var(--c-walnut-soft); }
+.level-badge--strong::before{ background: var(--c-oxblood); }
+.level-badge--restore::before { background: #8a9a7b; }
+.level-badge--soon {
+  color: var(--c-muted);
+  border-style: dashed;
+}
+.level-badge--soon::before { background: var(--c-muted); }
+
+/* class library — accordion rows built on .faq details/summary */
+.class-library { border-top: 1px solid var(--c-divider); }
+.class-library details { border-bottom: 1px solid var(--c-divider); padding: var(--s-6) 0; }
+.class-library summary {
+  list-style: none; cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center; gap: var(--s-4);
+}
+.class-library summary::-webkit-details-marker { display: none; }
+.class-library summary::after {
+  content: "+"; font-family: var(--ff-body); font-weight: 300;
+  font-size: 1.6rem; line-height: 1; color: var(--c-ink-soft);
+  transition: transform var(--t);
+}
+.class-library details[open] summary::after { transform: rotate(45deg); }
+.class-library__name {
+  font-family: var(--ff-display);
+  font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+  font-weight: 600; letter-spacing: -0.01em; color: var(--c-ink);
+}
+.class-library__tagline {
+  display: block; margin-top: 0.25rem;
+  font-family: var(--ff-serif); font-style: italic;
+  font-size: 1.02rem; color: var(--c-oxblood); letter-spacing: 0;
+}
+.class-library__panel { padding-top: var(--s-5); max-width: 74ch; }
+.class-library__panel p { color: var(--c-ink-soft); }
+.class-library__panel p + p { margin-top: var(--s-4); }
+.class-library__facts {
+  display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-6);
+  margin-top: var(--s-5); padding-top: var(--s-5);
+  border-top: 1px solid var(--c-divider);
+}
+.class-library__facts div { display: flex; flex-direction: column; gap: 0.15rem; }
+.class-library__facts dt {
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-muted);
+}
+.class-library__facts dd { font-family: var(--ff-display); font-weight: 600; color: var(--c-ink); font-size: 0.98rem; }
+.class-library details[data-soon] .class-library__name { color: var(--c-ink-soft); }
+
+@media (max-width: 640px) {
+  .class-library summary { grid-template-columns: 1fr auto; }
+  .class-library summary .level-badge { grid-column: 1 / -1; justify-self: start; margin-top: 0.5rem; }
+}
+
+/* good-to-know glossary — reuses kv language */
+.glossary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--s-5); }
+.glossary__term {
+  padding: var(--s-6);
+  background: var(--c-card);
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-lg);
+}
+.glossary__term dt {
+  font-family: var(--ff-display); font-weight: 700;
+  font-size: 1.1rem; letter-spacing: -0.01em; color: var(--c-ink);
+}
+.glossary__term dd { margin-top: var(--s-2); color: var(--c-ink-soft); font-size: 0.95rem; }
+
+/* founding-team coming-soon roster */
+.roster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--s-5); }
+.roster-card {
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-lg);
+  overflow: hidden; background: var(--c-card);
+}
+.roster-card__photo {
+  aspect-ratio: 4/5;
+  background: linear-gradient(160deg, var(--c-bg-soft), var(--c-surface));
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--c-divider);
+}
+.roster-card__photo span {
+  font-family: var(--ff-serif); font-style: italic;
+  font-size: 2.4rem; color: rgba(90,22,32,0.28);
+}
+.roster-card__body { padding: var(--s-5); }
+.roster-card__body .eyebrow { color: var(--c-clay); }
+.roster-card__body strong { display:block; font-family: var(--ff-display); font-weight: 600; font-size: 1.05rem; margin-top: 0.3rem; color: var(--c-ink); }
+.roster-card__body p { color: var(--c-ink-soft); font-size: 0.92rem; margin-top: 0.4rem; }
