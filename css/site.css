@@ -1491,88 +1491,100 @@ body.ex-modal-open { overflow: hidden; }
 .ex-dot--foundation { background: var(--c-walnut-soft); }
 .ex-dot--intro      { background: var(--c-pink); }
 .ex-dot--barre      { background: var(--c-clay); }
-.ex-dot--flow-upper { background: #c68a3f; }
+.ex-dot--flow-upper { background: #8f8a5a; }
 .ex-dot--flow-lower { background: #8a6a3a; }
 .ex-dot--restore    { background: #8a9a7b; }
 .ex-dot--yin        { background: #9a7ba0; }
+.ex-dot--strength   { background: var(--c-oxblood); }
+.ex-dot--functional { background: #6f8a6a; }
 
-/* grid */
+/* timetable matrix — times down the left, days across the top */
 .ex-sched__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-inline: calc(-1 * clamp(var(--s-2), 1vw, var(--s-4))); padding-inline: clamp(var(--s-2), 1vw, var(--s-4)); }
-.ex-grid7 {
-  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: var(--s-3); min-width: 760px;
+.ex-tt {
+  display: grid;
+  grid-template-columns: 4.5rem repeat(7, minmax(0, 1fr));
+  min-width: 820px;
+  font-variant-numeric: tabular-nums lining-nums;
 }
-.ex-col { display: flex; flex-direction: column; gap: var(--s-2); }
-.ex-col__day {
+.ex-tt__cell { padding: 0.85rem 0.6rem; }
+/* header row */
+.ex-tt__daghead, .ex-tt__timehead {
   font-family: var(--ff-display); font-weight: 600;
-  font-size: 0.8rem; letter-spacing: 0.02em; color: var(--c-ink);
-  text-align: center; padding-bottom: var(--s-3);
-  margin-bottom: var(--s-1);
-  border-bottom: 1px solid var(--c-divider);
+  font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--c-ink); text-align: center;
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--c-divider-strong);
 }
-.ex-col--weekend .ex-col__day { color: var(--c-oxblood); }
-
-.ex-slot {
-  display: flex; flex-direction: column; gap: 0.1rem;
-  padding: 0.6rem 0.7rem;
-  border-radius: var(--r-md);
-  background: var(--c-bg-soft);
-  border: 1px solid var(--c-divider);
-  border-left: 3px solid var(--c-clay);
-  transition: transform var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+.ex-tt__daghead--weekend { color: var(--c-oxblood); }
+/* time labels down the left */
+.ex-tt__time {
+  font-family: var(--ff-body); font-weight: 600;
+  font-size: 0.78rem; color: var(--c-ink-soft);
+  display: flex; align-items: center;
 }
-.ex-slot:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-  background: var(--c-surface);
+/* class cells */
+.ex-tt__class {
+  text-align: center;
+  font-family: var(--ff-display); font-weight: 500;
+  font-size: 0.8rem; line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--c-ink);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--r-sm);
+  transition: background var(--t-fast);
 }
-.ex-slot__time {
-  font-family: var(--ff-body); font-variant-numeric: tabular-nums lining-nums;
-  font-size: 0.72rem; font-weight: 600; color: var(--c-muted);
-  letter-spacing: 0.01em;
+.ex-tt__class--empty { color: var(--c-divider-strong); font-weight: 400; }
+/* thin horizontal rule under every time row */
+.ex-tt__row-rule {
+  grid-column: 1 / -1; height: 1px; background: var(--c-divider);
 }
-.ex-slot__name {
-  font-family: var(--ff-display); font-weight: 600;
-  font-size: 0.82rem; color: var(--c-ink); letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-.ex-slot--signature  { border-left-color: var(--c-oxblood); }
-.ex-slot--foundation { border-left-color: var(--c-walnut-soft); }
-.ex-slot--intro      { border-left-color: var(--c-pink); }
-.ex-slot--barre      { border-left-color: var(--c-clay); }
-.ex-slot--flow-upper { border-left-color: #c68a3f; }
-.ex-slot--flow-lower { border-left-color: #8a6a3a; }
-.ex-slot--restore    { border-left-color: #8a9a7b; }
-.ex-slot--yin        { border-left-color: #9a7ba0; }
+/* color by class type (text tint, matching the story legend) */
+.ex-c-signature  { color: var(--c-ink); }
+.ex-c-foundation { color: var(--c-walnut-soft); }
+.ex-c-barre      { color: var(--c-clay); }
+.ex-c-flow       { color: #8f8a5a; }
+.ex-c-yin        { color: #9a7ba0; font-family: var(--ff-serif); font-style: italic; font-size: 0.92rem; font-weight: 400; }
+.ex-c-strength   { color: var(--c-oxblood); }
+.ex-c-functional { color: #6f8a6a; }
+.ex-tt__class:hover:not(.ex-tt__class--empty) { background: var(--c-bg-soft); }
 
 .ex-sched__foot {
-  margin-top: var(--s-6); padding-top: var(--s-6);
+  margin-top: var(--s-8); padding-top: var(--s-6);
   border-top: 1px solid var(--c-divider);
   font-size: 0.82rem; color: var(--c-muted); max-width: 68ch;
 }
 .ex-sched__foot em { font-family: var(--ff-serif); font-style: italic; color: var(--c-oxblood); }
 .ex-sched__foot a { color: var(--c-oxblood); text-decoration: underline; text-underline-offset: 2px; }
 
-/* mobile: stacked day rows instead of a 7-col grid */
-@media (max-width: 760px) {
-  .ex-sched__scroll { overflow-x: visible; margin-inline: 0; padding-inline: 0; }
-  .ex-grid7 { grid-template-columns: 1fr; min-width: 0; gap: var(--s-6); }
-  .ex-col { gap: var(--s-2); }
-  .ex-col__day {
-    text-align: left; font-size: 0.95rem;
+/* mobile: stacked day cards instead of a matrix */
+.ex-tt-mobile { display: none; }
+@media (max-width: 820px) {
+  .ex-sched__scroll { display: none; }
+  .ex-tt-mobile { display: flex; flex-direction: column; gap: var(--s-8); }
+  .ex-tt-mobile__day {
+    font-family: var(--ff-display); font-weight: 600;
+    font-size: 1rem; letter-spacing: 0.02em; color: var(--c-ink);
+    padding-bottom: var(--s-2); margin-bottom: var(--s-3);
     border-bottom: 1px solid var(--c-divider-strong);
-    padding-bottom: var(--s-2);
   }
-  .ex-slot {
-    flex-direction: row; align-items: baseline; gap: var(--s-3);
-    padding: 0.7rem 0.9rem;
+  .ex-tt-mobile__day--weekend { color: var(--c-oxblood); }
+  .ex-mrow {
+    display: flex; align-items: baseline; gap: var(--s-4);
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--c-divider);
   }
-  .ex-slot__time { min-width: 3.6rem; font-size: 0.8rem; }
-  .ex-slot__name { font-size: 0.92rem; }
+  .ex-mrow:last-child { border-bottom: 0; }
+  .ex-mrow__time {
+    font-family: var(--ff-body); font-weight: 600; font-size: 0.82rem;
+    color: var(--c-muted); min-width: 4rem;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  .ex-mrow__name {
+    font-family: var(--ff-display); font-weight: 500; font-size: 0.95rem;
+    color: var(--c-ink); letter-spacing: -0.01em;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ex-slot { transition: none; }
-  .ex-slot:hover { transform: none; }
+  .ex-tt__class { transition: none; }
 }
 
 /* ---- responsive ---- */
