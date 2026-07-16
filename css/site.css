@@ -1440,6 +1440,141 @@ body.ex-modal-open { overflow: hidden; }
 .know-card h3 { font-family: var(--ff-display); font-weight: 600; font-size: 1.08rem; color: var(--c-ink); margin-bottom: 0.4rem; }
 .know-card p { color: var(--c-ink-soft); font-size: 0.9rem; line-height: 1.5; }
 
+/* ============================================================
+   example schedule — sample weekly timetable (workout.html)
+   ============================================================ */
+.ex-sched {
+  margin-top: var(--s-10);
+  background: var(--c-card);
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  padding: clamp(var(--s-6), 3vw, var(--s-12));
+}
+.ex-sched__head {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: var(--s-3) var(--s-6);
+  padding-bottom: var(--s-6);
+  border-bottom: 1px solid var(--c-divider);
+}
+.ex-sched__eyebrow {
+  font-family: var(--ff-display); font-weight: 700;
+  font-size: clamp(1.15rem, 0.98rem + 0.9vw, 1.7rem);
+  letter-spacing: -0.02em; color: var(--c-ink);
+}
+.ex-sched__hours {
+  margin-top: 0.35rem;
+  font-family: var(--ff-serif); font-style: italic;
+  font-size: 1.05rem; color: var(--c-oxblood); letter-spacing: 0;
+}
+.ex-sched__note {
+  font-family: var(--ff-display); font-weight: 600;
+  font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--c-muted);
+  border: 1px dashed var(--c-divider-strong);
+  border-radius: var(--r-full);
+  padding: 0.34rem 0.8rem; white-space: nowrap;
+}
+
+/* legend */
+.ex-sched__legend {
+  list-style: none; display: flex; flex-wrap: wrap;
+  gap: var(--s-2) var(--s-5);
+  padding: var(--s-6) 0;
+}
+.ex-sched__legend li {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.82rem; color: var(--c-ink-soft);
+}
+.ex-dot { width: 9px; height: 9px; border-radius: 999px; flex: none; }
+.ex-dot--signature  { background: var(--c-oxblood); }
+.ex-dot--foundation { background: var(--c-walnut-soft); }
+.ex-dot--intro      { background: var(--c-pink); }
+.ex-dot--barre      { background: var(--c-clay); }
+.ex-dot--flow-upper { background: #c68a3f; }
+.ex-dot--flow-lower { background: #8a6a3a; }
+.ex-dot--restore    { background: #8a9a7b; }
+.ex-dot--yin        { background: #9a7ba0; }
+
+/* grid */
+.ex-sched__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-inline: calc(-1 * clamp(var(--s-2), 1vw, var(--s-4))); padding-inline: clamp(var(--s-2), 1vw, var(--s-4)); }
+.ex-grid7 {
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--s-3); min-width: 760px;
+}
+.ex-col { display: flex; flex-direction: column; gap: var(--s-2); }
+.ex-col__day {
+  font-family: var(--ff-display); font-weight: 600;
+  font-size: 0.8rem; letter-spacing: 0.02em; color: var(--c-ink);
+  text-align: center; padding-bottom: var(--s-3);
+  margin-bottom: var(--s-1);
+  border-bottom: 1px solid var(--c-divider);
+}
+.ex-col--weekend .ex-col__day { color: var(--c-oxblood); }
+
+.ex-slot {
+  display: flex; flex-direction: column; gap: 0.1rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--r-md);
+  background: var(--c-bg-soft);
+  border: 1px solid var(--c-divider);
+  border-left: 3px solid var(--c-clay);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+}
+.ex-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  background: var(--c-surface);
+}
+.ex-slot__time {
+  font-family: var(--ff-body); font-variant-numeric: tabular-nums lining-nums;
+  font-size: 0.72rem; font-weight: 600; color: var(--c-muted);
+  letter-spacing: 0.01em;
+}
+.ex-slot__name {
+  font-family: var(--ff-display); font-weight: 600;
+  font-size: 0.82rem; color: var(--c-ink); letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.ex-slot--signature  { border-left-color: var(--c-oxblood); }
+.ex-slot--foundation { border-left-color: var(--c-walnut-soft); }
+.ex-slot--intro      { border-left-color: var(--c-pink); }
+.ex-slot--barre      { border-left-color: var(--c-clay); }
+.ex-slot--flow-upper { border-left-color: #c68a3f; }
+.ex-slot--flow-lower { border-left-color: #8a6a3a; }
+.ex-slot--restore    { border-left-color: #8a9a7b; }
+.ex-slot--yin        { border-left-color: #9a7ba0; }
+
+.ex-sched__foot {
+  margin-top: var(--s-6); padding-top: var(--s-6);
+  border-top: 1px solid var(--c-divider);
+  font-size: 0.82rem; color: var(--c-muted); max-width: 68ch;
+}
+.ex-sched__foot em { font-family: var(--ff-serif); font-style: italic; color: var(--c-oxblood); }
+.ex-sched__foot a { color: var(--c-oxblood); text-decoration: underline; text-underline-offset: 2px; }
+
+/* mobile: stacked day rows instead of a 7-col grid */
+@media (max-width: 760px) {
+  .ex-sched__scroll { overflow-x: visible; margin-inline: 0; padding-inline: 0; }
+  .ex-grid7 { grid-template-columns: 1fr; min-width: 0; gap: var(--s-6); }
+  .ex-col { gap: var(--s-2); }
+  .ex-col__day {
+    text-align: left; font-size: 0.95rem;
+    border-bottom: 1px solid var(--c-divider-strong);
+    padding-bottom: var(--s-2);
+  }
+  .ex-slot {
+    flex-direction: row; align-items: baseline; gap: var(--s-3);
+    padding: 0.7rem 0.9rem;
+  }
+  .ex-slot__time { min-width: 3.6rem; font-size: 0.8rem; }
+  .ex-slot__name { font-size: 0.92rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ex-slot { transition: none; }
+  .ex-slot:hover { transform: none; }
+}
+
 /* ---- responsive ---- */
 @media (max-width: 720px) {
   .ex-modal__grid { grid-template-columns: 1fr; }
