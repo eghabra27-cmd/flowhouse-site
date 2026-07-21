@@ -1541,6 +1541,7 @@ body.ex-modal-open { overflow: hidden; }
 .ex-c-signature  { color: var(--c-ink); }
 .ex-c-foundation { color: var(--c-walnut-soft); }
 .ex-c-barre      { color: var(--c-clay); }
+.ex-c-intro      { color: var(--c-pink); }
 .ex-c-flow       { color: #8f8a5a; }
 .ex-c-yin        { color: #9a7ba0; font-family: var(--ff-serif); font-style: italic; font-size: 0.92rem; font-weight: 400; }
 .ex-c-strength   { color: var(--c-oxblood); }
