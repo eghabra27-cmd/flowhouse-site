@@ -1309,6 +1309,17 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
 .class-library__facts dd { font-family: var(--ff-display); font-weight: 600; color: var(--c-ink); font-size: 0.98rem; }
 .class-library details[data-soon] .class-library__name { color: var(--c-ink-soft); }
 
+/* Readability fix: class-library on the dark walnut section (flowhouse language block) */
+.section--walnut .class-library { border-top-color: rgba(245, 236, 224, 0.22); }
+.section--walnut .class-library details { border-bottom-color: rgba(245, 236, 224, 0.22); }
+.section--walnut .class-library summary::after { color: rgba(245, 236, 224, 0.75); }
+.section--walnut .class-library__name { color: #f5ecdf; }
+.section--walnut .class-library__tagline { color: var(--c-pink); }
+.section--walnut .class-library__panel p { color: rgba(245, 236, 224, 0.82); }
+.section--walnut .class-library__facts { border-top-color: rgba(245, 236, 224, 0.22); }
+.section--walnut .class-library__facts dt { color: rgba(245, 236, 224, 0.6); }
+.section--walnut .class-library__facts dd { color: #f5ecdf; }
+
 @media (max-width: 640px) {
   .class-library summary { grid-template-columns: 1fr auto; }
   .class-library summary .level-badge { grid-column: 1 / -1; justify-self: start; margin-top: 0.5rem; }
