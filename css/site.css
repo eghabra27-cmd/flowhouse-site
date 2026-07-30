@@ -660,44 +660,40 @@ h4, .h4 {
   gap: clamp(var(--s-6), 5vw, var(--s-16));
   align-items: center;
 }
-.app-copy { display: flex; flex-direction: column; gap: var(--s-5); }
+.app-copy { display: flex; flex-direction: column; gap: var(--s-5); align-items: flex-start; }
 .app-badges { margin-top: var(--s-2); display: flex; gap: var(--s-3); flex-wrap: wrap; }
 
-/* fanned phone cluster (Solidcore-style) */
-.app-phones {
-  position: relative;
+/* app icon chip (fh. monogram) */
+.app-icon {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: var(--c-walnut);
+  color: var(--c-cream, #f5ecdf);
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  box-shadow: 0 10px 26px -10px rgba(43,30,24,0.5);
+}
+.app-icon__dot { color: var(--c-pink, #c98a8a); }
+
+/* single clean phone */
+.app-device {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(360px, 42vw, 560px);
-  padding: 0 clamp(var(--s-4), 4vw, var(--s-10));
 }
-.app-phone {
-  border-radius: 26px;
-  box-shadow: 0 24px 60px -18px rgba(43,30,24,0.45);
-  background: var(--c-walnut);
-  width: clamp(180px, 21vw, 260px);
+.app-device img {
+  width: clamp(230px, 26vw, 320px);
   aspect-ratio: 400 / 800;
   object-fit: cover;
-}
-.app-phone--front {
-  position: relative;
-  z-index: 3;
-  transform: translateY(-6px);
-}
-.app-phone--back-left {
-  position: absolute;
-  z-index: 2;
-  left: 12%;
-  transform: rotate(-8deg) translateY(14px) scale(0.86);
-  opacity: 0.96;
-}
-.app-phone--back-right {
-  position: absolute;
-  z-index: 1;
-  right: 12%;
-  transform: rotate(8deg) translateY(14px) scale(0.86);
-  opacity: 0.96;
+  border-radius: 30px;
+  background: var(--c-walnut);
+  box-shadow: 0 30px 70px -20px rgba(43,30,24,0.5);
 }
 
 /* ---------- video placeholder ---------- */
@@ -831,7 +827,7 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
   .feature-split { grid-template-columns: 1fr; }
   .feature-split--reverse > :first-child { order: 0; }
   .app-split { grid-template-columns: 1fr; gap: var(--s-8); }
-  .app-phones { order: -1; min-height: 380px; }
+  .app-device { order: -1; }
   .app-copy { text-align: center; align-items: center; }
   .app-badges { justify-content: center; }
   .studio-card { grid-template-columns: 1fr; }
