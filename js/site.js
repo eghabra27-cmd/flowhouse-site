@@ -263,3 +263,53 @@
     }, { passive: true });
   }
 })();
+
+/* ---- Cinematic reel: sound toggle + viewport-aware playback ---- */
+(function () {
+  var video = document.getElementById('flowhouseReel');
+  var btn = document.getElementById('reelSound');
+  if (!video) return;
+
+  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Sound toggle
+  if (btn) {
+    btn.addEventListener('click', function () {
+      if (video.muted) {
+        video.muted = false;
+        video.volume = 1.0;
+        var p = video.play();
+        if (p && p.catch) p.catch(function(){});
+        btn.classList.add('is-on');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-label', 'Turn sound off');
+      } else {
+        video.muted = true;
+        btn.classList.remove('is-on');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-label', 'Turn sound on');
+      }
+    });
+  }
+
+  // Pause when off-screen (saves battery/bandwidth); resume muted when back
+  if ('IntersectionObserver' in window && !prefersReduced) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var p = video.play();
+          if (p && p.catch) p.catch(function(){});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    io.observe(video);
+  }
+
+  // Respect reduced motion: don't autoplay; show poster until user interacts
+  if (prefersReduced) {
+    video.removeAttribute('autoplay');
+    video.pause();
+  }
+})();

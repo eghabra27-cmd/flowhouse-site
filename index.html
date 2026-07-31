@@ -253,6 +253,45 @@
       </div>
     </section>
 
+    <!-- 03c · CINEMATIC REEL -->
+    <section class="section reel-band section--walnut">
+      <div class="container container-wide">
+        <div class="reel-layout">
+          <div class="reel-copy" data-reveal>
+            <span class="eyebrow">inside the hour</span>
+            <h2>Press play on <span class="serif-italic">a Flowhouse class.</span></h2>
+            <p class="lead">Low light, custom FlowFormers, and forty-five minutes of breath-led movement. This is the feeling we built — strong, precise, and quietly joyful.</p>
+            <div class="reel-cta-row">
+              <a href="class-menu.html" class="btn btn--pink">Explore the classes</a>
+              <a href="#waitlist" class="btn btn--ghost" style="color: #f5ecdf; border-color: rgba(245,236,224,0.3);">Join the Founding Circle</a>
+            </div>
+          </div>
+          <div class="reel-stage" data-reveal>
+            <div class="reel-frame">
+              <video
+                id="flowhouseReel"
+                class="reel-video"
+                playsinline
+                muted
+                loop
+                autoplay
+                preload="metadata"
+                poster="images/video/reel-poster.jpg">
+                <source src="videos/flowhouse-reel-muted.webm" type="video/webm">
+                <source src="videos/flowhouse-reel-muted.mp4" type="video/mp4">
+              </video>
+              <div class="reel-grain" aria-hidden="true"></div>
+              <button type="button" class="reel-sound" id="reelSound" aria-pressed="false" aria-label="Turn sound on">
+                <svg class="reel-sound__ico reel-sound__ico--muted" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
+                <svg class="reel-sound__ico reel-sound__ico--on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <span class="reel-sound__label">Tap for sound</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 05 · FLOWFORMER FEATURE -->
     <section class="section section--walnut">
       <div class="container container-wide">
@@ -427,6 +466,6 @@
   <a href="memberships.html" class="btn btn--pink">Become a member</a>
 </div>
 
-<script src="js/site.js?v=2"></script>
+<script src="js/site.js?v=3"></script>
 </body>
 </html>
