@@ -66,22 +66,22 @@
         if (mtHasRendered(c)) return;
         c.setAttribute('data-fh-fallback', 'done');
         var path = c.getAttribute('data-mariana-integrations') || '';
-        var heading = 'Booking opens soon.';
-        var body = 'Our live class schedule is on its way. Join the Founding Circle and you\u2019ll be first to book when classes open.';
+        var heading = 'Booking is open.';
+        var body = 'Our full class schedule is live. Book your spot anytime.';
         if (path.indexOf('account') > -1) {
-          heading = 'Accounts open soon.';
-          body = 'Member accounts go live with our class schedule. Join the Founding Circle for first access.';
+          heading = 'Manage your account.';
+          body = 'Member accounts are ready whenever you need them.';
         } else if (path.indexOf('membership') > -1 || path.indexOf('buy') > -1) {
-          heading = 'Memberships open soon.';
-          body = 'Founding-member pricing and packages are on their way. Join the Founding Circle to lock in first access.';
+          heading = 'Memberships and packages.';
+          body = 'Explore memberships, class packages, and intro offers anytime.';
         }
         c.innerHTML =
           '<div class="mt-fallback">' +
-            '<span class="eyebrow">opening summer 2026</span>' +
+            '<span class="eyebrow">opening september 1</span>' +
             '<h3 class="h4" style="margin:0.4rem 0;">' + heading + '</h3>' +
             '<p class="text-sm" style="max-width:46ch;">' + body + '</p>' +
             '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem;">' +
-              '<a href="index.html#waitlist" class="btn btn--primary btn--sm">Join the Founding Circle</a>' +
+              '<a href="https://flowhouse.marianatek.com" class="btn btn--primary btn--sm">Book a class</a>' +
               '<a href="https://flowhouse.marianatek.com" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Open booking</a>' +
             '</div>' +
           '</div>';

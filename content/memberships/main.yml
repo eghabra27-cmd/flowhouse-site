@@ -1,11 +1,11 @@
 # ──────────────────────────────────────────────
 # HERO (teaser)
 # ──────────────────────────────────────────────
-hero_eyebrow: "founding memberships launching soon"
+hero_eyebrow: "memberships"
 hero_headline_html: "First access. <span class='serif-italic'>First booking.</span> First through the door."
-hero_lead: "Founding members will receive first access to class booking, exclusive launch perks, and introductory membership opportunities. A new movement space is coming to Rehoboth — stay tuned for first access."
-hero_cta_primary_label: "Join the Founding Circle"
-hero_cta_primary_href: "index.html#waitlist"
+hero_lead: "Memberships, class packages, and intro offers — the easiest way to begin is an intro offer. Book your first class anytime."
+hero_cta_primary_label: "Book a class"
+hero_cta_primary_href: "https://flowhouse.marianatek.com"
 hero_cta_secondary_label: "The Method"
 hero_cta_secondary_href: "flowformer.html"
 
@@ -14,7 +14,7 @@ hero_cta_secondary_href: "flowformer.html"
 # ──────────────────────────────────────────────
 pullquote_eyebrow: "be first to know"
 pullquote_html: "An invitation, <em style=\"color: var(--c-pink);\">before the doors open.</em>"
-pullquote_body: "The Founding Circle is our pre-launch community — the first people to book, the first to know, the first to receive our launch perks. Quiet, considered, intentional."
+pullquote_body: "Our community moves with intention — finding strength, calm, and connection in every class. Quiet, considered, intentional."
 
 # ──────────────────────────────────────────────
 # WAITLIST FORM SECTION
@@ -22,4 +22,4 @@ pullquote_body: "The Founding Circle is our pre-launch community — the first p
 waitlist_eyebrow: "join us"
 waitlist_headline: "Be one of the first."
 waitlist_lead: "One update a month, max. Quiet, considered, never spam. We'll share the launch details as we have them."
-waitlist_cta: "Join the Founding Circle"
+waitlist_cta: "Book a class"

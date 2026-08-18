@@ -1,13 +1,13 @@
 hero_eyebrow: what to expect
 hero_headline: More than a workout.
 hero_subhead: Movement designed to strengthen the body while creating space to reconnect with yourself. Flowhouse is a place to reset, strengthen, and return to your body — every class, every visit.
-hero_cta_primary_label: Join the Founding Circle
-hero_cta_primary_href: index.html#waitlist
+hero_cta_primary_label: Book a class
+hero_cta_primary_href: https://flowhouse.marianatek.com
 hero_cta_secondary_label: See the class flow
 hero_cta_secondary_href: '#flow'
 hero_image: /images/uploads/84c031d2-0b9e-43fe-8e9e-502650c9721b.png
 hero_image_alt: Three flowhouse practitioners working on Flowformer reformers with overhead cable straps, warm ambient lighting.
-hero_badge: Opening Summer 2026
+hero_badge: Opening September 1
 flow_eyebrow: the class flow
 flow_headline: Six blocks. One conversation with the body.
 flow_intro: Every Signature and Foundation class is structured this way — sequenced for time under tension, continuous movement, and intentional return.
@@ -21,12 +21,12 @@ flow_blocks:
   - title: Upper body block
     body: Long-lever arms on the cables, push-pull symmetry, breath-led pacing. Strength without strain.
   - title: Final core push · center abdominals
-    body: One last deliberate burn. Centered, low-impact, high-intensity — the moment you'll catch yourself smiling mid-flow.
+    body: One last deliberate burn. Centered, low-impact, and deeply intentional — the moment you'll catch yourself smiling mid-flow.
   - title: Slow stretch + cool down
     body: Long-line opening, breath, nervous-system regulation. You'll wipe the carriage, reset, and walk out taller than you came in.
 after_eyebrow: after class
 after_headline: A social and wellness experience.
-after_lead: flowhouse is a sanctuary, but also a community. Stay after class. Grab a juice. Chat with the founding circle. Linger in the calm.
+after_lead: flowhouse is a sanctuary, but also a community. Stay after class. Grab a juice. Chat with the community. Linger in the calm.
 after_body: The hour on the Flowformer is the start of the ritual — not the end of it. We protect the calm inside the studio and we welcome you into the community right outside it. Both are part of the experience.
 after_image: /images/uploads/team-trio.png
 after_image_alt: Three flowhouse members chatting in the studio after class against a walnut wall.
@@ -50,7 +50,7 @@ faq_headline: The things you'd text a friend who's already done it.
 faq_aside: Can't find your question? Email info@flowhouserb.com — we read everything.
 faqs:
   - question: What's the difference between Signature and Barre 45?
-    answer: 'Signature is our contemporary reformer pilates class on the Flowformer — full-body, time-under-tension, sequenced. Barre 45 is a strength-based barre class on the wall using small props and continuous movement. Different equipment, same flowhouse philosophy: precision-based, low impact, high intensity.'
+    answer: 'Signature is our contemporary reformer pilates class on the Flowformer — full-body, time-under-tension, sequenced. Barre 45 is a strength-based barre class on the wall using small props and continuous movement. Different equipment, same flowhouse philosophy: precision-based, low impact, and intentional — a fusion of contemporary pilates and modern movement.'
   - question: What's the difference between Foundation and Signature?
     answer: Foundation is the slower, more cued version of Signature — built for new reformer movers and for refining the basics. You'll learn the Flowformer setup, the springs, and our foundational positions. Signature assumes you know the carriage and moves at a steadier, more continuous pace.
   - question: What is Yin?
