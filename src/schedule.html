@@ -111,214 +111,32 @@
       </div>
     </section>
 
-    <!-- EXAMPLE SCHEDULE -->
-    <section class="section" id="example-schedule">
-      <div class="container">
-        <div class="section-head">
+    <!-- STUDIO HOURS -->
+    <section class="section" id="hours" style="padding-top: 0;">
+      <div class="container container-narrow">
+        <div class="section-head" style="margin-bottom: var(--s-8);">
           <div class="section-head__title" data-reveal>
-            <span class="eyebrow">a typical week</span>
-            <h2>Example schedule.</h2>
+            <span class="eyebrow">studio hours</span>
+            <h2>When we&rsquo;re on the schedule.</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>A look at what a typical week at flowhouse could look like. Our schedule may change seasonally, but this gives you an idea of the variety of classes offered throughout the week.</p>
+            <p>Class times fall within these daily windows. Exact times, instructors, and availability are always live on the booking schedule above.</p>
           </div>
         </div>
-
-        <div class="ex-sched" data-reveal>
-          <div class="ex-sched__head">
-            <div class="ex-sched__headtext">
-              <span class="ex-sched__eyebrow">Example weekly schedule</span>
-              <p class="ex-sched__hours">Rehoboth Beach &middot; 50-minute classes &middot; 5:00 AM &ndash; 7:00 PM</p>
-            </div>
-            <span class="ex-sched__note">Sample only &middot; not a live timetable</span>
+        <dl data-reveal style="margin: 0; border-top: 1px solid var(--c-divider);">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap: var(--s-4); padding: var(--s-5) 0; border-bottom: 1px solid var(--c-divider);">
+            <dt style="font-weight:600; color: var(--c-ink);">Monday &amp; Thursday</dt>
+            <dd style="margin:0; font-variant-numeric: tabular-nums; color: var(--c-oxblood); white-space:nowrap;">5:00 AM &ndash; 8:00 PM</dd>
           </div>
-
-          <!-- legend -->
-          <ul class="ex-sched__legend" aria-label="Class types">
-            <li><span class="ex-dot ex-dot--signature"></span>Signature &mdash; strength reformer</li>
-            <li><span class="ex-dot ex-dot--foundation"></span>Foundation &mdash; beginner reformer</li>
-            <li><span class="ex-dot ex-dot--barre"></span>Barre &mdash; full-body strength</li>
-            <li><span class="ex-dot ex-dot--intro"></span>Intro &mdash; first-timer welcome</li>
-            <li><span class="ex-dot ex-dot--yin"></span>Reformer Yin &mdash; restorative</li>
-          </ul>
-
-          <!-- desktop matrix: times down the left, days across the top -->
-          <div class="ex-sched__scroll">
-            <div class="ex-tt" role="table" aria-label="Example weekly class schedule">
-              <div class="ex-tt__cell ex-tt__timehead" role="columnheader"></div>
-              <div class="ex-tt__cell ex-tt__daghead" role="columnheader">MON</div>
-              <div class="ex-tt__cell ex-tt__daghead" role="columnheader">TUE</div>
-              <div class="ex-tt__cell ex-tt__daghead" role="columnheader">WED</div>
-              <div class="ex-tt__cell ex-tt__daghead" role="columnheader">THU</div>
-              <div class="ex-tt__cell ex-tt__daghead" role="columnheader">FRI</div>
-              <div class="ex-tt__cell ex-tt__daghead ex-tt__daghead--weekend" role="columnheader">SAT</div>
-              <div class="ex-tt__cell ex-tt__daghead ex-tt__daghead--weekend" role="columnheader">SUN</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">5:00a</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">6:10a</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">7:20a</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">10:00a</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-intro">Intro</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">11:10a</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-intro">Intro</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-intro">Intro</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">12:20p</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">4:00p</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">5:10p</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-foundation">Foundation</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-barre">Barre</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__row-rule"></div>
-              <div class="ex-tt__cell ex-tt__time">6:20p</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-yin">Reformer Yin</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-signature">Signature</div>
-              <div class="ex-tt__cell ex-tt__class ex-c-yin">Reformer Yin</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-              <div class="ex-tt__cell ex-tt__class ex-tt__class--empty">&mdash;</div>
-            </div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap: var(--s-4); padding: var(--s-5) 0; border-bottom: 1px solid var(--c-divider);">
+            <dt style="font-weight:600; color: var(--c-ink);">Tuesday, Wednesday &amp; Friday</dt>
+            <dd style="margin:0; font-variant-numeric: tabular-nums; color: var(--c-oxblood); white-space:nowrap;">6:00 AM &ndash; 8:00 PM</dd>
           </div>
-
-          <!-- mobile: stacked per-day -->
-          <div class="ex-tt-mobile">
-            <div>
-              <div class="ex-tt-mobile__day">Monday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">4:00p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:10p</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:20p</span><span class="ex-mrow__name ex-c-yin">Reformer Yin</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day">Tuesday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">4:00p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:10p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day">Wednesday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-intro">Intro</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">4:00p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:10p</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day">Thursday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">4:00p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:10p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:20p</span><span class="ex-mrow__name ex-c-yin">Reformer Yin</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day">Friday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">4:00p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:10p</span><span class="ex-mrow__name ex-c-barre">Barre</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day ex-tt-mobile__day--weekend">Saturday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-intro">Intro</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">12:20p</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-            </div>
-            <div>
-              <div class="ex-tt-mobile__day ex-tt-mobile__day--weekend">Sunday</div>
-              <div class="ex-mrow"><span class="ex-mrow__time">5:00a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">6:10a</span><span class="ex-mrow__name ex-c-signature">Signature</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">7:20a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">10:00a</span><span class="ex-mrow__name ex-c-intro">Intro</span></div>
-              <div class="ex-mrow"><span class="ex-mrow__time">11:10a</span><span class="ex-mrow__name ex-c-foundation">Foundation</span></div>
-            </div>
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap: var(--s-4); padding: var(--s-5) 0; border-bottom: 1px solid var(--c-divider);">
+            <dt style="font-weight:600; color: var(--c-ink);">Saturday &amp; Sunday</dt>
+            <dd style="margin:0; font-variant-numeric: tabular-nums; color: var(--c-oxblood); white-space:nowrap;">7:00 AM &ndash; 12:00 PM</dd>
           </div>
-
-          <p class="ex-sched__foot">This is an <em>example</em> schedule for illustration only. Live class times, instructors, and availability are always on the <a href="schedule.html">schedule &amp; booking</a> page.</p>
-        </div>
+        </dl>
       </div>
     </section>
 
