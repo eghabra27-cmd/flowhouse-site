@@ -1362,9 +1362,13 @@ body.no-bookbar .site-footer { margin-bottom: 0; }
 .roster-card__body .eyebrow { color: var(--c-clay); }
 .roster-card__body strong { display:block; font-family: var(--ff-display); font-weight: 600; font-size: 1.05rem; margin-top: 0.3rem; color: var(--c-ink); }
 .roster-card__body p { color: var(--c-ink-soft); font-size: 0.92rem; margin-top: 0.4rem; }
-.roster-card__social { display: flex; gap: var(--s-3); margin-top: var(--s-3); }
-.roster-card__social a { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; letter-spacing: 0.02em; color: var(--c-clay); border-bottom: 1px solid transparent; }
-.roster-card__social a:hover { border-bottom-color: var(--c-clay); }
+.roster-card__social { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1rem; margin-top: var(--s-4); }
+.roster-card__social a { display: inline-flex; align-items: center; gap: 0.32rem; font-size: 0.78rem; letter-spacing: 0.01em; color: var(--c-ink-soft); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: color .18s ease, border-color .18s ease; white-space: nowrap; max-width: 100%; }
+.roster-card__social a svg { flex: 0 0 auto; opacity: 0.82; }
+.roster-card__social a span { overflow: hidden; text-overflow: ellipsis; }
+.roster-card__social a:hover { color: var(--c-clay); border-bottom-color: var(--c-clay); }
+.roster-card__social a:hover svg { opacity: 1; }
+.roster-card__social a:focus-visible { outline: 2px solid var(--c-clay); outline-offset: 2px; border-radius: 2px; }
 
 /* ══════════════════════════════════════════════════════════════
    THE WORKOUT v2 — choose your class, exercise library, modal,
