@@ -223,7 +223,13 @@ function buildPages() {
     if (fs.existsSync(srcFile)) {
       const dir = path.join(ROOT, name);
       fs.mkdirSync(dir, { recursive: true });
-      fs.copyFileSync(srcFile, path.join(dir, 'index.html'));
+      // The copy lives one folder deep, so make relative links/assets root-absolute
+      // (e.g. css/site.css -> /css/site.css). Leaves #anchors, absolute, and external URLs alone.
+      const html = fs.readFileSync(srcFile, 'utf8').replace(
+        /\b(href|src)="(?!#|\/|[a-z][a-z0-9+.-]*:)([^"]+)"/gi,
+        (m, attr, url) => `${attr}="/${url}"`
+      );
+      fs.writeFileSync(path.join(dir, 'index.html'), html);
       console.log(`✓ Pretty URL: /${name} → ${name}/index.html`);
     }
   }
