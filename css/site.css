@@ -1872,7 +1872,7 @@ body.ex-modal-open { overflow: hidden; }
 .video-hero__btn:hover { background: var(--c-oxblood-hover); color: #fbf3eb; }
 .video-hero__btn svg { flex: none; }
 @media (max-width: 767px) {
-  .video-hero { height: 139vw; max-height: 80svh; }
+  .video-hero { height: 118vw; max-height: 80svh; }
   .video-hero__btn { width: 212px; height: 56px; bottom: 47px; font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
