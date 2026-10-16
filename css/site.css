@@ -1926,3 +1926,10 @@ body.ex-modal-open { overflow: hidden; }
 
 /* hero video: anchor framing to the top so the built-in logo sits a little lower (crop comes off the bottom) */
 .video-hero__video { object-position: 50% 0%; }
+/* desktop homepage: line the menu icon up with the video's built-in logo (logo centre = 137.5px of the 1896×1066 frame; video is cover + top-anchored) */
+@media (min-width: 768px) and (min-aspect-ratio: 4/3) {
+  .home-overlay .site-header .nav-toggle {
+    position: relative;
+    top: calc(max(100vw * 0.072521, clamp(520px, 82vh, 820px) * 0.128987) - var(--header-h) / 2);
+  }
+}
