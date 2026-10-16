@@ -1919,3 +1919,7 @@ body.ex-modal-open { overflow: hidden; }
 @media (min-width: 768px) and (min-aspect-ratio: 4/3) {
   .home-overlay .site-header .wordmark { visibility: hidden; }
 }
+
+/* menu panel: no wordmark — close button only */
+.mobile-drawer .drawer-head .wordmark { display: none; }
+.mobile-drawer .drawer-head { justify-content: flex-end; }
