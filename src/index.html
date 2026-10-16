@@ -132,6 +132,50 @@
       </div>
     </div>
 
+    <!-- 03 · SANCTUARY INTRO — who we are, the equipment, the experience -->
+    <section class="section sanctuary" id="sanctuary">
+      <div class="container">
+        <div class="sanct-row sanct-row--intro">
+          <div class="sanct-copy" data-reveal>
+            <span class="eyebrow">{{ home.sanctuary.eyebrow }}</span>
+            <h2>{{ home.sanctuary.headline_html | raw }}</h2>
+            <p class="sanct-lead">{{ home.sanctuary.lead }}</p>
+            <p>{{ home.sanctuary.body }}</p>
+          </div>
+          <div class="sanct-duo" data-reveal>
+            <img class="sanct-duo__small" src="{{ home.sanctuary.image_small }}" alt="{{ home.sanctuary.image_small_alt }}" loading="lazy">
+            <img class="sanct-duo__large" src="{{ home.sanctuary.image_large }}" alt="{{ home.sanctuary.image_large_alt }}" loading="lazy">
+          </div>
+        </div>
+
+        <div class="sanct-row sanct-row--flip">
+          <div class="sanct-media" data-reveal>
+            <img src="{{ home.sanctuary.equipment_image }}" alt="{{ home.sanctuary.equipment_image_alt }}" loading="lazy">
+          </div>
+          <div class="sanct-copy" data-reveal>
+            <span class="eyebrow">{{ home.sanctuary.equipment_eyebrow }}</span>
+            <h3 class="sanct-h3">{{ home.sanctuary.equipment_headline }}</h3>
+            <p>{{ home.sanctuary.equipment_body }}</p>
+            <p>{{ home.sanctuary.equipment_body_2 }}</p>
+            <p class="sanct-note">{{ home.sanctuary.equipment_note }}</p>
+          </div>
+        </div>
+
+        <div class="sanct-row">
+          <div class="sanct-copy" data-reveal>
+            <span class="eyebrow">{{ home.sanctuary.experience_eyebrow }}</span>
+            <h3 class="sanct-h3">{{ home.sanctuary.experience_headline }}</h3>
+            <p>{{ home.sanctuary.experience_body }}</p>
+            <p>{{ home.sanctuary.experience_body_2 }}</p>
+            <a class="btn btn--ghost sanct-cta" href="{{ home.sanctuary.experience_cta_href }}">{{ home.sanctuary.experience_cta_label }}</a>
+          </div>
+          <div class="sanct-media" data-reveal>
+            <img src="{{ home.sanctuary.experience_image }}" alt="{{ home.sanctuary.experience_image_alt }}" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 04 · CLASS MENU (3 core formats per spec) -->
     <section class="section section--soft" id="classes">
       <div class="container">

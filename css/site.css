@@ -1948,3 +1948,29 @@ body.ex-modal-open { overflow: hidden; }
 .section--clay small.form-note, .section--clay .form-note { color: var(--c-ink) !important; }
 .ex-dot--barre, .level-badge--all::before { background: #d9b4a1; }
 .ex-c-barre { color: #8f1d0f; }
+
+/* ---------- homepage · sanctuary intro (who we are · the equipment · the experience) — modeled on jetsetpilates.com ---------- */
+.sanctuary .sanct-row {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+.sanctuary .sanct-row + .sanct-row { margin-top: clamp(4rem, 9vw, 8rem); }
+.sanct-copy { max-width: 33rem; }
+.sanct-copy h2 { margin: var(--s-3) 0 var(--s-6); }
+.sanct-copy p { color: var(--c-ink-soft); line-height: 1.7; }
+.sanct-copy p + p { margin-top: var(--s-4); }
+.sanct-lead { font-size: var(--fs-lead); color: var(--c-ink) !important; }
+.sanct-h3 { font-size: var(--fs-h2); line-height: 1.05; margin: var(--s-3) 0 var(--s-6); }
+.sanct-note { font-size: var(--fs-sm); color: var(--c-ink) !important; border-left: 2px solid var(--c-oxblood); padding-left: var(--s-4); margin-top: var(--s-6) !important; }
+.sanct-cta { margin-top: var(--s-8); }
+.sanct-media img, .sanct-duo img { display: block; width: 100%; object-fit: cover; border-radius: var(--r-md); }
+.sanct-media img { aspect-ratio: 5 / 4; }
+.sanctuary .sanct-row--flip .sanct-media { order: -1; }
+.sanct-duo { display: grid; grid-template-columns: 1fr 1.65fr; gap: clamp(0.75rem, 1.6vw, 1.5rem); align-items: start; }
+.sanct-duo__small { aspect-ratio: 3 / 4; }
+.sanct-duo__large { aspect-ratio: 4 / 5; margin-top: clamp(1.5rem, 3vw, 2.5rem); }
+@media (max-width: 860px) {
+  .sanctuary .sanct-row { grid-template-columns: 1fr; }
+  .sanctuary .sanct-row--flip .sanct-media { order: 0; }
+  .sanct-copy { max-width: none; }
+}
