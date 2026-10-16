@@ -69,7 +69,7 @@
       <a href="schedule.html" class="btn btn--ghost btn--sm" data-nav-cta>Book</a>
       <a href="schedule.html#book" class="btn btn--primary btn--sm">Book a class</a>
       <button class="nav-toggle" data-drawer-toggle aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+        <svg viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="1" y1="2" x2="29" y2="2"/><line x1="1" y1="10" x2="29" y2="10"/><line x1="1" y1="18" x2="29" y2="18"/></svg>
       </button>
     </div>
   </div>
@@ -104,37 +104,12 @@
 
     <!-- 00 · VIDEO HERO — full-bleed autoplay loop (modeled on clubreformer.com) -->
     <section class="video-hero" aria-label="flowhouse in motion">
+      <h1 class="video-hero__title">flowhouse — high intensity reformer &amp; barre in Rehoboth Beach</h1>
       <video class="video-hero__video" autoplay muted loop playsinline preload="auto" poster="images/video/hero-poster.jpg" aria-hidden="true" disablepictureinpicture disableremoteplayback>
         <source src="videos/flowhouse-hero.webm" type="video/webm">
         <source src="videos/flowhouse-hero.mp4" type="video/mp4">
       </video>
       <a href="schedule.html#book" class="video-hero__btn">BOOK WITH US<svg viewBox="0 0 8 12" width="7" height="11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.5 6 6l-4.5 4.5"/></svg></a>
-    </section>
-
-    <!-- 01 · HERO — editorial split (text left, campaign portrait right) -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero__grid">
-          <div class="hero__copy" data-reveal>
-            <span class="eyebrow">{{ home.hero.eyebrow }}</span>
-            <h1>{{ home.hero.headline_html | raw }}</h1>
-            <p class="lead">{{ home.hero.subhead }}</p>
-            <div class="hero__cta-row">
-              <a href="{{ home.hero.cta_primary_href }}" class="btn btn--primary">{{ home.hero.cta_primary_label }}</a>
-              <a href="{{ home.hero.cta_secondary_href }}" class="btn btn--ghost">{{ home.hero.cta_secondary_label }}</a>
-            </div>
-            <dl class="hero__meta">
-              <div><dt>Method</dt><dd>{{ home.hero.meta_method }}</dd></div>
-              <div><dt>Modalities</dt><dd>{{ home.hero.meta_modalities }}</dd></div>
-              <div><dt>Opening</dt><dd>{{ home.hero.meta_opening }}</dd></div>
-            </dl>
-          </div>
-          <div class="hero__image-frame" data-reveal>
-            <img src="{{ home.hero.hero_image }}" alt="{{ home.hero.hero_image_alt }}" loading="eager" fetchpriority="high">
-            <span class="hero__image-badge">{{ home.hero.badge }}</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- 02 · TICKER -->

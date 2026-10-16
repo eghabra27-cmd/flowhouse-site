@@ -1878,3 +1878,31 @@ body.ex-modal-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .video-hero__btn { transition: none; }
 }
+
+/* ---------- minimal hamburger header (all pages) — modeled on clubreformer.com ---------- */
+.video-hero__title { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.site-header .nav-links,
+.site-header .header-actions > a { display: none !important; }
+.site-header .nav-toggle {
+  display: inline-flex !important;
+  width: 44px; height: 44px; border: 0; border-radius: 0;
+  background: transparent; color: var(--c-ink); cursor: pointer;
+  margin-right: -8px;
+}
+.site-header .nav-toggle svg { width: 30px; height: 20px; }
+.site-header .nav-toggle:hover { opacity: .7; }
+@media (max-width: 767px) {
+  .site-header__row { flex-direction: row-reverse; }
+  .site-header .nav-toggle { margin-right: 0; margin-left: -8px; }
+}
+/* menu panel: full-screen on mobile, elegant side panel on desktop */
+@media (min-width: 768px) {
+  .mobile-drawer {
+    left: auto; width: min(460px, 100%);
+    padding: var(--s-8) var(--s-10, 2.5rem);
+    box-shadow: -24px 0 60px rgba(26,19,13,.14), 0 0 0 100vmax rgba(26,19,13,.32);
+    overflow-y: auto;
+  }
+}
+
+.mobile-drawer .nav-toggle { display: inline-flex !important; cursor: pointer; }
