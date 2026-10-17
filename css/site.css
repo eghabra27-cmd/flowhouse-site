@@ -2470,3 +2470,6 @@ body.ex-modal-open { overflow: hidden; }
   .site-header .header-actions > a.header-login::after { display: none; }
   .page-overlay .site-header .header-actions > a.header-login, .home-overlay .site-header .header-actions > a.header-login { color: #fffdfb; border-color: rgba(255,253,251,.85); background: rgba(20,19,19,.18); backdrop-filter: blur(4px); }
 }
+
+/* Class Menu — class titles in all caps */
+.cm-row__name { text-transform: uppercase; }
