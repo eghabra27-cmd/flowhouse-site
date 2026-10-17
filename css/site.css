@@ -2404,3 +2404,8 @@ body.ex-modal-open { overflow: hidden; }
   .ry-hero__img, .ry-hero__inner { animation: none; }
   .ry-timeline span { transform: none; transition: none; }
 }
+
+/* FlowFormer page (flowformer.html) — reuses the .ry-* editorial styles */
+.ff-hero .ry-hero__img { object-position: 30% 60%; }
+.ff-link { margin-top: var(--s-6); }
+@media (max-width: 760px) { .ff-hero .ry-hero__img { object-position: 22% 60%; } }

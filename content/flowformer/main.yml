@@ -1,0 +1,58 @@
+# FlowFormer page — edit any text or photo here, then rebuild.
+# Photos: swap any "image:" path for a new file in /images/ (keep the alt text accurate).
+
+hero:
+  eyebrow: the equipment
+  title: The FlowFormer.
+  subtitle: Our custom reformer.
+  body: Every reformer class is taught on the FlowFormer — our custom reformer and the foundation of the Flowhouse Method, developed specifically for the way we teach.
+  button_label: Book a class
+  button_href: schedule.html
+  image: /images/v4/flowformer-real.jpg
+  image_alt: The matte-black FlowFormer reformer against the walnut wood-slat wall at flowhouse.
+
+about:
+  eyebrow: built for the way we teach
+  title: Ten reformers. <span class="serif-italic">One method.</span>
+  intro: The studio holds ten FlowFormers, with matte-black frames, the flowhouse wordmark on the side rail, and overhead cable straps for long-lever upper-body work.
+  image: /images/uploads/flowformer-studio-3-4.jpg
+  image_alt: A member standing among the FlowFormer reformers in the walnut-lined flowhouse studio
+  parts:
+    - num: "10"
+      label: in the studio
+      title: Custom FlowFormers
+      body: Ten custom reformers, suited to the way we teach — the foundation of the Flowhouse Method.
+    - num: "10"
+      label: minutes early, your first time
+      title: A short orientation
+      body: First-timers should arrive about ten minutes before class — your instructor will walk you through the carriage, platform, springs, straps, and safety features.
+  closing: New to the reformer? Start with an Intro class — paced and cued for first-time movers.
+  link_label: Start with Intro
+  link_href: new-here.html
+
+language:
+  eyebrow: good to know
+  title: A little flowhouse language.
+  intro: A few terms you'll hear in the studio — so your first class feels familiar before you arrive.
+  terms:
+    - name: FlowFormer
+      tagline: Our custom reformer.
+      body: The matte-black machine at the centre of every class, built specifically for the way we teach — carriage, platform, springs, and straps working together.
+    - name: Time under tension
+      tagline: Slow, controlled reps.
+      body: Moving slowly and with control so muscles work for longer through each rep. It's how we build strength without impact.
+    - name: The Flow
+      tagline: The rhythm of class.
+      body: A continuous, breath-led sequence that carries you from one movement to the next — the signature rhythm of a flowhouse class.
+    - name: Springs & resistance
+      tagline: Your load, guided.
+      body: The reformer's springs set your resistance. Your instructor guides every change, so you're always working at the right load.
+    - name: Modification
+      tagline: Meeting you where you are.
+      body: A small adjustment to a movement — a different range, position, or spring — so every body can work safely and effectively.
+    - name: Progression
+      tagline: The next step up.
+      body: A way to add challenge to a movement once form is solid — more range, more load, or a longer hold, always earned.
+    - name: Eccentric movement
+      tagline: The lengthening phase.
+      body: The lengthening phase of a movement. We slow it down on purpose — long eccentrics are where lasting strength is built.

@@ -1,11 +1,143 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8">
-<title>Redirecting — flowhouse</title>
-<meta http-equiv="refresh" content="0; url=new-here.html">
-<link rel="canonical" href="https://flowhouserb.com/new-here.html">
-<meta name="robots" content="noindex">
-<style>body{font-family:system-ui;background:#f9f5f0;color:#353231;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:1rem;text-align:center}a{color:#af2413}</style>
-</head><body>
-<div><p>Redirecting to <a href="new-here.html">new here</a>…</p></div>
-<script>location.replace("new-here.html");</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f9f5f0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>The FlowFormer — Our Custom Reformer · flowhouse Rehoboth Beach</title>
+  <meta name="description" content="Meet the FlowFormer, flowhouse's custom reformer and the foundation of the Flowhouse Method — plus a little flowhouse language for your first class in Rehoboth Beach.">
+  <meta property="og:title" content="The FlowFormer — flowhouse Rehoboth Beach">
+  <meta property="og:description" content="Our custom reformer, built for the way we teach.">
+  <meta property="og:image" content="https://flowhouserb.com/images/v4/flowformer-real.jpg">
+  <link rel="canonical" href="https://flowhouserb.com/flowformer.html">
+</head>
+<body class="page-overlay ry-page ff-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+
+{{> mobile-drawer }}
+
+  <main id="main">
+
+    <!-- HERO — text + photo: content/flowformer/main.yml -->
+    <section class="ry-hero ff-hero" aria-labelledby="ff-title">
+      <img class="ry-hero__img" src="{{ flowformer.main.hero.image }}" alt="{{ flowformer.main.hero.image_alt }}">
+      <div class="ry-hero__shade" aria-hidden="true"></div>
+      <div class="container ry-hero__inner">
+        <span class="ry-eyebrow ry-eyebrow--light">{{ flowformer.main.hero.eyebrow }}</span>
+        <h1 id="ff-title" class="ry-hero__title">{{ flowformer.main.hero.title }}</h1>
+        <p class="ry-hero__sub">{{ flowformer.main.hero.subtitle }}</p>
+        <p class="ry-hero__body">{{ flowformer.main.hero.body }}</p>
+        <a href="{{ flowformer.main.hero.button_href }}" class="ry-btn">{{ flowformer.main.hero.button_label }}</a>
+      </div>
+    </section>
+
+    <!-- BUILT FOR THE WAY WE TEACH -->
+    <section class="ry-method" aria-labelledby="ff-about-title">
+      <div class="container ry-method__grid">
+        <div class="ry-method__copy">
+          <span class="ry-eyebrow" data-reveal>{{ flowformer.main.about.eyebrow }}</span>
+          <h2 id="ff-about-title" class="ry-h2" data-reveal>{{ flowformer.main.about.title | raw }}</h2>
+          <p class="ry-lead" data-reveal>{{ flowformer.main.about.intro }}</p>
+          <div class="ry-parts">
+            {{#each flowformer.main.about.parts}}<div class="ry-part" data-reveal>
+              <span class="ry-part__num">{{ this.num }}</span>
+              <div>
+                <span class="ry-part__label">{{ this.label }}</span>
+                <h3 class="ry-part__title">{{ this.title }}</h3>
+                <p>{{ this.body }}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <p class="ry-method__closing" data-reveal>{{ flowformer.main.about.closing }}</p>
+          <p class="ry-who__link ff-link" data-reveal><a href="{{ flowformer.main.about.link_href }}">{{ flowformer.main.about.link_label }} <span aria-hidden="true">→</span></a></p>
+        </div>
+        <figure class="ry-method__media" data-reveal><img src="{{ flowformer.main.about.image }}" alt="{{ flowformer.main.about.image_alt }}" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- A LITTLE FLOWHOUSE LANGUAGE -->
+    <section class="section section--walnut" aria-labelledby="ff-lang-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow" style="color: var(--c-pink);">{{ flowformer.main.language.eyebrow }}</span>
+            <h2 id="ff-lang-title" style="color: var(--c-bg);">{{ flowformer.main.language.title }}</h2>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p style="color: rgba(249,245,240,0.78);">{{ flowformer.main.language.intro }}</p>
+          </div>
+        </div>
+
+        <div class="class-library" data-reveal>
+          {{#each flowformer.main.language.terms}}<details>
+            <summary><span class="class-library__name">{{ this.name }}<span class="class-library__tagline">{{ this.tagline }}</span></span></summary>
+            <div class="class-library__panel"><p>{{ this.body }}</p></div>
+          </details>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <span class="wordmark">flowhouse</span>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(249,245,240,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(249,245,240,0.6);">{{ global.settings.footer_address }}</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="about.html">About</a>
+        <a href="studio.html">The studio</a>
+        <a href="new-here.html">New here</a>
+        <a href="class-menu.html">Class menu</a>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <a href="schedule.html">Schedule &amp; booking</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="team.html">Team</a>
+        <a href="franchising.html">Franchising</a>
+        <a href="schedule.html#book">Book a class</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
+        <a href="tel:{{ global.settings.phone_tel }}">{{ global.settings.phone_display }}</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sms-terms.html">SMS Terms</a>
+        <a href="policies.html">Studio Policies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" role="region" aria-label="Booking">
+  <div class="book-bar__text">
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
+  </div>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
+</div>
+
+<script src="js/site.js?v=4"></script>
+</body>
+</html>
