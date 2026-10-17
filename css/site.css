@@ -2116,3 +2116,10 @@ body.ex-modal-open { overflow: hidden; }
   .ig-track { animation: none; }
   .ig-marquee { overflow-x: auto; }
 }
+
+/* Desktop menu: only the seven main links (home, login and buttons stay on phone/tablet) */
+@media (min-width: 1024px) {
+  .mobile-drawer nav a[href="index.html"],
+  .mobile-drawer nav a[href="account.html"],
+  .mobile-drawer .drawer-cta { display: none; }
+}
