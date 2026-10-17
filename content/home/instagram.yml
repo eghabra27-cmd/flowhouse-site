@@ -1,29 +1,41 @@
-# Scrolling Instagram strip — studio photos that link to @myflowhouse
+# Scrolling Instagram strip — the 12 latest @myflowhouse posts (cover images), each linking to its post
 eyebrow: follow along
 headline_html: Find us on Instagram <span class="serif-italic">@myflowhouse</span>
 cta_label: Follow @myflowhouse
 images:
-  - src: /images/ig/ig-01.jpg
-    alt: Sam leaning on a FlowFormer in the flowhouse studio
-  - src: /images/ig/ig-02.jpg
-    alt: A flowhouse class working on the FlowFormer reformers
-  - src: /images/ig/ig-03.jpg
-    alt: A client at the barre wall in the flowhouse studio
-  - src: /images/ig/ig-04.jpg
-    alt: A client seated on the FlowFormer
-  - src: /images/ig/ig-05.jpg
-    alt: Rows of FlowFormers mid-class
-  - src: /images/ig/ig-06.jpg
-    alt: A long stretch on the FlowFormer
-  - src: /images/ig/ig-07.jpg
-    alt: Clients side by side on the FlowFormers
-  - src: /images/ig/ig-08.jpg
-    alt: Grip socks on the FlowFormer
-  - src: /images/ig/ig-09.jpg
-    alt: Clients together after class
-  - src: /images/ig/ig-10.jpg
-    alt: Grip socks at the barre
-  - src: /images/ig/ig-11.jpg
-    alt: A practitioner mid-flow on the FlowFormer
-  - src: /images/ig/ig-12.jpg
-    alt: The flowhouse studio and FlowFormers
+  - src: /images/ig/ig-01-Dej5cUaxukA.jpg
+    href: https://www.instagram.com/p/Dej5cUaxukA/
+    alt: "flowhouse cork block and pilates balls"
+  - src: /images/ig/ig-02-DehH52qEYBN.jpg
+    href: https://www.instagram.com/p/DehH52qEYBN/
+    alt: "First timers: 2 weeks unlimited for $69"
+  - src: /images/ig/ig-03-DeE_4ThRkir.jpg
+    href: https://www.instagram.com/p/DeE_4ThRkir/
+    alt: "The flowhouse storefront in Rehoboth Beach"
+  - src: /images/ig/ig-04-Dd9laAKsqqR.jpg
+    href: https://www.instagram.com/p/Dd9laAKsqqR/
+    alt: "First class $10 — flowhouse on a vintage TV"
+  - src: /images/ig/ig-05-Dd2Dcf-lkBn.jpg
+    href: https://www.instagram.com/p/Dd2Dcf-lkBn/
+    alt: "Clients at the barre in the flowhouse studio"
+  - src: /images/ig/ig-06-DdrPHVkkdEL.jpg
+    href: https://www.instagram.com/p/DdrPHVkkdEL/
+    alt: "Life at the house lately — clients at the barre"
+  - src: /images/ig/ig-07-DdZQ0F-RWAI.jpg
+    href: https://www.instagram.com/p/DdZQ0F-RWAI/
+    alt: "The flowhouse wordmark"
+  - src: /images/ig/ig-08-DdXBkXYMqvb.jpg
+    href: https://www.instagram.com/p/DdXBkXYMqvb/
+    alt: "flowhouse window sign: reformer, high intensity, barre, yin + restore"
+  - src: /images/ig/ig-09-DdUI9XwRQyx.jpg
+    href: https://www.instagram.com/p/DdUI9XwRQyx/
+    alt: "Celebrating two weeks of flowhouse in the studio"
+  - src: /images/ig/ig-10-DdMlt_JkSgc.jpg
+    href: https://www.instagram.com/p/DdMlt_JkSgc/
+    alt: "FlowFormers lined up in the studio"
+  - src: /images/ig/ig-11-Dc59C9eRSI3.jpg
+    href: https://www.instagram.com/p/Dc59C9eRSI3/
+    alt: "The post-class ritual with Pressed Juicery"
+  - src: /images/ig/ig-12-DczhLkqtydM.jpg
+    href: https://www.instagram.com/p/DczhLkqtydM/
+    alt: "The flowhouse wordmark on the studio wall"

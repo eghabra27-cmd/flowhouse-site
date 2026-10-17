@@ -228,8 +228,8 @@
       </div>
       <div class="ig-marquee">
         <div class="ig-track">
-          <div class="ig-set">{{#each home.instagram.images}}<a class="ig-tile" href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
-          <div class="ig-set" aria-hidden="true">{{#each home.instagram.images}}<a class="ig-tile" href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
+          <div class="ig-set">{{#each home.instagram.images}}<a class="ig-tile" href="{{ this.href }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
+          <div class="ig-set" aria-hidden="true">{{#each home.instagram.images}}<a class="ig-tile" href="{{ this.href }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
         </div>
       </div>
       <div class="container ig-strip__cta">
