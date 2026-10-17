@@ -1,0 +1,75 @@
+# Class Menu page — one detailed row per class. Descriptions from the flowhouse Mariana Tek schedule (November 2026).
+aside: New to the reformer or years in, there's a starting point here for you. Read about each class, then head to the schedule to book.
+book_label: Book this class
+book_href: "schedule.html#book"
+classes:
+  - id: intro
+    name: Intro
+    badge: First class
+    badge_class: intro
+    lead: Learn the FlowFormer and the foundations of a flowhouse class from the ground up.
+    paragraphs:
+      - Intro teaches you how to use the FlowFormer and introduces the primary positions and movements used throughout class. Your instructor explains proper setup, alignment, transitions, breathing, spring changes, and the general sequence of a flowhouse class.
+      - You'll practice movements from each major section of class and finish with a short five-to-ten-minute guided Flow, so you leave prepared for Signature.
+    image: /images/uploads/Tezza-0754.JPG
+    alt: A client seated on the FlowFormer in the flowhouse studio beneath the sphere pendant lights
+    best_for: First-timers
+    length: 50 min
+    focus: Setup & form
+    level: New
+  - id: signature
+    name: Signature
+    badge: The full method
+    badge_class: strong
+    lead: The flagship reformer class — contemporary Pilates and modern strength, together.
+    paragraphs:
+      - Signature blends contemporary Pilates with strength-focused movement on the FlowFormer. Expect controlled, full-body sequences, standing work, dynamic transitions, and a faster tempo designed to build strength, endurance, balance, and stability.
+      - Challenging but intentional, with a focus on form, control, and continuous movement from start to finish. Open to all levels — our instructors offer modifications and progressions throughout. We recommend an Intro class first to learn the FlowFormer.
+    image: /images/uploads/20260822_082501_C53929.JPEG
+    alt: A practitioner mid-flow on the FlowFormer
+    best_for: Ready members
+    length: 50 min
+    focus: Full-body strength
+    level: All levels
+  - id: barre
+    name: Barre
+    badge: All levels
+    badge_class: all
+    lead: A modern barre class inspired by the original Lotte Berk method.
+    paragraphs:
+      - Barre focuses on posture, endurance, and muscular control using controlled movement, repetition, mats, light weights, and the barre. Small, precise movements build long, resilient muscle and a strong, aligned frame.
+      - A beautiful complement to your reformer work — different tempo, same intention.
+    image: /images/uploads/barre-studio.jpg
+    alt: A client working at the barre wall in the flowhouse studio
+    best_for: All levels
+    length: 45 min
+    focus: Posture & endurance
+    level: All levels
+  - id: fusion
+    name: Fusion
+    badge: Barre + FlowFormer
+    badge_class: all
+    lead: The best of both worlds — two flowhouse favorites in one full-body workout.
+    paragraphs:
+      - FUSION combines two Flow House favorites, Barre and FlowFormer, into one full-body workout. You'll spend part of class at the barre and part on the mat, moving through a mix of traditional Barre exercises and our signature FlowFormer sequences.
+      - Expect controlled movements, strength-building exercises, and a full-body burn. Low-impact, high-intensity, and designed to leave you feeling stronger from head to toe.
+    image: /images/uploads/Tezza-5511.JPG
+    alt: A client in grip socks working on the FlowFormer
+    best_for: The full experience
+    length: 50 min
+    focus: Barre & reformer
+    level: All levels
+  - id: yin
+    name: Reformer Yin
+    badge: Recovery
+    badge_class: restore
+    lead: A restorative reformer experience built on mobility, breath, and release.
+    paragraphs:
+      - Reformer Yin features supported movement, longer holds, stretching, breathwork, and myofascial release. Slow, supported movement opens the body, calms the nervous system, and makes space for recovery.
+      - The perfect counterbalance to your stronger training days — a class that leaves you noticeably lighter.
+    image: /images/uploads/Tezza-4735.JPG
+    alt: A client in a long, supported stretch on the FlowFormer
+    best_for: Recovery days
+    length: 50 min
+    focus: Mobility & breath
+    level: All levels

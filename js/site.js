@@ -132,6 +132,18 @@
     });
   });
 
+  // open a class card when linked directly (e.g. class-menu.html#signature)
+  const openCardFromHash = () => {
+    const id = location.hash.slice(1);
+    const card = id && document.getElementById(id);
+    if (!card || !card.classList.contains('class-card')) return;
+    const btn = card.querySelector('.class-card__learn');
+    if (btn && btn.getAttribute('aria-expanded') !== 'true') btn.click();
+    card.scrollIntoView({ block: 'start' });
+  };
+  openCardFromHash();
+  window.addEventListener('hashchange', openCardFromHash);
+
   // ── Exercise Library: filters + accessible modal ──
   const exGrid = document.querySelector('[data-ex-grid]');
   if (exGrid && Array.isArray(window.FH_EXERCISES)) {

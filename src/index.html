@@ -194,36 +194,28 @@
       </div>
     </section>
 
-    <!-- 04 · CLASS MENU (3 core formats per spec) -->
+    <!-- 04 · THE MENU — class columns (modeled on thestokeoc.com/the-gym) -->
     <section class="section section--soft" id="classes">
       <div class="container">
-        <div class="section-head">
-          <div class="section-head__title" data-reveal>
-            <span class="eyebrow">{{ home.classes.section_eyebrow }}</span>
-            <h2>{{ home.classes.section_headline_html | raw }}</h2>
-          </div>
-          <div class="section-head__aside" data-reveal>
-            <p>{{ home.classes.section_intro }}</p>
-          </div>
+        <div class="menu-head" data-reveal>
+          <span class="eyebrow">{{ home.classes.section_eyebrow }}</span>
+          <h2>{{ home.classes.section_headline_html | raw }}</h2>
+          <p>{{ home.classes.section_intro }}</p>
         </div>
-
-        <div class="class-grid">
-          {{#each home.classes.classes}}
-          <article class="class-card" data-reveal>
-            <div class="class-card__media"><img src="{{ this.image }}" alt="{{ this.alt }}"><span class="tag">{{ this.tag }}</span></div>
-            <div class="class-card__body">
-              <h3 class="h4">{{ this.name }}</h3>
-              <p>{{ this.bio }}</p>
-              {{#if this.note}}
-              <p class="text-muted text-sm" style="margin-top: 0.5rem;">{{ this.note }}</p>
-              {{/if}}
-              <div class="class-card__meta"><span>{{ this.meta_left }}</span><span>·</span><span>{{ this.meta_right }}</span></div>
-            </div>
+        <div class="menu-cols">
+          {{#each home.classes.classes}}<article class="menu-col" data-reveal>
+            <h3>{{ this.name }}</h3>
+            <p class="menu-col__tag">{{ this.tagline }}</p>
+            <p class="menu-col__bio">{{ this.bio }}</p>
+            <a class="menu-col__link" href="{{ this.href }}">{{ home.classes.learn_more_label }} <span aria-hidden="true">→</span></a>
           </article>
           {{/each}}
         </div>
-
-        <p data-reveal class="text-muted text-sm" style="text-align:center; margin-top: var(--s-8); max-width: 56ch; margin-inline: auto;">{{ home.classes.footer_note }}</p>
+        <div class="menu-ctas" data-reveal>
+          <a href="{{ home.classes.cta_secondary_href }}" class="btn btn--ghost">{{ home.classes.cta_secondary_label }}</a>
+          <a href="{{ home.classes.cta_primary_href }}" class="btn btn--primary">{{ home.classes.cta_primary_label }}</a>
+        </div>
+        {{#if home.classes.footer_note}}<p class="menu-note" data-reveal>{{ home.classes.footer_note }}</p>{{/if}}
       </div>
     </section>
 
@@ -410,6 +402,6 @@
   <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
 </div>
 
-<script src="js/site.js?v=3"></script>
+<script src="js/site.js?v=4"></script>
 </body>
 </html>

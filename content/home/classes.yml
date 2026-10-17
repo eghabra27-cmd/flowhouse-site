@@ -1,21 +1,30 @@
-section_eyebrow: the modalities
-section_headline_html: Reformer. Barre. <span class="serif-italic">Equally essential.</span>
+section_eyebrow: our classes
+section_headline_html: The menu.
 section_intro: An elevated movement studio — a fusion of contemporary pilates and modern movement across reformer and barre, designed to support the body long-term through posture, alignment, mobility, core strength, and mind-body connection.
 classes:
+  - name: Intro
+    tagline: reformer · 50 min · your first class
+    bio: Learn the FlowFormer and the foundations of a flowhouse class from the ground up.
+    href: class-menu.html#intro
   - name: Signature
-    image: /images/uploads/20260822_082501_C53929.JPEG
-    alt: A practitioner mid-flow on the Flowformer
-    tag: 50 min · intermediate
-    bio: Our signature reformer class blends modern strength-based movement with foundational principles inspired by Joseph Pilates. Through intentional movement, clients build deep core strength, pelvic-floor support, stability, endurance, and full-body control.
-    note: While still accessible to many clients, the pacing and sequencing lean slightly intermediate/advanced and are best suited for those with prior reformer experience.
-    meta_left: Reformer
-    meta_right: Time under tension
+    tagline: reformer · 50 min · all levels
+    bio: The flagship reformer class — contemporary Pilates and modern strength, together.
+    href: class-menu.html#signature
   - name: Barre 45
-    image: /images/uploads/Tezza-9481.JPG
-    alt: Detail of a hand resting on the brass barre
-    tag: 45 min · all levels
-    bio: A modern barre class rooted in alignment, muscular endurance, posture, and low-impact strength training. Expect intentional movement, sculpt-based sequencing, deep core activation, and full-body burn designed to strengthen and support the body without high-impact stress.
-    note: ''
-    meta_left: Barre
-    meta_right: Continuous movement
-footer_note: Intro first-timer classes and Reformer Yin restorative recovery round out the full menu. Fusion — our barre + reformer hybrid — is coming soon.
+    tagline: barre · 45 min · all levels
+    bio: A modern barre class inspired by the original Lotte Berk method.
+    href: class-menu.html#barre
+  - name: Fusion
+    tagline: barre + flowformer · 50 min
+    bio: The best of both worlds — Barre and FlowFormer in one full-body workout.
+    href: class-menu.html#fusion
+  - name: Reformer Yin
+    tagline: reformer · 50 min · recovery
+    bio: A restorative reformer experience built on mobility, breath, and release.
+    href: class-menu.html#yin
+learn_more_label: Learn more
+cta_primary_label: Book a class
+cta_primary_href: "schedule.html#book"
+cta_secondary_label: Pricing
+cta_secondary_href: memberships.html
+footer_note: ""

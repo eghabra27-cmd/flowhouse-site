@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
   <title>Class Menu — Classes, Movements &amp; Schedule · flowhouse Rehoboth Beach</title>
-  <meta name="description" content="Explore the full flowhouse class menu — Intro, Signature, Barre, Reformer Yin, and our Fusion barre + reformer hybrid coming soon. Browse the movement library and view the schedule.">
+  <meta name="description" content="Explore the full flowhouse class menu — Intro, Signature, Barre, Reformer Yin, and Fusion, our barre + reformer hybrid. Browse the movement library and view the schedule.">
   <meta property="og:title" content="Class Menu — flowhouse Rehoboth Beach">
   <meta property="og:description" content="Every flowhouse class, the movements that shape them, and a link to the live schedule.">
   <meta property="og:image" content="https://flowhouserb.com/images/v4/workout-hero.jpg">
@@ -61,122 +61,29 @@
             <h2>The class menu.</h2>
           </div>
           <div class="section-head__aside" data-reveal>
-            <p>New to the reformer or years in, there's a starting point here for you. Tap any class to learn more, then head to the schedule to book.</p>
+            <p>{{ classmenu.classes.aside }}</p>
           </div>
         </div>
 
-        <div class="class-picker" data-reveal>
-
-          <!-- Intro -->
-          <article class="class-card">
-            <div class="class-card__top">
-              <h3 class="class-card__name">Intro</h3>
-              <span class="level-badge level-badge--intro">First class</span>
-            </div>
-            <p class="class-card__desc">Learn the FlowFormer and the foundations of a flowhouse class from the ground up.</p>
-            <dl class="class-card__facts">
-              <div><dt>Best for</dt><dd>First-timers</dd></div>
-              <div><dt>Length</dt><dd>50 min</dd></div>
-              <div><dt>Focus</dt><dd>Setup &amp; form</dd></div>
-              <div><dt>Level</dt><dd>New</dd></div>
-            </dl>
-            <div class="class-card__foot">
-              <button class="class-card__learn" type="button" aria-expanded="false"><span>Learn more </span></button>
-              <div class="class-card__more" hidden>
-                <p>Intro teaches you how to use the FlowFormer and introduces the primary positions and movements used throughout class. Your instructor explains proper setup, alignment, transitions, breathing, spring changes, and the general sequence of a flowhouse class.</p>
-                <p>You'll practice movements from each major section of class and finish with a short five-to-ten-minute guided Flow, so you leave prepared for Signature.</p>
-              </div>
+        <div class="cm-rows">
+          {{#each classmenu.classes.classes}}<article class="cm-row" id="{{ this.id }}">
+            <div class="cm-row__media" data-reveal><img src="{{ this.image }}" alt="{{ this.alt }}" loading="lazy"></div>
+            <div class="cm-row__copy" data-reveal>
+              <span class="level-badge level-badge--{{ this.badge_class }}">{{ this.badge }}</span>
+              <h3 class="cm-row__name">{{ this.name }}</h3>
+              <p class="cm-row__lead">{{ this.lead }}</p>
+              {{#each this.paragraphs}}<p>{{ this }}</p>
+              {{/each}}
+              <dl class="class-card__facts cm-row__facts">
+                <div><dt>Best for</dt><dd>{{ this.best_for }}</dd></div>
+                <div><dt>Length</dt><dd>{{ this.length }}</dd></div>
+                <div><dt>Focus</dt><dd>{{ this.focus }}</dd></div>
+                <div><dt>Level</dt><dd>{{ this.level }}</dd></div>
+              </dl>
+              <a href="{{ classmenu.classes.book_href }}" class="btn btn--primary">{{ classmenu.classes.book_label }}</a>
             </div>
           </article>
-
-          <!-- Signature -->
-          <article class="class-card">
-            <div class="class-card__top">
-              <h3 class="class-card__name">Signature</h3>
-              <span class="level-badge level-badge--strong">The full method</span>
-            </div>
-            <p class="class-card__desc">The flagship reformer class — contemporary Pilates and modern strength, together.</p>
-            <dl class="class-card__facts">
-              <div><dt>Best for</dt><dd>Ready members</dd></div>
-              <div><dt>Length</dt><dd>50 min</dd></div>
-              <div><dt>Focus</dt><dd>Full-body strength</dd></div>
-              <div><dt>Level</dt><dd>All levels</dd></div>
-            </dl>
-            <div class="class-card__foot">
-              <button class="class-card__learn" type="button" aria-expanded="false"><span>Learn more </span></button>
-              <div class="class-card__more" hidden>
-                <p>Signature combines contemporary Pilates with modern strength training through slow tempo, continuous transitions, and real time under tension. It's challenging, athletic, and intentional from first spring to last.</p>
-                <p>A complete full-body workout that builds lasting strength, class after class. Open to all levels — our instructors offer modifications and progressions throughout, and there's standing work built in, so newer members are supported from day one. We recommend an Intro class first to learn the FlowFormer.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Barre -->
-          <article class="class-card">
-            <div class="class-card__top">
-              <h3 class="class-card__name">Barre</h3>
-              <span class="level-badge level-badge--all">All levels</span>
-            </div>
-            <p class="class-card__desc">A modern barre class inspired by the original Lotte Berk method.</p>
-            <dl class="class-card__facts">
-              <div><dt>Best for</dt><dd>All levels</dd></div>
-              <div><dt>Length</dt><dd>45 min</dd></div>
-              <div><dt>Focus</dt><dd>Posture &amp; endurance</dd></div>
-              <div><dt>Level</dt><dd>All levels</dd></div>
-            </dl>
-            <div class="class-card__foot">
-              <button class="class-card__learn" type="button" aria-expanded="false"><span>Learn more </span></button>
-              <div class="class-card__more" hidden>
-                <p>Barre focuses on posture, endurance, and muscular control using controlled movement, repetition, mats, light weights, and the barre. Small, precise movements build long, resilient muscle and a strong, aligned frame.</p>
-                <p>A beautiful complement to your reformer work — different tempo, same intention.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Yin -->
-          <article class="class-card">
-            <div class="class-card__top">
-              <h3 class="class-card__name">Reformer Yin</h3>
-              <span class="level-badge level-badge--restore">Recovery</span>
-            </div>
-            <p class="class-card__desc">A restorative reformer experience built on mobility, breath, and release.</p>
-            <dl class="class-card__facts">
-              <div><dt>Best for</dt><dd>Recovery days</dd></div>
-              <div><dt>Length</dt><dd>50 min</dd></div>
-              <div><dt>Focus</dt><dd>Mobility &amp; breath</dd></div>
-              <div><dt>Level</dt><dd>All levels</dd></div>
-            </dl>
-            <div class="class-card__foot">
-              <button class="class-card__learn" type="button" aria-expanded="false"><span>Learn more </span></button>
-              <div class="class-card__more" hidden>
-                <p>Reformer Yin features supported movement, longer holds, stretching, breathwork, and myofascial release. Slow, supported movement opens the body, calms the nervous system, and makes space for recovery.</p>
-                <p>The perfect counterbalance to your stronger training days — a class that leaves you noticeably lighter. On the schedule Monday and Thursday evenings.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Fusion — coming soon -->
-          <article class="class-card" data-soon>
-            <div class="class-card__top">
-              <h3 class="class-card__name">Fusion</h3>
-              <span class="level-badge level-badge--soon">Coming soon</span>
-            </div>
-            <p class="class-card__desc">Our barre + reformer hybrid — two of our signatures woven into one class.</p>
-            <dl class="class-card__facts">
-              <div><dt>Best for</dt><dd>The full experience</dd></div>
-              <div><dt>Length</dt><dd>50 min</dd></div>
-              <div><dt>Focus</dt><dd>Barre &amp; reformer</dd></div>
-              <div><dt>Level</dt><dd>All levels</dd></div>
-            </dl>
-            <div class="class-card__foot">
-              <button class="class-card__learn" type="button" aria-expanded="false"><span>Learn more </span></button>
-              <div class="class-card__more" hidden>
-                <p>Fusion blends the precision and posture work of Barre with the strength and time-under-tension of the FlowFormer — moving between the barre and the reformer in one continuous, breath-led class.</p>
-                <p>The best of both practices in a single session. Arriving on the flowhouse schedule soon after opening.</p>
-              </div>
-            </div>
-          </article>
-
+          {{/each}}
         </div>
       </div>
     </section>
@@ -514,6 +421,6 @@ window.FH_EXERCISES = [
 ];
 </script>
 
-<script src="js/site.js?v=3"></script>
+<script src="js/site.js?v=4"></script>
 </body>
 </html>
