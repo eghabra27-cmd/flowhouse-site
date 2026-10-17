@@ -2284,3 +2284,4 @@ body.ex-modal-open { overflow: hidden; }
 .team-house .roster-card__social a:hover { color: var(--c-oxblood); border-bottom-color: var(--c-oxblood); }
 @media (hover: none) { .team-house .roster-card__photo img { filter: grayscale(1) contrast(1.06) sepia(.08); } }
 .team-house .roster-card__photo:not(:has(img))::before { content: none; }
+#barre .cm-row__media img { object-position: 50% 78%; }
