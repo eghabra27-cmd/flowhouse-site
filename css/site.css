@@ -2030,3 +2030,32 @@ body.ex-modal-open { overflow: hidden; }
 .nh-offer p { color: var(--c-ink-soft); }
 .nh-offer__price { font-family: var(--ff-display, inherit); font-weight: 700; font-size: clamp(2rem, 1.5rem + 2vw, 3rem); color: var(--c-oxblood); line-height: 1; }
 @media (max-width: 860px) { .nh-offers__inner { grid-template-columns: 1fr; } }
+
+/* ---------- Homepage app band (modeled on purebarre.com) ---------- */
+.app-band-wrap { padding: clamp(5rem, 9vw, 8rem) 0 clamp(3rem, 5vw, 4.5rem); }
+.app-band { background: var(--c-oxblood); color: #fffdfb; }
+.app-band__inner { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.app-band__copy { text-align: center; padding: clamp(3.5rem, 6vw, 5.5rem) 0; display: flex; flex-direction: column; align-items: center; gap: var(--s-5); }
+.app-band__copy h2 { color: #fffdfb; font-size: var(--fs-h2); margin: 0; }
+.app-band__copy h2 .serif-italic { color: #fffdfb; }
+.app-band__copy p { color: #fffdfb; max-width: 34ch; font-size: var(--fs-lead); line-height: 1.55; }
+.appstore-badge { display: inline-flex; align-items: center; gap: .6rem; background: #000; color: #fff; border: 1px solid rgba(255,255,255,.55); border-radius: 10px; padding: .55rem 1.1rem .55rem .9rem; text-decoration: none; line-height: 1; transition: transform var(--t); }
+.appstore-badge:hover { transform: translateY(-2px); }
+.appstore-badge__logo { width: 24px; height: 24px; }
+.appstore-badge span { display: flex; flex-direction: column; font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; }
+.appstore-badge small { font-size: .68rem; font-weight: 500; letter-spacing: .01em; margin-bottom: .2rem; }
+.app-band__phones { position: relative; height: 100%; min-height: 360px; }
+.app-phone { position: absolute; width: clamp(190px, 17vw, 250px); background: #111; border-radius: 34px; padding: 9px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.55); }
+.app-phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
+.app-phone--front { left: 12%; top: calc(-1 * clamp(4rem, 7vw, 6.5rem)); z-index: 2; }
+.app-phone--back { left: calc(12% + clamp(130px, 12vw, 175px)); top: calc(-1 * clamp(2.5rem, 4.5vw, 4rem)); transform: rotate(9deg); z-index: 1; }
+@media (max-width: 860px) {
+  .app-band-wrap { padding-top: clamp(2.5rem, 6vw, 4rem); }
+  .app-band__inner { grid-template-columns: 1fr; gap: 0; }
+  .app-band__copy { padding-bottom: var(--s-6); }
+  .app-band__phones { min-height: 0; height: auto; display: flex; justify-content: center; padding-bottom: 0; margin-bottom: -2.5rem; }
+  .app-phone { position: relative; left: auto; top: auto; width: 46vw; max-width: 210px; }
+  .app-phone--front { order: 1; margin-right: -14vw; }
+  .app-phone--back { order: 2; transform: rotate(7deg) translateY(1.5rem); }
+  .app-band-wrap { padding-bottom: clamp(4rem, 10vw, 5rem); }
+}
