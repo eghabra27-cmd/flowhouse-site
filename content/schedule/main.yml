@@ -3,8 +3,8 @@ headline_html: Class schedule, <span class="serif-italic">now live.</span>
 lead: Our full class schedule is live. Book your spot anytime.
 cta_primary_label: Book a class
 cta_primary_href: '#book'
-cta_secondary_label: The Experience
-cta_secondary_href: flowformer.html
+cta_secondary_label: New here
+cta_secondary_href: new-here.html
 image: images/v4/studio.png
 image_alt: The flowhouse studio — ten custom Flowformer reformers under warm pendant lighting.
 image_caption: Opening September 1 · Rehoboth Beach, DE

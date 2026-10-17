@@ -1,0 +1,51 @@
+# "New here" page — modeled on jetsetpilates.com/new, in the flowhouse brand.
+# Copy is drawn from facts already on the site (what to expect, first-class notes, glossary) and real Google reviews.
+hero_eyebrow: new here
+hero_headline_html: Not another pilates studio. <span class="serif-italic">A method of our own.</span>
+hero_lead: The Flowhouse experience blends contemporary Pilates with modern strength training on the FlowFormer — our custom reformer. Slow tempo, time under tension, breath, precision, and control, sequenced into one continuous flow.
+
+expect_image: /images/uploads/Tezza-4228.JPG
+expect_image_alt: A flowhouse class working on the FlowFormer reformers beneath the studio's sphere pendant lights
+expect_intro: "Within one of our signature 50-minute classes, you can expect:"
+expect_items:
+  - Breath work and deep-core activation on the FlowFormer — we start the conversation from the inside out.
+  - Lower body, oblique, and upper body blocks — time-under-tension reps, slow eccentrics, and long-lever arms on the cables.
+  - One continuous, breath-led flow. Your instructor guides every movement, transition, and spring change, and modifications are always available.
+  - A final core push, then a slow stretch and cool down — you'll walk out taller than you came in.
+expect_note: "First time on the reformer? Start with an Intro class — paced and cued for first-time movers, the place to learn the reformer before anything else."
+
+reviews_eyebrow: in their words
+reviews_headline: What our members say.
+reviews_image: /images/v4/experience-hero-community.jpg
+reviews_image_alt: Members laughing and high-fiving together after class in the flowhouse studio, against the warm walnut wood-slat wall
+reviews:
+  - quote: I took my first ever pilates class at flowhouse and had such a great experience. Sam, the owner, was incredibly sweet and welcoming, and the facility is beautiful. My instructor, Lexi, was amazing and made my first time way less intimidating.
+    source: 5-star Google review
+  - quote: There's something about this space that you feel the second you walk through the door — the warmth, the energy, the people. It feels like more than a studio…
+    source: 5-star Google review
+  - quote: The space is beautiful, the instructors are welcoming and knowledgeable, and the classes are challenging in the best way.
+    source: 5-star Google review
+
+welcome_image: /images/uploads/Tezza-1149.JPG
+welcome_headline: We're so excited to welcome you to flowhouse.
+welcome_sub: "Here's what to know before your first class:"
+cards:
+  - icon: clock
+    title: Arrive early
+    body: First-timers should arrive about ten minutes before class for a short orientation and FlowFormer setup — your instructor will walk you through the carriage, platform, springs, straps, and safety features.
+  - icon: sock
+    title: Grip socks required
+    body: Required for safety and hygiene. Available for purchase in the studio if you need a pair.
+  - icon: bottle
+    title: Come ready to move
+    body: Bring water and wear comfortable, fitted movement clothing you can move freely in. Phones stay silent and stored away so the room stays calm.
+  - icon: phone
+    title: Connect with us
+    body: Download the Flow House app to book classes, manage your membership, and stay connected — all in one place.
+    app: true
+
+cta_headline: Let's get you into a class.
+cta_primary_label: Book a class
+cta_primary_href: "schedule.html#book"
+cta_secondary_label: See the class menu
+cta_secondary_href: class-menu.html

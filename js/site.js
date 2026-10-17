@@ -5,7 +5,7 @@
     const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     const map = {
       'index.html': 'home', '': 'home',
-      'about.html': 'about', 'studio.html': 'studio', 'flowformer.html': 'flowformer',
+      'about.html': 'about', 'studio.html': 'studio', 'flowformer.html': 'flowformer', 'new-here.html': 'new-here',
       'what-to-expect.html': 'what-to-expect', 'schedule.html': 'schedule',
       'memberships.html': 'memberships', 'membership.html': 'memberships',
       'merch.html': 'merch', 'teach.html': 'teach', 'account.html': 'account',

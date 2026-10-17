@@ -6,8 +6,8 @@ hero_headline_html: "First access. <span class='serif-italic'>First booking.</sp
 hero_lead: "Memberships, class packages, and intro offers — the easiest way to begin is an intro offer. Book your first class anytime."
 hero_cta_primary_label: "Book a class"
 hero_cta_primary_href: "schedule.html#book"
-hero_cta_secondary_label: "The Method"
-hero_cta_secondary_href: "flowformer.html"
+hero_cta_secondary_label: New here
+hero_cta_secondary_href: "new-here.html"
 
 # ──────────────────────────────────────────────
 # PULL QUOTE STRIP
