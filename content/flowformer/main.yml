@@ -41,29 +41,3 @@ video:
   poster: /images/v4/flowformer-real.jpg
   poster_alt: The matte-black FlowFormer reformer against the walnut wood-slat wall.
 
-language:
-  eyebrow: good to know
-  title: A little flowhouse language.
-  intro: A few terms you'll hear in the studio — so your first class feels familiar before you arrive.
-  terms:
-    - name: FlowFormer
-      tagline: Our custom reformer.
-      body: The matte-black machine at the centre of every class, built specifically for the way we teach — carriage, platform, springs, and straps working together.
-    - name: Time under tension
-      tagline: Slow, controlled reps.
-      body: Moving slowly and with control so muscles work for longer through each rep. It's how we build strength without impact.
-    - name: The Flow
-      tagline: The rhythm of class.
-      body: A continuous, breath-led sequence that carries you from one movement to the next — the signature rhythm of a flowhouse class.
-    - name: Springs & resistance
-      tagline: Your load, guided.
-      body: The reformer's springs set your resistance. Your instructor guides every change, so you're always working at the right load.
-    - name: Modification
-      tagline: Meeting you where you are.
-      body: A small adjustment to a movement — a different range, position, or spring — so every body can work safely and effectively.
-    - name: Progression
-      tagline: The next step up.
-      body: A way to add challenge to a movement once form is solid — more range, more load, or a longer hold, always earned.
-    - name: Eccentric movement
-      tagline: The lengthening phase.
-      body: The lengthening phase of a movement. We slow it down on purpose — long eccentrics are where lasting strength is built.

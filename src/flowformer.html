@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
   <title>The FlowFormer — Our Custom Reformer · flowhouse Rehoboth Beach</title>
-  <meta name="description" content="Meet the FlowFormer, flowhouse's custom reformer and the foundation of the Flowhouse Method — plus a little flowhouse language for your first class in Rehoboth Beach.">
+  <meta name="description" content="Meet the FlowFormer, flowhouse's custom reformer and the foundation of the Flowhouse Method, built for the way we teach. Rehoboth Beach, DE.">
   <meta property="og:title" content="The FlowFormer — flowhouse Rehoboth Beach">
   <meta property="og:description" content="Our custom reformer, built for the way we teach.">
   <meta property="og:image" content="https://flowhouserb.com/images/v4/flowformer-real.jpg">
@@ -79,29 +79,6 @@
             <span class="ff-video__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
             <span class="ff-video__badge">{{ flowformer.main.video.badge }}</span>
           </div>{{/unless}}
-        </div>
-      </div>
-    </section>
-
-    <!-- A LITTLE FLOWHOUSE LANGUAGE -->
-    <section class="section section--walnut" aria-labelledby="ff-lang-title">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-head__title" data-reveal>
-            <span class="eyebrow" style="color: var(--c-pink);">{{ flowformer.main.language.eyebrow }}</span>
-            <h2 id="ff-lang-title" style="color: var(--c-bg);">{{ flowformer.main.language.title }}</h2>
-          </div>
-          <div class="section-head__aside" data-reveal>
-            <p style="color: rgba(249,245,240,0.78);">{{ flowformer.main.language.intro }}</p>
-          </div>
-        </div>
-
-        <div class="class-library" data-reveal>
-          {{#each flowformer.main.language.terms}}<details>
-            <summary><span class="class-library__name">{{ this.name }}<span class="class-library__tagline">{{ this.tagline }}</span></span></summary>
-            <div class="class-library__panel"><p>{{ this.body }}</p></div>
-          </details>
-          {{/each}}
         </div>
       </div>
     </section>
