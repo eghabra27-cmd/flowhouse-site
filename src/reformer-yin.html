@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f9f5f0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>Reformer Yin — Strength Meets Stillness · flowhouse Rehoboth Beach</title>
+  <meta name="description" content="Reformer Yin at flowhouse: a 50-minute class pairing 30 minutes of strength-focused reformer Pilates with 20 minutes of slow, Yin-inspired stretching. Rehoboth Beach, DE.">
+  <meta property="og:title" content="Reformer Yin — flowhouse Rehoboth Beach">
+  <meta property="og:description" content="Strength meets stillness. 30 minutes of reformer Pilates, 20 minutes of Yin-inspired stretching.">
+  <meta property="og:image" content="https://flowhouserb.com/images/uploads/reformer-yin-hero.jpg">
+  <link rel="canonical" href="https://flowhouserb.com/reformer-yin.html">
+</head>
+<body class="page-overlay ry-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+
+{{> mobile-drawer }}
+
+  <main id="main">
+
+    <!-- HERO — full-bleed photo, header overlaid. Text + photo: content/reformeryin/main.yml -->
+    <section class="ry-hero" aria-labelledby="ry-title">
+      <img class="ry-hero__img" src="{{ reformeryin.main.hero.image }}" alt="{{ reformeryin.main.hero.image_alt }}">
+      <div class="ry-hero__shade" aria-hidden="true"></div>
+      <div class="container ry-hero__inner">
+        <span class="ry-eyebrow ry-eyebrow--light">{{ reformeryin.main.hero.eyebrow }}</span>
+        <h1 id="ry-title" class="ry-hero__title">{{ reformeryin.main.hero.title }}</h1>
+        <p class="ry-hero__sub">{{ reformeryin.main.hero.subtitle }}</p>
+        <p class="ry-hero__body">{{ reformeryin.main.hero.body }}</p>
+        <a href="{{ reformeryin.main.hero.button_href }}" class="ry-btn">{{ reformeryin.main.hero.button_label }}</a>
+      </div>
+    </section>
+
+    <!-- 1 · THE METHOD -->
+    <section class="ry-method" aria-labelledby="ry-method-title">
+      <div class="container ry-method__grid">
+        <div class="ry-method__copy">
+          <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.method.eyebrow }}</span>
+          <h2 id="ry-method-title" class="ry-h2" data-reveal>{{ reformeryin.main.method.title | raw }}</h2>
+          <p class="ry-lead" data-reveal>{{ reformeryin.main.method.intro }}</p>
+          <div class="ry-parts">
+            {{#each reformeryin.main.method.parts}}<div class="ry-part" data-reveal>
+              <span class="ry-part__num">{{ this.minutes }}</span>
+              <div>
+                <span class="ry-part__label">{{ this.label }}</span>
+                <h3 class="ry-part__title">{{ this.title }}</h3>
+                <p>{{ this.body }}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <p class="ry-method__closing" data-reveal>{{ reformeryin.main.method.closing }}</p>
+        </div>
+        <figure class="ry-method__media" data-reveal><img src="{{ reformeryin.main.method.image }}" alt="{{ reformeryin.main.method.image_alt }}" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- 2 · WHY WE PRACTICE -->
+    <section class="ry-why" aria-labelledby="ry-why-title">
+      <div class="container">
+        <header class="ry-why__head">
+          <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.why.eyebrow }}</span>
+          <h2 id="ry-why-title" class="ry-h2" data-reveal>{{ reformeryin.main.why.title }}</h2>
+          <p class="ry-lead" data-reveal>{{ reformeryin.main.why.intro }}</p>
+        </header>
+        <ol class="ry-why__list">
+          {{#each reformeryin.main.why.items}}<li class="ry-why__item" data-reveal>
+            <span class="ry-why__no">0{{ @index1 }}</span>
+            <h3>{{ this.title }}</h3>
+            <p>{{ this.body }}</p>
+          </li>
+          {{/each}}
+        </ol>
+        <p class="ry-note" data-reveal>{{ reformeryin.main.why.note }}</p>
+      </div>
+    </section>
+
+    <!-- 3 · THE EXPERIENCE — split-screen timeline -->
+    <section class="ry-exp" aria-labelledby="ry-exp-title">
+      <div class="container ry-exp__head">
+        <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.experience.eyebrow }}</span>
+        <h2 id="ry-exp-title" class="ry-h2" data-reveal>{{ reformeryin.main.experience.title }}</h2>
+        <div class="ry-timeline" data-reveal aria-hidden="true"><span class="ry-timeline__a"></span><span class="ry-timeline__b"></span></div>
+      </div>
+      <div class="ry-exp__split">
+        {{#each reformeryin.main.experience.phases}}<article class="ry-phase">
+          <div class="ry-phase__media"><img src="{{ this.image }}" alt="{{ this.image_alt }}" loading="lazy"></div>
+          <div class="ry-phase__copy" data-reveal>
+            <span class="ry-phase__time">{{ this.time }}</span>
+            <h3 class="ry-phase__name">{{ this.name }}</h3>
+            <p class="ry-phase__line">{{ this.line }}</p>
+          </div>
+        </article>
+        {{/each}}
+      </div>
+    </section>
+
+    <!-- 4 · WHO IT'S FOR -->
+    <section class="ry-who" aria-labelledby="ry-who-title">
+      <div class="container ry-who__grid">
+        <div>
+          <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.who.eyebrow }}</span>
+          <h2 id="ry-who-title" class="ry-h2 ry-h2--xl" data-reveal>{{ reformeryin.main.who.title }}</h2>
+          <p class="ry-lead" data-reveal>{{ reformeryin.main.who.body }}</p>
+          <dl class="ry-facts" data-reveal>
+            {{#each reformeryin.main.who.facts}}<div><dt>{{ this.label }}</dt><dd>{{ this.value }}</dd></div>
+            {{/each}}
+          </dl>
+        </div>
+        <ul class="ry-who__points">
+          {{#each reformeryin.main.who.points}}<li data-reveal>
+            <h3>{{ this.title }}</h3>
+            <p>{{ this.body }}</p>
+          </li>
+          {{/each}}
+          <li data-reveal class="ry-who__link"><a href="{{ reformeryin.main.who.new_href }}">{{ reformeryin.main.who.new_label }} <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5 · YOUR MOMENT TO RESET -->
+    <section class="ry-reset" aria-labelledby="ry-reset-title">
+      <img class="ry-reset__img" src="{{ reformeryin.main.reset.image }}" alt="{{ reformeryin.main.reset.image_alt }}" loading="lazy">
+      <div class="ry-reset__shade" aria-hidden="true"></div>
+      <div class="container ry-reset__inner">
+        <span class="ry-eyebrow ry-eyebrow--light" data-reveal>{{ reformeryin.main.reset.eyebrow }}</span>
+        <h2 id="ry-reset-title" class="ry-reset__title" data-reveal>{{ reformeryin.main.reset.title }}</h2>
+        <a href="{{ reformeryin.main.reset.button_href }}" class="ry-btn" data-reveal>{{ reformeryin.main.reset.button_label }}</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <span class="wordmark">flowhouse</span>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(249,245,240,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(249,245,240,0.6);">{{ global.settings.footer_address }}</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="about.html">About</a>
+        <a href="studio.html">The studio</a>
+        <a href="new-here.html">New here</a>
+        <a href="class-menu.html">Class menu</a>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <a href="schedule.html">Schedule &amp; booking</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="team.html">Team</a>
+        <a href="franchising.html">Franchising</a>
+        <a href="schedule.html#book">Book a class</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
+        <a href="tel:{{ global.settings.phone_tel }}">{{ global.settings.phone_display }}</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sms-terms.html">SMS Terms</a>
+        <a href="policies.html">Studio Policies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" role="region" aria-label="Booking">
+  <div class="book-bar__text">
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
+  </div>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
+</div>
+
+<script src="js/site.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+# Reformer Yin page — edit any text or photo here, then rebuild.
+# Photos: swap any "image:" path for a new file in /images/uploads/ (keep the alt text accurate).
+# Both booking buttons link to the existing schedule.
+
+hero:
+  eyebrow: a signature flowhouse class
+  title: Reformer Yin.
+  subtitle: Strength meets stillness.
+  body: An intentional balance of effort and ease. A practice that brings together the strength of reformer Pilates with the stillness of Yin.
+  button_label: Book Reformer Yin
+  button_href: schedule.html
+  image: /images/uploads/reformer-yin-hero.jpg
+  image_alt: Black-and-white image of a flowhouse client in a slow, reaching stretch on the FlowFormer, holding a strap overhead.
+
+method:
+  eyebrow: the method
+  title: Two practices. <span class="serif-italic">One experience.</span>
+  intro: Reformer Yin is a 50-minute class in two parts. It begins with strength and ends in stillness — so you leave having worked, and having rested.
+  image: /images/uploads/reformer-yin-method.jpg
+  image_alt: A flowhouse client in a long side stretch on the reformer against the walnut wood-slat wall.
+  parts:
+    - minutes: "30"
+      label: minutes
+      title: Reformer Pilates
+      body: Controlled, strength-focused work on the reformer. Spring resistance, a steady tempo, and precise form build heat without rushing.
+    - minutes: "20"
+      label: minutes
+      title: Yin-inspired stretching
+      body: Slow, restorative stretches held for longer, with time to settle into each shape and soften your breath.
+  closing: Active movement, then stillness. Effort, then ease.
+
+why:
+  eyebrow: why we practice
+  title: What it can support.
+  intro: Reformer Yin pairs two kinds of work in one class. Here's what each part is designed to support — and, as with any practice, results build gradually with consistency.
+  items:
+    - title: Strength & muscular endurance
+      body: Reformer Pilates is a form of resistance training — springs load the muscles through slow, controlled, repeated movement. Studies of regular Pilates practice have reported improvements in muscular endurance and core strength over time.
+    - title: Flexibility & mobility
+      body: The Yin portion holds supported stretches for longer than a typical cool-down. Regular stretching is associated with improved flexibility and range of motion, especially when it becomes part of your routine.
+    - title: Body awareness & mindful movement
+      body: A slower pace and clear cueing invite you to notice alignment, effort, and breath as you move — attention that can carry into the rest of your training.
+    - title: Relaxation & recovery
+      body: Quieter, supported positions and slow, steady breathing give you space to downshift after effort. Many people find this part of class calming — a chance to reset before the rest of the day.
+    - title: A more balanced routine
+      body: Most workouts are all effort. Pairing strength work with dedicated time for mobility and rest helps round out your week — a natural counterbalance to Signature, Barre, and Fusion.
+  note: Reformer Yin is a movement class, not medical treatment. If you're pregnant, recovering from an injury, or managing a health condition, check with your healthcare provider first and let your instructor know before class.
+
+experience:
+  eyebrow: the experience
+  title: Fifty minutes, two moods.
+  phases:
+    - time: 00–30 MIN
+      name: The Strength
+      line: Controlled movement. Intentional resistance. A little fire.
+      image: /images/uploads/Tezza-7995-2.jpg
+      image_alt: A flowhouse client holding a strong plank on the reformer under the studio pendant lights.
+    - time: 30–50 MIN
+      name: The Stillness
+      line: Supported stretches. Slower breaths. A moment to reset.
+      image: /images/uploads/reformer-yin-stillness.jpg
+      image_alt: Black-and-white image of a flowhouse client seated quietly on the beach, hugging her knees.
+
+who:
+  eyebrow: who it's for
+  title: Come as you are.
+  body: Reformer Yin is an option for anyone who wants to combine strength work with flexibility, stillness, and recovery — whether you train often and want a counterbalance, or you're looking for a slower, more intentional way to move.
+  points:
+    - title: Modifications, always
+      body: Your instructor can offer modifications and options throughout class, so every movement can meet you where you are.
+    - title: Your own range
+      body: You're encouraged to move within a range that feels comfortable for you — never forced, never rushed.
+    - title: New to the reformer?
+      body: Beginners start with an Intro class to learn the FlowFormer before stepping into the full schedule.
+  facts:
+    - label: Length
+      value: 50 min
+    - label: Practice
+      value: Reformer
+    - label: Level
+      value: All levels
+  new_label: Start with Intro
+  new_href: new-here.html
+
+reset:
+  eyebrow: your moment to reset
+  title: Strong enough to slow down.
+  button_label: Book your flow
+  button_href: schedule.html
+  image: /images/uploads/Tezza-1839.JPG
+  image_alt: Black-and-white image of a flowhouse client on the beach at the water's edge, balancing a flowhouse. block on her head.
