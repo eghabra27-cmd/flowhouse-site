@@ -2117,9 +2117,9 @@ body.ex-modal-open { overflow: hidden; }
   .ig-marquee { overflow-x: auto; }
 }
 
-/* Desktop menu: only the seven main links (home, login and buttons stay on phone/tablet) */
+/* Desktop menu: seven main links + Login and Book a class buttons (full menu stays on phone/tablet) */
 @media (min-width: 1024px) {
   .mobile-drawer nav a[href="index.html"],
   .mobile-drawer nav a[href="account.html"],
-  .mobile-drawer .drawer-cta { display: none; }
+  .mobile-drawer .drawer-cta > a:first-child { display: none; }
 }
