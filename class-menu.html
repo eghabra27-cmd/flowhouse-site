@@ -18,7 +18,7 @@
   <meta property="og:image" content="https://flowhouserb.com/images/v4/workout-hero.jpg">
   <link rel="canonical" href="https://flowhouserb.com/class-menu.html">
 </head>
-<body>
+<body class="page-overlay">
   <a href="#main" class="skip-link">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__row">
@@ -72,29 +72,29 @@
 
   <main id="main">
 
-    <!-- 1 · HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero__grid">
-          <div class="hero__copy" data-reveal>
-            <span class="eyebrow">the class menu</span>
-            <h1>One method. <em>Many classes.</em></h1>
-            <p class="lead">Every class shares the same intention — the difference is tempo, focus, and length. Explore the full menu, learn the movements that shape each class, and find a starting point that fits you.</p>
-            <div class="hero__cta-row">
-              <a href="#classes" class="btn btn--primary">Explore the classes</a>
-              <a href="schedule.html" class="btn btn--ghost">View the schedule</a>
-            </div>
-            <dl class="hero__meta">
-              <div><dt>Practice</dt><dd>Reformer &amp; barre</dd></div>
-              <div><dt>Class length</dt><dd>45 &amp; 50 min</dd></div>
-              <div><dt>Level</dt><dd>All welcome</dd></div>
-            </dl>
-          </div>
-          <div class="hero__image-frame" data-reveal style="aspect-ratio: 4/4.6;">
-            <img src="images/v4/class-menu-hero.jpg" alt="Close editorial detail of a flowhouse client in grip socks seated on the matte-black FlowFormer, framed through the reformer's frame in warm natural light.">
-            <span class="hero__image-badge">One method, many classes</span>
+    <!-- 1 · BANNER — full-bleed photo, header overlaid (modeled on clubreformer.com/first-time) -->
+    <section class="cm-banner" aria-labelledby="cm-banner-title">
+      <img class="cm-banner__img" src="images/uploads/class-menu-banner.jpg" alt="Black-and-white detail of a flowhouse client holding a side plank in flowhouse. activewear against a soft gray backdrop.">
+      <div class="cm-banner__shade" aria-hidden="true"></div>
+      <h1 id="cm-banner-title" class="cm-banner__title">One method.<br>Many classes.</h1>
+    </section>
+
+    <!-- 1b · INTRO (existing hero copy) -->
+    <section class="cm-intro">
+      <div class="container cm-intro__grid">
+        <div data-reveal>
+          <span class="eyebrow">the class menu</span>
+          <p class="lead">Every class shares the same intention — the difference is tempo, focus, and length. Explore the full menu, learn the movements that shape each class, and find a starting point that fits you.</p>
+          <div class="hero__cta-row">
+            <a href="#classes" class="btn btn--primary">Explore the classes</a>
+            <a href="schedule.html" class="btn btn--ghost">View the schedule</a>
           </div>
         </div>
+        <dl class="hero__meta" data-reveal>
+          <div><dt>Practice</dt><dd>Reformer &amp; barre</dd></div>
+          <div><dt>Class length</dt><dd>45 &amp; 50 min</dd></div>
+          <div><dt>Level</dt><dd>All welcome</dd></div>
+        </dl>
       </div>
     </section>
 
