@@ -2473,3 +2473,11 @@ body.ex-modal-open { overflow: hidden; }
 
 /* Class Menu — class titles in all caps */
 .cm-row__name { text-transform: uppercase; }
+
+/* Homepage hero video — never show the browser's play/pause overlay (iOS Low Power Mode etc.) */
+.video-hero__video { pointer-events: none; }
+.video-hero__video::-webkit-media-controls,
+.video-hero__video::-webkit-media-controls-panel,
+.video-hero__video::-webkit-media-controls-play-button,
+.video-hero__video::-webkit-media-controls-overlay-play-button,
+.video-hero__video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; opacity: 0 !important; }

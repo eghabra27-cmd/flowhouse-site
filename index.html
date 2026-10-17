@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/site.css?v=5">
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
@@ -109,9 +109,10 @@
     <!-- 00 · VIDEO HERO — full-bleed autoplay loop (modeled on clubreformer.com) -->
     <section class="video-hero" aria-label="flowhouse in motion">
       <h1 class="video-hero__title">flowhouse — high intensity reformer &amp; barre in Rehoboth Beach</h1>
-      <video class="video-hero__video" autoplay muted loop playsinline preload="auto" poster="images/video/hero-poster.jpg" aria-hidden="true" disablepictureinpicture disableremoteplayback>
-        <source src="videos/flowhouse-hero.webm" type="video/webm">
+      <video class="video-hero__video" id="heroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/video/hero-poster.jpg" aria-hidden="true" disablepictureinpicture disableremoteplayback>
+        <source src="videos/flowhouse-hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
         <source src="videos/flowhouse-hero.mp4" type="video/mp4">
+        <source src="videos/flowhouse-hero.webm" type="video/webm">
       </video>
       <a href="schedule.html#book" class="video-hero__btn">BOOK WITH US<svg viewBox="0 0 8 12" width="7" height="11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.5 6 6l-4.5 4.5"/></svg></a>
     </section>
@@ -501,7 +502,7 @@
   <a href="schedule.html#book" class="btn btn--pink">Book a class</a>
 </div>
 
-<script src="js/site.js?v=4"></script>
+<script src="js/site.js?v=5"></script>
 <script>
   // Meet the House — arrow buttons scroll the gallery by one card
   (function () {

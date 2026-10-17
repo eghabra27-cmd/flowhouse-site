@@ -325,3 +325,26 @@
     video.pause();
   }
 })();
+
+/* ---- Homepage hero video: make sure it autoplays on phones ----
+   Some phones (e.g. iPhone Low Power Mode, data saver) block autoplay; if play() is refused,
+   start the muted loop on the visitor's first touch, scroll, or click. */
+(function () {
+  var v = document.getElementById('heroVideo');
+  if (!v) return;
+  v.muted = true; v.defaultMuted = true; v.playsInline = true;
+  v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+  var evts = ['touchstart', 'touchend', 'scroll', 'click', 'keydown'];
+  function kick() {
+    var p = v.play();
+    if (p && p.then) p.then(off).catch(function () {});
+    else if (!v.paused) off();
+  }
+  function off() { evts.forEach(function (e) { window.removeEventListener(e, kick, true); }); }
+  function arm() { evts.forEach(function (e) { window.addEventListener(e, kick, { capture: true, passive: true }); }); }
+  arm();
+  if (v.readyState >= 2) kick(); else v.addEventListener('canplay', kick, { once: true });
+  kick();
+  // resume if the phone paused it when the tab/app was in the background
+  document.addEventListener('visibilitychange', function () { if (!document.hidden && v.paused) kick(); });
+})();
