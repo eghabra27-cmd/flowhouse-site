@@ -30,6 +30,17 @@ about:
   link_label: Start with Intro
   link_href: new-here.html
 
+video:
+  # When your video is ready: upload it to /videos/ (MP4) and put its path in "src",
+  # e.g. src: /videos/flowformer-explained.mp4  — the "coming soon" frame is replaced automatically.
+  src: ""
+  eyebrow: the machine, explained
+  title: Meet the FlowFormer.
+  badge: Video coming soon
+  body: A walkthrough of the carriage, platform, springs, and straps — and how they work together in a flowhouse class.
+  poster: /images/v4/flowformer-real.jpg
+  poster_alt: The matte-black FlowFormer reformer against the walnut wood-slat wall.
+
 language:
   eyebrow: good to know
   title: A little flowhouse language.

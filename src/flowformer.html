@@ -64,6 +64,25 @@
       </div>
     </section>
 
+    <!-- VIDEO — set flowformer.main.video.src in content/flowformer/main.yml when ready -->
+    <section class="ff-video" aria-labelledby="ff-video-title">
+      <div class="container">
+        <div class="ff-video__head">
+          <span class="ry-eyebrow" data-reveal>{{ flowformer.main.video.eyebrow }}</span>
+          <h2 id="ff-video-title" class="ry-h2" data-reveal>{{ flowformer.main.video.title }}</h2>
+          <p class="ry-lead" data-reveal>{{ flowformer.main.video.body }}</p>
+        </div>
+        <div class="ff-video__frame" data-reveal>
+          {{#if flowformer.main.video.src}}<video src="{{ flowformer.main.video.src }}" poster="{{ flowformer.main.video.poster }}" controls playsinline preload="metadata"></video>{{/if}}
+          {{#unless flowformer.main.video.src}}<img src="{{ flowformer.main.video.poster }}" alt="{{ flowformer.main.video.poster_alt }}" loading="lazy">
+          <div class="ff-video__soon">
+            <span class="ff-video__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+            <span class="ff-video__badge">{{ flowformer.main.video.badge }}</span>
+          </div>{{/unless}}
+        </div>
+      </div>
+    </section>
+
     <!-- A LITTLE FLOWHOUSE LANGUAGE -->
     <section class="section section--walnut" aria-labelledby="ff-lang-title">
       <div class="container">

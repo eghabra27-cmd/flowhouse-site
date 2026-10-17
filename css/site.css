@@ -2409,3 +2409,16 @@ body.ex-modal-open { overflow: hidden; }
 .ff-hero .ry-hero__img { object-position: 30% 60%; }
 .ff-link { margin-top: var(--s-6); }
 @media (max-width: 760px) { .ff-hero .ry-hero__img { object-position: 22% 60%; } }
+/* FlowFormer page — video / coming soon */
+.ff-video { background: var(--c-bg-soft); padding: clamp(5rem, 10vw, 9rem) 0; }
+.ff-video__head { max-width: 760px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.ff-video__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #2a2827; }
+.ff-video__frame video, .ff-video__frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ff-video__frame img { filter: grayscale(.35) brightness(.42); transform: scale(1.02); transition: transform 1.6s var(--ease); }
+.ff-video__frame:hover img { transform: scale(1.05); }
+.ff-video__soon { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; color: #fffdfb; }
+.ff-video__play { display: grid; place-items: center; width: clamp(68px, 8vw, 96px); aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(255,253,251,.7); background: rgba(255,253,251,.08); backdrop-filter: blur(4px); padding-left: 4px; animation: ffPulse 2.8s var(--ease) infinite; }
+@keyframes ffPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,253,251,.28); } 50% { box-shadow: 0 0 0 14px rgba(255,253,251,0); } }
+.ff-video__badge { font-family: var(--ff-display); font-weight: 600; font-size: .75rem; letter-spacing: .24em; text-transform: uppercase; border: 1px solid rgba(255,253,251,.6); padding: .55rem 1rem; background: rgba(20,19,19,.55); }
+@media (max-width: 760px) { .ff-video__frame { aspect-ratio: 4 / 5; } }
+@media (prefers-reduced-motion: reduce) { .ff-video__play { animation: none; } }
