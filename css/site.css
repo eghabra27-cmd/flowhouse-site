@@ -2046,7 +2046,7 @@ body.ex-modal-open { overflow: hidden; }
 .appstore-badge small { font-size: .68rem; font-weight: 500; letter-spacing: .01em; margin-bottom: .2rem; }
 .app-band__phones { position: relative; height: 100%; min-height: 360px; }
 .app-phone { position: absolute; width: clamp(190px, 17vw, 250px); background: #111; border-radius: 34px; padding: 9px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.55); }
-.app-phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
+.app-phone img { display: block; width: 100%; height: auto; aspect-ratio: 278 / 575; object-fit: cover; object-position: top; border-radius: 26px; }
 .app-phone--front { left: 12%; top: calc(-1 * clamp(4rem, 7vw, 6.5rem)); z-index: 2; }
 .app-phone--back { left: calc(12% + clamp(130px, 12vw, 175px)); top: calc(-1 * clamp(2.5rem, 4.5vw, 4rem)); transform: rotate(9deg); z-index: 1; }
 @media (max-width: 860px) {
