@@ -118,6 +118,24 @@
       </div>
     </section>
 
+    <!-- 03b · FIRST-TIME SPECIALS -->
+    <section class="section nh-offers" id="intro-offers">
+      <div class="container nh-offers__inner">
+        <div class="nh-offers__head" data-reveal>
+          <span class="eyebrow">{{ newhere.main.offers_eyebrow }}</span>
+          <h2>{{ newhere.main.offers_headline }}</h2>
+          <a href="{{ newhere.main.offers_cta_href }}" class="btn btn--primary">{{ newhere.main.offers_cta_label }}</a>
+        </div>
+        <div class="nh-offers__list" data-reveal>
+          {{#each newhere.main.offers}}<div class="nh-offer">
+            <div><h3>{{ this.name }}</h3><p>{{ this.desc }}</p></div>
+            <span class="nh-offer__price">{{ this.price }}</span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
     <!-- 04 · BEFORE YOUR FIRST CLASS — cards over photo -->
     <section class="nh-welcome">
       <img class="nh-welcome__bg" src="{{ newhere.main.welcome_image }}" alt="" aria-hidden="true" loading="lazy">
@@ -140,6 +158,29 @@
             <p>{{ this.body }}</p>
             {{#if this.app}}<a class="btn btn--ghost btn--sm nh-card__app" href="{{ global.settings.app_store_url }}" target="_blank" rel="noopener">Download the App</a>{{/if}}
           </article>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- 04b · COMMON QUESTIONS -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__title" data-reveal>
+            <span class="eyebrow">{{ newhere.main.faq_eyebrow }}</span>
+            <h2>{{ newhere.main.faq_headline }}</h2>
+          </div>
+          <div class="section-head__aside" data-reveal>
+            <p>{{ newhere.main.faq_aside }}</p>
+          </div>
+        </div>
+        <div class="faq" data-reveal>
+          {{#each newhere.main.faqs}}
+          <details{{#if @first}} open{{/if}}>
+            <summary>{{ this.question }}</summary>
+            <p>{{ this.answer }}</p>
+          </details>
           {{/each}}
         </div>
       </div>

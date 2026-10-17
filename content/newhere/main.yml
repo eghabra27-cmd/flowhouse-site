@@ -49,3 +49,34 @@ cta_primary_label: Book a class
 cta_primary_href: "schedule.html#book"
 cta_secondary_label: See the class menu
 cta_secondary_href: class-menu.html
+
+# First-time specials (from the flowhouse Intro Offers post)
+offers_eyebrow: first-time specials
+offers_headline: Two ways to try flowhouse for the first time.
+offers:
+  - name: First Class
+    price: "$10"
+    desc: One class to feel it for yourself. Come as you are.
+  - name: 2 Weeks Unlimited
+    price: "$69"
+    desc: Two full weeks, unlimited classes. Find your rhythm.
+offers_cta_label: Get your intro offer
+offers_cta_href: memberships.html
+
+# Common questions
+faq_eyebrow: questions, answered
+faq_headline: The most common questions from new clients.
+faq_aside: Can't find your question? Email info@flowhouserb.com — we read everything.
+faqs:
+  - question: Where should I start?
+    answer: "Start with an Intro class if you're new to reformer pilates — it's paced and cued for first-timers so you learn the FlowFormer setup and springs before anything else. From there, Signature, Yin, and Barre 45 are all open to you. Signature is all levels: our instructors give modifications and progressions throughout, and there's standing work built in."
+  - question: I've never done pilates. Is this for me?
+    answer: Yes — and especially yes. Reformer pilates is one of the most beginner-friendly strength practices because the machine supports you while it challenges you.
+  - question: How fit do I need to be to start?
+    answer: Not fit at all. We program for every body — including people coming back from injury, post-partum, or who haven't moved in years. Just tell your instructor at check-in.
+  - question: Can I take class with an injury or after surgery?
+    answer: "We program for every body, including people coming back from injury, and modifications are always available. Always let your instructor know at the start of class about any injuries or recent surgeries — your safety is our priority. If you have a recent injury or a pre-existing medical condition, please check with your physician before starting a new exercise program."
+  - question: Can I take class while pregnant or post-partum?
+    answer: "Our classes welcome every body, including post-partum. If you're pregnant, please check with your physician before starting a new exercise program, and always let your instructor know at the start of class so they can offer modifications throughout. Your safety is our priority."
+  - question: Is Signature suitable for beginners?
+    answer: "Yes. Signature is an all-levels class — our instructors offer modifications and progressions throughout, and there's standing work built in, so you can meet the class wherever you are. We simply recommend taking an Intro class first so you're comfortable with the FlowFormer setup and springs before you flow."

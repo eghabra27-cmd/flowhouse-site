@@ -2021,3 +2021,12 @@ body.ex-modal-open { overflow: hidden; }
 }
 @media (max-width: 560px) { .nh-cards { grid-template-columns: 1fr; } }
 .nh-statement .container--narrow { width: min(100% - 2rem, var(--container-narrow)); margin-inline: auto; }
+/* New here — first-time specials */
+.nh-offers__inner { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.nh-offers__head h2 { margin: var(--s-3) 0 var(--s-6); max-width: 16ch; }
+.nh-offers__list { border-top: 1px solid var(--c-divider); }
+.nh-offer { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-6); padding: clamp(1.25rem, 2.5vw, 2rem) 0; border-bottom: 1px solid var(--c-divider); }
+.nh-offer h3 { font-size: var(--fs-h3); text-transform: uppercase; letter-spacing: -.01em; margin-bottom: var(--s-2); }
+.nh-offer p { color: var(--c-ink-soft); }
+.nh-offer__price { font-family: var(--ff-display, inherit); font-weight: 700; font-size: clamp(2rem, 1.5rem + 2vw, 3rem); color: var(--c-oxblood); line-height: 1; }
+@media (max-width: 860px) { .nh-offers__inner { grid-template-columns: 1fr; } }
