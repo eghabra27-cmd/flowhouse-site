@@ -1,0 +1,105 @@
+# "Meet the House." — homepage instructor gallery.
+# Names, photos, Instagram and Spotify links come from the Team page; classes come from the Mariana Tek schedule (Oct–Nov 2026);
+# "detail" lines are taken from each instructor's Team page bio.
+# To add more personality later, fill in now_playing (e.g. "Cuff It — Beyoncé"). Empty fields are hidden.
+headline: Meet the house.
+sub: The people behind the movement.
+cta_label: Meet the full team
+cta_href: team.html
+instructors:
+  - name: Sam
+    role: Founder
+    image: /images/team/sam.jpg
+    classes: Signature · Barre · Fusion · Reformer Yin · Intro
+    detail: Off the mat — the ocean, a good book, friends and family.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/azt6cs2eihylfg05z1w55uhgf"
+    instagram: https://www.instagram.com/samghabraa
+  - name: Alexis
+    role: Instructor
+    image: /images/team/alexis.jpg
+    classes: Signature
+    detail: Registered nurse with a deep appreciation for how the body moves.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/alexisporohnavi"
+    instagram: https://www.instagram.com/Alexisporohnavi
+  - name: Bladen
+    role: Instructor
+    image: /images/team/bladen.jpg
+    classes: Signature · Barre
+    detail: Led flowhouse's instructor anatomy training.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/12148589863"
+    instagram: https://www.instagram.com/roller_bladen
+  - name: Brittany
+    role: Instructor
+    image: /images/team/brittany.jpg
+    classes: Signature · Intro
+    detail: Former soccer and volleyball coach. Challenging flows, fun music.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/brittcastig-us"
+    instagram: https://www.instagram.com/__brittanycastiglione__
+  - name: Hannah
+    role: Instructor
+    image: /images/team/hannah.jpg
+    classes: Signature
+    detail: Obsessed with her son, cold brew, and Beyoncé.
+    now_playing: ""
+    playlist: ""
+    instagram: https://www.instagram.com/hannahreginach
+  - name: Jillian
+    role: Instructor
+    image: /images/team/jillian.jpg
+    classes: Signature
+    detail: Pilates meets strength training — upbeat, challenging, approachable.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/jilliancorsiglia"
+    instagram: https://www.instagram.com/jilliancorsiglia
+  - name: Lexi
+    role: Instructor
+    image: /images/team/lexi.jpg
+    classes: Signature
+    detail: Good music and just the right amount of "you've got one more."
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/227wtn6o67pyj63lxobee7zhq"
+    instagram: https://www.instagram.com/lexiorf
+  - name: Maggie
+    role: Instructor
+    image: /images/team/maggie.jpg
+    classes: Signature
+    detail: Training for her first marathon.
+    now_playing: ""
+    playlist: ""
+    instagram: https://www.instagram.com/_maggiemurphyyy
+  - name: Meredith
+    role: Instructor
+    image: /images/team/meredith.jpg
+    classes: Signature · Reformer Yin
+    detail: Rehoboth native, interior designer, three-time marathoner.
+    now_playing: ""
+    playlist: ""
+    instagram: https://www.instagram.com/meredithlockwood
+  - name: Tricia
+    role: Instructor
+    image: /images/team/tricia.jpg
+    classes: Barre
+    detail: Fashion stylist and yoga practitioner of 18 years.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/tricia.irwin"
+    instagram: https://www.instagram.com/_triciaelkins
+  - name: Kayla
+    role: Instructor
+    image: /images/team/kayla.jpg
+    classes: Barre
+    detail: Intensity with intention — and always a 10/10 playlist.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/31kqtepfoomovb2zxfv3lt6m3rwu"
+    instagram: https://www.instagram.com/kaylaburkentine
+  - name: Key
+    role: Instructor
+    image: /images/team/key.jpg
+    classes: Signature
+    detail: Found Xformer Pilates in her late 30s — proof it's never too late.
+    now_playing: ""
+    playlist: "https://open.spotify.com/user/k5wc55829kx5bipcf518xqls8"
+    instagram: https://www.instagram.com/eastandlane

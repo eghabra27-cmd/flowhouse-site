@@ -1,0 +1,16 @@
+# "New here? You're invited." — first-timer offers. Buttons open the existing Mariana Tek products directly.
+headline_html: New here? <span class="serif-italic">You're invited.</span>
+sub: Your place at the house is waiting.
+cards:
+  - number: "No. 01"
+    title: The First Flow
+    offer: First Class — $10
+    body: A little introduction to your new favorite place.
+    button: Book your first class
+    href: "memberships.html?_mt=%2Fbuy%2F48717%3FactiveProduct%3Dcredits-14820"
+  - number: "No. 02"
+    title: Two Weeks at the House
+    offer: 14 Days Unlimited — $69
+    body: Two weeks. Unlimited movement. Your new routine starts here.
+    button: Start your two weeks
+    href: "memberships.html?_mt=%2Fbuy%2F48717%3FactiveProduct%3Dcredits-14695"

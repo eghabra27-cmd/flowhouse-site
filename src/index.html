@@ -157,6 +157,27 @@
       </div>
     </section>
 
+    <!-- 03a · NEW HERE? YOU'RE INVITED — first-timer offers, editorial invitation -->
+    <section class="invite" id="invited" aria-labelledby="invite-title">
+      <div class="container">
+        <header class="invite__head" data-reveal>
+          <h2 id="invite-title" class="invite__title">{{ home.invite.headline_html | raw }}</h2>
+          <p class="invite__sub">{{ home.invite.sub }}</p>
+        </header>
+        <div class="invite__cards">
+          {{#each home.invite.cards}}<article class="invite-card" data-reveal>
+            <span class="invite-card__no">{{ this.number }}</span>
+            <h3 class="invite-card__title">{{ this.title }}</h3>
+            <p class="invite-card__offer">{{ this.offer }}</p>
+            <span class="invite-card__rule" aria-hidden="true"></span>
+            <p class="invite-card__body">{{ this.body }}</p>
+            <a href="{{ this.href }}" class="invite-card__btn">{{ this.button }}</a>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
     <!-- 03b · APP DOWNLOAD — red band with phones (modeled on purebarre.com) -->
     <section class="app-band-wrap" id="app">
       <div class="app-band">
@@ -199,6 +220,37 @@
       </div>
     </section>
 
+
+    <!-- 04a · MEET THE HOUSE — editorial instructor gallery -->
+    <section class="house" id="meet-the-house" aria-labelledby="house-title">
+      <div class="container house__head" data-reveal>
+        <div>
+          <h2 id="house-title" class="house__title">{{ home.house.headline }}</h2>
+          <p class="house__sub">{{ home.house.sub }}</p>
+        </div>
+        <div class="house__nav">
+          <button type="button" class="house__arrow" data-house-prev aria-label="Previous instructors">&larr;</button>
+          <button type="button" class="house__arrow" data-house-next aria-label="Next instructors">&rarr;</button>
+        </div>
+      </div>
+      <div class="house__rail" data-house-rail tabindex="0" aria-label="Instructor gallery — scroll sideways">
+        {{#each home.house.instructors}}<figure class="house-card">
+          <div class="house-card__photo"><img src="{{ this.image }}" alt="{{ this.name }}, flowhouse {{ this.role }}" loading="lazy"><span class="house-card__index">{{ @index1 }}</span></div>
+          <figcaption>
+            <span class="house-card__role">{{ this.role }}</span>
+            <h3 class="house-card__name">{{ this.name }}</h3>
+            <p class="house-card__classes">{{ this.classes }}</p>
+            {{#if this.detail}}<p class="house-card__detail">{{ this.detail }}</p>{{/if}}
+            {{#if this.now_playing}}<p class="house-card__playing"><span>Now playing</span> {{ this.now_playing }}</p>{{/if}}
+            <p class="house-card__links">{{#if this.playlist}}<a href="{{ this.playlist }}" target="_blank" rel="noopener">Her playlist ↗</a>{{/if}}{{#if this.instagram}}<a href="{{ this.instagram }}" target="_blank" rel="noopener">Instagram ↗</a>{{/if}}</p>
+          </figcaption>
+        </figure>
+        {{/each}}
+      </div>
+      <div class="container house__foot" data-reveal>
+        <a href="{{ home.house.cta_href }}" class="house__more">{{ home.house.cta_label }} <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
 
     <!-- 04b · INSTAGRAM STRIP — auto-scrolling photos linking to @myflowhouse -->
     <section class="section ig-strip" aria-label="flowhouse on Instagram">
@@ -278,5 +330,20 @@
 </div>
 
 <script src="js/site.js?v=4"></script>
+<script>
+  // Meet the House — arrow buttons scroll the gallery by one card
+  (function () {
+    var rail = document.querySelector('[data-house-rail]');
+    if (!rail) return;
+    function step(dir) {
+      var card = rail.querySelector('.house-card');
+      var w = card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 0) : 320;
+      rail.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+    var p = document.querySelector('[data-house-prev]'), n = document.querySelector('[data-house-next]');
+    if (p) p.addEventListener('click', function () { step(-1); });
+    if (n) n.addEventListener('click', function () { step(1); });
+  })();
+</script>
 </body>
 </html>

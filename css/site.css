@@ -2166,3 +2166,89 @@ body.ex-modal-open { overflow: hidden; }
   .cm-banner__title { left: 1.25rem; right: 1.25rem; bottom: 2.25rem; }
   .cm-intro__grid { grid-template-columns: 1fr; align-items: start; }
 }
+
+/* ---------- Homepage · "New here? You're invited." — editorial first-timer invitation ---------- */
+.invite { background: #EFE5D7; padding: clamp(4.5rem, 10vw, 9rem) 0; }
+.invite__head { text-align: center; margin: 0 auto clamp(3rem, 6vw, 5rem); }
+.invite__title {
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.6rem, 1.2rem + 6vw, 7rem); line-height: .9; letter-spacing: -0.035em;
+  color: var(--c-ink); margin: 0;
+}
+.invite__title .serif-italic {
+  display: block; font-family: var(--ff-serif); font-style: italic; font-weight: 400;
+  text-transform: none; letter-spacing: -0.01em; color: var(--c-oxblood); margin-top: .08em;
+}
+.invite__sub { margin: var(--s-6) auto 0; font-size: var(--fs-lead); color: var(--c-ink-soft); }
+.invite__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); max-width: 1080px; margin: 0 auto; }
+.invite-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  background: #f7f0e6; border: 1px solid rgba(53,50,49,.22); border-radius: 0;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+.invite-card:hover { transform: translateY(-6px); border-color: rgba(53,50,49,.45); box-shadow: 0 22px 44px -28px rgba(53,50,49,.45); }
+.invite-card__no { font-family: var(--ff-serif); font-style: italic; font-size: 1.1rem; color: var(--c-oxblood); }
+.invite-card__title { font-family: var(--ff-serif); font-weight: 400; font-size: clamp(2.1rem, 1.4rem + 2.4vw, 3.4rem); line-height: 1; margin: var(--s-4) 0 var(--s-4); color: var(--c-ink); }
+.invite-card__offer { font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: var(--fs-sm); color: var(--c-ink); margin: 0; }
+.invite-card__rule { display: block; width: 48px; height: 1px; background: rgba(53,50,49,.4); margin: var(--s-6) 0; }
+.invite-card__body { color: var(--c-ink-soft); line-height: 1.65; margin: 0 0 var(--s-8); max-width: 34ch; flex: 1; }
+.invite-card__btn {
+  display: inline-block; background: var(--c-oxblood); color: #fffdfb; text-decoration: none;
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem;
+  padding: 1.05rem 1.6rem; border-radius: 0; transition: background var(--t-fast);
+}
+.invite-card__btn:hover, .invite-card__btn:focus-visible { background: var(--c-oxblood-hover); color: #fffdfb; }
+@media (max-width: 760px) {
+  .invite__cards { grid-template-columns: 1fr; }
+  .invite-card__btn { width: 100%; text-align: center; }
+}
+
+/* ---------- Homepage · "Meet the house." — editorial instructor gallery ---------- */
+.house { background: var(--c-bg); padding: clamp(4.5rem, 10vw, 9rem) 0 clamp(3.5rem, 7vw, 6rem); overflow: hidden; }
+.house__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--s-8); margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.house__title {
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.8rem, 1.2rem + 7vw, 8rem); line-height: .86; letter-spacing: -0.04em; margin: 0; color: var(--c-ink);
+}
+.house__sub { font-family: var(--ff-serif); font-style: italic; font-size: clamp(1.25rem, 1rem + 1vw, 1.8rem); color: var(--c-ink-soft); margin: var(--s-4) 0 0; }
+.house__nav { display: flex; gap: var(--s-2); flex-shrink: 0; }
+.house__arrow {
+  width: 52px; height: 52px; border: 1px solid rgba(53,50,49,.35); background: transparent; color: var(--c-ink);
+  font-size: 1.2rem; cursor: pointer; border-radius: 0; transition: background var(--t-fast), color var(--t-fast);
+}
+.house__arrow:hover { background: var(--c-ink); color: #fffdfb; }
+.house__rail {
+  display: flex; gap: clamp(1rem, 2vw, 1.75rem); overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 0 max(1rem, calc((100vw - var(--container)) / 2)) var(--s-4);
+  scroll-padding-left: max(1rem, calc((100vw - var(--container)) / 2));
+  scrollbar-width: none; -ms-overflow-style: none; outline: none;
+}
+.house__rail::-webkit-scrollbar { display: none; }
+.house-card { flex: 0 0 clamp(250px, 24vw, 340px); margin: 0; scroll-snap-align: start; }
+.house-card__photo { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: #ddd6ce; }
+.house-card__photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(1) contrast(1.06) brightness(.98) sepia(.08);
+  transition: filter 700ms var(--ease), transform 900ms var(--ease);
+}
+.house-card:hover .house-card__photo img { filter: grayscale(0) contrast(1) sepia(0); transform: scale(1.04); }
+.house-card__index { position: absolute; top: .85rem; left: .95rem; font-family: var(--ff-serif); font-style: italic; color: #fffdfb; font-size: 1.05rem; text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.house-card figcaption { padding-top: var(--s-5, 1.25rem); }
+.house-card__role { font-size: var(--fs-tiny); text-transform: uppercase; letter-spacing: .18em; color: var(--c-oxblood); font-weight: 600; }
+.house-card__name { font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.8rem); line-height: .95; letter-spacing: -0.03em; margin: var(--s-2) 0 var(--s-3); color: var(--c-ink); }
+.house-card__classes { font-size: var(--fs-tiny); text-transform: uppercase; letter-spacing: .12em; color: var(--c-ink); margin: 0 0 var(--s-3); }
+.house-card__detail { font-family: var(--ff-serif); font-style: italic; font-size: 1.15rem; line-height: 1.3; color: var(--c-ink-soft); margin: 0 0 var(--s-3); }
+.house-card__playing { font-size: var(--fs-sm); margin: 0 0 var(--s-3); color: var(--c-ink); }
+.house-card__playing span { text-transform: uppercase; letter-spacing: .14em; font-size: var(--fs-tiny); color: var(--c-muted); margin-right: .4em; }
+.house-card__links { display: flex; gap: var(--s-4); margin: 0; font-size: var(--fs-sm); }
+.house-card__links a { color: var(--c-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.house-card__links a:hover { color: var(--c-oxblood); }
+.house__foot { margin-top: clamp(2rem, 4vw, 3rem); }
+.house__more { font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .8rem; color: var(--c-ink); text-decoration: none; border-bottom: 1px solid var(--c-ink); padding-bottom: 4px; }
+.house__more:hover { color: var(--c-oxblood); border-color: var(--c-oxblood); }
+@media (max-width: 760px) {
+  .house__nav { display: none; }
+  .house-card { flex-basis: 78vw; }
+}
+@media (hover: none) { .house-card__photo img { filter: grayscale(1) contrast(1.06) sepia(.08); } }
