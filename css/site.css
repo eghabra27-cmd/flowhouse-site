@@ -1974,3 +1974,7 @@ body.ex-modal-open { overflow: hidden; }
   .sanctuary .sanct-row--flip .sanct-media { order: 0; }
   .sanct-copy { max-width: none; }
 }
+/* sanctuary: the equipment / experience photos are portrait — show them tall rather than cropping heads/feet */
+.sanct-media img { aspect-ratio: 4 / 5; }
+@media (max-width: 860px) { .sanct-media img { aspect-ratio: 4 / 5; } }
+@media (max-width: 860px) { .sanctuary .sanct-row--flip .sanct-media { order: 1; } }
