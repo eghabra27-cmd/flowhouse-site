@@ -64,6 +64,7 @@
       <a href="flowformer.html" data-nav="flowformer">flowformer</a>
       <a href="studio.html" data-nav="studio">studio</a>
       <a href="team.html" data-nav="team">team</a>
+      <a href="franchising.html" data-nav="franchising">franchising</a>
     </nav>
     <div class="header-actions">
       <a href="account.html" class="header-login" data-nav="account">Login</a>
@@ -92,6 +93,7 @@
     <a href="flowformer.html">flowformer</a>
     <a href="studio.html">studio</a>
     <a href="team.html">team</a>
+    <a href="franchising.html">franchising</a>
     <a href="index.html">home</a>
     <a href="account.html">login</a>
   </nav>
@@ -141,6 +143,7 @@
             <p>{{ home.sanctuary.equipment_body }}</p>
             <p>{{ home.sanctuary.equipment_body_2 }}</p>
             <p class="sanct-note">{{ home.sanctuary.equipment_note }}</p>
+            <a class="sanct-link" href="{{ home.sanctuary.equipment_link_href }}">{{ home.sanctuary.equipment_link_label }} <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -251,6 +254,29 @@
       </div>
       <div class="container house__foot" data-reveal>
         <a href="{{ home.house.cta_href }}" class="house__more">{{ home.house.cta_label }} <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- FRANCHISING band — copy: content/home/franchise.yml -->
+    <section class="home-franchise" id="franchising" aria-labelledby="hf-title">
+      <div class="home-franchise__media" data-reveal>
+        <img src="{{ home.franchise.image }}" alt="{{ home.franchise.image_alt }}" loading="lazy">
+      </div>
+      <div class="home-franchise__copy">
+        <div class="home-franchise__top" data-reveal>
+          <span class="home-franchise__eyebrow">{{ home.franchise.eyebrow }}</span>
+          <span class="home-franchise__badge">{{ home.franchise.badge }}</span>
+        </div>
+        <h2 id="hf-title" class="home-franchise__title" data-reveal>{{ home.franchise.headline_html | raw }}</h2>
+        <p class="home-franchise__body" data-reveal>{{ home.franchise.body }}</p>
+        <dl class="home-franchise__stats" data-reveal>
+          {{#each home.franchise.stats}}<div><dt>{{ this.figure }}</dt><dd>{{ this.label }}</dd></div>
+          {{/each}}
+        </dl>
+        <div class="home-franchise__actions" data-reveal>
+          <a href="{{ home.franchise.button_href }}" class="home-franchise__btn">{{ home.franchise.button_label }}</a>
+          <a href="mailto:{{ home.franchise.email }}" class="home-franchise__mail">{{ home.franchise.email_label }} · {{ home.franchise.email }}</a>
+        </div>
       </div>
     </section>
 

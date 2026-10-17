@@ -1,0 +1,18 @@
+# Homepage franchising band — copy drawn from the Franchising page (content/franchising/main.yml).
+eyebrow: franchising
+badge: In development
+headline_html: A movement brand designed to <em>travel beautifully.</em>
+body: From a single coastal studio to a brand built for thoughtful expansion. Every system — the FlowFormer, the method, the design language, the member experience — was created to be repeatable without losing what makes it feel personal.
+stats:
+  - figure: "1"
+    label: Flagship studio · Rehoboth Beach
+  - figure: "3"
+    label: Modalities — reformer, barre, yin
+  - figure: 100%
+    label: Proprietary equipment & method
+button_label: Explore franchising
+button_href: franchising.html
+email_label: Franchise inquiries
+email: info@flowhouserb.com
+image: /images/uploads/franchise-studio.jpg
+image_alt: The flowhouse studio interior — warm walnut walls and custom FlowFormer reformers under soft pendant light.
