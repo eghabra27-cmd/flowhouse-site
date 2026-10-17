@@ -2252,3 +2252,35 @@ body.ex-modal-open { overflow: hidden; }
   .house-card { flex-basis: 78vw; }
 }
 @media (hover: none) { .house-card__photo img { filter: grayscale(1) contrast(1.06) sepia(.08); } }
+
+/* ---------- Team page · roster restyled to match homepage "Meet the house." gallery ---------- */
+.team-house .section-head__title h2 {
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.8rem, 1.2rem + 7vw, 8rem); line-height: .86; letter-spacing: -0.04em; color: var(--c-ink);
+}
+.team-house .section-head__aside p { font-family: var(--ff-serif); font-style: italic; font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); line-height: 1.35; color: var(--c-ink-soft); }
+.team-house .roster-grid { counter-reset: house; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: clamp(2.5rem, 4vw, 3.5rem) clamp(1rem, 2vw, 1.75rem); }
+.team-house .roster-card { counter-increment: house; border: 0; border-radius: 0; background: transparent; overflow: visible; }
+.team-house .roster-card__photo { border: 0; border-radius: 0; overflow: hidden; background: #ddd6ce; }
+.team-house .roster-card__photo img {
+  filter: grayscale(1) contrast(1.06) brightness(.98) sepia(.08);
+  transition: filter 700ms var(--ease), transform 900ms var(--ease);
+}
+.team-house .roster-card:hover .roster-card__photo img { filter: grayscale(0) contrast(1) sepia(0); transform: scale(1.04); }
+.team-house .roster-card__photo::before {
+  content: counter(house); position: absolute; top: .85rem; left: .95rem; z-index: 1;
+  font-family: var(--ff-serif); font-style: italic; color: #fffdfb; font-size: 1.05rem; text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+.team-house .roster-card__photo span { font-size: clamp(4rem, 8vw, 6rem); color: rgba(175,36,19,.35); }
+.team-house .roster-card__body { padding: var(--s-5, 1.25rem) 0 0; }
+.team-house .roster-card__body .eyebrow { font-size: var(--fs-tiny); letter-spacing: .18em; color: var(--c-oxblood); font-weight: 600; }
+.team-house .roster-card__body strong {
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(1.9rem, 1.3rem + 1.8vw, 2.8rem); line-height: .95; letter-spacing: -0.03em; margin: var(--s-2) 0 var(--s-3);
+}
+.team-house .roster-card__body p { font-size: var(--fs-sm); line-height: 1.65; color: var(--c-ink-soft); margin-top: 0; }
+.team-house .roster-card__social { gap: .4rem 1.1rem; }
+.team-house .roster-card__social a { color: var(--c-ink); font-size: var(--fs-sm); border-bottom: 1px solid var(--c-ink); }
+.team-house .roster-card__social a:hover { color: var(--c-oxblood); border-bottom-color: var(--c-oxblood); }
+@media (hover: none) { .team-house .roster-card__photo img { filter: grayscale(1) contrast(1.06) sepia(.08); } }
+.team-house .roster-card__photo:not(:has(img))::before { content: none; }
