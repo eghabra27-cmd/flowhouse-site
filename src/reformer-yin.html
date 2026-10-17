@@ -83,59 +83,6 @@
       </div>
     </section>
 
-    <!-- 3 · THE EXPERIENCE — split-screen timeline -->
-    <section class="ry-exp" aria-labelledby="ry-exp-title">
-      <div class="container ry-exp__head">
-        <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.experience.eyebrow }}</span>
-        <h2 id="ry-exp-title" class="ry-h2" data-reveal>{{ reformeryin.main.experience.title }}</h2>
-              </div>
-      <div class="ry-exp__split">
-        {{#each reformeryin.main.experience.phases}}<article class="ry-phase">
-          <div class="ry-phase__media"><img src="{{ this.image }}" alt="{{ this.image_alt }}" loading="lazy"></div>
-          <div class="ry-phase__copy" data-reveal>
-            <span class="ry-phase__time">{{ this.time }}</span>
-            <h3 class="ry-phase__name">{{ this.name }}</h3>
-            <p class="ry-phase__line">{{ this.line }}</p>
-          </div>
-        </article>
-        {{/each}}
-      </div>
-    </section>
-
-    <!-- 4 · WHO IT'S FOR -->
-    <section class="ry-who" aria-labelledby="ry-who-title">
-      <div class="container ry-who__grid">
-        <div>
-          <span class="ry-eyebrow" data-reveal>{{ reformeryin.main.who.eyebrow }}</span>
-          <h2 id="ry-who-title" class="ry-h2 ry-h2--xl" data-reveal>{{ reformeryin.main.who.title }}</h2>
-          <p class="ry-lead" data-reveal>{{ reformeryin.main.who.body }}</p>
-          <dl class="ry-facts" data-reveal>
-            {{#each reformeryin.main.who.facts}}<div><dt>{{ this.label }}</dt><dd>{{ this.value }}</dd></div>
-            {{/each}}
-          </dl>
-        </div>
-        <ul class="ry-who__points">
-          {{#each reformeryin.main.who.points}}<li data-reveal>
-            <h3>{{ this.title }}</h3>
-            <p>{{ this.body }}</p>
-          </li>
-          {{/each}}
-          <li data-reveal class="ry-who__link"><a href="{{ reformeryin.main.who.new_href }}">{{ reformeryin.main.who.new_label }} <span aria-hidden="true">→</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 5 · YOUR MOMENT TO RESET -->
-    <section class="ry-reset" aria-labelledby="ry-reset-title">
-      <img class="ry-reset__img" src="{{ reformeryin.main.reset.image }}" alt="{{ reformeryin.main.reset.image_alt }}" loading="lazy">
-      <div class="ry-reset__shade" aria-hidden="true"></div>
-      <div class="container ry-reset__inner">
-        <span class="ry-eyebrow ry-eyebrow--light" data-reveal>{{ reformeryin.main.reset.eyebrow }}</span>
-        <h2 id="ry-reset-title" class="ry-reset__title" data-reveal>{{ reformeryin.main.reset.title }}</h2>
-        <a href="{{ reformeryin.main.reset.button_href }}" class="ry-btn" data-reveal>{{ reformeryin.main.reset.button_label }}</a>
-      </div>
-    </section>
-
   </main>
 
   <footer class="site-footer">
