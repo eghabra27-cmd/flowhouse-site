@@ -2092,3 +2092,27 @@ body.ex-modal-open { overflow: hidden; }
   .cm-row:nth-child(even) .cm-row__media { order: 0; }
   .cm-row__media img { aspect-ratio: 4 / 4.4; }
 }
+
+/* ---------- Homepage closing CTA (modeled on solidcore.co) ---------- */
+.home-close { text-align: center; padding: clamp(4rem, 8vw, 6.5rem) 0; }
+.home-close h2 { text-transform: uppercase; font-size: clamp(2.2rem, 1.4rem + 3vw, 3.8rem); letter-spacing: -.01em; line-height: 1; margin: 0 0 var(--s-5); }
+.home-close p { font-size: var(--fs-lead); color: var(--c-ink); margin: 0 auto var(--s-8); }
+
+/* ---------- Homepage Instagram strip ---------- */
+.ig-strip { padding-bottom: clamp(2.5rem, 5vw, 4rem); overflow: hidden; }
+.ig-strip__head { text-align: center; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.ig-strip__head h2 { margin-top: var(--s-3); }
+.ig-strip__head h2 .serif-italic { color: var(--c-oxblood); }
+.ig-marquee { overflow: hidden; }
+.ig-track { display: flex; width: max-content; animation: ig-scroll 60s linear infinite; }
+.ig-marquee:hover .ig-track { animation-play-state: paused; }
+.ig-set { display: flex; gap: 12px; padding-right: 12px; }
+.ig-tile { display: block; width: clamp(180px, 20vw, 280px); aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--r-sm, 6px); }
+.ig-tile img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.ig-tile:hover img { transform: scale(1.04); }
+.ig-strip__cta { text-align: center; margin-top: clamp(2rem, 4vw, 2.75rem); }
+@keyframes ig-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .ig-track { animation: none; }
+  .ig-marquee { overflow-x: auto; }
+}

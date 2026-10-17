@@ -1,0 +1,29 @@
+# Scrolling Instagram strip — studio photos that link to @myflowhouse
+eyebrow: follow along
+headline_html: Find us on Instagram <span class="serif-italic">@myflowhouse</span>
+cta_label: Follow @myflowhouse
+images:
+  - src: /images/ig/ig-01.jpg
+    alt: Sam leaning on a FlowFormer in the flowhouse studio
+  - src: /images/ig/ig-02.jpg
+    alt: A flowhouse class working on the FlowFormer reformers
+  - src: /images/ig/ig-03.jpg
+    alt: A client at the barre wall in the flowhouse studio
+  - src: /images/ig/ig-04.jpg
+    alt: A client seated on the FlowFormer
+  - src: /images/ig/ig-05.jpg
+    alt: Rows of FlowFormers mid-class
+  - src: /images/ig/ig-06.jpg
+    alt: A long stretch on the FlowFormer
+  - src: /images/ig/ig-07.jpg
+    alt: Clients side by side on the FlowFormers
+  - src: /images/ig/ig-08.jpg
+    alt: Grip socks on the FlowFormer
+  - src: /images/ig/ig-09.jpg
+    alt: Clients together after class
+  - src: /images/ig/ig-10.jpg
+    alt: Grip socks at the barre
+  - src: /images/ig/ig-11.jpg
+    alt: A practitioner mid-flow on the FlowFormer
+  - src: /images/ig/ig-12.jpg
+    alt: The flowhouse studio and FlowFormers

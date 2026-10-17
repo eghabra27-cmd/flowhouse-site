@@ -220,6 +220,32 @@
     </section>
 
 
+    <!-- 04b · INSTAGRAM STRIP — auto-scrolling photos linking to @myflowhouse -->
+    <section class="section ig-strip" aria-label="flowhouse on Instagram">
+      <div class="container ig-strip__head" data-reveal>
+        <span class="eyebrow">{{ home.instagram.eyebrow }}</span>
+        <h2>{{ home.instagram.headline_html | raw }}</h2>
+      </div>
+      <div class="ig-marquee">
+        <div class="ig-track">
+          <div class="ig-set">{{#each home.instagram.images}}<a class="ig-tile" href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
+          <div class="ig-set" aria-hidden="true">{{#each home.instagram.images}}<a class="ig-tile" href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener" tabindex="-1"><img src="{{ this.src }}" alt="{{ this.alt }}" loading="lazy"></a>{{/each}}</div>
+        </div>
+      </div>
+      <div class="container ig-strip__cta">
+        <a href="{{ global.settings.instagram_url }}" class="btn btn--ghost" target="_blank" rel="noopener">{{ home.instagram.cta_label }}</a>
+      </div>
+    </section>
+
+    <!-- 05 · CLOSING CTA (modeled on solidcore.co) -->
+    <section class="section home-close">
+      <div class="container" data-reveal>
+        <h2>{{ home.closing.headline }}</h2>
+        <p>{{ home.closing.sub }}</p>
+        <a href="{{ home.closing.cta_href }}" class="btn btn--primary">{{ home.closing.cta_label }}</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">

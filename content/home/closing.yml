@@ -1,0 +1,5 @@
+# Closing CTA at the end of the homepage (modeled on solidcore.co)
+headline: Find your flow.
+sub: Your first class is waiting. Ready to begin?
+cta_label: Book a class
+cta_href: "schedule.html#book"
