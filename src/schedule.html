@@ -78,21 +78,8 @@
 
   <main id="main">
 
-    <section class="section" style="padding-top: clamp(var(--s-12), 10vw, var(--s-24)); padding-bottom: clamp(var(--s-12), 10vw, var(--s-24));">
-      <div class="container container-narrow" style="text-align: center;">
-        <span class="eyebrow" data-reveal>{{ schedule.main.eyebrow }}</span>
-        <h1 data-reveal style="margin: var(--s-5) 0;">{{ schedule.main.headline_html | raw }}</h1>
-        <p class="lead" data-reveal style="margin: 0 auto var(--s-8);">{{ schedule.main.lead }}</p>
-
-        <div data-reveal style="display:flex; gap: var(--s-3); flex-wrap: wrap; justify-content: center;">
-          <a href="{{ schedule.main.cta_primary_href }}" class="btn btn--primary">{{ schedule.main.cta_primary_label }}</a>
-          <a href="{{ schedule.main.cta_secondary_href }}" class="btn btn--ghost">{{ schedule.main.cta_secondary_label }}</a>
-        </div>
-      </div>
-    </section>
-
     <!-- LIVE BOOKING (Mariana Tek) -->
-    <section class="section" style="padding-top: 0;" id="book">
+    <section class="section" style="padding-top: clamp(var(--s-10), 7vw, var(--s-16));" id="book">
       <div class="container">
         <div class="section-head" style="margin-bottom: var(--s-8);">
           <div class="section-head__title" data-reveal>
