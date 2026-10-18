@@ -1,0 +1,92 @@
+# Private Events page — edit any text or photo here, then rebuild.
+# Photos: swap any "image:" path for a new file in /images/uploads/ (keep the alt text accurate).
+# The inquiry form posts to the same Formspree endpoint as the site's other forms (see src/private-events.html).
+
+hero:
+  eyebrow: flowhouse. private events
+  title: the house is yours.
+  subtitle: Your people. Your playlist. Your private flow.
+  body: Birthdays, brides, besties & everything worth celebrating. From milestone moments to just-because gatherings, make the house your own.
+  button_label: Make it a private affair
+  image: /images/uploads/private-events-hero.jpg
+  image_alt: Friends laughing and high-fiving in the walnut-lined flowhouse studio.
+
+experiences:
+  eyebrow: private experiences
+  title: made for the moments worth gathering for.
+  items:
+    - num: "01"
+      title: Birthday at the house
+      body: Another year, another reason to flow. Celebrate with a private Pilates or Barre class, your favorite people, and a little time to make the studio your own.
+      image: /images/uploads/private-events-birthday.jpg
+      image_alt: A group of friends relaxing and chatting on the FlowFormer reformers after class.
+    - num: "02"
+      title: Bridal house
+      body: Something borrowed, something blue, something Pilates. For bachelorettes, bridal parties, and the ultimate wedding-weekend celebration.
+      image: /images/uploads/private-events-bridal.jpg
+      image_alt: Women working side by side at the wooden barre against the walnut wall, one with a bow in her hair.
+    - num: "03"
+      title: Just because
+      body: Girls' days, friend reunions, team bonding, or simply an excuse to get everyone together. No occasion necessary.
+      image: /images/uploads/private-events-just-because.jpg
+      image_alt: A group moving together between the reformers in the flowhouse studio.
+    - num: "04"
+      title: Brands & beyond
+      body: Corporate wellness, brand activations, community gatherings, and creative collaborations. Your vision, our space.
+      image: /images/uploads/private-events-brands.jpg
+      image_alt: The empty flowhouse barre room with the illuminated flowhouse. sign on the walnut wall.
+
+included:
+  eyebrow: the private experience
+  title: a little more than a workout.
+  intro: Every private event is built around your group. Here's what it can include.
+  items:
+    - A private 50-minute Reformer class or 45-minute Barre class
+    - A customized playlist and class atmosphere
+    - An experienced flowhouse instructor
+    - Private studio time afterward for pictures, cake, gifts, and celebrations
+    - The option to bring snacks, drinks, cakes, and decorations
+    - Optional flowhouse goodie bags featuring grip socks and other goodies
+  note: Additional details and personalized touches can be discussed when booking.
+  image: /images/uploads/private-events-experience.jpg
+  image_alt: Close-up of legs in white flowhouse grip socks on the reformer.
+
+details:
+  eyebrow: the details
+  title: two ways to make it yours.
+  options:
+    - name: Reformer
+      guests: Up to 10 guests
+      length: 50-minute private class
+    - name: Barre
+      guests: Up to 15 guests
+      length: 45-minute private class
+  levels: All experience levels welcome. Classes can be adjusted to accommodate beginners and experienced movers.
+  note: Private events are subject to studio availability. Pricing varies depending on the experience and group details.
+
+faq:
+  eyebrow: good to know
+  title: questions, answered.
+  items:
+    - question: Can we decorate the studio?
+      answer: Absolutely! You're welcome to bring decorations. We'll coordinate setup details before your event.
+    - question: Can we bring food and drinks?
+      answer: Yes! You're welcome to bring cake, snacks, and beverages for your celebration.
+    - question: What if some guests have never done Pilates or Barre?
+      answer: No experience necessary. Our instructors can offer modifications and guide everyone through the experience.
+    - question: Can we choose the music?
+      answer: Of course. We want the experience to feel like yours.
+    - question: How much does a private event cost?
+      answer: Pricing depends on your group size and event details. Submit an inquiry for personalized information.
+    - question: How do we reserve a date?
+      answer: Complete the inquiry form below and our team will reach out to discuss availability and next steps.
+
+form:
+  eyebrow: private event inquiry
+  title: let's make it a thing.
+  subtitle: Tell us what you're celebrating. We'll take it from there.
+  capacity: "Capacity: up to 10 guests for Reformer, up to 15 for Barre."
+  button_label: Inquire about your date
+  success_title: you're on the list. ♡
+  success_body: We've received your inquiry and will be in touch soon.
+  error: "Something went wrong and your inquiry didn't send. Your details are still here — please try again, or email info@flowhouserb.com."

@@ -62,6 +62,7 @@
       <a href="class-menu.html" data-nav="class-menu">class menu</a>
       <a href="reformer-yin.html" data-nav="reformer-yin">reformer yin</a>
       <a href="flowformer.html" data-nav="flowformer">flowformer</a>
+      <a href="private-events.html" data-nav="private-events">private events</a>
       <a href="studio.html" data-nav="studio">studio</a>
       <a href="team.html" data-nav="team">team</a>
       <a href="franchising.html" data-nav="franchising">franchising</a>
@@ -91,6 +92,7 @@
     <a href="class-menu.html">class menu</a>
     <a href="reformer-yin.html">reformer yin</a>
     <a href="flowformer.html">flowformer</a>
+    <a href="private-events.html">private events</a>
     <a href="studio.html">studio</a>
     <a href="team.html">team</a>
     <a href="franchising.html">franchising</a>
@@ -255,6 +257,19 @@
       </div>
       <div class="container house__foot" data-reveal>
         <a href="{{ home.house.cta_href }}" class="house__more">{{ home.house.cta_label }} <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- PRIVATE EVENTS teaser — copy: content/home/private.yml -->
+    <section class="home-private" id="private-events" aria-labelledby="hp-title">
+      <div class="container home-private__grid">
+        <div class="home-private__copy">
+          <span class="home-private__eyebrow" data-reveal>{{ home.private.eyebrow }}</span>
+          <h2 id="hp-title" class="home-private__title" data-reveal>{{ home.private.headline }}</h2>
+          <p class="home-private__body" data-reveal>{{ home.private.body }}</p>
+          <a href="{{ home.private.button_href }}" class="pe-btn" data-reveal>{{ home.private.button_label }} <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="home-private__media" data-reveal><img src="{{ home.private.image }}" alt="{{ home.private.image_alt }}" loading="lazy"></figure>
       </div>
     </section>
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f9f5f0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=5">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
+  <title>Private Events — Birthdays, Bridal &amp; Group Classes · flowhouse Rehoboth Beach</title>
+  <meta name="description" content="Make the house yours. Private Reformer and Barre events at flowhouse in Rehoboth Beach — birthdays, bridal parties, girls' days, and brand gatherings. Inquire about your date.">
+  <meta property="og:title" content="Private Events — flowhouse Rehoboth Beach">
+  <meta property="og:description" content="the house is yours. Your people. Your playlist. Your private flow.">
+  <meta property="og:image" content="https://flowhouserb.com/images/uploads/private-events-hero.jpg">
+  <link rel="canonical" href="https://flowhouserb.com/private-events.html">
+</head>
+<body class="page-overlay pe-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+{{> site-header }}
+
+{{> mobile-drawer }}
+
+  <main id="main">
+
+    <!-- 01 · HERO — text + photo: content/privateevents/main.yml -->
+    <section class="pe-hero" aria-labelledby="pe-title">
+      <img class="pe-hero__img" src="{{ privateevents.main.hero.image }}" alt="{{ privateevents.main.hero.image_alt }}">
+      <div class="pe-hero__shade" aria-hidden="true"></div>
+      <div class="container pe-hero__inner">
+        <span class="pe-eyebrow pe-eyebrow--light">{{ privateevents.main.hero.eyebrow }}</span>
+        <h1 id="pe-title" class="pe-hero__title">{{ privateevents.main.hero.title }}</h1>
+        <p class="pe-hero__sub">{{ privateevents.main.hero.subtitle }}</p>
+        <p class="pe-hero__body">{{ privateevents.main.hero.body }}</p>
+        <a href="#inquire" class="pe-btn" data-pe-scroll>{{ privateevents.main.hero.button_label }} <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- 02 · PRIVATE EXPERIENCES -->
+    <section class="pe-exp" aria-labelledby="pe-exp-title">
+      <div class="container">
+        <header class="pe-head">
+          <span class="pe-eyebrow" data-reveal>{{ privateevents.main.experiences.eyebrow }}</span>
+          <h2 id="pe-exp-title" class="pe-h2" data-reveal>{{ privateevents.main.experiences.title }}</h2>
+        </header>
+        <div class="pe-exp__grid">
+          {{#each privateevents.main.experiences.items}}<article class="pe-tile" data-reveal>
+            <div class="pe-tile__media"><img src="{{ this.image }}" alt="{{ this.image_alt }}" loading="lazy"></div>
+            <div class="pe-tile__copy">
+              <span class="pe-tile__num">{{ this.num }}</span>
+              <h3 class="pe-tile__title">{{ this.title }}</h3>
+              <p>{{ this.body }}</p>
+            </div>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · THE PRIVATE EXPERIENCE -->
+    <section class="pe-inc" aria-labelledby="pe-inc-title">
+      <div class="container pe-inc__grid">
+        <figure class="pe-inc__media" data-reveal><img src="{{ privateevents.main.included.image }}" alt="{{ privateevents.main.included.image_alt }}" loading="lazy"></figure>
+        <div class="pe-inc__copy">
+          <span class="pe-eyebrow" data-reveal>{{ privateevents.main.included.eyebrow }}</span>
+          <h2 id="pe-inc-title" class="pe-h2" data-reveal>{{ privateevents.main.included.title }}</h2>
+          <p class="pe-lead" data-reveal>{{ privateevents.main.included.intro }}</p>
+          <ol class="pe-inc__list">
+            {{#each privateevents.main.included.items}}<li data-reveal><span class="pe-inc__no">0{{ @index1 }}</span><span>{{ this }}</span></li>
+            {{/each}}
+          </ol>
+          <p class="pe-inc__note" data-reveal>{{ privateevents.main.included.note }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · THE DETAILS -->
+    <section class="pe-details" aria-labelledby="pe-det-title">
+      <div class="container">
+        <header class="pe-head pe-head--center">
+          <span class="pe-eyebrow" data-reveal>{{ privateevents.main.details.eyebrow }}</span>
+          <h2 id="pe-det-title" class="pe-h2" data-reveal>{{ privateevents.main.details.title }}</h2>
+        </header>
+        <div class="pe-details__grid">
+          {{#each privateevents.main.details.options}}<div class="pe-option" data-reveal>
+            <h3 class="pe-option__name">{{ this.name }}</h3>
+            <p class="pe-option__guests">{{ this.guests }}</p>
+            <p class="pe-option__length">{{ this.length }}</p>
+          </div>
+          {{/each}}
+        </div>
+        <p class="pe-details__levels" data-reveal>{{ privateevents.main.details.levels }}</p>
+        <p class="pe-details__note" data-reveal>{{ privateevents.main.details.note }}</p>
+      </div>
+    </section>
+
+    <!-- 05 · FAQ -->
+    <section class="pe-faq" aria-labelledby="pe-faq-title">
+      <div class="container pe-faq__grid">
+        <header>
+          <span class="pe-eyebrow" data-reveal>{{ privateevents.main.faq.eyebrow }}</span>
+          <h2 id="pe-faq-title" class="pe-h2" data-reveal>{{ privateevents.main.faq.title }}</h2>
+        </header>
+        <div class="faq pe-faq__list" data-reveal>
+          {{#each privateevents.main.faq.items}}<details>
+            <summary>{{ this.question }}</summary>
+            <p>{{ this.answer }}</p>
+          </details>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · INQUIRY FORM — same Formspree endpoint as the site's other forms; handled by js/private-events.js -->
+    <section class="pe-form" id="inquire" aria-labelledby="pe-form-title">
+      <div class="container pe-form__grid">
+        <header class="pe-form__head">
+          <span class="pe-eyebrow" data-reveal>{{ privateevents.main.form.eyebrow }}</span>
+          <h2 id="pe-form-title" class="pe-h2" data-reveal>{{ privateevents.main.form.title }}</h2>
+          <p class="pe-lead" data-reveal>{{ privateevents.main.form.subtitle }}</p>
+          <p class="pe-form__cap" data-reveal>{{ privateevents.main.form.capacity }}</p>
+        </header>
+
+        <div class="pe-form__wrap" data-reveal>
+          <form id="pe-inquiry" name="private-events-inquiry" method="POST" action="https://formspree.io/f/xnjyngdw" data-pe-form novalidate>
+            <input type="hidden" name="_subject" value="New private event inquiry — flowhouse">
+            <input type="hidden" name="form" value="Flowhouse Private Events Inquiry">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+            <div class="pe-fields" data-pe-fields>
+              <div class="field pe-span-2"><label for="pe-name">Full name <span class="pe-req" aria-hidden="true">*</span></label><input id="pe-name" name="Full Name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="pe-email">Email address <span class="pe-req" aria-hidden="true">*</span></label><input id="pe-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="pe-phone">Phone number</label><input id="pe-phone" name="Phone Number" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="pe-type">Event type</label>
+                <select id="pe-type" name="Event Type">
+                  <option value="">Select one</option>
+                  <option>Birthday</option>
+                  <option>Bridal/Bachelorette</option>
+                  <option>Private Group</option>
+                  <option>Corporate/Brand Event</option>
+                  <option>Other</option>
+                </select></div>
+              <div class="field"><label for="pe-class">Preferred class</label>
+                <select id="pe-class" name="Preferred Class" data-pe-class>
+                  <option value="">Select one</option>
+                  <option>Reformer</option>
+                  <option>Barre</option>
+                  <option>Not Sure Yet</option>
+                </select></div>
+              <div class="field"><label for="pe-date">Preferred event date <span class="pe-req" aria-hidden="true">*</span></label><input id="pe-date" name="Preferred Event Date" type="date" required data-pe-date></div>
+              <div class="field"><label for="pe-time">Preferred start time</label><input id="pe-time" name="Preferred Start Time" type="time"></div>
+              <div class="field pe-span-2"><label for="pe-guests">Number of guests <span class="pe-req" aria-hidden="true">*</span></label><input id="pe-guests" name="Number of Guests" type="number" inputmode="numeric" min="1" step="1" required data-pe-guests aria-describedby="pe-cap-hint">
+                <small id="pe-cap-hint" class="pe-hint" data-pe-hint>Up to 10 guests for Reformer, up to 15 for Barre.</small></div>
+              <div class="field pe-span-2"><label for="pe-details">Additional details / special requests</label><textarea id="pe-details" name="Additional Details" placeholder="What you're celebrating, the vibe, music, decorations, goodie bags…"></textarea></div>
+              <div class="pe-span-2 pe-actions">
+                <button type="submit" class="pe-btn pe-btn--full" data-pe-submit><span data-pe-label>{{ privateevents.main.form.button_label }} <span aria-hidden="true">↗</span></span></button>
+                <p class="pe-error" data-pe-error role="alert" hidden>{{ privateevents.main.form.error }}</p>
+                <p class="pe-small">Required fields are marked <span class="pe-req">*</span>. Submitting an inquiry doesn't confirm a booking — we'll reach out about availability.</p>
+              </div>
+            </div>
+
+            <div class="pe-success" data-pe-success hidden tabindex="-1">
+              <p class="pe-success__title">{{ privateevents.main.form.success_title }}</p>
+              <p class="pe-success__body">{{ privateevents.main.form.success_body }}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <span class="wordmark">flowhouse</span>
+        <p style="margin-top:1.25rem; max-width: 42ch; color: rgba(249,245,240,0.7);">{{ global.settings.footer_tagline }}</p>
+        <p style="margin-top: 1.25rem; font-size: 0.85rem; color: rgba(249,245,240,0.6);">{{ global.settings.footer_address }}</p>
+      </div>
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <a href="about.html">About</a>
+        <a href="studio.html">The studio</a>
+        <a href="new-here.html">New here</a>
+        <a href="class-menu.html">Class menu</a>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <a href="schedule.html">Schedule &amp; booking</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="team.html">Team</a>
+        <a href="franchising.html">Franchising</a>
+        <a href="schedule.html#book">Book a class</a>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="{{ global.settings.instagram_url }}" target="_blank" rel="noopener">{{ global.settings.instagram_handle }}</a>
+        <a href="mailto:{{ global.settings.email }}">{{ global.settings.email }}</a>
+        <a href="tel:{{ global.settings.phone_tel }}">{{ global.settings.phone_display }}</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sms-terms.html">SMS Terms</a>
+        <a href="policies.html">Studio Policies</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ global.settings.copyright }}</span>
+      <span>{{ global.settings.status }}</span>
+    </div>
+  </div>
+</footer>
+
+<div class="book-bar" role="region" aria-label="Booking">
+  <div class="book-bar__text">
+    <strong>{{ global.settings.sticky_title }}</strong>
+    <span>{{ global.settings.sticky_subtitle }}</span>
+  </div>
+  <a href="{{ global.settings.sticky_cta_href }}" class="btn btn--pink">{{ global.settings.sticky_cta_label }}</a>
+</div>
+
+<script src="js/site.js?v=5"></script>
+<script src="js/private-events.js?v=1"></script>
+</body>
+</html>
