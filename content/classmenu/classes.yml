@@ -18,7 +18,7 @@ classes:
     focus: Setup & form
     level: New
   - id: signature
-    name: Signature
+    name: flowformer
     badge: The full method
     badge_class: strong
     lead: The flagship reformer class — contemporary Pilates and modern strength, together.
@@ -32,7 +32,7 @@ classes:
     focus: Full-body strength
     level: All levels
   - id: barre
-    name: Barre
+    name: flowbarre
     badge: All levels
     badge_class: all
     lead: A modern barre class inspired by the original Lotte Berk method.
