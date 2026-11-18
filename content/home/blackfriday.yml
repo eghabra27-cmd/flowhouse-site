@@ -19,7 +19,7 @@ deals:
   - number: "No. 02"
     label: 5-class pack
     price: "$99"
-    note_html: Normally <s>$135</s>
+    note_html: Normally <s>$140</s>
     title: 5 Classes
     body: That's $19.80 a class, with a full year to use them.
     fine: Black Friday exclusive. Classes expire one year after purchase.
@@ -28,7 +28,7 @@ deals:
   - number: "No. 03"
     label: 10-class pack
     price: "$199"
-    note_html: Black Friday exclusive
+    note_html: Normally <s>$260</s>
     title: 10 Classes
     body: That works out to $19.90 a class. Use them any time in the next 90 days.
     fine: Limit one per person. Classes expire 90 days after purchase.
