@@ -120,7 +120,8 @@
     </section>
 
     <!-- BLACK FRIDAY — seasonal deals band. Copy + on/off switch: content/home/blackfriday.yml -->
-    {{#if home.blackfriday.enabled}}<section class="bf" id="black-friday" aria-labelledby="bf-title">
+    {{#if home.blackfriday.enabled}}<section class="bf" id="black-friday" aria-labelledby="bf-title" data-ends="{{ home.blackfriday.ends }}">
+      <script>(function(){var s=document.currentScript.parentNode,e=Date.parse(s.getAttribute('data-ends'));if(e&&Date.now()>=e)s.remove();})();</script>
       <div class="container">
         <header class="bf__head" data-reveal>
           <p class="bf__eyebrow">{{ home.blackfriday.eyebrow }}</p>
