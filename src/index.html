@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=5">
+<link rel="stylesheet" href="css/site.css?v=6">
 <link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/favicon-180.png">
@@ -118,6 +118,29 @@
       </video>
       <a href="schedule.html#book" class="video-hero__btn">BOOK WITH US<svg viewBox="0 0 8 12" width="7" height="11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.5 6 6l-4.5 4.5"/></svg></a>
     </section>
+
+    <!-- BLACK FRIDAY — seasonal deals band. Copy + on/off switch: content/home/blackfriday.yml -->
+    {{#if home.blackfriday.enabled}}<section class="bf" id="black-friday" aria-labelledby="bf-title">
+      <div class="container">
+        <header class="bf__head" data-reveal>
+          <p class="bf__eyebrow">{{ home.blackfriday.eyebrow }}</p>
+          <h2 id="bf-title" class="bf__title">{{ home.blackfriday.headline_html | raw }}</h2>
+          <p class="bf__sub">{{ home.blackfriday.sub }}</p>
+        </header>
+        <div class="bf__deals">
+          {{#each home.blackfriday.deals}}<article class="bf-deal" data-reveal>
+            <p class="bf-deal__label"><span>{{ this.number }}</span> {{ this.label }}</p>
+            <p class="bf-deal__price">{{ this.price }}</p>
+            <p class="bf-deal__was">{{ this.note_html | raw }}</p>
+            <h3 class="bf-deal__title">{{ this.title }}</h3>
+            <p class="bf-deal__body">{{ this.body }}</p>
+            <p class="bf-deal__fine">{{ this.fine }}</p>
+            {{#if this.button}}<a href="{{ this.href }}" class="bf-deal__btn">{{ this.button }}</a>{{/if}}
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </section>{{/if}}
 
     <!-- 03 · SANCTUARY INTRO — who we are, the equipment, the experience -->
     <section class="section sanctuary" id="sanctuary">

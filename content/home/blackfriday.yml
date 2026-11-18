@@ -1,0 +1,43 @@
+# Black Friday at the house — homepage deals band (sits right under the video hero).
+# To take it down after Black Friday, change `enabled: true` to `enabled: false`.
+enabled: true
+eyebrow: Starts Wednesday, November 18
+headline_html: Black Friday <span class="serif-italic">at the house.</span>
+sub: No doorbusters, no lines. Just a few good deals, for a limited time.
+deals:
+  - number: "No. 01"
+    label: New clients
+    price: "$49"
+    note_html: Normally <s>$69</s>
+    title: 2 Weeks Unlimited
+    body: Two weeks of unlimited classes for anyone who hasn't been to Flowhouse yet.
+    fine: New clients only. Limited time.
+    button: Claim your two weeks
+    href: "memberships.html"
+  - number: "No. 02"
+    label: 5-class pack
+    price: "$99"
+    note_html: Normally <s>$135</s>
+    title: 5 Classes
+    body: That's $19.80 a class, with a full year to use them.
+    fine: Black Friday exclusive. Classes expire one year after purchase.
+    button: Get the 5-pack
+    href: "memberships.html"
+  - number: "No. 03"
+    label: 10-class pack
+    price: "$199"
+    note_html: Black Friday exclusive
+    title: 10 Classes
+    body: That works out to $19.90 a class. Use them any time in the next 90 days.
+    fine: Limit one per person. Classes expire 90 days after purchase.
+    button: Get the 10-pack
+    href: "memberships.html"
+  - number: "No. 04"
+    label: Retail
+    price: "20% off"
+    note_html: Flowhouse merch
+    title: Merch
+    body: Easy holiday gifts, or something for yourself. Stop by the front desk before or after class.
+    fine: In-studio only.
+    button: ""
+    href: ""

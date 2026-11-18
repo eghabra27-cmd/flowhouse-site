@@ -2624,3 +2624,44 @@ body.ex-modal-open { overflow: hidden; }
   .home-private__grid { grid-template-columns: 1fr; }
   .home-private__media img { aspect-ratio: 4 / 3; }
 }
+
+/* ---------- Homepage · Black Friday deals band (content/home/blackfriday.yml) ---------- */
+.bf { background: var(--c-walnut-deep); color: #efe5d7; padding: clamp(4.5rem, 10vw, 8rem) 0; }
+.bf__head { text-align: center; margin: 0 auto clamp(2.75rem, 5vw, 4.5rem); }
+.bf__eyebrow { font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; color: var(--c-pink); margin: 0 0 var(--s-6); }
+.bf__title {
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase;
+  font-size: clamp(2.6rem, 1.2rem + 6vw, 7rem); line-height: .9; letter-spacing: -0.035em;
+  color: #f9f5f0; margin: 0;
+}
+.bf__title .serif-italic {
+  display: block; font-family: var(--ff-serif); font-style: italic; font-weight: 400;
+  text-transform: none; letter-spacing: -0.01em; color: var(--c-pink); margin-top: .08em;
+}
+.bf__sub { margin: var(--s-6) auto 0; font-size: var(--fs-lead); color: rgba(239,229,215,.78); }
+.bf__deals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); max-width: 1240px; margin: 0 auto; }
+.bf-deal {
+  display: flex; flex-direction: column; align-items: flex-start;
+  border: 1px solid rgba(239,229,215,.22); padding: clamp(1.75rem, 2.6vw, 2.5rem) clamp(1.5rem, 2.2vw, 2rem);
+  transition: border-color var(--t), transform var(--t);
+}
+.bf-deal:hover { border-color: rgba(239,229,215,.5); transform: translateY(-4px); }
+.bf-deal__label { font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; color: rgba(239,229,215,.7); margin: 0; }
+.bf-deal__label span { font-family: var(--ff-serif); font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--c-pink); margin-right: .35em; }
+.bf-deal__price { font-family: var(--ff-serif); font-weight: 400; font-size: clamp(3.4rem, 2.4rem + 2.6vw, 5rem); line-height: 1; letter-spacing: -0.02em; color: #f9f5f0; margin: var(--s-6) 0 0; white-space: nowrap; }
+.bf-deal__was { font-size: var(--fs-sm); color: rgba(239,229,215,.6); margin: var(--s-2) 0 0; }
+.bf-deal__was s { text-decoration-thickness: 1px; }
+.bf-deal__title { font-family: var(--ff-serif); font-weight: 400; font-size: clamp(1.6rem, 1.3rem + .8vw, 2rem); line-height: 1.05; color: #f9f5f0; margin: var(--s-6) 0 var(--s-3); padding-top: var(--s-6); border-top: 1px solid rgba(239,229,215,.22); width: 100%; }
+.bf-deal__body { color: rgba(239,229,215,.85); line-height: 1.6; margin: 0 0 var(--s-4); }
+.bf-deal__fine { font-size: .8rem; line-height: 1.5; color: rgba(239,229,215,.58); margin: 0 0 var(--s-8); flex: 1; }
+.bf-deal__btn {
+  display: inline-block; background: var(--c-oxblood); color: #fffdfb; text-decoration: none;
+  font-family: var(--ff-display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .74rem;
+  padding: 1rem 1.3rem; border-radius: 0; transition: background var(--t-fast);
+}
+.bf-deal__btn:hover, .bf-deal__btn:focus-visible { background: var(--c-oxblood-hover); color: #fffdfb; }
+@media (max-width: 1080px) { .bf__deals { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .bf__deals { grid-template-columns: 1fr; }
+  .bf-deal__btn { width: 100%; text-align: center; }
+}
